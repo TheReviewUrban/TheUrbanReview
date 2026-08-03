@@ -84,7 +84,7 @@ a {
 .nav-links a:hover,
 .nav-links a.active {
     color: #ffffff;
-    border-bottom: 2px solid 114, 120, 125;
+    border-bottom: 2px solid #72787D ;
     padding-bottom: 5px;
 }
 
