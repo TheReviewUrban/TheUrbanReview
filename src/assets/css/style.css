@@ -1,0 +1,1145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #030712;
+    /* Fundo super escuro conforme a imagem */
+    color: #f3f4f6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-emphasis-color: inherit;
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+.navbar {
+    background-color: #030712;
+    padding: 20px 0;
+    border-bottom: 1px solid #1f2937;
+    display: flex;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-urban {
+    width: 250px;
+}
+
+.logo h1 {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1;
+    text-shadow:
+        3px 3px 0px #000,
+        5px 5px 12px rgba(0, 0, 0, 0.6);
+    transform: skew(-5deg);
+}
+
+.logo h1 span {
+    color: #1DADDC;
+    -webkit-text-stroke: 1px #000;
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px rgba(29, 173, 220, 0.5);
+}
+
+.logo p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    margin-top: 6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    color: #9ca3af;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #1DADDC;
+    padding-bottom: 5px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-btn {
+    background-color: #111827;
+    border: 1px solid #374151;
+    color: #9ca3af;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    width: 200px;
+    height: 50px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* BANNER DE DESTAQUE (HERO) */
+.hero-section {
+    background-image: url('https://picsum.photos/1920/1080?city');
+    /* Imagem provisória de cidade */
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+.hero-overlay {
+    background: linear-gradient(to top, #030712 10%, rgba(3, 7, 18, 0.4) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.badge-red {
+    background-color: #1DADDC;
+    color: white;
+}
+
+.meta-info {
+    font-size: 0.8rem;
+    color: #d1d5db;
+}
+
+.hero-content h2 {
+    font-size: 2.3rem;
+    margin: 15px 0;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-content p {
+    color: #9ca3af;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-main {
+    background-color: #1DADDC;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #1DADDC;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 25px;
+    height: 4px;
+    background-color: #4b5563;
+    border-radius: 2px;
+}
+
+.dot.active {
+    background-color: #1DADDC;
+}
+
+/* SEÇÃO DE ÚLTIMAS NOTÍCIAS */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 3px solid #1DADDC;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.section-header h3 {
+    font-size: 1.4rem;
+}
+
+.see-all {
+    color: #1DADDC;
+    font-size: 0.9rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.news-card {
+    background-color: #0b0f19;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-category {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.card-time {
+    color: #6b7280;
+    font-size: 0.8rem;
+}
+
+.text-red {
+    color: #f87171;
+}
+
+.text-blue {
+    color: #60a5fa;
+}
+
+.text-yellow {
+    color: #fbbf24;
+}
+
+.text-purple {
+    color: #c084fc;
+}
+
+.news-card h4 {
+    font-size: 1.05rem;
+    margin: 12px 0 20px 0;
+    line-height: 1.4;
+    color: #e5e7eb;
+}
+
+.read-more {
+    color: #1685aa;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+    margin-bottom: 60px;
+}
+
+.newsletter-box {
+    background-color: #0b0f19;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.newsletter-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-mail {
+    font-size: 2rem;
+    background-color: #1e1b4b;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.redes {
+    width: 20px;
+}
+
+.opniao {
+    width: 10px;
+}
+
+
+.newsletter-text h4 {
+    font-size: 1.1rem;
+}
+
+.newsletter-text p {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.newsletter-form input {
+    background-color: #111827;
+    border: 1px solid #374151;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    flex-grow: 1;
+}
+
+.newsletter-form button {
+    background-color: #1DADDC;
+    color: white;
+    border: none;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #020617;
+    border-top: 1px solid #1f2937;
+    padding: 50px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #1f2937;
+}
+
+.footer-brand h2 span {
+    color: #1DADDC;
+}
+
+.footer-brand p {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    background-color: #111827;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #374151;
+}
+
+.footer-links h5,
+.footer-contact h5 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.footer-links a,
+.footer-contact p {
+    display: block;
+    color: #9ca3af;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: left;
+    padding-top: 20px;
+    color: #6b7280;
+    font-size: 0.8rem;
+}
+
+.menu-icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0b0f19;
+    min-width: 160px;
+    border: 1px solid #1f2937;
+    z-index: 10;
+}
+
+.dropdown-content.show {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .menu-desk {
+        display: none !important;
+    }
+
+    .menu-icon-btn {
+        display: block !important;
+    }
+}
+
+/* Regras de inversão dinâmica de cores para o Modo Claro */
+body.light-mode {
+    background-color: #f9fafb !important;
+    color: #111827 !important;
+}
+
+body.light-mode .navbar,
+body.light-mode .news-card,
+body.light-mode .newsletter-box,
+body.light-mode .footer {
+    background-color: #ffffff !important;
+    border-color: #e5e7eb !important;
+}
+
+body.light-mode .nav-links a,
+body.light-mode .card-time,
+body.light-mode .footer-links a,
+body.light-mode .footer-contact p {
+    color: #4b5563 !important;
+}
+
+body.light-mode .nav-links a:hover,
+body.light-mode .nav-links a.active,
+body.light-mode .news-card h4,
+body.light-mode .footer-links h5,
+body.light-mode .footer-contact h5 {
+    color: #111827 !important;
+}
+
+body.light-mode .newsletter-form input,
+body.light-mode .newsletter-form textarea {
+    background-color: #f3f4f6 !important;
+    border-color: #d1d5db !important;
+    color: #111827 !important;
+}
+
+body.light-mode .menu-icon-btn {
+    color: #111827 !important;
+}
+
+/* Cores e Transição para o Modo Escuro */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer,
+body.dark-mode .news-card,
+body.dark-mode .newsletter-box {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode .dropdown-content li a,
+body.dark-mode .news-card h4,
+body.dark-mode .footer a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .search-btn {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.lista-comentarios {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+body.dark-mode .lista-comentarios {
+    border-top-color: #444;
+}
+
+.lista-comentarios h3 {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#listaComentariosUl {
+    list-style: none;
+    padding: 0;
+}
+
+.comentario-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #0056b3;
+}
+
+body.dark-mode .comentario-item {
+    background: #252525;
+    border-left-color: #ff3b30;
+    /* Altera o detalhe no modo escuro se desejar */
+}
+
+.comentario-email {
+    font-size: 0.85em;
+    color: #666;
+}
+
+body.dark-mode .comentario-email {
+    color: #aaa;
+}
+
+.comentario-item p {
+    margin: 8px 0 4px 0;
+}
+
+.comentario-item small {
+    color: #999;
+}
+
+.imagem-afastada {
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+/*=========================
+ MODO CLARO
+==========================*/
+
+body.light-mode {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+body.light-mode .navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #d1d5db;
+}
+
+body.light-mode .news-card,
+body.light-mode .newsletter-box,
+body.light-mode .footer {
+    background: #ffffff;
+    border-color: #d1d5db;
+}
+
+body.light-mode .footer {
+    border-top: 1px solid #d1d5db;
+}
+
+body.light-mode .logo p,
+body.light-mode .card-time,
+body.light-mode .footer-contact p,
+body.light-mode .footer-links a {
+    color: #6b7280;
+}
+
+body.light-mode .logo h1,
+body.light-mode .footer h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5 {
+    color: #111827;
+}
+
+body.light-mode .nav-links a {
+    color: #374151;
+}
+
+body.light-mode .nav-links a:hover,
+body.light-mode .nav-links a.active {
+    color: #1DADDC;
+}
+
+body.light-mode .search-btn {
+    background: #f3f4f6;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+body.light-mode .newsletter-form input,
+body.light-mode .newsletter-form textarea {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+body.light-mode .theme-toggle {
+    color: #111827;
+}
+
+body.light-mode .dropdown-content {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+}
+
+body.light-mode .dropdown-content a {
+    color: #111827;
+}
+
+body.light-mode .comentario-item {
+    background: #ffffff;
+    color: #111827;
+    border-left: 4px solid #1DADDC;
+}
+
+body.light-mode .comentario-email {
+    color: #6b7280;
+}
+
+/* Texto do banner sempre branco */
+.hero-content h2,
+.hero-content p,
+.hero-content .meta-info,
+.hero-content .badge,
+.hero-content .btn-main {
+    color: #fff;
+}
+
+/* Mantém branco também no modo claro */
+body.light-mode .hero-content h2,
+body.light-mode .hero-content p,
+body.light-mode .hero-content .meta-info,
+body.light-mode .hero-content .badge,
+body.light-mode .hero-content .btn-main {
+    color: #fff !important;
+}
+
+body.light-mode .btn-main {
+    background-color: #1DADDC;
+}
+
+body.light-mode .btn-main:hover {
+    background-color: #1695bf;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform .5s ease, color .3s ease;
+}
+
+.theme-toggle.animar {
+    transform: rotate(360deg) scale(1.25);
+}
+
+body.light-mode .theme-toggle {
+    color: #111827;
+}
+
+/* ============================================
+   CARROSSEL - THE URBAN REVIEW
+   ============================================ */
+
+.carousel-section {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---- TRACK E SLIDES ---- */
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+    transform: scale(1.03);
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+/* ---- IMAGEM DE FUNDO ---- */
+.carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.4);
+    transition: transform 6s ease;
+}
+
+.carousel-slide.active .carousel-bg {
+    transform: scale(1.05);
+}
+
+/* ---- OVERLAY E CONTEÚDO ---- */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.carousel-content {
+    max-width: 700px;
+    padding: 40px 20px;
+}
+
+.carousel-content .badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-right: 12px;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeSlideUp 0.6s ease 0.2s both;
+}
+
+.badge-red {
+    background: #dc2626;
+    color: white;
+}
+
+.badge-blue {
+    background: #2563eb;
+    color: white;
+}
+
+.badge-purple {
+    background: #7c3aed;
+    color: white;
+}
+
+.badge-yellow {
+    background: #d97706;
+    color: white;
+}
+
+.carousel-content .meta-info {
+    color: #d1d5db;
+    font-size: 0.85rem;
+    font-family: 'Open Sans', sans-serif;
+    animation: fadeSlideUp 0.6s ease 0.3s both;
+}
+
+.carousel-content h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 16px 0 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeSlideUp 0.6s ease 0.4s both;
+}
+
+.carousel-content p {
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-family: 'Open Sans', sans-serif;
+    animation: fadeSlideUp 0.6s ease 0.5s both;
+}
+
+.carousel-content .btn-main {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    animation: fadeSlideUp 0.6s ease 0.6s both;
+}
+
+.carousel-content .btn-main:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+/* ---- ANIMAÇÃO DE ENTRADA ---- */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---- SETAS DE NAVEGAÇÃO ---- */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.carousel-container:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn:hover {
+    background: rgba(220, 38, 38, 0.8);
+    border-color: rgba(220, 38, 38, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn-prev {
+    left: 20px;
+}
+
+.carousel-btn-next {
+    right: 20px;
+}
+
+/* ---- INDICADORES (DOTS) ---- */
+.carousel-indicators {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-dot.active {
+    background: #dc2626;
+    border-color: #dc2626;
+    width: 32px;
+    border-radius: 6px;
+}
+
+/* ---- BARRA DE PROGRESSO ---- */
+.carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.carousel-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    width: 0%;
+    transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
+}
+
+/* ============================================
+   RESPONSIVO - CARROSSEL
+   ============================================ */
+
+@media (max-width: 768px) {
+    .carousel-section {
+        height: 450px;
+    }
+
+    .carousel-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-content p {
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        opacity: 1;
+    }
+
+    .carousel-btn-prev {
+        left: 10px;
+    }
+
+    .carousel-btn-next {
+        right: 10px;
+    }
+
+    .carousel-content {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-section {
+        height: 400px;
+    }
+
+    .carousel-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .carousel-content p {
+        font-size: 0.85rem;
+    }
+
+    .carousel-content .btn-main {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
+    .carousel-content .badge {
+        font-size: 0.65rem;
+        padding: 4px 10px;
+    }
+}
+
+/* ==========================================
+   MOBILE - HEADER
+========================================== */
+@media (max-width: 768px) {
+
+    .navbar {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Esconde a logo que está fora do container */
+    .navbar>.logo-urban {
+        display: none;
+    }
+
+    /* Faz a logo ficar embaixo */
+    .logo {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+
+    .logo p {
+        font-size: .7rem;
+    }
+
+    /* Menu fica à esquerda */
+    .menu-mob {
+        order: 1;
+    }
+
+    .menu-icon-btn {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    /* Tema fica à direita */
+    .nav-actions {
+        order: 2;
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    /* Esconde pesquisa no celular */
+    .search-box {
+        display: none;
+    }
+
+    /* Dropdown */
+    .dropdown-content {
+        top: 55px;
+        left: 0;
+        width: 180px;
+        border-radius: 8px;
+    }
+
+    .logo-urban {
+        order: 3;
+        width: 140px;
+        margin: 20px auto 10px;
+        display: block;
+    }
+
+    .logo {
+        order: 4;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #1f2937;
+    }
+
+}
