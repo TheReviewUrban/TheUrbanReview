@@ -1,3 +1,21 @@
+:root {
+    --congresso-color-primaria: #e6c89d;
+    --congresso-color-secundaria: rgba(171, 157, 137);
+    --congresso-color-terciaria: #867A69;
+    --congresso-color-quaternaria: #635645;
+    --congresso-color-quinquenaria: #c27c14;
+}
+
+:root {
+    --politica-color-primaria: #899492 ;
+    --politica-color-secundaria: #616b69 ;
+    --politica-color-terciaria:#424746 ;
+    --politica-color-quaternaria:#383b3b ;
+    --politica-color-senaria:#2b2e2d ;
+    --politica-color-setenaria: #232525;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -64,6 +82,19 @@ a {
         0 0 15px rgba(29, 173, 220, 0.5);
 }
 
+#congresso .logo h1 span {
+    color: var(--congresso-color-quaternaria);
+    text-shadow: 3px 3px 0px #000,
+        0 0 15px var(--congresso-color-secundaria);
+}
+
+#politica .logo h1 span{
+    color: var(--politica-color-primaria);
+     text-shadow: 3px 3px 0px #000,
+        0 0 15px var(--politica-color-primaria);
+}
+
+
 .logo p {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
@@ -73,19 +104,42 @@ a {
     text-transform: uppercase;
 }
 
+#congresso .logo p {
+    color: var(--congresso-color-primaria);
+}
+
+#politica .logo p{
+    color: var(--politica-color-primaria);
+}
+
 .nav-links a {
-    color: #9ca3af;
+    color: #ffffff;
     margin: 0 15px;
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+#congresso .nav-links a {
+    color: white;
+}
+
+#politica .nav-links a{
+    color: white;
+}
+
+.nav-links a:hover, .nav-links a:active {
     color: #ffffff;
     border-bottom: 2px solid #1DADDC;
     padding-bottom: 5px;
+}
+
+#congresso .nav-links a:hover, .nav-links a:active {
+    border-bottom: 2px solid var(--congresso-color-primaria);
+}
+
+#politica .nav-links a:hover, .nav-links a:active{
+    border-bottom: 2px solid var(--politica-color-primaria);
 }
 
 .nav-actions {
@@ -152,6 +206,10 @@ a {
     color: white;
 }
 
+#congresso .badge-red {
+    background-color: red;
+}
+
 .meta-info {
     font-size: 0.8rem;
     color: #d1d5db;
@@ -181,8 +239,24 @@ a {
     transition: background 0.3s;
 }
 
+#congresso .btn-main {
+    background-color: var(--congresso-color-terciaria);
+}
+
+#politica .btn-main{
+    background-color: var(--politica-color-terciaria);
+}
+
 .btn-main:hover {
     background-color: #1DADDC;
+}
+
+#congresso .btn-main:hover {
+    background-color: var(--congresso-color-quaternaria);
+}
+
+#politica .btn-main:hover{
+    background-color: var(--politica-color-quaternaria);
 }
 
 .carousel-dots {
@@ -198,8 +272,26 @@ a {
     border-radius: 2px;
 }
 
+
+
 .dot.active {
     background-color: #1DADDC;
+}
+
+#congresso .dot {
+    background-color: var(--congresso-color-quaternaria);
+}
+
+#congresso .dot.active {
+    background-color: var(--congresso-color-primaria);
+}
+
+#politica .dot{
+
+}
+
+#politica .dot.active{
+    background-color: var(--politica-color-primaria);
 }
 
 /* SEÇÃO DE ÚLTIMAS NOTÍCIAS */
@@ -213,6 +305,14 @@ a {
     margin-top: 20px;
 }
 
+#congresso .section-header {
+    border-left: 3px solid var(--congresso-color-secundaria);
+}
+
+#politica .section-header{
+    border-left: 3px solid var(--politica-color-secundaria)
+}
+
 .section-header h3 {
     font-size: 1.4rem;
 }
@@ -220,6 +320,14 @@ a {
 .see-all {
     color: #1DADDC;
     font-size: 0.9rem;
+}
+
+#congresso .see-all {
+    color: var(--politica-color-quaternaria);
+}
+
+#politica .see-all{
+    color: var(--politica-color-quaternaria);
 }
 
 .news-grid {
@@ -236,6 +344,8 @@ a {
     border: 1px solid #1f2937;
     transition: transform 0.3s;
 }
+
+
 
 .news-card:hover {
     transform: translateY(-5px);
@@ -288,6 +398,14 @@ a {
     color: #1685aa;
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+#congresso .read-more {
+    color: var(--congresso-color-quinquenaria);
+}
+
+#poltica .read-more{
+    color: var(--politica-color-senaria);
 }
 
 /* NEWSLETTER */
@@ -367,6 +485,22 @@ a {
     height: 35px;
 }
 
+#congresso .newsletter-form button {
+    background-color: var(--congresso-color-quinquenaria);
+}
+
+#congresso .newsletter-form button:hover {
+    background-color: var(--congresso-color-primaria);
+}
+
+#politica .newsletter-form button{
+    background-color: var(--politica-color-senaria);
+}
+
+#politica .newsletter-form button:hover{
+    background-color: var(--politica-color-primaria);
+}
+
 /* FOOTER */
 .footer {
     background-color: #020617;
@@ -385,6 +519,14 @@ a {
 
 .footer-brand h2 span {
     color: #1DADDC;
+}
+
+#congresso .footer-brand h2 span {
+    color: var(--congresso-color-secundaria);
+}
+
+#politica .footer-brand h2 span{
+    color: var(--politica-color-secundaria);
 }
 
 .footer-brand p {
@@ -566,6 +708,14 @@ body.dark-mode .comentario-item {
     background: #252525;
     border-left-color: #ff3b30;
     /* Altera o detalhe no modo escuro se desejar */
+}
+
+#congresso body.dark-mode .comentario-item {
+    border-left-color: var(--congresso-color-quaternaria);
+}
+
+#congresso body.dark-mode .comentario-item {
+    border-left-color: var(--congresso-color-primaria)
 }
 
 .comentario-email {
@@ -874,11 +1024,29 @@ body.light-mode .theme-toggle {
     animation: fadeSlideUp 0.6s ease 0.6s both;
 }
 
+#congresso .carousel-content .btn-main {
+    background: var(--congresso-color-secundaria);
+}
+
+#politica .carousel-content .btn-main{
+    background-color: var(--politica-color-secundaria);
+}
+
 .carousel-content .btn-main:hover {
     background: #b91c1c;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
 }
+
+#congresso .carousel-content .btn-main:hover {
+    background-color: var(--congresso-color-terciaria);
+}
+
+#politica .carousel-content .btn-main:hover{
+    background-color: var(--politica-color-terciaria);
+}
+
+
 
 /* ---- ANIMAÇÃO DE ENTRADA ---- */
 @keyframes fadeSlideUp {
@@ -925,6 +1093,26 @@ body.light-mode .theme-toggle {
     transform: translateY(-50%) scale(1.1);
 }
 
+#congresso .carousel-btn {
+    background: var(--congresso-color-secundaria);
+    border-color: var(--congresso-color-primaria);
+}
+
+#congresso .carousel-btn:hover {
+    background-color: var(--congresso-color-quaternaria);
+    border-color: var(--congresso-color-primaria);
+}
+
+#politica .carousel-btn{
+    background-color: var(--politica-color-secundaria);
+    border-color: var(--politica-color-primaria);
+}
+
+#politica  .carousel-btn:hover{
+    background-color: var(--politica-color-quaternaria);
+    border-color: var(--politica-color-primaria);
+}
+
 .carousel-btn-prev {
     left: 20px;
 }
@@ -955,6 +1143,22 @@ body.light-mode .theme-toggle {
     padding: 0;
 }
 
+#congresso .carousel-dot {
+    border: 2px solid var(--congresso-color-secundaria);
+}
+
+#congresso .carousel-dot:hover {
+    background: var(--congresso-color-terciaria);
+}
+
+#politica .carousel-dot{
+    border: 2px solid var(--politica-color-primaria);
+}
+
+#politica .carousel-dot:hover{
+    background: var(--politica-color-terciaria);
+}
+
 .carousel-dot:hover {
     border-color: white;
     background: rgba(255, 255, 255, 0.3);
@@ -965,6 +1169,16 @@ body.light-mode .theme-toggle {
     border-color: #dc2626;
     width: 32px;
     border-radius: 6px;
+}
+
+#congresso .carousel-dot.active {
+    background-color: var(--congresso-color-primaria);
+    border-color: var(--congresso-color-secundaria);
+}
+
+#politica .carousel-dot.active{
+    background-color: var(--politica-color-primaria);
+    border-color: var(--politica-color-secundaria);
 }
 
 /* ---- BARRA DE PROGRESSO ---- */
@@ -984,6 +1198,14 @@ body.light-mode .theme-toggle {
     width: 0%;
     transition: width 0.1s linear;
     border-radius: 0 2px 2px 0;
+}
+
+#congresso .carousel-progress-bar {
+    background: linear-gradient(90deg, #99680c, #ffc400);
+}
+
+#politica .carousel-progress-bar{
+    background: linear-gradient(90deg, #292827, #eeeeeb); ;
 }
 
 /* ============================================
