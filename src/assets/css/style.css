@@ -128,17 +128,29 @@ a {
     color: white;
 }
 
-.nav-links a:hover, .nav-links a:active {
+.nav-links a:hover{
     color: #ffffff;
     border-bottom: 2px solid #1DADDC;
     padding-bottom: 5px;
 }
 
-#congresso .nav-links a:hover, .nav-links a:active {
+.nav-links a:active {
+    color: #ffffff;
+    border-bottom: 2px solid #1DADDC;
+    padding-bottom: 5px;
+}
+
+#congresso .nav-links a:hover{
+    border-bottom: 2px solid var(--congresso-color-primaria);
+}
+#congresso .nav-links a:active {
     border-bottom: 2px solid var(--congresso-color-primaria);
 }
 
-#politica .nav-links a:hover, .nav-links a:active{
+#politica .nav-links a:hover{
+    border-bottom: 2px solid var(--politica-color-primaria);
+}
+#politica .nav-links a:active {
     border-bottom: 2px solid var(--politica-color-primaria);
 }
 
