@@ -7,12 +7,23 @@
 }
 
 :root {
-    --politica-color-primaria: #899492 ;
-    --politica-color-secundaria: #616b69 ;
-    --politica-color-terciaria:#424746 ;
-    --politica-color-quaternaria:#383b3b ;
-    --politica-color-senaria:#2b2e2d ;
+    --politica-color-primaria: #899492;
+    --politica-color-secundaria: #616b69;
+    --politica-color-terciaria: #424746;
+    --politica-color-quaternaria:#383b3b;
+    --politica-color-senaria: #2b2e2d;
     --politica-color-setenaria: #232525;
+
+}
+
+:root {
+    --economia-color-primaria: #61ac06;
+    --economia-color-secundaria: #28af10;
+    --economia-color-terciaria: #b5ff4a;
+    --economia-color-quaternaria: #089646;
+    --economia-color-quinquenaria: #063d20;
+    --economia-color-senaria: #050d09;
+    --economia-color-setenaria: #08130d;
 
 }
 
@@ -88,10 +99,16 @@ a {
         0 0 15px var(--congresso-color-secundaria);
 }
 
-#politica .logo h1 span{
+#politica .logo h1 span {
     color: var(--politica-color-primaria);
-     text-shadow: 3px 3px 0px #000,
+    text-shadow: 3px 3px 0px #000,
         0 0 15px var(--politica-color-primaria);
+}
+
+#economia .logo h1 span {
+    color: var(--economia-color-primaria);
+    text-shadow: 3px 3px 0px #000,
+        0 0 15px var(--economia-color-primaria);
 }
 
 
@@ -108,8 +125,12 @@ a {
     color: var(--congresso-color-primaria);
 }
 
-#politica .logo p{
+#politica .logo p {
     color: var(--politica-color-primaria);
+}
+
+#economia .logo p{
+    color: var(--economia-color-primaria);
 }
 
 .nav-links a {
@@ -124,34 +145,40 @@ a {
     color: white;
 }
 
-#politica .nav-links a{
+#politica .nav-links a {
     color: white;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: #ffffff;
-    border-bottom: 5px solid #1DADDC;
-    padding-bottom: 5px;
+    border-bottom: 3px solid #1DADDC;
+    padding-bottom: 3px;
 }
 
 .nav-links a:active {
     color: #ffffff;
-    border-bottom: 5px solid #1DADDC;
-    padding-bottom: 5px;
+    border-bottom: 3px solid #1DADDC;
+    padding-bottom: 3px;
 }
 
-#congresso .nav-links a:hover{
-    border-bottom: 5px solid var(--congresso-color-primaria);
+#congresso .nav-links a:hover {
+    border-bottom: 3px solid var(--congresso-color-primaria);
 }
+
 #congresso .nav-links a:active {
-    border-bottom: 5px solid var(--congresso-color-primaria);
+    border-bottom: 3px solid var(--congresso-color-primaria);
 }
 
-#politica .nav-links a:hover{
-    border-bottom: 5px solid var(--politica-color-primaria);
+#politica .nav-links a:hover {
+    border-bottom: 3px solid var(--politica-color-primaria);
 }
+
 #politica .nav-links a:active {
-    border-bottom: 5px solid var(--politica-color-primaria);
+    border-bottom: 3px solid var(--politica-color-primaria);
+}
+
+#economia .nav-links a:hover  {
+    border-bottom: 3px solid var(--economia-color-terciaria);
 }
 
 .nav-actions {
@@ -255,7 +282,7 @@ a {
     background-color: var(--congresso-color-terciaria);
 }
 
-#politica .btn-main{
+#politica .btn-main {
     background-color: var(--politica-color-terciaria);
 }
 
@@ -267,8 +294,17 @@ a {
     background-color: var(--congresso-color-quaternaria);
 }
 
-#politica .btn-main:hover{
+#politica .btn-main:hover {
     background-color: var(--politica-color-quaternaria);
+}
+
+#economia .btn-main{
+    background-color: var(--economia-color-quaternaria);
+}
+
+
+#economia .btn-main:hover{
+    background-color: var(--economia-color-quinquenaria);
 }
 
 .carousel-dots {
@@ -298,12 +334,20 @@ a {
     background-color: var(--congresso-color-primaria);
 }
 
-#politica .dot{
+#politica .dot {
     background-color: var(--politica-color-quaternaria);
 }
 
-#politica .dot.active{
+#politica .dot.active {
     background-color: var(--politica-color-primaria);
+}
+
+#economia .dot {
+    background-color: var(--economia-color-quaternaria);
+}
+
+#economia .dot.active{
+    background-color: var(--economia-color-primaria);
 }
 
 /* SEÇÃO DE ÚLTIMAS NOTÍCIAS */
@@ -321,8 +365,12 @@ a {
     border-left: 3px solid var(--congresso-color-secundaria);
 }
 
-#politica .section-header{
-    border-left: 3px solid var(--politica-color-secundaria)
+#politica .section-header {
+    border-left: 3px solid var(--politica-color-secundaria);
+}
+
+#economia .section-header {
+    border-left: 3px solid var(--economia-color-secundaria)
 }
 
 .section-header h3 {
@@ -338,8 +386,12 @@ a {
     color: var(--politica-color-quaternaria);
 }
 
-#politica .see-all{
+#politica .see-all {
     color: var(--politica-color-quaternaria);
+}
+
+#economia .see-all{
+    color: var(--economia-color-quaternaria);
 }
 
 .news-grid {
@@ -416,8 +468,12 @@ a {
     color: var(--congresso-color-quinquenaria);
 }
 
-#poltica .read-more{
+#poltica .read-more {
     color: var(--politica-color-senaria);
+}
+
+#economia .read-more{
+    color: var(--economia-color-quinquenaria);
 }
 
 /* NEWSLETTER */
@@ -505,12 +561,20 @@ a {
     background-color: var(--congresso-color-primaria);
 }
 
-#politica .newsletter-form button{
+#politica .newsletter-form button {
     background-color: var(--politica-color-senaria);
 }
 
-#politica .newsletter-form button:hover{
+#politica .newsletter-form button:hover {
     background-color: var(--politica-color-primaria);
+}
+
+#economia .newsletter-form button{
+    background-color: var(--economia-color-terciaria);
+}
+
+#economia .newsletter-form button:hover{
+    background-color: var(--economia-color-primaria);
 }
 
 /* FOOTER */
@@ -537,8 +601,12 @@ a {
     color: var(--congresso-color-secundaria);
 }
 
-#politica .footer-brand h2 span{
+#politica .footer-brand h2 span {
     color: var(--politica-color-secundaria);
+}
+
+#economia .footer-brand h2 span{
+    color: var(--economia-color-secundaria);
 }
 
 .footer-brand p {
@@ -1040,7 +1108,7 @@ body.light-mode .theme-toggle {
     background: var(--congresso-color-secundaria);
 }
 
-#politica .carousel-content .btn-main{
+#politica .carousel-content .btn-main {
     background-color: var(--politica-color-secundaria);
 }
 
@@ -1054,8 +1122,16 @@ body.light-mode .theme-toggle {
     background-color: var(--congresso-color-terciaria);
 }
 
-#politica .carousel-content .btn-main:hover{
+#politica .carousel-content .btn-main:hover {
     background-color: var(--politica-color-terciaria);
+}
+
+#economia .carousel-content .btn-main{
+    background-color: var(--economia-color-secundaria);
+}
+
+#economia .carousel-content .btn-main:hover{
+    background-color: var(--economia-color-terciaria);
 }
 
 
@@ -1115,14 +1191,24 @@ body.light-mode .theme-toggle {
     border-color: var(--congresso-color-primaria);
 }
 
-#politica .carousel-btn{
+#politica .carousel-btn {
     background-color: var(--politica-color-secundaria);
     border-color: var(--politica-color-primaria);
 }
 
-#politica  .carousel-btn:hover{
+#politica .carousel-btn:hover {
     background-color: var(--politica-color-quaternaria);
     border-color: var(--politica-color-primaria);
+}
+
+#economia .carousel-btn{
+    background-color: var(--economia-color-quaternaria);
+    border-color: var(--economia-color-primaria);
+}
+
+#economia .carousel-btn:hover{
+    background-color: var(--economia-color-primaria);
+    border-color: var(--economia-color-secundaria);
 }
 
 .carousel-btn-prev {
@@ -1163,12 +1249,20 @@ body.light-mode .theme-toggle {
     background: var(--congresso-color-terciaria);
 }
 
-#politica .carousel-dot{
+#politica .carousel-dot {
     border: 2px solid var(--politica-color-primaria);
 }
 
-#politica .carousel-dot:hover{
+#politica .carousel-dot:hover {
     background: var(--politica-color-terciaria);
+}
+
+#economia  .carousel-dot{
+    border: 2px solid var(--economia-color-primaria);
+}
+
+#economia  .carousel-dot:hover{
+    background: var(--economia-color-terciaria);
 }
 
 .carousel-dot:hover {
@@ -1188,9 +1282,14 @@ body.light-mode .theme-toggle {
     border-color: var(--congresso-color-secundaria);
 }
 
-#politica .carousel-dot.active{
+#politica .carousel-dot.active {
     background-color: var(--politica-color-primaria);
     border-color: var(--politica-color-secundaria);
+}
+
+#economia .carousel-dot.active{
+    background-color: var(--economia-color-primaria);
+    border-color: var(--economia-color-secundaria);
 }
 
 /* ---- BARRA DE PROGRESSO ---- */
@@ -1216,8 +1315,13 @@ body.light-mode .theme-toggle {
     background: linear-gradient(90deg, #99680c, #ffc400);
 }
 
-#politica .carousel-progress-bar{
-    background: linear-gradient(90deg, #292827, #eeeeeb); ;
+#politica .carousel-progress-bar {
+    background: linear-gradient(90deg, #292827, #eeeeeb);
+    ;
+}
+
+#economia .carousel-progress-bar{
+    background: linear-gradient(90deg, #05813b, #00f76b )
 }
 
 /* ============================================
@@ -1382,16 +1486,20 @@ body.light-mode .theme-toggle {
 /* Estilo Padrão para item ativo */
 .nav-links a.active {
     color: #ffffff;
-    border-bottom: 5px solid #1DADDC;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #1DADDC;
+    padding-bottom: 2px;
 }
 
 /* Cor ativa específica para a página do Congresso */
 #congresso .nav-links a.active {
-    border-bottom: 5px solid var(--congresso-color-primaria);
+    border-bottom: 2px solid var(--congresso-color-primaria);
 }
 
 /* Cor ativa específica para a página de Política */
 #politica .nav-links a.active {
-    border-bottom: 5px solid var(--politica-color-primaria);
+    border-bottom: 2px solid var(--politica-color-primaria);
+}
+/* Cor ativa específica para a página de Economia */
+#economia .nav-links a.active{
+    border-bottom: 2px solid var(--economia-color-primaria);
 }
