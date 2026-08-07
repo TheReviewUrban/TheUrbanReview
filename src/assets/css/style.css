@@ -1,6 +1,6 @@
 :root {
     --congresso-color-primaria: #e6c89d;
-    --congresso-color-secundaria: rgba(171, 157, 137);
+    --congresso-color-secundaria: #ab9d89;
     --congresso-color-terciaria: #867A69;
     --congresso-color-quaternaria: #635645;
     --congresso-color-quinquenaria: #c27c14;
@@ -130,28 +130,28 @@ a {
 
 .nav-links a:hover{
     color: #ffffff;
-    border-bottom: 2px solid #1DADDC;
+    border-bottom: 5px solid #1DADDC;
     padding-bottom: 5px;
 }
 
 .nav-links a:active {
     color: #ffffff;
-    border-bottom: 2px solid #1DADDC;
+    border-bottom: 5px solid #1DADDC;
     padding-bottom: 5px;
 }
 
 #congresso .nav-links a:hover{
-    border-bottom: 2px solid var(--congresso-color-primaria);
+    border-bottom: 5px solid var(--congresso-color-primaria);
 }
 #congresso .nav-links a:active {
-    border-bottom: 2px solid var(--congresso-color-primaria);
+    border-bottom: 5px solid var(--congresso-color-primaria);
 }
 
 #politica .nav-links a:hover{
-    border-bottom: 2px solid var(--politica-color-primaria);
+    border-bottom: 5px solid var(--politica-color-primaria);
 }
 #politica .nav-links a:active {
-    border-bottom: 2px solid var(--politica-color-primaria);
+    border-bottom: 5px solid var(--politica-color-primaria);
 }
 
 .nav-actions {
@@ -1376,4 +1376,22 @@ body.light-mode .theme-toggle {
         border-bottom: 1px solid #1f2937;
     }
 
+}
+
+/* Ajuste Professor */
+/* Estilo Padrão para item ativo */
+.nav-links a.active {
+    color: #ffffff;
+    border-bottom: 5px solid #1DADDC;
+    padding-bottom: 5px;
+}
+
+/* Cor ativa específica para a página do Congresso */
+#congresso .nav-links a.active {
+    border-bottom: 5px solid var(--congresso-color-primaria);
+}
+
+/* Cor ativa específica para a página de Política */
+#politica .nav-links a.active {
+    border-bottom: 5px solid var(--politica-color-primaria);
 }
