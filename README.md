@@ -54,7 +54,7 @@ Adicione as prints do site na pasta `screenshots/`:
 
 | Home | Notícia | Categoria |
 |------|---------|-----------|
-| ![Home](./screenshots/home.png) | ![Notícia](./screenshots/noticia.png) | ![Categoria](./screenshots/categoria.png) |
+| ![Home](<img src="/src/assets/img/screenshots/home.png">) | ![Notícia](./screenshots/noticia.png) | ![Categoria](./screenshots/categoria.png) |
 
 ---
 
