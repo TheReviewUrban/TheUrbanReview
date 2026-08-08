@@ -40,22 +40,18 @@ git clone https://github.com/seu-usuario/the-urban-review.git
 ---
 
 ## 🚀Melhorias Futuras
-* Melhorar o botão do modo escuro
-* Responsividade em todas as paginas
-* Atualização no visual da pagina
-* Login para acessar os comentarios do site
-
+* Notícias Atualizadas
 ---
 
 ## 🦾Aprendizagem
-- Aprendemos a usar o java para que fazer os comentarios do site
-- A fazer o modo escuro
-- E usar de melhor forma o Css
+- Melhoria em JS.
+- Organização de pastas.
+- Utilizar de forma aprimorada as funcionalidades das tecnologias usadas.
 
 ---
 
 ## 👨🏻‍👩🏻‍👦🏻‍👦🏻Autores
-* Desenvolvido por Yasmin Cavalcante/Kaio César/Kaio Nogueira/Gustavo Bryan/Ismael Menezes
+* Desenvolvido por Yasmin Cavalcante/Kaio César/Kaio Nogueira/Gustavo Bryan/Ismael Menezes.
 * Turma de Tecnologia em Informática para internet (Vespertino) – Senac DF
 
 
