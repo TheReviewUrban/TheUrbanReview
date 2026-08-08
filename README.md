@@ -6,7 +6,7 @@
 ## 📸Captura de Tela
 | Home | Notícia | Categoria |
 |------|---------|-----------|
-| ![Home](<img src="/src/assets/img/screenshots/home.png" alt="Captura de tela do TheUrbanReview">) 
+<img src="/src/assets/img/screenshots/home.png" alt="Captura de tela do TheUrbanReview">) 
 
 ---
 
