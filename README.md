@@ -4,9 +4,9 @@
 ---
 
 ## 📸Captura de Tela
-| Home | Notícia |
+| Home | Notícias |
 |------|---------|
-| <img src="/src/assets/img/screenshots/home.png" alt="Captura de tela do TheUrbanReview" width="500"> | <img src="src/assets/img/screenshots/noticia.png" width="500">
+| <img src="/src/assets/img/screenshots/home.png" alt="Captura de tela do TheUrbanReview" width="700"> | <img src="src/assets/img/screenshots/noticia.png" width="500">
 
 ---
 
