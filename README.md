@@ -36,7 +36,7 @@
 ```bash
 git clone https://github.com/seu-usuario/the-urban-review.git
 ```
-:
+
 ---
 
 ## 🚀Melhorias Futuras
