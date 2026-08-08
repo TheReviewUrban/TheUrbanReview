@@ -31,18 +31,11 @@
 ## ❓Como rodar?
 * 1-Baixe o repositório (Clique no botão "Code" Download Zip)
 * 2-Extraia a pasta
-* 3-Abra o arquivo index.html no navegador
-* ## Como rodar
-
-1. Clone o repositório:
 ```bash
 git clone https://github.com/seu-usuario/the-urban-review.git
 ```
-
-2. Abra o arquivo `index.html` no navegador  
+3. Abra o arquivo `index.html` no navegador  
    ou use um servidor local:
-
-
 ---
 
 ## 🚀Melhorias Futuras
