@@ -11,19 +11,20 @@
 ---
 
 ## 🔧Funcionalidades
-* Botão de modo escuro
-* Aba de comentarios
-* Selecionamento de paginas sobre as noticias
-* Mundança de cor para a pagina de esportes
+* Botão de modo claro/escuro.
+* Aba de comentários para os úsuarios.
+* Selecionamento de paginas sobre as noticias.
+* Mudanças de cor para as páginas selecionadas.
+* Slides de notícias.
 
 ---
 
-## 🖥️Tecnologias ultilizadas
+## 🖥️Tecnologias Utilizadas
 - HTML
 - CSS
-- JavaScript
+- Java Script
 - GIT e Github
-- VS code
+- Visual Studio Code
 
 ---
 
@@ -31,6 +32,16 @@
 * 1-Baixe o repositório (Clique no botão "Code" Download Zip)
 * 2-Extraia a pasta
 * 3-Abra o arquivo index.html no navegador
+* ## Como rodar
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/the-urban-review.git
+```
+
+2. Abra o arquivo `index.html` no navegador  
+   ou use um servidor local:
+
 
 ---
 
