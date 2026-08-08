@@ -4,8 +4,8 @@
 ---
 
 ## 📸Captura de Tela
-| Home | Notícia | Categoria |
-|------|---------|-----------|
+| Home | Notícia |
+|------|---------|
 .<img src="/src/assets/img/screenshots/home.png" alt="Captura de tela do TheUrbanReview" width="500">.
 
 ---
