@@ -4,7 +4,9 @@
 ---
 
 ## 📸Captura de Tela
-![Prévia do Projeto](<img src="/src/assets/img/screenshots/home.png">)
+<p align="center">
+  <img src="/src/assets/img/screenshots/home.png" alt="Captura de tela do TheUrbanReview" width="900">
+</p>
 
 ---
 
