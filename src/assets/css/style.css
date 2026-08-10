@@ -27,6 +27,16 @@
 
 }
 
+:root{
+    --internacional-color-primaria: #FFE5B4;
+    --internacional-color-secundaria: #FFD580;
+    --internacional-color-terciaria: #FFB347;
+    --internacional-color-quaternaria: #FF8C00;
+    --internacional-color-quinquenaria: #FF7A00;
+    --internacional-color-senaria: #E85D04;
+    --internacional-color-setenaria: #D00000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -111,6 +121,12 @@ a {
         0 0 15px var(--economia-color-primaria);
 }
 
+#internacional .logo h1 span{
+    color: var(--internacional-color-quaternaria);
+    text-shadow: 3px 3px 0px #000,
+        0 0 15px var(--economia-color-primaria);
+}
+
 
 .logo p {
     font-family: 'Montserrat', sans-serif;
@@ -133,6 +149,10 @@ a {
     color: var(--economia-color-primaria);
 }
 
+#internacional .logo p{
+    color: var(--internacional-color-secundaria);
+}
+
 .nav-links a {
     color: #ffffff;
     margin: 0 15px;
@@ -146,6 +166,10 @@ a {
 }
 
 #politica .nav-links a {
+    color: white;
+}
+
+#internacional{
     color: white;
 }
 
@@ -179,6 +203,14 @@ a {
 
 #economia .nav-links a:hover  {
     border-bottom: 3px solid var(--economia-color-terciaria);
+}
+
+#internacional .nav-links a:hover{
+    border-bottom: 3px solid var(--internacional-color-primaria);
+}
+
+#internacional .nav-links a:active{
+    border-bottom: 3px solid var(--internacional-color-terciaria);
 }
 
 .nav-actions {
@@ -284,6 +316,10 @@ a {
 
 #politica .btn-main {
     background-color: var(--politica-color-terciaria);
+}
+
+#internacional .btn-main{
+    background-color: var(--internacional-color-terciaria);
 }
 
 .btn-main:hover {
@@ -526,13 +562,6 @@ a {
     margin-top: 4px;
 }
 
-.newsletter-form {
-    display: flex;
-    gap: 10px;
-    flex-grow: 1;
-    max-width: 500px;
-}
-
 .newsletter-form input {
     background-color: #111827;
     border: 1px solid #374151;
@@ -551,6 +580,25 @@ a {
     font-weight: bold;
     cursor: pointer;
     height: 35px;
+}
+
+.newsletter-form{
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    width: 100%; 
+    max-width: 500px;
+}
+
+.newsletter-form textarea{
+    background-color: #111827; 
+    border: 1px solid #374151; 
+    color: white; 
+    padding: 12px; 
+    border-radius: 6px; 
+    resize: vertical; 
+    min-height: 80px; 
+    font-family: inherit;
 }
 
 #congresso .newsletter-form button {

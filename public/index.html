@@ -24,9 +24,9 @@
             </div>
             <nav class="nav-links menu-desk">
                 <a href="/public/index.html" class="active">Início</a>
-                <a href="/src/pages/politica.html">Política</a>
+                <a href="/src/pages/politica.html">Política</a> 
                 <a href="/src/pages/internacional.html">Internacional</a>
-                <a href="/src/pages/economia.html">Esporte</a>
+                <a href="/src/pages/esportes.html">Esporte</a>
                 <a href="#contato">Contato</a>
             </nav>
             <nav class="dropdown menu-mob">
@@ -34,8 +34,8 @@
                 <ul id="dropdownContent" class="dropdown-content">
                     <li><a href="/public/index.html">Início</a></li>
                     <li><a href="/src/pages/politica.html">Política</a></li>
-                    <li><a href="/src/pages/congresso.html">Congresso</a></li>
-                    <li><a href="/src/pages/economia.html">Esporte</a></li>
+                    <li><a href="/src/pages/internacional.html">Internacional</a></li>
+                    <li><a href="/src/pages/esportes.html">Esporte</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -200,11 +200,11 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/inicio/Economia.jpg');"></div>
+                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/inicio/Economia.jpg');">
+                </div>
                 <div class="card-body">
                     <span class="card-category text-yellow">Economia</span> <span class="card-time">• há 6h</span>
-                    <h4>Dívida pública sobe 10 pontos do PIB na parcial do governo Lula e atinge 81,9%, maior nível em
-                        mais de 5 anos</h4>
+                    <h4>Dívida pública sobe 10 pontos do PIB na parcial do governo Lula e atinge 81,9%, maior nível em mais de 5 anos</h4>
                     <a href="./noticias/quedadeaviao.html" class="read-more">Ler mais →</a>
                 </div>
             </article>
@@ -272,12 +272,10 @@
                     <p>Insira os seus dados para submeter o seu comentário.</p>
                 </div>
             </div>
-            <form class="newsletter-form form-contato" id="formOpiniao"
-                style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 500px;">
+            <form class="newsletter-form form-contato" id="formOpiniao">
                 <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
                 <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua opinião aqui..." required
-                    style="background-color: #111827; border: 1px solid #374151; color: white; padding: 12px; border-radius: 6px; resize: vertical; min-height: 80px; font-family: inherit;"></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua opinião aqui..." required></textarea>
                 <button type="submit" id="btnEnviar">Enviar</button>
             </form>
         </div>
