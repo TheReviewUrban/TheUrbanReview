@@ -7,7 +7,7 @@
     <title>The Urban Review - Congresso</title>
 
     <link rel="stylesheet" href="/src/assets/css/style.css">
-
+    <link rel="icon" type="image/png" href="/src/assets/img/ícones/LogoCongresso.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -52,188 +52,124 @@
 ========================== -->
 
     <section class="carousel-section">
-
         <div class="carousel-container">
-
             <div class="carousel-track">
-
                 <!-- Slide 1 -->
-
                 <div class="carousel-slide active">
-
-                    <img src="/src/assets/img/img-noticias/congresso1.jpg" class="carousel-bg" alt="Congresso Nacional">
-
+                    <img src="/src/assets/img/img-noticias/congresso/lula.avif" class="carousel-bg"
+                        alt="Congresso Nacional">
                     <div class="carousel-overlay">
-
                         <div class="container carousel-content">
-
                             <span class="badge badge-red">
-                                DESTAQUE
-                            </span>
-
+                                DESTAQUE</span>
                             <span class="meta-info">
                                 Câmara • há 30 min
                             </span>
-
                             <h2>
-                                Câmara inicia semana com votação de projetos prioritários do governo
+                                Deputado defende projeto que regulamenta venda e uso de óculos inteligentes; assista a
+                                entrevista
                             </h2>
-
                             <p>
-                                Parlamentares analisam propostas nas áreas econômica,
-                                segurança pública e educação durante a retomada dos
-                                trabalhos legislativos.
+                                Zarattini quer detalhar o que é necessário para garantir que essa tecnologia respeite a
+                                Lei de Proteção de Dados
                             </p>
-
                             <a href="#" class="btn-main">
                                 Ler mais →
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
-
                 <!-- Slide 2 -->
-
                 <div class="carousel-slide">
-
-                    <img src="/src/assets/img/img-noticias/congresso2.jpg" class="carousel-bg">
-
+                    <img src="/src/assets/img/img-noticias/congresso/congresso-senado.avif" class="carousel-bg">
                     <div class="carousel-overlay">
-
                         <div class="container carousel-content">
-
                             <span class="badge badge-blue">
                                 SENADO
                             </span>
-
                             <span class="meta-info">
                                 Senado Federal • há 1h
                             </span>
-
                             <h2>
                                 Comissão aprova relatório de projeto que altera regras fiscais
                             </h2>
-
                             <p>
                                 Texto segue para votação em plenário após aprovação
                                 na comissão responsável.
                             </p>
-
                             <a href="#" class="btn-main">
                                 Ler mais →
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
-
                 <!-- Slide 3 -->
-
                 <div class="carousel-slide">
-
-                    <img src="/src/assets/img/img-noticias/congresso3.jpg" class="carousel-bg">
-
+                    <img src="/src/assets/img/img-noticias/congresso/congresso-noticia-pec.jpg" class="carousel-bg">
                     <div class="carousel-overlay">
-
                         <div class="container carousel-content">
-
                             <span class="badge badge-purple">
                                 PEC
                             </span>
-
                             <span class="meta-info">
                                 Congresso • há 2h
                             </span>
-
                             <h2>
                                 Nova proposta de emenda constitucional avança na Câmara
                             </h2>
-
                             <p>
                                 Lideranças partidárias articulam apoio para votação
                                 em segundo turno nas próximas semanas.
                             </p>
-
                             <a href="#" class="btn-main">
                                 Ler mais →
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
-
                 <!-- Slide 4 -->
-
                 <div class="carousel-slide">
-
-                    <img src="/src/assets/img/img-noticias/congresso4.jpg" class="carousel-bg">
-
+                    <img src="/src/assets/img/img-noticias/congresso/congresso-comissoes.png" class="carousel-bg">
                     <div class="carousel-overlay">
-
                         <div class="container carousel-content">
-
                             <span class="badge badge-yellow">
                                 COMISSÕES
                             </span>
-
                             <span class="meta-info">
                                 Congresso • há 3h
                             </span>
-
                             <h2>
                                 Comissões permanentes retomam audiências públicas nesta semana
                             </h2>
-
                             <p>
                                 Deputados e senadores discutem temas ligados à saúde,
                                 infraestrutura e orçamento federal.
                             </p>
-
                             <a href="#" class="btn-main">
                                 Ler mais →
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             <button class="carousel-btn carousel-btn-prev" id="btnPrev">
                 ❮
             </button>
-
             <button class="carousel-btn carousel-btn-next" id="btnNext">
                 ❯
             </button>
-
             <div class="carousel-indicators">
 
-                <button class="carousel-dot active"></button>
-                <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
+                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
 
             </div>
-
             <div class="carousel-progress">
                 <div class="carousel-progress-bar" id="progressBar"></div>
             </div>
-
         </div>
-
     </section>
 
     <main class="container">
@@ -249,7 +185,8 @@
         <section class="news-grid">
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/camara1.jpg');"></div>
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/congresso-camera.png');"></div>
                 <div class="card-body">
                     <span class="card-category text-blue">Câmara</span>
                     <span class="card-time"> • há 40 min</span>
@@ -263,7 +200,8 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/senado1.jpg');"></div>
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/congresso-senado.avif');"></div>
                 <div class="card-body">
                     <span class="card-category text-red">Senado</span>
                     <span class="card-time"> • há 1h</span>
@@ -277,7 +215,9 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/pec.jpg');"></div>
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/congreso-noticia-pec2.jpg');">
+                </div>
                 <div class="card-body">
                     <span class="card-category text-purple">PEC</span>
                     <span class="card-time"> • há 2h</span>
@@ -291,7 +231,9 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/comissao.jpg');"></div>
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/congresso-comissoes2.png');">
+                </div>
                 <div class="card-body">
                     <span class="card-category text-yellow">Comissões</span>
                     <span class="card-time"> • há 3h</span>
@@ -305,7 +247,9 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/orcamento.jpg');"></div>
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/congresso-orçamento.png');">
+                </div>
                 <div class="card-body">
                     <span class="card-category text-red">Orçamento</span>
                     <span class="card-time"> • há 4h</span>
@@ -319,7 +263,8 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/cpi.jpg');"></div>
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/noticia-cpi.jpg');"></div>
                 <div class="card-body">
                     <span class="card-category text-blue">CPI</span>
                     <span class="card-time"> • há 5h</span>
@@ -333,13 +278,14 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/plenario.jpg');"></div>
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/plenario.jpg');"></div>
                 <div class="card-body">
                     <span class="card-category text-yellow">Plenário</span>
                     <span class="card-time"> • há 6h</span>
 
                     <h4>
-                        Sessão deliberativa votará projetos ligados à educação e saúde.
+                        Plenário do CNJ aprova proposta orçamentária para 2027
                     </h4>
 
                     <a href="#" class="read-more">Ler mais →</a>
@@ -347,14 +293,31 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image:url('/src/assets/img/img-noticias/congresso-geral.jpg');">
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/congresso-geral.jpg');">
                 </div>
                 <div class="card-body">
                     <span class="card-category text-purple">Congresso</span>
                     <span class="card-time"> • há 7h</span>
 
                     <h4>
-                        Presidentes da Câmara e do Senado definem prioridades para o semestre legislativo.
+                        Comitê do Senado aprova responsabilização de Fauci por desacato ao Congresso
+                    </h4>
+
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image:url('/src/assets/img/img-noticias/congresso/congresso-polemica.png');">
+                </div>
+                <div class="card-body">
+                    <span class="card-category text-purple">Polêmica </span>
+                    <span class="card-time"> • há 7h</span>
+
+                    <h4>
+                        Centrão troca disputa pela Presidência por bilhões em cadeiras no Congresso
                     </h4>
 
                     <a href="#" class="read-more">Ler mais →</a>
@@ -383,17 +346,14 @@
                     <h4>
                         Reunião de líderes partidários para definição da pauta do Plenário.
                     </h4>
-
                 </div>
             </article>
-
             <article class="news-card">
                 <div class="card-body">
 
                     <span class="card-category text-red">
                         Terça-feira
                     </span>
-
                     <h4>
                         Votação de projetos econômicos e medidas provisórias.
                     </h4>
@@ -429,12 +389,40 @@
                 </div>
             </article>
 
+            <article class="news-card">
+                <div class="card-body">
+
+                    <span class="card-category text-yellow">
+                        Sexta-Feira
+                    </span>
+
+                    <h4>
+                        Congresso no Recife debate reforma tributária e contencioso administrativo
+                    </h4>
+
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+
+                    <span class="card-category text-yellow">
+                        Sábado
+                    </span>
+
+                    <h4>
+                        CPI da cultura em Candelária define a sequência dos trabalhos
+                    </h4>
+
+                </div>
+            </article>
+
         </section>
         <!-- =========================
      PARTICIPE
 ========================= -->
 
-        <section id="contato" class="newsletter-section">
+        <section id="contato" class="container newsletter-section">
 
             <div class="newsletter-box">
 
@@ -507,7 +495,7 @@
                 <h2>THE <span>URBAN</span> REVIEW</h2>
                 <p>Congresso Nacional • Câmara e Senado</p>
                 <div class="social-icons">
-                    <a href="#" class="redes" title="Instagram">
+                    <a href="v" class="redes" title="Instagram">
                         <img src="/src/assets/img/ícones/instagram.png" alt="Instagram" class="redes">
                     </a>
                     <a href="mailto:reviewurban759@gmail.com" class="redes" title="Gmail">
