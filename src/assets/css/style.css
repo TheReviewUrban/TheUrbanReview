@@ -1669,6 +1669,10 @@ body.light-mode .theme-toggle {
     border-bottom: 2px solid var(--internacional-color-primaria);
 }
 
+#esportes .nav-links a.active{
+    border-bottom: 2px solid var(--esportes-color-primaria);
+}
+
 
 
 /* CONTATO - LAYOUT RETO*/
