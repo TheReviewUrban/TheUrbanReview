@@ -17,7 +17,7 @@
 }
 
 :root {
-    --economia-color-primaria: #61ac06;
+    --economia-color-primaria: #61a                     c06;
     --economia-color-secundaria: #28af10;
     --economia-color-terciaria: #b5ff4a;
     --economia-color-quaternaria: #089646;
@@ -34,6 +34,7 @@
     --esportes-color-quinquenaria: #1C1008;
     --esportes-color-senaria: #050505;
     --esportes-color-setenaria: #3D1F0A;
+    --esportes-color-octoquinária: #3D1F0A;
 }
 
 :root{
@@ -171,7 +172,6 @@ a {
     color: var(--internacional-color-secundaria);
 }
 
-}
 
 .nav-links a {
     color: #ffffff;
@@ -241,7 +241,6 @@ a {
     border-bottom: 3px solid var(--internacional-color-terciaria);
 }
 
-}
 
 .nav-actions {
     display: flex;
@@ -439,7 +438,7 @@ a {
     background-color: var(--congresso-color-quinquenaria);
 }
 
-}
+
 
 /* SEÇÃO DE ÚLTIMAS NOTÍCIAS */
 .section-header {
@@ -497,7 +496,7 @@ a {
     color: var(--internacional-color-setenaria);
 }
 
-}
+
 
 .news-grid {
     display: grid;
@@ -1293,6 +1292,7 @@ body.light-mode .theme-toggle {
     transform: translateY(-50%);
     z-index: 10;
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
@@ -1667,6 +1667,10 @@ body.light-mode .theme-toggle {
 }
 #internacional .nav-links a.active{
     border-bottom: 2px solid var(--internacional-color-primaria);
+}
+
+#esportes .nav-links a.active{
+    border-bottom: 2px solid var(--esportes-color-primaria);
 }
 
 
