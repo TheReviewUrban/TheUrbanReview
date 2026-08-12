@@ -26,6 +26,16 @@
     --economia-color-setenaria: #08130d;
 
 }
+:root {
+    --esportes-color-primaria: #F59E0B;
+    --esportes-color-secundaria: #D97706;
+    --esportes-color-terciaria: #FBBF24;
+    --esportes-color-quaternaria: #EA580C;
+    --esportes-color-quinquenaria: #1C1008;
+    --esportes-color-senaria: #050505;
+    --esportes-color-setenaria: #3D1F0A;
+    --esportes-color-octoquinária: #3D1F0A;
+}
 
 :root{
     --internacional-color-primaria: #FFE5B4;
@@ -120,6 +130,11 @@ a {
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--economia-color-primaria);
 }
+#esportes .logo h1 span {
+    color: var(--esportes-color-primaria);
+    text-shadow: 3px 3px 0px #000,
+        0 0 15px var(--esportes-color-primaria);
+}
 
 #internacional .logo h1 span{
     color: var(--internacional-color-quaternaria);
@@ -149,9 +164,14 @@ a {
     color: var(--economia-color-primaria);
 }
 
+#esportes .logo p{
+    color: var(--esportes-color-primaria);
+}
+
 #internacional .logo p{
     color: var(--internacional-color-secundaria);
 }
+
 
 .nav-links a {
     color: #ffffff;
@@ -205,6 +225,14 @@ a {
     border-bottom: 3px solid var(--economia-color-terciaria);
 }
 
+#esportes .nav-links a:hover {
+    border-bottom: 3px solid var(--esportes-color-terciaria);
+}
+
+#esportes .nav-links a:active {
+    border-bottom: 3px solid var(--esportes-color-terciaria);
+}
+
 #internacional .nav-links a:hover{
     border-bottom: 3px solid var(--internacional-color-primaria);
 }
@@ -212,6 +240,7 @@ a {
 #internacional .nav-links a:active{
     border-bottom: 3px solid var(--internacional-color-terciaria);
 }
+
 
 .nav-actions {
     display: flex;
@@ -338,6 +367,9 @@ a {
     background-color: var(--economia-color-quaternaria);
 }
 
+#esportes .btn-main{
+    background-color: var(--economia-color-primaria);
+}
 
 #economia .btn-main:hover{
     background-color: var(--economia-color-quinquenaria);
@@ -394,6 +426,10 @@ a {
     background-color: var(--economia-color-primaria);
 }
 
+#esportes .dot.active{
+    background-color: var(--esportes-color-primaria);
+}
+
 #internacional .dot{
     background-color: var(--internacional-color-quaternaria);
 } 
@@ -401,6 +437,8 @@ a {
 #internacional .dot.active{
     background-color: var(--congresso-color-quinquenaria);
 }
+
+
 
 /* SEÇÃO DE ÚLTIMAS NOTÍCIAS */
 .section-header {
@@ -450,9 +488,15 @@ a {
     color: var(--economia-color-quaternaria);
 }
 
+#esportes .see-all{
+    color: var(--economia-color-quaternaria);
+}
+
 #internacional .see-all{
     color: var(--internacional-color-setenaria);
 }
+
+
 
 .news-grid {
     display: grid;
@@ -1248,6 +1292,7 @@ body.light-mode .theme-toggle {
     transform: translateY(-50%);
     z-index: 10;
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
