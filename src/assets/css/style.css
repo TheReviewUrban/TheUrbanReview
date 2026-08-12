@@ -26,6 +26,15 @@
     --economia-color-setenaria: #08130d;
 
 }
+:root {
+    --esportes-color-primaria: #F59E0B;
+    --esportes-color-secundaria: #D97706;
+    --esportes-color-terciaria: #FBBF24;
+    --esportes-color-quaternaria: #EA580C;
+    --esportes-color-quinquenaria: #1C1008;
+    --esportes-color-senaria: #050505;
+    --esportes-color-setenaria: #3D1F0A;
+}
 
 * {
     margin: 0;
@@ -110,7 +119,11 @@ a {
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--economia-color-primaria);
 }
-
+#esportes .logo h1 span {
+    color: var(--esportes-color-primaria);
+    text-shadow: 3px 3px 0px #000,
+        0 0 15px var(--esportes-color-primaria);
+}
 
 .logo p {
     font-family: 'Montserrat', sans-serif;
@@ -131,6 +144,10 @@ a {
 
 #economia .logo p{
     color: var(--economia-color-primaria);
+}
+
+#esportes .logo p{
+    color: var(--esportes-color-primaria);
 }
 
 .nav-links a {
@@ -179,6 +196,14 @@ a {
 
 #economia .nav-links a:hover  {
     border-bottom: 3px solid var(--economia-color-terciaria);
+}
+
+#esportes .nav-links a:hover {
+    border-bottom: 3px solid var(--esportes-color-terciaria);
+}
+
+#esportes .nav-links a:active {
+    border-bottom: 3px solid var(--esportes-color-terciaria);
 }
 
 .nav-actions {
@@ -302,6 +327,9 @@ a {
     background-color: var(--economia-color-quaternaria);
 }
 
+#esportes .btn-main{
+    background-color: var(--economia-color-primaria);
+}
 
 #economia .btn-main:hover{
     background-color: var(--economia-color-quinquenaria);
@@ -350,6 +378,10 @@ a {
     background-color: var(--economia-color-primaria);
 }
 
+#esportes .dot.active{
+    background-color: var(--esportes-color-primaria);
+}
+
 /* SEÇÃO DE ÚLTIMAS NOTÍCIAS */
 .section-header {
     display: flex;
@@ -391,6 +423,10 @@ a {
 }
 
 #economia .see-all{
+    color: var(--economia-color-quaternaria);
+}
+
+#esportes .see-all{
     color: var(--economia-color-quaternaria);
 }
 
