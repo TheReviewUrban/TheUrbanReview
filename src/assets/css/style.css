@@ -10,7 +10,7 @@
     --politica-color-primaria: #899492;
     --politica-color-secundaria: #616b69;
     --politica-color-terciaria: #424746;
-    --politica-color-quaternaria:#383b3b;
+    --politica-color-quaternaria: #383b3b;
     --politica-color-senaria: #2b2e2d;
     --politica-color-setenaria: #232525;
 
@@ -26,6 +26,7 @@
     --economia-color-setenaria: #08130d;
 
 }
+
 :root {
     --esportes-color-primaria: #F59E0B;
     --esportes-color-secundaria: #D97706;
@@ -37,7 +38,7 @@
     --esportes-color-octoquinária: #3D1F0A;
 }
 
-:root{
+:root {
     --internacional-color-primaria: #FFE5B4;
     --internacional-color-secundaria: #FFD580;
     --internacional-color-terciaria: #FFB347;
@@ -130,13 +131,14 @@ a {
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--economia-color-primaria);
 }
+
 #esportes .logo h1 span {
     color: var(--esportes-color-primaria);
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--esportes-color-primaria);
 }
 
-#internacional .logo h1 span{
+#internacional .logo h1 span {
     color: var(--internacional-color-quaternaria);
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--economia-color-primaria);
@@ -160,15 +162,15 @@ a {
     color: var(--politica-color-primaria);
 }
 
-#economia .logo p{
+#economia .logo p {
     color: var(--economia-color-primaria);
 }
 
-#esportes .logo p{
+#esportes .logo p {
     color: var(--esportes-color-primaria);
 }
 
-#internacional .logo p{
+#internacional .logo p {
     color: var(--internacional-color-secundaria);
 }
 
@@ -189,7 +191,7 @@ a {
     color: white;
 }
 
-#internacional{
+#internacional {
     color: white;
 }
 
@@ -221,7 +223,7 @@ a {
     border-bottom: 3px solid var(--politica-color-primaria);
 }
 
-#economia .nav-links a:hover  {
+#economia .nav-links a:hover {
     border-bottom: 3px solid var(--economia-color-terciaria);
 }
 
@@ -233,11 +235,11 @@ a {
     border-bottom: 3px solid var(--esportes-color-terciaria);
 }
 
-#internacional .nav-links a:hover{
+#internacional .nav-links a:hover {
     border-bottom: 3px solid var(--internacional-color-primaria);
 }
 
-#internacional .nav-links a:active{
+#internacional .nav-links a:active {
     border-bottom: 3px solid var(--internacional-color-terciaria);
 }
 
@@ -347,7 +349,7 @@ a {
     background-color: var(--politica-color-terciaria);
 }
 
-#internacional .btn-main{
+#internacional .btn-main {
     background-color: var(--internacional-color-terciaria);
 }
 
@@ -363,23 +365,23 @@ a {
     background-color: var(--politica-color-quaternaria);
 }
 
-#economia .btn-main{
+#economia .btn-main {
     background-color: var(--economia-color-quaternaria);
 }
 
-#esportes .btn-main{
+#esportes .btn-main {
     background-color: var(--economia-color-primaria);
 }
 
-#economia .btn-main:hover{
+#economia .btn-main:hover {
     background-color: var(--economia-color-quinquenaria);
 }
 
-#internacional .btn-main{
+#internacional .btn-main {
     background-color: var(--internacional-color-quaternaria);
 }
 
-#internacional .btn-main:hover{
+#internacional .btn-main:hover {
     background-color: var(--internacional-color-quinquenaria);
 }
 
@@ -422,19 +424,19 @@ a {
     background-color: var(--economia-color-quaternaria);
 }
 
-#economia .dot.active{
+#economia .dot.active {
     background-color: var(--economia-color-primaria);
 }
 
-#esportes .dot.active{
+#esportes .dot.active {
     background-color: var(--esportes-color-primaria);
 }
 
-#internacional .dot{
+#internacional .dot {
     background-color: var(--internacional-color-quaternaria);
-} 
+}
 
-#internacional .dot.active{
+#internacional .dot.active {
     background-color: var(--congresso-color-quinquenaria);
 }
 
@@ -463,7 +465,7 @@ a {
     border-left: 3px solid var(--economia-color-secundaria)
 }
 
-#internacional .section-header{
+#internacional .section-header {
     border-left: 3px solid var(--internacional-color-secundaria)
 }
 
@@ -484,15 +486,15 @@ a {
     color: var(--politica-color-quaternaria);
 }
 
-#economia .see-all{
+#economia .see-all {
     color: var(--economia-color-quaternaria);
 }
 
-#esportes .see-all{
+#esportes .see-all {
     color: var(--economia-color-quaternaria);
 }
 
-#internacional .see-all{
+#internacional .see-all {
     color: var(--internacional-color-setenaria);
 }
 
@@ -576,11 +578,11 @@ a {
     color: var(--politica-color-senaria);
 }
 
-#economia .read-more{
+#economia .read-more {
     color: var(--economia-color-quinquenaria);
 }
 
-#internacional .read-more{
+#internacional .read-more {
     color: var(--internacional-color-quinquenaria);
 }
 
@@ -654,22 +656,22 @@ a {
     height: 35px;
 }
 
-.newsletter-form{
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
-    width: 100%; 
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
     max-width: 500px;
 }
 
-.newsletter-form textarea{
-    background-color: #111827; 
-    border: 1px solid #374151; 
-    color: white; 
-    padding: 12px; 
-    border-radius: 6px; 
-    resize: vertical; 
-    min-height: 80px; 
+.newsletter-form textarea {
+    background-color: #111827;
+    border: 1px solid #374151;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 80px;
     font-family: inherit;
 }
 
@@ -689,19 +691,19 @@ a {
     background-color: var(--politica-color-primaria);
 }
 
-#economia .newsletter-form button{
+#economia .newsletter-form button {
     background-color: var(--economia-color-terciaria);
 }
 
-#economia .newsletter-form button:hover{
+#economia .newsletter-form button:hover {
     background-color: var(--economia-color-primaria);
 }
 
-#internacional .newsletter-form button{
+#internacional .newsletter-form button {
     background-color: var(--internacional-color-terciaria);
 }
 
-#internacional .newsletter-form button:hover{
+#internacional .newsletter-form button:hover {
     background-color: var(--internacional-color-primaria);
 }
 
@@ -733,11 +735,11 @@ a {
     color: var(--politica-color-secundaria);
 }
 
-#economia .footer-brand h2 span{
+#economia .footer-brand h2 span {
     color: var(--economia-color-secundaria);
 }
 
-#internacional .footer-brand h2 span{
+#internacional .footer-brand h2 span {
     color: var(--internacional-color-senaria);
 }
 
@@ -1258,15 +1260,15 @@ body.light-mode .theme-toggle {
     background-color: var(--politica-color-terciaria);
 }
 
-#economia .carousel-content .btn-main{
+#economia .carousel-content .btn-main {
     background-color: var(--economia-color-secundaria);
 }
 
-#economia .carousel-content .btn-main:hover{
+#economia .carousel-content .btn-main:hover {
     background-color: var(--economia-color-terciaria);
 }
 
-#internacional .carousel-content .btn-main{
+#internacional .carousel-content .btn-main {
     background-color: var(--internacional-color-terciaria);
 }
 
@@ -1338,22 +1340,22 @@ body.light-mode .theme-toggle {
     border-color: var(--politica-color-primaria);
 }
 
-#economia .carousel-btn{
+#economia .carousel-btn {
     background-color: var(--economia-color-quaternaria);
     border-color: var(--economia-color-primaria);
 }
 
-#economia .carousel-btn:hover{
+#economia .carousel-btn:hover {
     background-color: var(--economia-color-primaria);
     border-color: var(--economia-color-secundaria);
 }
 
-#internacional .carousel-btn{
+#internacional .carousel-btn {
     background-color: var(--internacional-color-quaternaria);
     border-color: var(--internacional-color-primaria);
 }
 
-#internacional .carousel-btn:hover{
+#internacional .carousel-btn:hover {
     background-color: var(--internacional-color-terciaria);
     border-color: var(--internacional-color-quaternaria);
 }
@@ -1404,20 +1406,20 @@ body.light-mode .theme-toggle {
     background: var(--politica-color-terciaria);
 }
 
-#economia  .carousel-dot{
+#economia .carousel-dot {
     border: 2px solid var(--economia-color-primaria);
 }
 
-#economia  .carousel-dot:hover{
+#economia .carousel-dot:hover {
     background: var(--economia-color-terciaria);
 }
 
-#internacional .carousel-dot{
-     border: 2px solid var(--internacional-color-quinquenaria);
+#internacional .carousel-dot {
+    border: 2px solid var(--internacional-color-quinquenaria);
 }
 
-#internacional .carousel-dot:hover{
-    background:var(--internacional-color-quaternaria);
+#internacional .carousel-dot:hover {
+    background: var(--internacional-color-quaternaria);
 }
 
 
@@ -1443,12 +1445,12 @@ body.light-mode .theme-toggle {
     border-color: var(--politica-color-secundaria);
 }
 
-#economia .carousel-dot.active{
+#economia .carousel-dot.active {
     background-color: var(--economia-color-primaria);
     border-color: var(--economia-color-secundaria);
 }
 
-#internacional .carousel-dot.active{
+#internacional .carousel-dot.active {
     background-color: var(--internacional-color-primaria);
     border-color: var(--internacional-color-secundaria);
 }
@@ -1481,8 +1483,8 @@ body.light-mode .theme-toggle {
     ;
 }
 
-#economia .carousel-progress-bar{
-    background: linear-gradient(90deg, #05813b, #00f76b )
+#economia .carousel-progress-bar {
+    background: linear-gradient(90deg, #05813b, #00f76b)
 }
 
 /* ==
@@ -1642,6 +1644,7 @@ body.light-mode .theme-toggle {
     }
 
 }
+
 /*FINAL MOBILE - HEADER*/
 
 /* Ajuste Professor */
@@ -1661,15 +1664,17 @@ body.light-mode .theme-toggle {
 #politica .nav-links a.active {
     border-bottom: 2px solid var(--politica-color-primaria);
 }
+
 /* Cor ativa específica para a página de Economia */
-#economia .nav-links a.active{
+#economia .nav-links a.active {
     border-bottom: 2px solid var(--economia-color-primaria);
 }
-#internacional .nav-links a.active{
+
+#internacional .nav-links a.active {
     border-bottom: 2px solid var(--internacional-color-primaria);
 }
 
-#esportes .nav-links a.active{
+#esportes .nav-links a.active {
     border-bottom: 2px solid var(--esportes-color-primaria);
 }
 
@@ -1706,7 +1711,7 @@ body.light-mode .theme-toggle {
 }
 
 /* Noticias inicio */
-    /* =========================================
+/* =========================================
    PÁGINA INTERNA DA NOTÍCIA
 ========================================= */
 
@@ -2160,11 +2165,9 @@ body#noticias-inicio.light-mode .article-back a:hover {
 #esportes .carousel-content .btn-main,
 #esportes .btn-main {
 
-    background: linear-gradient(
-        135deg,
-        var(--esporte-forte),
-        var(--esporte-laranja)
-    );
+    background: linear-gradient(135deg,
+            var(--esporte-forte),
+            var(--esporte-laranja));
 
     color: white;
 
@@ -2178,11 +2181,9 @@ body#noticias-inicio.light-mode .article-back a:hover {
 #esportes .carousel-content .btn-main:hover,
 #esportes .btn-main:hover {
 
-    background: linear-gradient(
-        135deg,
-        var(--esporte-laranja),
-        var(--esporte-dourado)
-    );
+    background: linear-gradient(135deg,
+            var(--esporte-laranja),
+            var(--esporte-dourado));
 
     color: #1c1008;
 
@@ -2254,12 +2255,10 @@ body#noticias-inicio.light-mode .article-back a:hover {
 
 #esportes .carousel-progress-bar {
 
-    background: linear-gradient(
-        90deg,
-        var(--esporte-forte),
-        var(--esporte-laranja),
-        var(--esporte-dourado)
-    );
+    background: linear-gradient(90deg,
+            var(--esporte-forte),
+            var(--esporte-laranja),
+            var(--esporte-dourado));
 }
 
 
@@ -2308,11 +2307,9 @@ body#noticias-inicio.light-mode .article-back a:hover {
 #esportes .news-card {
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #0b0f19,
-            #120d06
-        );
+            #120d06);
 
     border: 1px solid #292015;
 
@@ -2387,11 +2384,9 @@ body#noticias-inicio.light-mode .article-back a:hover {
 #esportes .newsletter-box {
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #0b0f19,
-            #1a1005
-        );
+            #1a1005);
 
     border: 1px solid #302314;
 }
@@ -2399,11 +2394,9 @@ body#noticias-inicio.light-mode .article-back a:hover {
 
 #esportes .newsletter-form button {
 
-    background: linear-gradient(
-        135deg,
-        var(--esporte-forte),
-        var(--esporte-laranja)
-    );
+    background: linear-gradient(135deg,
+            var(--esporte-forte),
+            var(--esporte-laranja));
 
     color: white;
 
@@ -2430,11 +2423,9 @@ body#noticias-inicio.light-mode .article-back a:hover {
 #esportes .footer {
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #020617,
-            #090704
-        );
+            #090704);
 
     border-top: 1px solid #2a2114;
 }
