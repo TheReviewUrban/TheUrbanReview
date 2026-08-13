@@ -2097,3 +2097,398 @@ body#noticias-inicio.light-mode .article-back a:hover {
 }
 
 /* /FIM - Noticias inicio */
+
+/* Inicio das noticias de esportes */
+
+/* CORES PRINCIPAIS */
+#esportes {
+    --esporte-laranja: #F59E0B;
+    --esporte-laranja-escuro: #D97706;
+    --esporte-dourado: #FBBF24;
+    --esporte-forte: #EA580C;
+    --esporte-preto: #050505;
+    --esporte-marrom: #3D1F0A;
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+#esportes .logo h1 span {
+    color: var(--esporte-laranja);
+
+    -webkit-text-stroke: 1px #000;
+
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+#esportes .logo p {
+    color: var(--esporte-dourado);
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+#esportes .nav-links a:hover {
+    color: var(--esporte-dourado);
+    border-bottom: 3px solid var(--esporte-laranja);
+}
+
+#esportes .nav-links a.active {
+    color: white;
+    border-bottom: 2px solid var(--esporte-laranja);
+}
+
+
+/* =====================================================
+   CARROSSEL
+   ===================================================== */
+
+#esportes .carousel-content .badge {
+    background: var(--esporte-forte);
+    color: white;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+#esportes .carousel-content .btn-main,
+#esportes .btn-main {
+
+    background: linear-gradient(
+        135deg,
+        var(--esporte-forte),
+        var(--esporte-laranja)
+    );
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px rgba(245, 158, 11, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+
+#esportes .carousel-content .btn-main:hover,
+#esportes .btn-main:hover {
+
+    background: linear-gradient(
+        135deg,
+        var(--esporte-laranja),
+        var(--esporte-dourado)
+    );
+
+    color: #1c1008;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+
+/* =====================================================
+   SETAS DO CARROSSEL
+   ===================================================== */
+
+#esportes .carousel-btn {
+
+    background: rgba(245, 158, 11, 0.2);
+
+    border: 1px solid var(--esporte-dourado);
+
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+
+#esportes .carousel-btn:hover {
+
+    background: var(--esporte-forte);
+
+    border-color: var(--esporte-dourado);
+
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+/* =====================================================
+   INDICADORES
+   ===================================================== */
+
+#esportes .carousel-dot {
+
+    border: 2px solid var(--esporte-laranja);
+}
+
+
+#esportes .carousel-dot:hover {
+
+    background: var(--esporte-laranja-escuro);
+
+    border-color: var(--esporte-dourado);
+}
+
+
+#esportes .carousel-dot.active {
+
+    background: var(--esporte-laranja);
+
+    border-color: var(--esporte-dourado);
+
+    box-shadow:
+        0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+
+/* =====================================================
+   BARRA DE PROGRESSO
+   ===================================================== */
+
+#esportes .carousel-progress-bar {
+
+    background: linear-gradient(
+        90deg,
+        var(--esporte-forte),
+        var(--esporte-laranja),
+        var(--esporte-dourado)
+    );
+}
+
+
+/* =====================================================
+   TÍTULO DAS NOTÍCIAS
+   ===================================================== */
+
+#esportes .section-header {
+
+    border-left: 4px solid var(--esporte-laranja);
+
+    box-shadow:
+        -5px 0 15px rgba(245, 158, 11, 0.08);
+}
+
+
+#esportes .section-header h3 {
+
+    color: white;
+}
+
+
+/* VER TODAS */
+
+#esportes .see-all {
+
+    color: var(--esporte-dourado);
+
+    transition: 0.3s;
+}
+
+
+#esportes .see-all:hover {
+
+    color: var(--esporte-laranja);
+
+    text-shadow:
+        0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+
+/* =====================================================
+   CARDS DE NOTÍCIAS
+   ===================================================== */
+
+#esportes .news-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b0f19,
+            #120d06
+        );
+
+    border: 1px solid #292015;
+
+    transition:
+        transform 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#esportes .news-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--esporte-laranja);
+
+    box-shadow:
+        0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+
+/* CATEGORIA */
+
+#esportes .card-category {
+
+    color: var(--esporte-laranja);
+
+}
+
+
+/* HORÁRIO */
+
+#esportes .card-time {
+
+    color: #777;
+}
+
+
+/* TÍTULO */
+
+#esportes .news-card h4 {
+
+    color: #f5f5f5;
+}
+
+
+/* LEIA MAIS */
+
+#esportes .read-more {
+
+    color: var(--esporte-dourado);
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+#esportes .read-more:hover {
+
+    color: var(--esporte-laranja);
+
+    text-shadow:
+        0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+
+/* =====================================================
+   NEWSLETTER
+   ===================================================== */
+
+#esportes .newsletter-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b0f19,
+            #1a1005
+        );
+
+    border: 1px solid #302314;
+}
+
+
+#esportes .newsletter-form button {
+
+    background: linear-gradient(
+        135deg,
+        var(--esporte-forte),
+        var(--esporte-laranja)
+    );
+
+    color: white;
+
+    border: none;
+
+    transition: 0.3s;
+}
+
+
+#esportes .newsletter-form button:hover {
+
+    background: var(--esporte-dourado);
+
+    color: #1c1008;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+#esportes .footer {
+
+    background:
+        linear-gradient(
+            180deg,
+            #020617,
+            #090704
+        );
+
+    border-top: 1px solid #2a2114;
+}
+
+
+#esportes .footer-brand h2 span {
+
+    color: var(--esporte-laranja);
+
+    text-shadow:
+        0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+
+/* =====================================================
+   DETALHE ESPORTIVO NOS CARDS
+   ===================================================== */
+
+#esportes .card-category::before {
+
+    content: "●";
+
+    color: var(--esporte-dourado);
+
+    margin-right: 6px;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   MODO CLARO
+   ===================================================== */
+
+body.light-mode #esportes .news-card {
+
+    background: #ffffff;
+
+    border-color: #e5e7eb;
+}
+
+
+body.light-mode #esportes .news-card:hover {
+
+    border-color: var(--esporte-laranja);
+
+    box-shadow:
+        0 8px 25px rgba(245, 158, 11, 0.15);
+}
+
+
+body.light-mode #esportes .section-header h3 {
+
+    color: #111827;
+}
+
+/* /Fim das noticias de Esportes */
