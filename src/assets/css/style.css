@@ -518,8 +518,17 @@ a {
 
 
 .news-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    border-color: #1DADDC ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
 }
+
+#politica .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--politica-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
 
 .card-img {
     height: 200px;
@@ -943,6 +952,11 @@ body.dark-mode .comentario-email {
 
 .comentario-item p {
     margin: 8px 0 4px 0;
+    color: #000;
+}
+
+strong{
+    color: #000;
 }
 
 .comentario-item small {
@@ -2321,11 +2335,8 @@ body#noticias-inicio.light-mode .article-back a:hover {
 
 
 #esportes .news-card:hover {
-
     transform: translateY(-7px);
-
     border-color: var(--esporte-laranja);
-
     box-shadow:
         0 10px 30px rgba(245, 158, 11, 0.15);
 }
@@ -2445,13 +2456,9 @@ body#noticias-inicio.light-mode .article-back a:hover {
    ===================================================== */
 
 #esportes .card-category::before {
-
     content: "●";
-
     color: var(--esporte-dourado);
-
     margin-right: 6px;
-
     font-size: 10px;
 }
 
