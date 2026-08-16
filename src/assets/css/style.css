@@ -1274,7 +1274,7 @@ body.light-mode .theme-toggle {
 }
 
 #politica .carousel-content .btn-main {
-    background-color: var(--politica-color-secundaria);
+    background: var(--politica-color-secundaria);
 }
 
 .carousel-content .btn-main:hover {
@@ -1285,10 +1285,12 @@ body.light-mode .theme-toggle {
 
 #congresso .carousel-content .btn-main:hover {
     background-color: var(--congresso-color-terciaria);
+    box-shadow: 0 6px 20px rgba(168, 112, 49, 0.945);
 }
 
 #politica .carousel-content .btn-main:hover {
     background-color: var(--politica-color-terciaria);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
 #economia .carousel-content .btn-main {
@@ -1296,11 +1298,17 @@ body.light-mode .theme-toggle {
 }
 
 #economia .carousel-content .btn-main:hover {
-    background-color: var(--economia-color-terciaria);
+    background-color: var(--economia-color-quinquenaria);
+    box-shadow: 0 6px 20px rgba(74, 220, 38, 0.4);
 }
 
 #internacional .carousel-content .btn-main {
     background-color: var(--internacional-color-terciaria);
+}
+
+#internacional .carousel-content .btn-main:hover {
+    background-color: var(--internacional-color-quinquenaria);
+    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
 }
 
 
