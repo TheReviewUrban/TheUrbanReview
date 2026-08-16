@@ -529,6 +529,23 @@ a {
     box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
 }
 
+#congresso .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--congresso-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+#economia .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--economia-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+#internacional .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--internacional-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
 
 .card-img {
     height: 200px;
@@ -1501,6 +1518,10 @@ body.light-mode .theme-toggle {
     background: linear-gradient(90deg, #05813b, #00f76b)
 }
 
+#internacional .carousel-progress-bar {
+    background: linear-gradient(90deg, #cfb108, #f76f00)
+}
+
 /* ==
    RESPONSIVO - CARROSSEL
    == */
@@ -2443,13 +2464,10 @@ body#noticias-inicio.light-mode .article-back a:hover {
 
 
 #esportes .footer-brand h2 span {
-
     color: var(--esporte-laranja);
-
     text-shadow:
         0 0 10px rgba(245, 158, 11, 0.3);
 }
-
 
 /* =====================================================
    DETALHE ESPORTIVO NOS CARDS
@@ -2468,24 +2486,15 @@ body#noticias-inicio.light-mode .article-back a:hover {
    ===================================================== */
 
 body.light-mode #esportes .news-card {
-
     background: #ffffff;
-
     border-color: #e5e7eb;
 }
-
-
 body.light-mode #esportes .news-card:hover {
-
     border-color: var(--esporte-laranja);
-
     box-shadow:
         0 8px 25px rgba(245, 158, 11, 0.15);
 }
-
-
 body.light-mode #esportes .section-header h3 {
-
     color: #111827;
 }
 
