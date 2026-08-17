@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The Urban Review - Esportes</title>
+    <meta
+        name="description"
+        content="The Urban Review - Notícias, informações e novidades do mundo dos esportes."
+    >
+
+    <title>The Urban Review | Esportes</title>
 
     <link rel="stylesheet" href="/src/assets/css/style.css">
 
@@ -14,7 +19,8 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 </head>
 
 <body id="esportes">
@@ -26,38 +32,114 @@
         <div class="container nav-container">
 
             <div class="logo">
-                <h1>THE <span>URBAN</span> REVIEW</h1>
+                <h1>
+                    THE <span>URBAN</span> REVIEW
+                </h1>
+
                 <p>Notícias de Esportes</p>
             </div>
 
-            <nav class="nav-links menu-desk">
-                <a href="/public/index.html">Início</a>
-                <a href="/src/pages/politica.html">Política</a>
-                <a href="/src/pages/internacional.html">Internacional</a>
-                <a href="#" class="active">Esporte</a>
-                <a href="#contato">Contato</a>
+            <!-- MENU DESKTOP -->
+
+            <nav class="nav-links menu-desk" aria-label="Navegação principal">
+
+                <a href="/public/index.html">
+                    Início
+                </a>
+
+                <a href="/src/pages/politica.html">
+                    Política
+                </a>
+
+                <a href="/src/pages/internacional.html">
+                    Internacional
+                </a>
+
+                <a
+                    href="/src/pages/esportes.html"
+                    class="active"
+                    aria-current="page">
+                    Esportes
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
+
             </nav>
 
-            <nav class="dropdown menu-mob">
+            <!-- MENU MOBILE -->
 
-                <button id="btnMenuMob" class="menu-icon-btn">☰</button>
+            <nav class="dropdown menu-mob" aria-label="Menu mobile">
+
+                <button
+                    type="button"
+                    id="btnMenuMob"
+                    class="menu-icon-btn"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="dropdownContent">
+
+                    ☰
+
+                </button>
 
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="/public/index.html">Início</a></li>
-                    <li><a href="/src/pages/politica.html">Política</a></li>
-                    <li><a href="/src/pages/internacional.html">Internacional</a></li>
-                    <li><a href="#">Esportes</a></li>
-                    <li><a href="#contato">Contato</a></li>
+
+                    <li>
+                        <a href="/public/index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/src/pages/politica.html">
+                            Política
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/src/pages/internacional.html">
+                            Internacional
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="/src/pages/esportes.html"
+                            aria-current="page">
+                            Esportes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">
+                            Contato
+                        </a>
+                    </li>
+
                 </ul>
 
             </nav>
 
+            <!-- AÇÕES -->
+
             <div class="nav-actions">
 
-                <div class="search-box"></div>
+                <div
+                    class="search-box"
+                    role="search">
+                </div>
 
-                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">
+                <button
+                    type="button"
+                    id="modoEscuro"
+                    class="theme-toggle"
+                    title="Alternar tema"
+                    aria-label="Alternar entre tema claro e escuro">
+
                     🌙
+
                 </button>
 
             </div>
@@ -69,7 +151,9 @@
 
     <!-- ==================== CARROSSEL ==================== -->
 
-    <section class="carousel-section">
+    <section
+        class="carousel-section"
+        aria-label="Destaques esportivos">
 
         <div class="carousel-container">
 
@@ -77,7 +161,7 @@
 
                 <!-- SLIDE 1 -->
 
-                <div class="carousel-slide active">
+                <article class="carousel-slide active">
 
                     <div class="carousel-overlay">
 
@@ -100,7 +184,9 @@
                                 com disputas acirradas dentro e fora de campo.
                             </p>
 
-                            <a href="./noticias/futebol.html" class="btn-main">
+                            <a
+                                href="/src/pages/noticias/futebol.html"
+                                class="btn-main">
                                 Ler mais →
                             </a>
 
@@ -108,12 +194,12 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- SLIDE 2 -->
 
-                <div class="carousel-slide">
+                <article class="carousel-slide">
 
                     <div class="carousel-overlay">
 
@@ -136,7 +222,9 @@
                                 de uma sequência importante de partidas.
                             </p>
 
-                            <a href="./noticias/clubes.html" class="btn-main">
+                            <a
+                                href="/src/pages/noticias/clubes.html"
+                                class="btn-main">
                                 Ler mais →
                             </a>
 
@@ -144,12 +232,12 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- SLIDE 3 -->
 
-                <div class="carousel-slide">
+                <article class="carousel-slide">
 
                     <div class="carousel-overlay">
 
@@ -172,7 +260,9 @@
                                 novas gerações de torcedores.
                             </p>
 
-                            <a href="./noticias/basquete.html" class="btn-main">
+                            <a
+                                href="/src/pages/noticias/basquete.html"
+                                class="btn-main">
                                 Ler mais →
                             </a>
 
@@ -180,12 +270,12 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- SLIDE 4 -->
 
-                <div class="carousel-slide">
+                <article class="carousel-slide">
 
                     <div class="carousel-overlay">
 
@@ -208,7 +298,9 @@
                                 ajudam atletas e equipes a melhorar seus resultados.
                             </p>
 
-                            <a href="./noticias/tecnologia-esportiva.html" class="btn-main">
+                            <a
+                                href="/src/pages/noticias/tecnologia-esportiva.html"
+                                class="btn-main">
                                 Ler mais →
                             </a>
 
@@ -216,7 +308,7 @@
 
                     </div>
 
-                </div>
+                </article>
 
             </div>
 
@@ -224,6 +316,7 @@
             <!-- SETAS -->
 
             <button
+                type="button"
                 class="carousel-btn carousel-btn-prev"
                 id="btnPrev"
                 aria-label="Slide anterior">
@@ -232,8 +325,8 @@
 
             </button>
 
-
             <button
+                type="button"
                 class="carousel-btn carousel-btn-next"
                 id="btnNext"
                 aria-label="Próximo slide">
@@ -245,30 +338,37 @@
 
             <!-- INDICADORES -->
 
-            <div class="carousel-indicators">
+            <div
+                class="carousel-indicators"
+                aria-label="Selecionar slide">
 
                 <button
+                    type="button"
                     class="carousel-dot active"
                     data-slide="0"
-                    aria-label="Slide 1">
+                    aria-label="Ir para slide 1"
+                    aria-current="true">
                 </button>
 
                 <button
+                    type="button"
                     class="carousel-dot"
                     data-slide="1"
-                    aria-label="Slide 2">
+                    aria-label="Ir para slide 2">
                 </button>
 
                 <button
+                    type="button"
                     class="carousel-dot"
                     data-slide="2"
-                    aria-label="Slide 3">
+                    aria-label="Ir para slide 3">
                 </button>
 
                 <button
+                    type="button"
                     class="carousel-dot"
                     data-slide="3"
-                    aria-label="Slide 4">
+                    aria-label="Ir para slide 4">
                 </button>
 
             </div>
@@ -276,7 +376,9 @@
 
             <!-- BARRA DE PROGRESSO -->
 
-            <div class="carousel-progress">
+            <div
+                class="carousel-progress"
+                aria-hidden="true">
 
                 <div
                     class="carousel-progress-bar"
@@ -300,39 +402,48 @@
                 Últimas notícias de esportes
             </h3>
 
-            <a href="#" class="see-all">
+            <a
+                href="/src/pages/esportes.html"
+                class="see-all">
                 Ver todas →
             </a>
 
         </div>
 
 
-        <section class="news-grid">
+        <section
+            class="news-grid"
+            aria-label="Últimas notícias">
 
 
             <!-- NOTÍCIA 1 -->
 
             <article class="news-card">
 
-                <div class="card-img">
+                <div
+                    class="card-img"
+                    role="img"
+                    aria-label="Notícia sobre futebol">
                 </div>
 
                 <div class="card-body">
 
-                    <span class="card-category text-blue">
-                        Futebol
-                    </span>
+                    <div>
+                        <span class="card-category text-blue">
+                            Futebol
+                        </span>
 
-                    <span class="card-time">
-                        • há 1h
-                    </span>
+                        <span class="card-time">
+                            • há 1h
+                        </span>
+                    </div>
 
                     <h4>
                         Clubes se preparam para uma sequência decisiva de partidas
                     </h4>
 
                     <a
-                        href="./noticias/futebol.html"
+                        href="/src/pages/noticias/futebol.html"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -346,25 +457,30 @@
 
             <article class="news-card">
 
-                <div class="card-img">
+                <div
+                    class="card-img"
+                    role="img"
+                    aria-label="Mercado da bola">
                 </div>
 
                 <div class="card-body">
 
-                    <span class="card-category text-red">
-                        Futebol
-                    </span>
+                    <div>
+                        <span class="card-category text-red">
+                            Futebol
+                        </span>
 
-                    <span class="card-time">
-                        • há 2h
-                    </span>
+                        <span class="card-time">
+                            • há 2h
+                        </span>
+                    </div>
 
                     <h4>
                         Mercado da bola movimenta clubes e aumenta expectativa dos torcedores
                     </h4>
 
                     <a
-                        href="./noticias/mercado-da-bola.html"
+                        href="/src/pages/noticias/mercado-da-bola.html"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -378,25 +494,30 @@
 
             <article class="news-card">
 
-                <div class="card-img">
+                <div
+                    class="card-img"
+                    role="img"
+                    aria-label="Curiosidades sobre esportes">
                 </div>
 
                 <div class="card-body">
 
-                    <span class="card-category text-yellow">
-                        Curiosidade
-                    </span>
+                    <div>
+                        <span class="card-category text-yellow">
+                            Curiosidade
+                        </span>
 
-                    <span class="card-time">
-                        • há 3h
-                    </span>
+                        <span class="card-time">
+                            • há 3h
+                        </span>
+                    </div>
 
                     <h4>
                         Você sabe como surgiram algumas das principais modalidades esportivas?
                     </h4>
 
                     <a
-                        href="./noticias/curiosidades-esportes.html"
+                        href="/src/pages/noticias/curiosidades-esportes.html"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -410,25 +531,30 @@
 
             <article class="news-card">
 
-                <div class="card-img">
+                <div
+                    class="card-img"
+                    role="img"
+                    aria-label="Notícia sobre basquete">
                 </div>
 
                 <div class="card-body">
 
-                    <span class="card-category text-blue">
-                        Basquete
-                    </span>
+                    <div>
+                        <span class="card-category text-blue">
+                            Basquete
+                        </span>
 
-                    <span class="card-time">
-                        • há 4h
-                    </span>
+                        <span class="card-time">
+                            • há 4h
+                        </span>
+                    </div>
 
                     <h4>
                         Basquete brasileiro busca novos talentos para o futuro da modalidade
                     </h4>
 
                     <a
-                        href="./noticias/basquete.html"
+                        href="/src/pages/noticias/basquete.html"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -442,25 +568,30 @@
 
             <article class="news-card">
 
-                <div class="card-img">
+                <div
+                    class="card-img"
+                    role="img"
+                    aria-label="Tecnologia esportiva">
                 </div>
 
                 <div class="card-body">
 
-                    <span class="card-category text-purple">
-                        Tecnologia
-                    </span>
+                    <div>
+                        <span class="card-category text-purple">
+                            Tecnologia
+                        </span>
 
-                    <span class="card-time">
-                        • há 5h
-                    </span>
+                        <span class="card-time">
+                            • há 5h
+                        </span>
+                    </div>
 
                     <h4>
                         Tecnologia ajuda atletas a acompanhar desempenho durante os treinamentos
                     </h4>
 
                     <a
-                        href="./noticias/tecnologia-esportiva.html"
+                        href="/src/pages/noticias/tecnologia-esportiva.html"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -474,25 +605,30 @@
 
             <article class="news-card">
 
-                <div class="card-img">
+                <div
+                    class="card-img"
+                    role="img"
+                    aria-label="Preparação física">
                 </div>
 
                 <div class="card-body">
 
-                    <span class="card-category text-yellow">
-                        Esportes
-                    </span>
+                    <div>
+                        <span class="card-category text-yellow">
+                            Esportes
+                        </span>
 
-                    <span class="card-time">
-                        • há 6h
-                    </span>
+                        <span class="card-time">
+                            • há 6h
+                        </span>
+                    </div>
 
                     <h4>
                         Preparação física ganha importância no alto rendimento esportivo
                     </h4>
 
                     <a
-                        href="./noticias/preparacao-fisica.html"
+                        href="/src/pages/noticias/preparacao-fisica.html"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -514,12 +650,12 @@
 
         </div>
 
-
-        <section class="news-grid agenda-semana">
+        <section
+            class="news-grid agenda-semana"
+            aria-label="Agenda esportiva da semana">
 
 
             <article class="news-card">
-
                 <div class="card-body">
 
                     <span class="card-category text-blue">
@@ -531,12 +667,10 @@
                     </h4>
 
                 </div>
-
             </article>
 
 
             <article class="news-card">
-
                 <div class="card-body">
 
                     <span class="card-category text-red">
@@ -548,12 +682,10 @@
                     </h4>
 
                 </div>
-
             </article>
 
 
             <article class="news-card">
-
                 <div class="card-body">
 
                     <span class="card-category text-purple">
@@ -565,12 +697,10 @@
                     </h4>
 
                 </div>
-
             </article>
 
 
             <article class="news-card">
-
                 <div class="card-body">
 
                     <span class="card-category text-yellow">
@@ -582,15 +712,13 @@
                     </h4>
 
                 </div>
-
             </article>
 
 
             <article class="news-card">
-
                 <div class="card-body">
 
-                    <span class="card-category text-yellow">
+                    <span class="card-category text-blue">
                         Sexta-feira
                     </span>
 
@@ -599,15 +727,13 @@
                     </h4>
 
                 </div>
-
             </article>
 
 
             <article class="news-card">
-
                 <div class="card-body">
 
-                    <span class="card-category text-yellow">
+                    <span class="card-category text-red">
                         Sábado
                     </span>
 
@@ -616,7 +742,6 @@
                     </h4>
 
                 </div>
-
             </article>
 
         </section>
@@ -626,23 +751,27 @@
 
     <!-- ==================== CONTATO ==================== -->
 
-    <section id="contato" class="container newsletter-section">
+    <section
+        id="contato"
+        class="container newsletter-section">
 
         <div class="newsletter-box">
 
             <div class="newsletter-text">
 
-                <div class="icon-mail">
+                <div
+                    class="icon-mail"
+                    aria-hidden="true">
                 </div>
 
                 <div>
 
                     <h4>
-                        Coloque sua opinião sobre o site abaixo
+                        Coloque sua opinião sobre o site
                     </h4>
 
                     <p>
-                        Insira os seus dados para submeter o seu comentário.
+                        Insira seus dados para enviar seu comentário.
                     </p>
 
                 </div>
@@ -652,30 +781,57 @@
 
             <form
                 class="newsletter-form form-contato"
-                id="formOpiniao"
-                style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 500px;">
+                id="formOpiniao">
 
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Seu Nome"
-                    required>
+                <div class="form-group">
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Seu E-mail"
-                    required>
+                    <label for="nome">
+                        Nome
+                    </label>
 
-                <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    placeholder="Escreva a sua opinião aqui..."
-                    required
-                    style="background-color: #111827; border: 1px solid #374151; color: white; padding: 12px; border-radius: 6px; resize: vertical; min-height: 80px; font-family: inherit;">
-                </textarea>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Seu nome"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Seu e-mail"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="mensagem">
+                        Sua opinião
+                    </label>
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Escreva sua opinião aqui..."
+                        required>
+                    </textarea>
+
+                </div>
+
 
                 <button
                     type="submit"
@@ -688,7 +844,9 @@
         </div>
 
 
-        <div class="container lista-comentarios">
+        <!-- COMENTÁRIOS -->
+
+        <div class="lista-comentarios">
 
             <h3>
                 Comentários dos Leitores
@@ -709,6 +867,8 @@
         <div class="container footer-grid">
 
 
+            <!-- MARCA -->
+
             <div class="footer-brand">
 
                 <h2>
@@ -724,7 +884,9 @@
                     <a
                         href="https://www.instagram.com/reviewurban759/"
                         class="redes"
-                        title="Instagram">
+                        title="Instagram"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
                         Instagram
 
@@ -733,7 +895,7 @@
                     <a
                         href="mailto:reviewurban759@gmail.com"
                         class="redes"
-                        title="Gmail">
+                        title="Enviar e-mail">
 
                         E-mail
 
@@ -743,6 +905,8 @@
 
             </div>
 
+
+            <!-- NAVEGAÇÃO -->
 
             <div class="footer-links">
 
@@ -762,17 +926,19 @@
                     Internacional
                 </a>
 
-                <a href="#">
+                <a href="/src/pages/esportes.html">
                     Esportes
                 </a>
 
             </div>
 
 
+            <!-- CONTATO -->
+
             <div class="footer-contact">
 
                 <h5>
-                    Contato Redação
+                    Contato da Redação
                 </h5>
 
                 <p>
@@ -784,7 +950,7 @@
                 </p>
 
                 <p>
-                    Brazlândia/Águas Lindas - DF, Brasil
+                    Brazlândia / Águas Lindas - DF, Brasil
                 </p>
 
             </div>
@@ -795,13 +961,15 @@
         <div class="container footer-bottom">
 
             <p>
-                &copy; 2026 The Urban Review - Todos os direitos reservados.
+                 2026 The Urban Review - Todos os direitos reservados.
             </p>
 
         </div>
 
     </footer>
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="/src/assets/js/script.js"></script>
 
