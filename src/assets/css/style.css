@@ -10,14 +10,14 @@
     --politica-color-primaria: #899492;
     --politica-color-secundaria: #616b69;
     --politica-color-terciaria: #424746;
-    --politica-color-quaternaria:#383b3b;
+    --politica-color-quaternaria: #383b3b;
     --politica-color-senaria: #2b2e2d;
     --politica-color-setenaria: #232525;
 
 }
 
 :root {
-    --economia-color-primaria: #61a                     c06;
+    --economia-color-primaria: #61ac06;
     --economia-color-secundaria: #28af10;
     --economia-color-terciaria: #b5ff4a;
     --economia-color-quaternaria: #089646;
@@ -26,6 +26,7 @@
     --economia-color-setenaria: #08130d;
 
 }
+
 :root {
     --esportes-color-primaria: #F59E0B;
     --esportes-color-secundaria: #D97706;
@@ -37,7 +38,7 @@
     --esportes-color-octoquinária: #3D1F0A;
 }
 
-:root{
+:root {
     --internacional-color-primaria: #FFE5B4;
     --internacional-color-secundaria: #FFD580;
     --internacional-color-terciaria: #FFB347;
@@ -130,13 +131,14 @@ a {
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--economia-color-primaria);
 }
+
 #esportes .logo h1 span {
     color: var(--esportes-color-primaria);
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--esportes-color-primaria);
 }
 
-#internacional .logo h1 span{
+#internacional .logo h1 span {
     color: var(--internacional-color-quaternaria);
     text-shadow: 3px 3px 0px #000,
         0 0 15px var(--economia-color-primaria);
@@ -160,15 +162,15 @@ a {
     color: var(--politica-color-primaria);
 }
 
-#economia .logo p{
+#economia .logo p {
     color: var(--economia-color-primaria);
 }
 
-#esportes .logo p{
+#esportes .logo p {
     color: var(--esportes-color-primaria);
 }
 
-#internacional .logo p{
+#internacional .logo p {
     color: var(--internacional-color-secundaria);
 }
 
@@ -189,7 +191,7 @@ a {
     color: white;
 }
 
-#internacional{
+#internacional {
     color: white;
 }
 
@@ -221,7 +223,7 @@ a {
     border-bottom: 3px solid var(--politica-color-primaria);
 }
 
-#economia .nav-links a:hover  {
+#economia .nav-links a:hover {
     border-bottom: 3px solid var(--economia-color-terciaria);
 }
 
@@ -233,11 +235,11 @@ a {
     border-bottom: 3px solid var(--esportes-color-terciaria);
 }
 
-#internacional .nav-links a:hover{
+#internacional .nav-links a:hover {
     border-bottom: 3px solid var(--internacional-color-primaria);
 }
 
-#internacional .nav-links a:active{
+#internacional .nav-links a:active {
     border-bottom: 3px solid var(--internacional-color-terciaria);
 }
 
@@ -347,7 +349,7 @@ a {
     background-color: var(--politica-color-terciaria);
 }
 
-#internacional .btn-main{
+#internacional .btn-main {
     background-color: var(--internacional-color-terciaria);
 }
 
@@ -363,23 +365,23 @@ a {
     background-color: var(--politica-color-quaternaria);
 }
 
-#economia .btn-main{
+#economia .btn-main {
     background-color: var(--economia-color-quaternaria);
 }
 
-#esportes .btn-main{
+#esportes .btn-main {
     background-color: var(--economia-color-primaria);
 }
 
-#economia .btn-main:hover{
+#economia .btn-main:hover {
     background-color: var(--economia-color-quinquenaria);
 }
 
-#internacional .btn-main{
+#internacional .btn-main {
     background-color: var(--internacional-color-quaternaria);
 }
 
-#internacional .btn-main:hover{
+#internacional .btn-main:hover {
     background-color: var(--internacional-color-quinquenaria);
 }
 
@@ -422,19 +424,19 @@ a {
     background-color: var(--economia-color-quaternaria);
 }
 
-#economia .dot.active{
+#economia .dot.active {
     background-color: var(--economia-color-primaria);
 }
 
-#esportes .dot.active{
+#esportes .dot.active {
     background-color: var(--esportes-color-primaria);
 }
 
-#internacional .dot{
+#internacional .dot {
     background-color: var(--internacional-color-quaternaria);
-} 
+}
 
-#internacional .dot.active{
+#internacional .dot.active {
     background-color: var(--congresso-color-quinquenaria);
 }
 
@@ -463,7 +465,7 @@ a {
     border-left: 3px solid var(--economia-color-secundaria)
 }
 
-#internacional .section-header{
+#internacional .section-header {
     border-left: 3px solid var(--internacional-color-secundaria)
 }
 
@@ -484,15 +486,15 @@ a {
     color: var(--politica-color-quaternaria);
 }
 
-#economia .see-all{
+#economia .see-all {
     color: var(--economia-color-quaternaria);
 }
 
-#esportes .see-all{
+#esportes .see-all {
     color: var(--economia-color-quaternaria);
 }
 
-#internacional .see-all{
+#internacional .see-all {
     color: var(--internacional-color-setenaria);
 }
 
@@ -516,7 +518,33 @@ a {
 
 
 .news-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    border-color: #1DADDC ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+#politica .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--politica-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+#congresso .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--congresso-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+#economia .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--economia-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+#internacional .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--internacional-color-secundaria) ;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
 }
 
 .card-img {
@@ -576,11 +604,11 @@ a {
     color: var(--politica-color-senaria);
 }
 
-#economia .read-more{
+#economia .read-more {
     color: var(--economia-color-quinquenaria);
 }
 
-#internacional .read-more{
+#internacional .read-more {
     color: var(--internacional-color-quinquenaria);
 }
 
@@ -654,22 +682,22 @@ a {
     height: 35px;
 }
 
-.newsletter-form{
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
-    width: 100%; 
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
     max-width: 500px;
 }
 
-.newsletter-form textarea{
-    background-color: #111827; 
-    border: 1px solid #374151; 
-    color: white; 
-    padding: 12px; 
-    border-radius: 6px; 
-    resize: vertical; 
-    min-height: 80px; 
+.newsletter-form textarea {
+    background-color: #111827;
+    border: 1px solid #374151;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 80px;
     font-family: inherit;
 }
 
@@ -689,19 +717,19 @@ a {
     background-color: var(--politica-color-primaria);
 }
 
-#economia .newsletter-form button{
+#economia .newsletter-form button {
     background-color: var(--economia-color-terciaria);
 }
 
-#economia .newsletter-form button:hover{
+#economia .newsletter-form button:hover {
     background-color: var(--economia-color-primaria);
 }
 
-#internacional .newsletter-form button{
+#internacional .newsletter-form button {
     background-color: var(--internacional-color-terciaria);
 }
 
-#internacional .newsletter-form button:hover{
+#internacional .newsletter-form button:hover {
     background-color: var(--internacional-color-primaria);
 }
 
@@ -733,11 +761,11 @@ a {
     color: var(--politica-color-secundaria);
 }
 
-#economia .footer-brand h2 span{
+#economia .footer-brand h2 span {
     color: var(--economia-color-secundaria);
 }
 
-#internacional .footer-brand h2 span{
+#internacional .footer-brand h2 span {
     color: var(--internacional-color-senaria);
 }
 
@@ -941,6 +969,11 @@ body.dark-mode .comentario-email {
 
 .comentario-item p {
     margin: 8px 0 4px 0;
+    color: #000;
+}
+
+strong{
+    color: #000;
 }
 
 .comentario-item small {
@@ -1241,7 +1274,7 @@ body.light-mode .theme-toggle {
 }
 
 #politica .carousel-content .btn-main {
-    background-color: var(--politica-color-secundaria);
+    background: var(--politica-color-secundaria);
 }
 
 .carousel-content .btn-main:hover {
@@ -1252,22 +1285,30 @@ body.light-mode .theme-toggle {
 
 #congresso .carousel-content .btn-main:hover {
     background-color: var(--congresso-color-terciaria);
+    box-shadow: 0 6px 20px rgba(168, 112, 49, 0.945);
 }
 
 #politica .carousel-content .btn-main:hover {
     background-color: var(--politica-color-terciaria);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
-#economia .carousel-content .btn-main{
+#economia .carousel-content .btn-main {
     background-color: var(--economia-color-secundaria);
 }
 
-#economia .carousel-content .btn-main:hover{
-    background-color: var(--economia-color-terciaria);
+#economia .carousel-content .btn-main:hover {
+    background-color: var(--economia-color-quinquenaria);
+    box-shadow: 0 6px 20px rgba(74, 220, 38, 0.4);
 }
 
-#internacional .carousel-content .btn-main{
+#internacional .carousel-content .btn-main {
     background-color: var(--internacional-color-terciaria);
+}
+
+#internacional .carousel-content .btn-main:hover {
+    background-color: var(--internacional-color-quinquenaria);
+    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
 }
 
 
@@ -1338,22 +1379,22 @@ body.light-mode .theme-toggle {
     border-color: var(--politica-color-primaria);
 }
 
-#economia .carousel-btn{
+#economia .carousel-btn {
     background-color: var(--economia-color-quaternaria);
     border-color: var(--economia-color-primaria);
 }
 
-#economia .carousel-btn:hover{
+#economia .carousel-btn:hover {
     background-color: var(--economia-color-primaria);
     border-color: var(--economia-color-secundaria);
 }
 
-#internacional .carousel-btn{
+#internacional .carousel-btn {
     background-color: var(--internacional-color-quaternaria);
     border-color: var(--internacional-color-primaria);
 }
 
-#internacional .carousel-btn:hover{
+#internacional .carousel-btn:hover {
     background-color: var(--internacional-color-terciaria);
     border-color: var(--internacional-color-quaternaria);
 }
@@ -1404,20 +1445,20 @@ body.light-mode .theme-toggle {
     background: var(--politica-color-terciaria);
 }
 
-#economia  .carousel-dot{
+#economia .carousel-dot {
     border: 2px solid var(--economia-color-primaria);
 }
 
-#economia  .carousel-dot:hover{
+#economia .carousel-dot:hover {
     background: var(--economia-color-terciaria);
 }
 
-#internacional .carousel-dot{
-     border: 2px solid var(--internacional-color-quinquenaria);
+#internacional .carousel-dot {
+    border: 2px solid var(--internacional-color-quinquenaria);
 }
 
-#internacional .carousel-dot:hover{
-    background:var(--internacional-color-quaternaria);
+#internacional .carousel-dot:hover {
+    background: var(--internacional-color-quaternaria);
 }
 
 
@@ -1443,12 +1484,12 @@ body.light-mode .theme-toggle {
     border-color: var(--politica-color-secundaria);
 }
 
-#economia .carousel-dot.active{
+#economia .carousel-dot.active {
     background-color: var(--economia-color-primaria);
     border-color: var(--economia-color-secundaria);
 }
 
-#internacional .carousel-dot.active{
+#internacional .carousel-dot.active {
     background-color: var(--internacional-color-primaria);
     border-color: var(--internacional-color-secundaria);
 }
@@ -1481,8 +1522,12 @@ body.light-mode .theme-toggle {
     ;
 }
 
-#economia .carousel-progress-bar{
-    background: linear-gradient(90deg, #05813b, #00f76b )
+#economia .carousel-progress-bar {
+    background: linear-gradient(90deg, #05813b, #00f76b)
+}
+
+#internacional .carousel-progress-bar {
+    background: linear-gradient(90deg, #cfb108, #f76f00)
 }
 
 /* ==
@@ -1642,6 +1687,7 @@ body.light-mode .theme-toggle {
     }
 
 }
+
 /*FINAL MOBILE - HEADER*/
 
 /* Ajuste Professor */
@@ -1661,15 +1707,17 @@ body.light-mode .theme-toggle {
 #politica .nav-links a.active {
     border-bottom: 2px solid var(--politica-color-primaria);
 }
+
 /* Cor ativa específica para a página de Economia */
-#economia .nav-links a.active{
+#economia .nav-links a.active {
     border-bottom: 2px solid var(--economia-color-primaria);
 }
-#internacional .nav-links a.active{
+
+#internacional .nav-links a.active {
     border-bottom: 2px solid var(--internacional-color-primaria);
 }
 
-#esportes .nav-links a.active{
+#esportes .nav-links a.active {
     border-bottom: 2px solid var(--esportes-color-primaria);
 }
 
@@ -1706,7 +1754,7 @@ body.light-mode .theme-toggle {
 }
 
 /* Noticias inicio */
-    /* =========================================
+/* =========================================
    PÁGINA INTERNA DA NOTÍCIA
 ========================================= */
 
@@ -2097,3 +2145,365 @@ body#noticias-inicio.light-mode .article-back a:hover {
 }
 
 /* /FIM - Noticias inicio */
+
+/* Inicio das noticias de esportes */
+
+/* CORES PRINCIPAIS */
+#esportes {
+    --esporte-laranja: #F59E0B;
+    --esporte-laranja-escuro: #D97706;
+    --esporte-dourado: #FBBF24;
+    --esporte-forte: #EA580C;
+    --esporte-preto: #050505;
+    --esporte-marrom: #3D1F0A;
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+#esportes .logo h1 span {
+    color: var(--esporte-laranja);
+
+    -webkit-text-stroke: 1px #000;
+
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+#esportes .logo p {
+    color: var(--esporte-dourado);
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+#esportes .nav-links a:hover {
+    color: var(--esporte-dourado);
+    border-bottom: 3px solid var(--esporte-laranja);
+}
+
+#esportes .nav-links a.active {
+    color: white;
+    border-bottom: 2px solid var(--esporte-laranja);
+}
+
+
+/* =====================================================
+   CARROSSEL
+   ===================================================== */
+
+#esportes .carousel-content .badge {
+    background: var(--esporte-forte);
+    color: white;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+#esportes .carousel-content .btn-main,
+#esportes .btn-main {
+
+    background: linear-gradient(135deg,
+            var(--esporte-forte),
+            var(--esporte-laranja));
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px rgba(245, 158, 11, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+
+#esportes .carousel-content .btn-main:hover,
+#esportes .btn-main:hover {
+
+    background: linear-gradient(135deg,
+            var(--esporte-laranja),
+            var(--esporte-dourado));
+
+    color: #1c1008;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+
+/* =====================================================
+   SETAS DO CARROSSEL
+   ===================================================== */
+
+#esportes .carousel-btn {
+
+    background: rgba(245, 158, 11, 0.2);
+
+    border: 1px solid var(--esporte-dourado);
+
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+
+#esportes .carousel-btn:hover {
+
+    background: var(--esporte-forte);
+
+    border-color: var(--esporte-dourado);
+
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+/* =====================================================
+   INDICADORES
+   ===================================================== */
+
+#esportes .carousel-dot {
+
+    border: 2px solid var(--esporte-laranja);
+}
+
+
+#esportes .carousel-dot:hover {
+
+    background: var(--esporte-laranja-escuro);
+
+    border-color: var(--esporte-dourado);
+}
+
+
+#esportes .carousel-dot.active {
+
+    background: var(--esporte-laranja);
+
+    border-color: var(--esporte-dourado);
+
+    box-shadow:
+        0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+
+/* =====================================================
+   BARRA DE PROGRESSO
+   ===================================================== */
+
+#esportes .carousel-progress-bar {
+
+    background: linear-gradient(90deg,
+            var(--esporte-forte),
+            var(--esporte-laranja),
+            var(--esporte-dourado));
+}
+
+
+/* =====================================================
+   TÍTULO DAS NOTÍCIAS
+   ===================================================== */
+
+#esportes .section-header {
+
+    border-left: 4px solid var(--esporte-laranja);
+
+    box-shadow:
+        -5px 0 15px rgba(245, 158, 11, 0.08);
+}
+
+
+#esportes .section-header h3 {
+
+    color: white;
+}
+
+
+/* VER TODAS */
+
+#esportes .see-all {
+
+    color: var(--esporte-dourado);
+
+    transition: 0.3s;
+}
+
+
+#esportes .see-all:hover {
+
+    color: var(--esporte-laranja);
+
+    text-shadow:
+        0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+
+/* =====================================================
+   CARDS DE NOTÍCIAS
+   ===================================================== */
+
+#esportes .news-card {
+
+    background:
+        linear-gradient(145deg,
+            #0b0f19,
+            #120d06);
+
+    border: 1px solid #292015;
+
+    transition:
+        transform 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#esportes .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--esporte-laranja);
+    box-shadow:
+        0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+
+/* CATEGORIA */
+
+#esportes .card-category {
+
+    color: var(--esporte-laranja);
+
+}
+
+
+/* HORÁRIO */
+
+#esportes .card-time {
+
+    color: #777;
+}
+
+
+/* TÍTULO */
+
+#esportes .news-card h4 {
+
+    color: #f5f5f5;
+}
+
+
+/* LEIA MAIS */
+
+#esportes .read-more {
+
+    color: var(--esporte-dourado);
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+#esportes .read-more:hover {
+
+    color: var(--esporte-laranja);
+
+    text-shadow:
+        0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+
+/* =====================================================
+   NEWSLETTER
+   ===================================================== */
+
+#esportes .newsletter-box {
+
+    background:
+        linear-gradient(135deg,
+            #0b0f19,
+            #1a1005);
+
+    border: 1px solid #302314;
+}
+
+
+#esportes .newsletter-form button {
+
+    background: linear-gradient(135deg,
+            var(--esporte-forte),
+            var(--esporte-laranja));
+
+    color: white;
+
+    border: none;
+
+    transition: 0.3s;
+}
+
+
+#esportes .newsletter-form button:hover {
+
+    background: var(--esporte-dourado);
+
+    color: #1c1008;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+#esportes .footer {
+
+    background:
+        linear-gradient(180deg,
+            #020617,
+            #090704);
+
+    border-top: 1px solid #2a2114;
+}
+
+
+#esportes .footer-brand h2 span {
+    color: var(--esporte-laranja);
+    text-shadow:
+        0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+/* =====================================================
+   DETALHE ESPORTIVO NOS CARDS
+   ===================================================== */
+
+#esportes .card-category::before {
+    content: "●";
+    color: var(--esporte-dourado);
+    margin-right: 6px;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   MODO CLARO
+   ===================================================== */
+
+body.light-mode #esportes .news-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+body.light-mode #esportes .news-card:hover {
+    border-color: var(--esporte-laranja);
+    box-shadow:
+        0 8px 25px rgba(245, 158, 11, 0.15);
+}
+body.light-mode #esportes .section-header h3 {
+    color: #111827;
+}
+
+/* /Fim das noticias de Esportes */

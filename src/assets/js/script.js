@@ -42,7 +42,7 @@ if (formOpiniao && newsletterSection) {
         const listaUl = document.getElementById("listaComentariosUl");
         const novoItem = document.createElement("li");
         novoItem.className = "comentario-item";
-        
+
         // Monta a estrutura injetando o texto de forma segura
         novoItem.innerHTML = `
             <strong>${nome}</strong> <span class='comentario-email'>(${email})</span>
@@ -51,12 +51,13 @@ if (formOpiniao && newsletterSection) {
         `;
 
         // Adiciona no topo da lista
-        listaUl.prepend(novoItem); 
-        
+        listaUl.prepend(novoItem);
+
         // SÓ LIMPA OS CAMPOS AGORA, depois que o texto já foi para a tela
-        formOpiniao.reset(); 
-    })};
-   const btnModo = document.getElementById("modoEscuro");
+        formOpiniao.reset();
+    })
+};
+const btnModo = document.getElementById("modoEscuro");
 
 if (btnModo) {
 
@@ -232,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
         isPaused = false;
         progressStart = Date.now();
         animateProgress();
-    })});
+    })
+});
 
-    
+
