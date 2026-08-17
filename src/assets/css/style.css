@@ -2290,7 +2290,7 @@ body#noticias-inicio.light-mode .article-back a:hover {
         position: relative;
     }
 
-    .navbar > .logo-urban {
+    .navbar.logo-urban {
         display: none;
     }
 
