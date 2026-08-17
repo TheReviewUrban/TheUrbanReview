@@ -13,7 +13,6 @@
     --politica-color-quaternaria: #383b3b;
     --politica-color-senaria: #2b2e2d;
     --politica-color-setenaria: #232525;
-
 }
 
 :root {
@@ -24,7 +23,6 @@
     --economia-color-quinquenaria: #063d20;
     --economia-color-senaria: #050d09;
     --economia-color-setenaria: #08130d;
-
 }
 
 :root {
@@ -48,6 +46,11 @@
     --internacional-color-setenaria: #D00000;
 }
 
+
+/* =====================================================
+   RESET / GERAL
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -55,10 +58,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #030712;
-    /* Fundo super escuro conforme a imagem */
     color: #f3f4f6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -68,12 +75,15 @@ body {
 }
 
 a {
-    text-emphasis-color: inherit;
+    color: inherit;
     text-decoration: none;
 }
 
 
-/* NAVBAR */
+/* =====================================================
+   NAVBAR
+===================================================== */
+
 .navbar {
     background-color: #030712;
     padding: 20px 0;
@@ -114,37 +124,6 @@ a {
         0 0 15px rgba(29, 173, 220, 0.5);
 }
 
-#congresso .logo h1 span {
-    color: var(--congresso-color-quaternaria);
-    text-shadow: 3px 3px 0px #000,
-        0 0 15px var(--congresso-color-secundaria);
-}
-
-#politica .logo h1 span {
-    color: var(--politica-color-primaria);
-    text-shadow: 3px 3px 0px #000,
-        0 0 15px var(--politica-color-primaria);
-}
-
-#economia .logo h1 span {
-    color: var(--economia-color-primaria);
-    text-shadow: 3px 3px 0px #000,
-        0 0 15px var(--economia-color-primaria);
-}
-
-#esportes .logo h1 span {
-    color: var(--esportes-color-primaria);
-    text-shadow: 3px 3px 0px #000,
-        0 0 15px var(--esportes-color-primaria);
-}
-
-#internacional .logo h1 span {
-    color: var(--internacional-color-quaternaria);
-    text-shadow: 3px 3px 0px #000,
-        0 0 15px var(--economia-color-primaria);
-}
-
-
 .logo p {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
@@ -152,6 +131,46 @@ a {
     margin-top: 6px;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+
+/* =====================================================
+   CORES DA LOGO POR CATEGORIA
+===================================================== */
+
+#congresso .logo h1 span {
+    color: var(--congresso-color-quaternaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--congresso-color-secundaria);
+}
+
+#politica .logo h1 span {
+    color: var(--politica-color-primaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--politica-color-primaria);
+}
+
+#economia .logo h1 span {
+    color: var(--economia-color-primaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--economia-color-primaria);
+}
+
+#esportes .logo h1 span {
+    color: var(--esportes-color-primaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--esportes-color-primaria);
+}
+
+#internacional .logo h1 span {
+    color: var(--internacional-color-quaternaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--internacional-color-quaternaria);
 }
 
 #congresso .logo p {
@@ -175,23 +194,23 @@ a {
 }
 
 
+/* =====================================================
+   MENU
+===================================================== */
+
 .nav-links a {
     color: #ffffff;
     margin: 0 15px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
 }
 
-#congresso .nav-links a {
-    color: white;
-}
-
-#politica .nav-links a {
-    color: white;
-}
-
-#internacional {
+#congresso .nav-links a,
+#politica .nav-links a,
+#economia .nav-links a,
+#esportes .nav-links a,
+#internacional .nav-links a {
     color: white;
 }
 
@@ -207,42 +226,64 @@ a {
     padding-bottom: 3px;
 }
 
-#congresso .nav-links a:hover {
-    border-bottom: 3px solid var(--congresso-color-primaria);
-}
-
+#congresso .nav-links a:hover,
 #congresso .nav-links a:active {
-    border-bottom: 3px solid var(--congresso-color-primaria);
+    border-bottom-color: var(--congresso-color-primaria);
 }
 
-#politica .nav-links a:hover {
-    border-bottom: 3px solid var(--politica-color-primaria);
-}
-
+#politica .nav-links a:hover,
 #politica .nav-links a:active {
-    border-bottom: 3px solid var(--politica-color-primaria);
+    border-bottom-color: var(--politica-color-primaria);
 }
 
-#economia .nav-links a:hover {
-    border-bottom: 3px solid var(--economia-color-terciaria);
+#economia .nav-links a:hover,
+#economia .nav-links a:active {
+    border-bottom-color: var(--economia-color-terciaria);
 }
 
-#esportes .nav-links a:hover {
-    border-bottom: 3px solid var(--esportes-color-terciaria);
-}
-
+#esportes .nav-links a:hover,
 #esportes .nav-links a:active {
-    border-bottom: 3px solid var(--esportes-color-terciaria);
+    border-bottom-color: var(--esportes-color-terciaria);
 }
 
-#internacional .nav-links a:hover {
-    border-bottom: 3px solid var(--internacional-color-primaria);
-}
-
+#internacional .nav-links a:hover,
 #internacional .nav-links a:active {
-    border-bottom: 3px solid var(--internacional-color-terciaria);
+    border-bottom-color: var(--internacional-color-primaria);
 }
 
+
+/* ITEM ATIVO */
+
+.nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #1DADDC;
+    padding-bottom: 2px;
+}
+
+#congresso .nav-links a.active {
+    border-bottom-color: var(--congresso-color-primaria);
+}
+
+#politica .nav-links a.active {
+    border-bottom-color: var(--politica-color-primaria);
+}
+
+#economia .nav-links a.active {
+    border-bottom-color: var(--economia-color-primaria);
+}
+
+#esportes .nav-links a.active {
+    border-bottom-color: var(--esportes-color-primaria);
+}
+
+#internacional .nav-links a.active {
+    border-bottom-color: var(--internacional-color-primaria);
+}
+
+
+/* =====================================================
+   AÇÕES DA NAVBAR
+===================================================== */
 
 .nav-actions {
     display: flex;
@@ -266,24 +307,62 @@ a {
     background: none;
     border: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
+    transition: transform .5s ease, color .3s ease;
 }
 
-/* BANNER DE DESTAQUE (HERO) */
+.theme-toggle.animar {
+    transform: rotate(360deg) scale(1.25);
+}
+
+.menu-icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0b0f19;
+    min-width: 160px;
+    border: 1px solid #1f2937;
+    z-index: 10;
+}
+
+.dropdown-content.show {
+    display: block !important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
 .hero-section {
     background-image: url('https://picsum.photos/1920/1080?city');
-    /* Imagem provisória de cidade */
     background-size: cover;
     background-position: center;
     height: 550px;
     position: relative;
     margin-bottom: 40px;
-
 }
 
 .hero-overlay {
-    background: linear-gradient(to top, #030712 10%, rgba(3, 7, 18, 0.4) 100%);
+    background: linear-gradient(
+        to top,
+        #030712 10%,
+        rgba(3, 7, 18, 0.4) 100%
+    );
     width: 100%;
     height: 100%;
     display: flex;
@@ -338,7 +417,7 @@ a {
     border-radius: 4px;
     font-weight: bold;
     display: inline-block;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 #congresso .btn-main {
@@ -349,8 +428,16 @@ a {
     background-color: var(--politica-color-terciaria);
 }
 
+#economia .btn-main {
+    background-color: var(--economia-color-quaternaria);
+}
+
+#esportes .btn-main {
+    background-color: var(--esportes-color-primaria);
+}
+
 #internacional .btn-main {
-    background-color: var(--internacional-color-terciaria);
+    background-color: var(--internacional-color-quaternaria);
 }
 
 .btn-main:hover {
@@ -365,25 +452,22 @@ a {
     background-color: var(--politica-color-quaternaria);
 }
 
-#economia .btn-main {
-    background-color: var(--economia-color-quaternaria);
-}
-
-#esportes .btn-main {
-    background-color: var(--economia-color-primaria);
-}
-
 #economia .btn-main:hover {
     background-color: var(--economia-color-quinquenaria);
 }
 
-#internacional .btn-main {
-    background-color: var(--internacional-color-quaternaria);
+#esportes .btn-main:hover {
+    background-color: var(--esportes-color-secundaria);
 }
 
 #internacional .btn-main:hover {
     background-color: var(--internacional-color-quinquenaria);
 }
+
+
+/* =====================================================
+   DOTS DO HERO
+===================================================== */
 
 .carousel-dots {
     display: flex;
@@ -397,8 +481,6 @@ a {
     background-color: #4b5563;
     border-radius: 2px;
 }
-
-
 
 .dot.active {
     background-color: #1DADDC;
@@ -428,6 +510,10 @@ a {
     background-color: var(--economia-color-primaria);
 }
 
+#esportes .dot {
+    background-color: var(--esportes-color-quaternaria);
+}
+
 #esportes .dot.active {
     background-color: var(--esportes-color-primaria);
 }
@@ -437,12 +523,14 @@ a {
 }
 
 #internacional .dot.active {
-    background-color: var(--congresso-color-quinquenaria);
+    background-color: var(--internacional-color-primaria);
 }
 
 
+/* =====================================================
+   ÚLTIMAS NOTÍCIAS
+===================================================== */
 
-/* SEÇÃO DE ÚLTIMAS NOTÍCIAS */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -454,19 +542,23 @@ a {
 }
 
 #congresso .section-header {
-    border-left: 3px solid var(--congresso-color-secundaria);
+    border-left-color: var(--congresso-color-secundaria);
 }
 
 #politica .section-header {
-    border-left: 3px solid var(--politica-color-secundaria);
+    border-left-color: var(--politica-color-secundaria);
 }
 
 #economia .section-header {
-    border-left: 3px solid var(--economia-color-secundaria)
+    border-left-color: var(--economia-color-secundaria);
+}
+
+#esportes .section-header {
+    border-left-color: var(--esportes-color-primaria);
 }
 
 #internacional .section-header {
-    border-left: 3px solid var(--internacional-color-secundaria)
+    border-left-color: var(--internacional-color-secundaria);
 }
 
 .section-header h3 {
@@ -479,7 +571,7 @@ a {
 }
 
 #congresso .see-all {
-    color: var(--politica-color-quaternaria);
+    color: var(--congresso-color-quaternaria);
 }
 
 #politica .see-all {
@@ -491,7 +583,7 @@ a {
 }
 
 #esportes .see-all {
-    color: var(--economia-color-quaternaria);
+    color: var(--esportes-color-dourado, #FBBF24);
 }
 
 #internacional .see-all {
@@ -499,6 +591,9 @@ a {
 }
 
 
+/* =====================================================
+   CARDS
+===================================================== */
 
 .news-grid {
     display: grid;
@@ -512,39 +607,14 @@ a {
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #1f2937;
-    transition: transform 0.3s;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
-
-
 
 .news-card:hover {
-    transform: translateY(-7px);
-    border-color: #1DADDC ;
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
-}
-
-#politica .news-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--politica-color-secundaria) ;
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
-}
-
-#congresso .news-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--congresso-color-secundaria) ;
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
-}
-
-#economia .news-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--economia-color-secundaria) ;
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
-}
-
-#internacional .news-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--internacional-color-secundaria) ;
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+    transform: translateY(-5px);
 }
 
 .card-img {
@@ -600,7 +670,7 @@ a {
     color: var(--congresso-color-quinquenaria);
 }
 
-#poltica .read-more {
+#politica .read-more {
     color: var(--politica-color-senaria);
 }
 
@@ -608,11 +678,19 @@ a {
     color: var(--economia-color-quinquenaria);
 }
 
+#esportes .read-more {
+    color: var(--esportes-color-terciaria);
+}
+
 #internacional .read-more {
     color: var(--internacional-color-quinquenaria);
 }
 
-/* NEWSLETTER */
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
 .newsletter-section {
     margin-bottom: 60px;
 }
@@ -623,16 +701,17 @@ a {
     border-radius: 8px;
     padding: 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 40px;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .newsletter-text {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex: 1;
 }
 
 .icon-mail {
@@ -640,7 +719,6 @@ a {
     background-color: #1e1b4b;
     padding: 10px;
     border-radius: 8px;
-
 }
 
 .redes {
@@ -651,7 +729,6 @@ a {
     width: 40px;
 }
 
-
 .newsletter-text h4 {
     font-size: 1.1rem;
 }
@@ -660,6 +737,15 @@ a {
     color: #9ca3af;
     font-size: 0.85rem;
     margin-top: 4px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    flex: 1;
 }
 
 .newsletter-form input {
@@ -680,14 +766,6 @@ a {
     font-weight: bold;
     cursor: pointer;
     height: 35px;
-}
-
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-width: 500px;
 }
 
 .newsletter-form textarea {
@@ -725,6 +803,19 @@ a {
     background-color: var(--economia-color-primaria);
 }
 
+#esportes .newsletter-form button {
+    background: linear-gradient(
+        135deg,
+        var(--esportes-color-quaternaria),
+        var(--esportes-color-primaria)
+    );
+}
+
+#esportes .newsletter-form button:hover {
+    background: var(--esportes-color-terciaria);
+    color: #1c1008;
+}
+
 #internacional .newsletter-form button {
     background-color: var(--internacional-color-terciaria);
 }
@@ -733,7 +824,11 @@ a {
     background-color: var(--internacional-color-primaria);
 }
 
-/* FOOTER */
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
 .footer {
     background-color: #020617;
     border-top: 1px solid #1f2937;
@@ -765,6 +860,10 @@ a {
     color: var(--economia-color-secundaria);
 }
 
+#esportes .footer-brand h2 span {
+    color: var(--esportes-color-primaria);
+}
+
 #internacional .footer-brand h2 span {
     color: var(--internacional-color-senaria);
 }
@@ -789,7 +888,12 @@ a {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 25px solid #2d2f33;
+    border: 1px solid #2d2f33;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
 }
 
 .footer-links h5,
@@ -813,309 +917,10 @@ a {
     font-size: 0.8rem;
 }
 
-.menu-icon-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #0b0f19;
-    min-width: 160px;
-    border: 1px solid #1f2937;
-    z-index: 10;
-}
-
-.dropdown-content.show {
-    display: block !important;
-}
-
-@media (max-width: 768px) {
-    .menu-desk {
-        display: none !important;
-    }
-
-    .menu-icon-btn {
-        display: block !important;
-    }
-}
-
-/* Regras de inversão dinâmica de cores para o Modo Claro */
-body.light-mode {
-    background-color: #f9fafb !important;
-    color: #111827 !important;
-}
-
-body.light-mode .navbar,
-body.light-mode .news-card,
-body.light-mode .newsletter-box,
-body.light-mode .footer {
-    background-color: #ffffff !important;
-    border-color: #e5e7eb !important;
-}
-
-body.light-mode .nav-links a,
-body.light-mode .card-time,
-body.light-mode .footer-links a,
-body.light-mode .footer-contact p {
-    color: #4b5563 !important;
-}
-
-body.light-mode .nav-links a:hover,
-body.light-mode .nav-links a.active,
-body.light-mode .news-card h4,
-body.light-mode .footer-links h5,
-body.light-mode .footer-contact h5 {
-    color: #111827 !important;
-}
-
-body.light-mode .newsletter-form input,
-body.light-mode .newsletter-form textarea {
-    background-color: #f3f4f6 !important;
-    border-color: #d1d5db !important;
-    color: #111827 !important;
-}
-
-body.light-mode .menu-icon-btn {
-    color: #111827 !important;
-}
-
-/* Cores e Transição para o Modo Escuro */
-body {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.dark-mode .navbar,
-body.dark-mode .footer,
-body.dark-mode .news-card,
-body.dark-mode .newsletter-box {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-body.dark-mode .nav-links a,
-body.dark-mode .dropdown-content li a,
-body.dark-mode .news-card h4,
-body.dark-mode .footer a {
-    color: #e0e0e0;
-}
-
-body.dark-mode .search-btn {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #444;
-}
-
-.lista-comentarios {
-    margin-top: 40px;
-    padding: 20px;
-    border-top: 1px solid #ccc;
-}
-
-body.dark-mode .lista-comentarios {
-    border-top-color: #444;
-}
-
-.lista-comentarios h3 {
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#listaComentariosUl {
-    list-style: none;
-    padding: 0;
-}
-
-.comentario-item {
-    background: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border-left: 4px solid #0056b3;
-}
-
-body.dark-mode .comentario-item {
-    background: #252525;
-    border-left-color: #ff3b30;
-    /* Altera o detalhe no modo escuro se desejar */
-}
-
-#congresso body.dark-mode .comentario-item {
-    border-left-color: var(--congresso-color-quaternaria);
-}
-
-#congresso body.dark-mode .comentario-item {
-    border-left-color: var(--congresso-color-primaria)
-}
-
-.comentario-email {
-    font-size: 0.85em;
-    color: #666;
-}
-
-body.dark-mode .comentario-email {
-    color: #aaa;
-}
-
-.comentario-item p {
-    margin: 8px 0 4px 0;
-    color: #000;
-}
-
-strong{
-    color: #000;
-}
-
-.comentario-item small {
-    color: #999;
-}
-
-.imagem-afastada {
-    margin-right: 15px;
-    margin-bottom: 20px;
-}
-
-/*
- MODO CLARO
-=*/
-
-body.light-mode {
-    background: #f3f4f6;
-    color: #111827;
-}
-
-body.light-mode .navbar {
-    background: #ffffff;
-    border-bottom: 1px solid #d1d5db;
-}
-
-body.light-mode .news-card,
-body.light-mode .newsletter-box,
-body.light-mode .footer {
-    background: #ffffff;
-    border-color: #d1d5db;
-}
-
-body.light-mode .footer {
-    border-top: 1px solid #d1d5db;
-}
-
-body.light-mode .logo p,
-body.light-mode .card-time,
-body.light-mode .footer-contact p,
-body.light-mode .footer-links a {
-    color: #6b7280;
-}
-
-body.light-mode .logo h1,
-body.light-mode .footer h2,
-body.light-mode h3,
-body.light-mode h4,
-body.light-mode h5 {
-    color: #111827;
-}
-
-body.light-mode .nav-links a {
-    color: #374151;
-}
-
-body.light-mode .nav-links a:hover,
-body.light-mode .nav-links a.active {
-    color: #1DADDC;
-}
-
-body.light-mode .search-btn {
-    background: #f3f4f6;
-    color: #111827;
-    border: 1px solid #d1d5db;
-}
-
-body.light-mode .newsletter-form input,
-body.light-mode .newsletter-form textarea {
-    background: #ffffff;
-    color: #111827;
-    border: 1px solid #d1d5db;
-}
-
-body.light-mode .theme-toggle {
-    color: #111827;
-}
-
-body.light-mode .dropdown-content {
-    background: #ffffff;
-    border: 1px solid #d1d5db;
-}
-
-body.light-mode .dropdown-content a {
-    color: #111827;
-}
-
-body.light-mode .comentario-item {
-    background: #ffffff;
-    color: #111827;
-    border-left: 4px solid #1DADDC;
-}
-
-body.light-mode .comentario-email {
-    color: #6b7280;
-}
-
-/* Texto do banner sempre branco */
-.hero-content h2,
-.hero-content p,
-.hero-content .meta-info,
-.hero-content .badge,
-.hero-content .btn-main {
-    color: #fff;
-}
-
-/* Mantém branco também no modo claro */
-body.light-mode .hero-content h2,
-body.light-mode .hero-content p,
-body.light-mode .hero-content .meta-info,
-body.light-mode .hero-content .badge,
-body.light-mode .hero-content .btn-main {
-    color: #fff !important;
-}
-
-body.light-mode .btn-main {
-    background-color: #1DADDC;
-}
-
-body.light-mode .btn-main:hover {
-    background-color: #1695bf;
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: transform .5s ease, color .3s ease;
-}
-
-.theme-toggle.animar {
-    transform: rotate(360deg) scale(1.25);
-}
-
-body.light-mode .theme-toggle {
-    color: #111827;
-}
-
-/* ==
-   CARROSSEL - THE URBAN REVIEW
-   == */
+/* =====================================================
+   CARROSSEL
+===================================================== */
 
 .carousel-section {
     position: relative;
@@ -1131,7 +936,6 @@ body.light-mode .theme-toggle {
     height: 100%;
 }
 
-/* ---- TRACK E SLIDES ---- */
 .carousel-track {
     position: relative;
     width: 100%;
@@ -1146,7 +950,10 @@ body.light-mode .theme-toggle {
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease,
+        transform 0.8s ease;
     transform: scale(1.03);
 }
 
@@ -1157,7 +964,6 @@ body.light-mode .theme-toggle {
     z-index: 2;
 }
 
-/* ---- IMAGEM DE FUNDO ---- */
 .carousel-bg {
     position: absolute;
     top: 0;
@@ -1174,17 +980,18 @@ body.light-mode .theme-toggle {
     transform: scale(1.05);
 }
 
-/* ---- OVERLAY E CONTEÚDO ---- */
 .carousel-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.4) 50%,
-            rgba(0, 0, 0, 0.2) 100%);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
     display: flex;
     align-items: center;
     z-index: 1;
@@ -1274,7 +1081,23 @@ body.light-mode .theme-toggle {
 }
 
 #politica .carousel-content .btn-main {
-    background: var(--politica-color-secundaria);
+    background-color: var(--politica-color-secundaria);
+}
+
+#economia .carousel-content .btn-main {
+    background-color: var(--economia-color-secundaria);
+}
+
+#esportes .carousel-content .btn-main {
+    background: linear-gradient(
+        135deg,
+        var(--esportes-color-quaternaria),
+        var(--esportes-color-primaria)
+    );
+}
+
+#internacional .carousel-content .btn-main {
+    background-color: var(--internacional-color-terciaria);
 }
 
 .carousel-content .btn-main:hover {
@@ -1285,35 +1108,34 @@ body.light-mode .theme-toggle {
 
 #congresso .carousel-content .btn-main:hover {
     background-color: var(--congresso-color-terciaria);
-    box-shadow: 0 6px 20px rgba(168, 112, 49, 0.945);
 }
 
 #politica .carousel-content .btn-main:hover {
     background-color: var(--politica-color-terciaria);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
-}
-
-#economia .carousel-content .btn-main {
-    background-color: var(--economia-color-secundaria);
 }
 
 #economia .carousel-content .btn-main:hover {
-    background-color: var(--economia-color-quinquenaria);
-    box-shadow: 0 6px 20px rgba(74, 220, 38, 0.4);
+    background-color: var(--economia-color-terciaria);
 }
 
-#internacional .carousel-content .btn-main {
-    background-color: var(--internacional-color-terciaria);
+#esportes .carousel-content .btn-main:hover {
+    background: linear-gradient(
+        135deg,
+        var(--esportes-color-primaria),
+        var(--esportes-color-terciaria)
+    );
+    color: #1c1008;
 }
 
 #internacional .carousel-content .btn-main:hover {
     background-color: var(--internacional-color-quinquenaria);
-    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
 }
 
 
+/* =====================================================
+   ANIMAÇÃO
+===================================================== */
 
-/* ---- ANIMAÇÃO DE ENTRADA ---- */
 @keyframes fadeSlideUp {
     from {
         opacity: 0;
@@ -1326,7 +1148,11 @@ body.light-mode .theme-toggle {
     }
 }
 
-/* ---- SETAS DE NAVEGAÇÃO ---- */
+
+/* =====================================================
+   SETAS DO CARROSSEL
+===================================================== */
+
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -1389,6 +1215,16 @@ body.light-mode .theme-toggle {
     border-color: var(--economia-color-secundaria);
 }
 
+#esportes .carousel-btn {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: var(--esportes-color-terciaria);
+}
+
+#esportes .carousel-btn:hover {
+    background: var(--esportes-color-quaternaria);
+    border-color: var(--esportes-color-terciaria);
+}
+
 #internacional .carousel-btn {
     background-color: var(--internacional-color-quaternaria);
     border-color: var(--internacional-color-primaria);
@@ -1407,7 +1243,11 @@ body.light-mode .theme-toggle {
     right: 20px;
 }
 
-/* ---- INDICADORES (DOTS) ---- */
+
+/* =====================================================
+   INDICADORES
+===================================================== */
+
 .carousel-indicators {
     position: absolute;
     bottom: 35px;
@@ -1429,39 +1269,6 @@ body.light-mode .theme-toggle {
     padding: 0;
 }
 
-#congresso .carousel-dot {
-    border: 2px solid var(--congresso-color-secundaria);
-}
-
-#congresso .carousel-dot:hover {
-    background: var(--congresso-color-terciaria);
-}
-
-#politica .carousel-dot {
-    border: 2px solid var(--politica-color-primaria);
-}
-
-#politica .carousel-dot:hover {
-    background: var(--politica-color-terciaria);
-}
-
-#economia .carousel-dot {
-    border: 2px solid var(--economia-color-primaria);
-}
-
-#economia .carousel-dot:hover {
-    background: var(--economia-color-terciaria);
-}
-
-#internacional .carousel-dot {
-    border: 2px solid var(--internacional-color-quinquenaria);
-}
-
-#internacional .carousel-dot:hover {
-    background: var(--internacional-color-quaternaria);
-}
-
-
 .carousel-dot:hover {
     border-color: white;
     background: rgba(255, 255, 255, 0.3);
@@ -1474,9 +1281,25 @@ body.light-mode .theme-toggle {
     border-radius: 6px;
 }
 
+#congresso .carousel-dot {
+    border-color: var(--congresso-color-secundaria);
+}
+
+#congresso .carousel-dot:hover {
+    background: var(--congresso-color-terciaria);
+}
+
 #congresso .carousel-dot.active {
     background-color: var(--congresso-color-primaria);
     border-color: var(--congresso-color-secundaria);
+}
+
+#politica .carousel-dot {
+    border-color: var(--politica-color-primaria);
+}
+
+#politica .carousel-dot:hover {
+    background: var(--politica-color-terciaria);
 }
 
 #politica .carousel-dot.active {
@@ -1484,9 +1307,40 @@ body.light-mode .theme-toggle {
     border-color: var(--politica-color-secundaria);
 }
 
+#economia .carousel-dot {
+    border-color: var(--economia-color-primaria);
+}
+
+#economia .carousel-dot:hover {
+    background: var(--economia-color-terciaria);
+}
+
 #economia .carousel-dot.active {
     background-color: var(--economia-color-primaria);
     border-color: var(--economia-color-secundaria);
+}
+
+#esportes .carousel-dot {
+    border-color: var(--esportes-color-primaria);
+}
+
+#esportes .carousel-dot:hover {
+    background: var(--esportes-color-secundaria);
+    border-color: var(--esportes-color-terciaria);
+}
+
+#esportes .carousel-dot.active {
+    background: var(--esportes-color-primaria);
+    border-color: var(--esportes-color-terciaria);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+#internacional .carousel-dot {
+    border-color: var(--internacional-color-quinquenaria);
+}
+
+#internacional .carousel-dot:hover {
+    background: var(--internacional-color-quaternaria);
 }
 
 #internacional .carousel-dot.active {
@@ -1494,7 +1348,11 @@ body.light-mode .theme-toggle {
     border-color: var(--internacional-color-secundaria);
 }
 
-/* ---- BARRA DE PROGRESSO ---- */
+
+/* =====================================================
+   BARRA DE PROGRESSO
+===================================================== */
+
 .carousel-progress {
     position: absolute;
     bottom: 0;
@@ -1519,22 +1377,871 @@ body.light-mode .theme-toggle {
 
 #politica .carousel-progress-bar {
     background: linear-gradient(90deg, #292827, #eeeeeb);
-    ;
 }
 
 #economia .carousel-progress-bar {
-    background: linear-gradient(90deg, #05813b, #00f76b)
+    background: linear-gradient(90deg, #05813b, #00f76b);
+}
+
+#esportes .carousel-progress-bar {
+    background: linear-gradient(
+        90deg,
+        var(--esportes-color-quaternaria),
+        var(--esportes-color-primaria),
+        var(--esportes-color-terciaria)
+    );
 }
 
 #internacional .carousel-progress-bar {
-    background: linear-gradient(90deg, #cfb108, #f76f00)
+    background: linear-gradient(
+        90deg,
+        var(--internacional-color-quaternaria),
+        var(--internacional-color-terciaria),
+        var(--internacional-color-primaria)
+    );
 }
 
-/* ==
-   RESPONSIVO - CARROSSEL
-   == */
+
+/* =====================================================
+   COMENTÁRIOS
+===================================================== */
+
+.lista-comentarios {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.lista-comentarios h3 {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#listaComentariosUl {
+    list-style: none;
+    padding: 0;
+}
+
+.comentario-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #0056b3;
+}
+
+.comentario-email {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.comentario-item p {
+    margin: 8px 0 4px 0;
+}
+
+.comentario-item small {
+    color: #999;
+}
+
+.imagem-afastada {
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   NOTÍCIAS DE ESPORTES
+===================================================== */
+
+#esportes {
+    --esporte-laranja: #F59E0B;
+    --esporte-laranja-escuro: #D97706;
+    --esporte-dourado: #FBBF24;
+    --esporte-forte: #EA580C;
+    --esporte-preto: #050505;
+    --esporte-marrom: #3D1F0A;
+}
+
+
+/* LOGO */
+
+#esportes .logo h1 span {
+    color: var(--esporte-laranja);
+    -webkit-text-stroke: 1px #000;
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+#esportes .logo p {
+    color: var(--esporte-dourado);
+}
+
+
+/* MENU */
+
+#esportes .nav-links a:hover {
+    color: var(--esporte-dourado);
+    border-bottom: 3px solid var(--esporte-laranja);
+}
+
+#esportes .nav-links a.active {
+    color: white;
+    border-bottom: 2px solid var(--esporte-laranja);
+}
+
+
+/* CARROSSEL */
+
+#esportes .carousel-content .badge {
+    background: var(--esporte-forte);
+    color: white;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+#esportes .carousel-content .btn-main,
+#esportes .btn-main {
+    background: linear-gradient(
+        135deg,
+        var(--esporte-forte),
+        var(--esporte-laranja)
+    );
+    color: white;
+    box-shadow:
+        0 5px 15px rgba(245, 158, 11, 0.25);
+    transition: all 0.3s ease;
+}
+
+#esportes .carousel-content .btn-main:hover,
+#esportes .btn-main:hover {
+    background: linear-gradient(
+        135deg,
+        var(--esporte-laranja),
+        var(--esporte-dourado)
+    );
+    color: #1c1008;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+
+/* SETAS */
+
+#esportes .carousel-btn {
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid var(--esporte-dourado);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#esportes .carousel-btn:hover {
+    background: var(--esporte-forte);
+    border-color: var(--esporte-dourado);
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+/* INDICADORES */
+
+#esportes .carousel-dot {
+    border: 2px solid var(--esporte-laranja);
+}
+
+#esportes .carousel-dot:hover {
+    background: var(--esporte-laranja-escuro);
+    border-color: var(--esporte-dourado);
+}
+
+#esportes .carousel-dot.active {
+    background: var(--esporte-laranja);
+    border-color: var(--esporte-dourado);
+    box-shadow:
+        0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+
+/* BARRA DE PROGRESSO */
+
+#esportes .carousel-progress-bar {
+    background: linear-gradient(
+        90deg,
+        var(--esporte-forte),
+        var(--esporte-laranja),
+        var(--esporte-dourado)
+    );
+}
+
+
+/* TÍTULO */
+
+#esportes .section-header {
+    border-left: 4px solid var(--esporte-laranja);
+    box-shadow:
+        -5px 0 15px rgba(245, 158, 11, 0.08);
+}
+
+#esportes .section-header h3 {
+    color: white;
+}
+
+
+/* VER TODAS */
+
+#esportes .see-all {
+    color: var(--esporte-dourado);
+    transition: 0.3s;
+}
+
+#esportes .see-all:hover {
+    color: var(--esporte-laranja);
+    text-shadow:
+        0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+
+/* CARDS */
+
+#esportes .news-card {
+    background:
+        linear-gradient(
+            145deg,
+            #0b0f19,
+            #120d06
+        );
+    border: 1px solid #292015;
+    transition:
+        transform 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#esportes .news-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--esporte-laranja);
+    box-shadow:
+        0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+
+/* CATEGORIA */
+
+#esportes .card-category {
+    color: var(--esporte-laranja);
+}
+
+
+/* HORÁRIO */
+
+#esportes .card-time {
+    color: #777;
+}
+
+
+/* TÍTULO */
+
+#esportes .news-card h4 {
+    color: #f5f5f5;
+}
+
+
+/* LEIA MAIS */
+
+#esportes .read-more {
+    color: var(--esporte-dourado);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#esportes .read-more:hover {
+    color: var(--esporte-laranja);
+    text-shadow:
+        0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+
+/* NEWSLETTER */
+
+#esportes .newsletter-box {
+    background:
+        linear-gradient(
+            135deg,
+            #0b0f19,
+            #1a1005
+        );
+    border: 1px solid #302314;
+}
+
+#esportes .newsletter-form button {
+    background: linear-gradient(
+        135deg,
+        var(--esporte-forte),
+        var(--esporte-laranja)
+    );
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+#esportes .newsletter-form button:hover {
+    background: var(--esporte-dourado);
+    color: #1c1008;
+    transform: translateY(-2px);
+}
+
+
+/* FOOTER */
+
+#esportes .footer {
+    background:
+        linear-gradient(
+            180deg,
+            #020617,
+            #090704
+        );
+    border-top: 1px solid #2a2114;
+}
+
+#esportes .footer-brand h2 span {
+    color: var(--esporte-laranja);
+    text-shadow:
+        0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+
+/* DETALHE ESPORTIVO */
+
+#esportes .card-category::before {
+    content: "●";
+    color: var(--esporte-dourado);
+    margin-right: 6px;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   PÁGINA INTERNA DA NOTÍCIA
+===================================================== */
+
+#noticias-inicio .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-inicio .article-page .container {
+    max-width: 950px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-inicio .article-category {
+    display: inline-block;
+    background: var(--politica-color-terciaria);
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-inicio .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-inicio .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #9ca3af;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-inicio .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-inicio .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-inicio .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+}
+
+#noticias-inicio .article-image figcaption {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* TEXTO */
+
+#noticias-inicio .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-inicio .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-inicio .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #f3f4f6;
+    font-weight: 500;
+    border-left: 3px solid var(--politica-color-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-inicio .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--politica-color-primaria);
+    padding-left: 12px;
+}
+
+
+/* CITAÇÃO */
+
+#noticias-inicio .article-content blockquote {
+    margin: 35px 0;
+    padding: 25px;
+    background: #0b0f19;
+    border-left: 4px solid var(--politica-color-primaria);
+    border-radius: 5px;
+    color: #e5e7eb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
+/* COMPARTILHAMENTO */
+
+#noticias-inicio .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-inicio .article-share span {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-inicio .article-share button {
+    border: 1px solid #374151;
+    background: #111827;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-inicio .article-share button:hover {
+    background: var(--politica-color-terciaria);
+}
+
+
+/* VOLTAR */
+
+#noticias-inicio .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-inicio .article-back a {
+    color: var(--politica-color-primaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-inicio .article-back a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   MODO ESCURO
+===================================================== */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer,
+body.dark-mode .news-card,
+body.dark-mode .newsletter-box {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode .dropdown-content li a,
+body.dark-mode .news-card h4,
+body.dark-mode .footer a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .search-btn {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .lista-comentarios {
+    border-top-color: #444;
+}
+
+body.dark-mode .comentario-item {
+    background: #252525;
+    border-left-color: #ff3b30;
+}
+
+body.dark-mode .comentario-email {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   MODO CLARO
+===================================================== */
+
+body.light-mode {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+body.light-mode .navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #d1d5db;
+}
+
+body.light-mode .navbar,
+body.light-mode .news-card,
+body.light-mode .newsletter-box,
+body.light-mode .footer {
+    background-color: #ffffff;
+    border-color: #d1d5db;
+}
+
+body.light-mode .footer {
+    border-top: 1px solid #d1d5db;
+}
+
+body.light-mode .logo p,
+body.light-mode .card-time,
+body.light-mode .footer-contact p,
+body.light-mode .footer-links a {
+    color: #6b7280;
+}
+
+body.light-mode .logo h1,
+body.light-mode .footer h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5 {
+    color: #111827;
+}
+
+body.light-mode .nav-links a {
+    color: #374151;
+}
+
+body.light-mode .nav-links a:hover,
+body.light-mode .nav-links a.active {
+    color: #1DADDC;
+}
+
+body.light-mode .search-btn {
+    background: #f3f4f6;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+body.light-mode .newsletter-form input,
+body.light-mode .newsletter-form textarea {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+body.light-mode .theme-toggle {
+    color: #111827;
+}
+
+body.light-mode .menu-icon-btn {
+    color: #111827;
+}
+
+body.light-mode .dropdown-content {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+}
+
+body.light-mode .dropdown-content a {
+    color: #111827;
+}
+
+body.light-mode .comentario-item {
+    background: #ffffff;
+    color: #111827;
+    border-left: 4px solid #1DADDC;
+}
+
+body.light-mode .comentario-email {
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   TEXTO DO BANNER
+===================================================== */
+
+.hero-content h2,
+.hero-content p,
+.hero-content .meta-info,
+.hero-content .badge,
+.hero-content .btn-main {
+    color: #fff;
+}
+
+body.light-mode .hero-content h2,
+body.light-mode .hero-content p,
+body.light-mode .hero-content .meta-info,
+body.light-mode .hero-content .badge,
+body.light-mode .hero-content .btn-main {
+    color: #fff !important;
+}
+
+body.light-mode .btn-main {
+    background-color: #1DADDC;
+}
+
+body.light-mode .btn-main:hover {
+    background-color: #1695bf;
+}
+
+
+/* =====================================================
+   MODO CLARO - NOTÍCIA
+===================================================== */
+
+body#noticias-inicio.light-mode .article-title {
+    color: #111827;
+}
+
+body#noticias-inicio.light-mode .article-subtitle {
+    color: #4b5563;
+}
+
+body#noticias-inicio.light-mode .article-meta {
+    color: #6b7280;
+}
+
+body#noticias-inicio.light-mode .article-content p {
+    color: #374151;
+}
+
+body#noticias-inicio.light-mode .article-content .article-lead {
+    color: #111827;
+}
+
+body#noticias-inicio.light-mode .article-content h2 {
+    color: #111827;
+}
+
+body#noticias-inicio.light-mode .article-content blockquote {
+    background: #ffffff;
+    color: #374151;
+    border-color: var(--politica-color-primaria);
+}
+
+body#noticias-inicio.light-mode .article-share {
+    border-color: #d1d5db;
+}
+
+body#noticias-inicio.light-mode .article-share button {
+    background: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+body#noticias-inicio.light-mode .article-back a:hover {
+    color: #111827;
+}
+
+
+/* =====================================================
+   MOBILE - MENU
+===================================================== */
 
 @media (max-width: 768px) {
+
+    .menu-desk {
+        display: none !important;
+    }
+
+    .menu-icon-btn {
+        display: block !important;
+    }
+
+    .navbar {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .navbar > .logo-urban {
+        display: none;
+    }
+
+    .logo {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+
+    .logo p {
+        font-size: .7rem;
+    }
+
+    .menu-mob {
+        order: 1;
+    }
+
+    .menu-icon-btn {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .nav-actions {
+        order: 2;
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .dropdown-content {
+        top: 55px;
+        left: 0;
+        width: 180px;
+        border-radius: 8px;
+    }
+
+    .logo-urban {
+        order: 3;
+        width: 140px;
+        margin: 20px auto 10px;
+        display: block;
+    }
+
+    .logo {
+        order: 4;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #1f2937;
+    }
+
+    .newsletter-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+    }
+}
+
+
+/* =====================================================
+   MOBILE - CARROSSEL
+===================================================== */
+
+@media (max-width: 768px) {
+
     .carousel-section {
         height: 450px;
     }
@@ -1573,6 +2280,7 @@ body.light-mode .theme-toggle {
 }
 
 @media (max-width: 480px) {
+
     .carousel-section {
         height: 400px;
     }
@@ -1596,497 +2304,10 @@ body.light-mode .theme-toggle {
     }
 }
 
-/* 
-   MOBILE - HEADER
- */
-@media (max-width: 768px) {
 
-    .navbar {
-        display: block;
-        padding: 15px 0;
-    }
-
-    .nav-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-    }
-
-    /* Esconde a logo que está fora do container */
-    .navbar>.logo-urban {
-        display: none;
-    }
-
-    /* Faz a logo ficar embaixo */
-    .logo {
-        order: 3;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .logo h1 {
-        font-size: 1.6rem;
-    }
-
-    .logo p {
-        font-size: .7rem;
-    }
-
-    /* Menu fica à esquerda */
-    .menu-mob {
-        order: 1;
-    }
-
-    .menu-icon-btn {
-        display: block;
-        font-size: 1.8rem;
-    }
-
-    /* Tema fica à direita */
-    .nav-actions {
-        order: 2;
-        margin-left: auto;
-        gap: 10px;
-    }
-
-    /* Esconde pesquisa no celular */
-    .search-box {
-        display: none;
-    }
-
-    /* Dropdown */
-    .dropdown-content {
-        top: 55px;
-        left: 0;
-        width: 180px;
-        border-radius: 8px;
-    }
-
-    .logo-urban {
-        order: 3;
-        width: 140px;
-        margin: 20px auto 10px;
-        display: block;
-    }
-
-    .logo {
-        order: 4;
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-grid {
-        display: grid;
-        grid-template-columns: auto;
-        gap: 40px;
-        padding-bottom: 40px;
-        border-bottom: 1px solid #1f2937;
-    }
-
-}
-
-/*FINAL MOBILE - HEADER*/
-
-/* Ajuste Professor */
-/* Estilo Padrão para item ativo */
-.nav-links a.active {
-    color: #ffffff;
-    border-bottom: 2px solid #1DADDC;
-    padding-bottom: 2px;
-}
-
-/* Cor ativa específica para a página do Congresso */
-#congresso .nav-links a.active {
-    border-bottom: 2px solid var(--congresso-color-primaria);
-}
-
-/* Cor ativa específica para a página de Política */
-#politica .nav-links a.active {
-    border-bottom: 2px solid var(--politica-color-primaria);
-}
-
-/* Cor ativa específica para a página de Economia */
-#economia .nav-links a.active {
-    border-bottom: 2px solid var(--economia-color-primaria);
-}
-
-#internacional .nav-links a.active {
-    border-bottom: 2px solid var(--internacional-color-primaria);
-}
-
-#esportes .nav-links a.active {
-    border-bottom: 2px solid var(--esportes-color-primaria);
-}
-
-
-
-/* CONTATO - LAYOUT RETO*/
-
-.newsletter-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.newsletter-text {
-    flex: 1;
-}
-
-.newsletter-form {
-    flex: 1;
-    max-width: 500px;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .newsletter-box {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .newsletter-form {
-        max-width: 100%;
-    }
-}
-
-/* Noticias inicio */
-/* =========================================
-   PÁGINA INTERNA DA NOTÍCIA
-========================================= */
-
-#noticias-inicio .article-page {
-    padding: 70px 0 80px;
-}
-
-#noticias-inicio .article-page .container {
-    max-width: 950px;
-}
-
-
-/* =========================================
-   CATEGORIA
-========================================= */
-
-#noticias-inicio .article-category {
-    display: inline-block;
-    background: var(--politica-color-terciaria);
-    color: #ffffff;
-    padding: 7px 14px;
-    border-radius: 4px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   TÍTULO
-========================================= */
-
-#noticias-inicio .article-title {
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 3rem;
-    font-weight: 800;
-
-    line-height: 1.15;
-
-    color: #ffffff;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   SUBTÍTULO
-========================================= */
-
-#noticias-inicio .article-subtitle {
-    font-family: 'Open Sans', sans-serif;
-
-    font-size: 1.2rem;
-    line-height: 1.6;
-
-    color: #9ca3af;
-
-    max-width: 850px;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================================
-   META
-========================================= */
-
-#noticias-inicio .article-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    color: #6b7280;
-
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.85rem;
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================================
-   IMAGEM
-========================================= */
-
-#noticias-inicio .article-image {
-    margin: 0 0 40px;
-}
-
-#noticias-inicio .article-image img {
-    display: block;
-
-    width: 100%;
-    max-height: 550px;
-
-    object-fit: cover;
-
-    border-radius: 8px;
-
-    border: 1px solid #1f2937;
-}
-
-#noticias-inicio .article-image figcaption {
-    color: #6b7280;
-
-    font-size: 0.75rem;
-
-    margin-top: 8px;
-}
-
-
-/* =========================================
-   TEXTO
-========================================= */
-
-#noticias-inicio .article-content {
-    max-width: 800px;
-
-    margin: 0 auto;
-}
-
-#noticias-inicio .article-content p {
-    font-family: 'Open Sans', sans-serif;
-
-    color: #d1d5db;
-
-    font-size: 1.05rem;
-
-    line-height: 1.9;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================================
-   PRIMEIRO PARÁGRAFO
-========================================= */
-
-#noticias-inicio .article-content .article-lead {
-    font-size: 1.2rem;
-
-    color: #f3f4f6;
-
-    font-weight: 500;
-
-    border-left: 3px solid var(--politica-color-primaria);
-
-    padding-left: 20px;
-}
-
-
-/* =========================================
-   SUBTÍTULOS
-========================================= */
-
-#noticias-inicio .article-content h2 {
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 1.7rem;
-
-    color: #ffffff;
-
-    margin-top: 45px;
-    margin-bottom: 20px;
-
-    border-left: 3px solid var(--politica-color-primaria);
-
-    padding-left: 12px;
-}
-
-
-/* =========================================
-   CITAÇÃO
-========================================= */
-
-#noticias-inicio .article-content blockquote {
-    margin: 35px 0;
-
-    padding: 25px;
-
-    background: #0b0f19;
-
-    border-left: 4px solid var(--politica-color-primaria);
-
-    border-radius: 5px;
-
-    color: #e5e7eb;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 1.1rem;
-
-    line-height: 1.6;
-
-    font-style: italic;
-}
-
-
-/* =========================================
-   COMPARTILHAMENTO
-========================================= */
-
-#noticias-inicio .article-share {
-    max-width: 800px;
-
-    margin: 50px auto 30px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #1f2937;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#noticias-inicio .article-share span {
-    color: #9ca3af;
-
-    font-size: 0.85rem;
-
-    margin-right: 5px;
-}
-
-#noticias-inicio .article-share button {
-    border: 1px solid #374151;
-
-    background: #111827;
-
-    color: #ffffff;
-
-    padding: 8px 14px;
-
-    border-radius: 5px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-#noticias-inicio .article-share button:hover {
-    background: var(--politica-color-terciaria);
-}
-
-
-/* =========================================
-   VOLTAR
-========================================= */
-
-#noticias-inicio .article-back {
-    max-width: 800px;
-
-    margin: 25px auto 0;
-}
-
-#noticias-inicio .article-back a {
-    color: var(--politica-color-primaria);
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 0.9rem;
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-#noticias-inicio .article-back a:hover {
-    color: #ffffff;
-}
-
-
-/* =========================================
-   MODO CLARO
-========================================= */
-
-body#noticias-inicio.light-mode .article-title {
-    color: #111827;
-}
-
-body#noticias-inicio.light-mode .article-subtitle {
-    color: #4b5563;
-}
-
-body#noticias-inicio.light-mode .article-meta {
-    color: #6b7280;
-}
-
-body#noticias-inicio.light-mode .article-content p {
-    color: #374151;
-}
-
-body#noticias-inicio.light-mode .article-content .article-lead {
-    color: #111827;
-}
-
-body#noticias-inicio.light-mode .article-content h2 {
-    color: #111827;
-}
-
-body#noticias-inicio.light-mode .article-content blockquote {
-    background: #ffffff;
-    color: #374151;
-
-    border-color: var(--politica-color-primaria);
-}
-
-body#noticias-inicio.light-mode .article-share {
-    border-color: #d1d5db;
-}
-
-body#noticias-inicio.light-mode .article-share button {
-    background: #ffffff;
-    color: #111827;
-
-    border-color: #d1d5db;
-}
-
-body#noticias-inicio.light-mode .article-back a:hover {
-    color: #111827;
-}
-
-
-/* =========================================
-   RESPONSIVO
-========================================= */
+/* =====================================================
+   MOBILE - NOTÍCIA
+===================================================== */
 
 @media (max-width: 768px) {
 
@@ -2124,7 +2345,6 @@ body#noticias-inicio.light-mode .article-back a:hover {
     }
 }
 
-
 @media (max-width: 480px) {
 
     #noticias-inicio .article-title {
@@ -2143,367 +2363,3 @@ body#noticias-inicio.light-mode .article-back a:hover {
         max-height: 300px;
     }
 }
-
-/* /FIM - Noticias inicio */
-
-/* Inicio das noticias de esportes */
-
-/* CORES PRINCIPAIS */
-#esportes {
-    --esporte-laranja: #F59E0B;
-    --esporte-laranja-escuro: #D97706;
-    --esporte-dourado: #FBBF24;
-    --esporte-forte: #EA580C;
-    --esporte-preto: #050505;
-    --esporte-marrom: #3D1F0A;
-}
-
-
-/* =====================================================
-   LOGO
-   ===================================================== */
-
-#esportes .logo h1 span {
-    color: var(--esporte-laranja);
-
-    -webkit-text-stroke: 1px #000;
-
-    text-shadow:
-        3px 3px 0 #000,
-        0 0 15px rgba(245, 158, 11, 0.5);
-}
-
-#esportes .logo p {
-    color: var(--esporte-dourado);
-}
-
-
-/* =====================================================
-   MENU
-   ===================================================== */
-
-#esportes .nav-links a:hover {
-    color: var(--esporte-dourado);
-    border-bottom: 3px solid var(--esporte-laranja);
-}
-
-#esportes .nav-links a.active {
-    color: white;
-    border-bottom: 2px solid var(--esporte-laranja);
-}
-
-
-/* =====================================================
-   CARROSSEL
-   ===================================================== */
-
-#esportes .carousel-content .badge {
-    background: var(--esporte-forte);
-    color: white;
-}
-
-
-/* BOTÃO PRINCIPAL */
-
-#esportes .carousel-content .btn-main,
-#esportes .btn-main {
-
-    background: linear-gradient(135deg,
-            var(--esporte-forte),
-            var(--esporte-laranja));
-
-    color: white;
-
-    box-shadow:
-        0 5px 15px rgba(245, 158, 11, 0.25);
-
-    transition: all 0.3s ease;
-}
-
-
-#esportes .carousel-content .btn-main:hover,
-#esportes .btn-main:hover {
-
-    background: linear-gradient(135deg,
-            var(--esporte-laranja),
-            var(--esporte-dourado));
-
-    color: #1c1008;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 8px 25px rgba(245, 158, 11, 0.4);
-}
-
-
-/* =====================================================
-   SETAS DO CARROSSEL
-   ===================================================== */
-
-#esportes .carousel-btn {
-
-    background: rgba(245, 158, 11, 0.2);
-
-    border: 1px solid var(--esporte-dourado);
-
-    color: white;
-
-    transition: all 0.3s ease;
-}
-
-
-#esportes .carousel-btn:hover {
-
-    background: var(--esporte-forte);
-
-    border-color: var(--esporte-dourado);
-
-    transform: translateY(-50%) scale(1.1);
-}
-
-
-/* =====================================================
-   INDICADORES
-   ===================================================== */
-
-#esportes .carousel-dot {
-
-    border: 2px solid var(--esporte-laranja);
-}
-
-
-#esportes .carousel-dot:hover {
-
-    background: var(--esporte-laranja-escuro);
-
-    border-color: var(--esporte-dourado);
-}
-
-
-#esportes .carousel-dot.active {
-
-    background: var(--esporte-laranja);
-
-    border-color: var(--esporte-dourado);
-
-    box-shadow:
-        0 0 10px rgba(245, 158, 11, 0.5);
-}
-
-
-/* =====================================================
-   BARRA DE PROGRESSO
-   ===================================================== */
-
-#esportes .carousel-progress-bar {
-
-    background: linear-gradient(90deg,
-            var(--esporte-forte),
-            var(--esporte-laranja),
-            var(--esporte-dourado));
-}
-
-
-/* =====================================================
-   TÍTULO DAS NOTÍCIAS
-   ===================================================== */
-
-#esportes .section-header {
-
-    border-left: 4px solid var(--esporte-laranja);
-
-    box-shadow:
-        -5px 0 15px rgba(245, 158, 11, 0.08);
-}
-
-
-#esportes .section-header h3 {
-
-    color: white;
-}
-
-
-/* VER TODAS */
-
-#esportes .see-all {
-
-    color: var(--esporte-dourado);
-
-    transition: 0.3s;
-}
-
-
-#esportes .see-all:hover {
-
-    color: var(--esporte-laranja);
-
-    text-shadow:
-        0 0 8px rgba(245, 158, 11, 0.5);
-}
-
-
-/* =====================================================
-   CARDS DE NOTÍCIAS
-   ===================================================== */
-
-#esportes .news-card {
-
-    background:
-        linear-gradient(145deg,
-            #0b0f19,
-            #120d06);
-
-    border: 1px solid #292015;
-
-    transition:
-        transform 0.3s ease,
-        border 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-#esportes .news-card:hover {
-    transform: translateY(-7px);
-    border-color: var(--esporte-laranja);
-    box-shadow:
-        0 10px 30px rgba(245, 158, 11, 0.15);
-}
-
-
-/* CATEGORIA */
-
-#esportes .card-category {
-
-    color: var(--esporte-laranja);
-
-}
-
-
-/* HORÁRIO */
-
-#esportes .card-time {
-
-    color: #777;
-}
-
-
-/* TÍTULO */
-
-#esportes .news-card h4 {
-
-    color: #f5f5f5;
-}
-
-
-/* LEIA MAIS */
-
-#esportes .read-more {
-
-    color: var(--esporte-dourado);
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-
-#esportes .read-more:hover {
-
-    color: var(--esporte-laranja);
-
-    text-shadow:
-        0 0 8px rgba(245, 158, 11, 0.4);
-}
-
-
-/* =====================================================
-   NEWSLETTER
-   ===================================================== */
-
-#esportes .newsletter-box {
-
-    background:
-        linear-gradient(135deg,
-            #0b0f19,
-            #1a1005);
-
-    border: 1px solid #302314;
-}
-
-
-#esportes .newsletter-form button {
-
-    background: linear-gradient(135deg,
-            var(--esporte-forte),
-            var(--esporte-laranja));
-
-    color: white;
-
-    border: none;
-
-    transition: 0.3s;
-}
-
-
-#esportes .newsletter-form button:hover {
-
-    background: var(--esporte-dourado);
-
-    color: #1c1008;
-
-    transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-#esportes .footer {
-
-    background:
-        linear-gradient(180deg,
-            #020617,
-            #090704);
-
-    border-top: 1px solid #2a2114;
-}
-
-
-#esportes .footer-brand h2 span {
-    color: var(--esporte-laranja);
-    text-shadow:
-        0 0 10px rgba(245, 158, 11, 0.3);
-}
-
-/* =====================================================
-   DETALHE ESPORTIVO NOS CARDS
-   ===================================================== */
-
-#esportes .card-category::before {
-    content: "●";
-    color: var(--esporte-dourado);
-    margin-right: 6px;
-    font-size: 10px;
-}
-
-
-/* =====================================================
-   MODO CLARO
-   ===================================================== */
-
-body.light-mode #esportes .news-card {
-    background: #ffffff;
-    border-color: #e5e7eb;
-}
-body.light-mode #esportes .news-card:hover {
-    border-color: var(--esporte-laranja);
-    box-shadow:
-        0 8px 25px rgba(245, 158, 11, 0.15);
-}
-body.light-mode #esportes .section-header h3 {
-    color: #111827;
-}
-
-/* /Fim das noticias de Esportes */
