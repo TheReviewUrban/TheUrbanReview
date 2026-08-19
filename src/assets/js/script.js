@@ -236,3 +236,63 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 });
 
+// ==========================================
+// MENU DROPDOWN - MODO MOBILE
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnMenuMob = document.getElementById("btnMenuMob");
+    const dropdownContent = document.getElementById("dropdownContent");
+
+    if (!btnMenuMob || !dropdownContent) {
+        return;
+    }
+
+    // Abrir e fechar o menu
+    btnMenuMob.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        dropdownContent.classList.toggle("show");
+
+        // Troca o ícone
+        if (dropdownContent.classList.contains("show")) {
+            btnMenuMob.textContent = "✕";
+        } else {
+            btnMenuMob.textContent = "☰";
+        }
+
+    });
+
+    // Fecha o menu quando clicar fora dele
+    document.addEventListener("click", function (event) {
+
+        if (
+            !dropdownContent.contains(event.target) &&
+            !btnMenuMob.contains(event.target)
+        ) {
+
+            dropdownContent.classList.remove("show");
+            btnMenuMob.textContent = "☰";
+
+        }
+
+    });
+
+    // Fecha o menu quando clicar em algum link
+    const linksMenu = dropdownContent.querySelectorAll("a");
+
+    linksMenu.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            dropdownContent.classList.remove("show");
+            btnMenuMob.textContent = "☰";
+
+        });
+
+    });
+
+});
+
