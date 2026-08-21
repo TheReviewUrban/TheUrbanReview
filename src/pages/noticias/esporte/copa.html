@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa| The Urban Review</title>
+    <link rel="stylesheet" href="/src/assets/css/style.css">
+    <link rel="icon" type="image/png" href="/src/assets/img/ícones/LogoEsportes.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="noticias-inicio">
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="navbar">
+        <a href="/public/index.html"><img src="/src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban"></a>
+
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>THE <span>URBAN</span> REVIEW</h1>
+                <p>Notícias de Esportes</p>
+            </div>
+
+            <!-- Menu Desktop -->
+            <nav class="nav-links menu-desk">
+                <a href="/public/index.html" class="active">Início</a>
+                <a href="/src/pages/politica.html">Política</a>
+                <a href="/src/pages/internacional.html">Internacional</a>
+                <a href="/src/pages/esportes.html">Esporte</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <!-- Menu Mobile -->
+            <nav class="dropdown menu-mob">
+                <button id="btnMenuMob" class="menu-icon-btn">☰</button>
+                <ul id="dropdownContent" class="dropdown-content">
+                    <li><a href="/public/index.html">Início</a></li>
+                    <li><a href="/src/pages/politica.html">Política</a></li>
+                    <li><a href="/src/pages/internacional.html">Internacional</a></li>
+                    <li><a href="/src/pages/esportes.html">Esporte</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== NOTÍCIA ==================== -->
+    <main class="article-page">
+        <div class="container">
+
+            <!-- Categoria -->
+            <div class="article-category">Esportes</div>
+
+            <!-- Título -->
+            <h1 class="article-title">
+                Cabo Verde na Copa do Mundo: dez curiosidades sobre o país africano que vai estrear na competição
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="article-subtitle">
+                Técnico dos 76ers, Nick Nurse revelou que tentou contratar o brasileiro como assistente técnico antes de Splitter ir para o Portland Trail Blazers
+            </p>
+
+            <!-- Informações -->
+            <div class="article-meta">
+                <span>Esportes</span>
+                <span>•</span>
+                <span>The Urban Review</span>
+                <span>•</span>
+                <span>Publicado recentemente</span>
+            </div>
+
+            <!-- Imagem principal -->
+            <figure class="article-image">
+                <img src="/src/assets/img/img-noticias/Esportes/Tiago.png" alt="Basquete">
+                <figcaption>
+                   Tiago Splitter, primeiro técnico brasileiro da NBA, irá comandar o Chicago Bulls na próxima temporada, após passar um ano no Portland Trail Blazers.
+                </figcaption>
+            </figure>
+
+            <!-- Conteúdo -->
+            <article class="article-content">
+                <p class="article-lead">
+                   Mas a trajetória do brasileiro quase foi muito diferente: Nick Nurse, técnico do Philadelphia 76ers, nova equipe de LeBron James, tentou contratá-lo para ser assistente técnico antes do início da temporada 2025-26.
+                </p>
+
+                <p>
+                    A revelação partiu do próprio americano, que esteve sábado (15) no Brasil ministrando uma clínica para treinadores em São Paulo, no programa da NBA Basketball School, e concedeu uma entrevista para a ESPN.
+                </p>
+
+                <h1>
+                    "Em primeiro lugar, ele fez um grande trabalho. Acho que ele fez um trabalho tremendo em uma situação muito difícil no ano passado. e ele deu conta, foi incrível", elogiou Nurse. "É engraçado, porque eu estava tentando contratá-lo ano passado para ser meu assistente, ou dois anos atrás, não me lembro, mas pedi a dsputa para Portland, e ele foi para lá", contou.
+                </h1>
+
+                <h2>
+                    Na época, Tiago Splitter tinha acabado de fazer uma temporada histórica na França, onde foi campeão nacional pelo Paris Basketball, além de ter grande campanha na Euroliga. O brasileiro já havia passado alguns anos como assistente técnico no Brooklyn Nets e no Houston Rockets, além de também ser auxiliar na Seleção Brasileira e técnico principal da categoria sub-23.
+                </h2>
+
+                <a href="https:uriosidades//exame.com/ciencia/monte-everest-20-c-que-voce-talvez-nao-saiba-sobre-o-ponto-mais-alto-do-mundo/">Veja a noticia original:</a>
+            </article>
+
+            <!-- Compartilhamento -->
+            <div class="article-share">
+                <span>Compartilhe:</span>
+                <button>WhatsApp</button>
+                <button>Instagram</button>
+            </div>
+
+            <!-- Voltar -->
+            <div class="article-back">
+                <a href="/public/index.html">← Voltar para as notícias</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- =================== CONTATO ==================== -->
+    <section id="contato" class="container newsletter-section">
+        <div class="newsletter-box">
+            <div class="newsletter-text">
+                <div class="icon-mail">
+                    <img src="/src/assets/img/ícones/email.png" class="opniao" alt="Contato">
+                </div>
+                <div>
+                    <h4>Coloque sua opinião sobre o site abaixo</h4>
+                    <p>Insira os seus dados para submeter o seu comentário.</p>
+                </div>
+            </div>
+
+            <form class="newsletter-form form-contato" id="formOpiniao">
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua opinião aqui..." required></textarea>
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </form>
+        </div>
+
+        <div class="container lista-comentarios">
+            <h3>Comentários dos Leitores</h3>
+            <ul id="listaComentariosUl"></ul>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>THE <span>URBAN</span> REVIEW</h2>
+                <p>Notícias que informam. Conteúdo que importa.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/reviewurban759/" class="redes" title="Instagram">
+                        <img src="/src/assets/img/ícones/instagram.png" alt="Instagram" class="redes">
+                    </a>
+                    <a href="mailto:reviewurban759@gmail.com" class="redes" title="Gmail">
+                        <img src="/src/assets/img/ícones/social.png" alt="Gmail" class="redes">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h5>Navegação</h5>
+                <a href="/public/index.html">Início</a>
+                <a href="/src/pages/politica.html">Política</a>
+                <a href="/src/pages/congresso.html">Congresso</a>
+                <a href="/src/pages/economia.html">Economia</a>
+            </div>
+            <img src="/src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban Footer">
+            <div class="footer-contact">
+                <h5>Contato Redação</h5>
+                <p>reviewurban759@gmail.com</p>
+                <p>(61) 99999-9999</p>
+                <p>Brazlândia/Águas Lindas - DF, Brasil</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 The Urban Review - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/src/assets/js/script.js"></script>
+</body>
+
+</html>
