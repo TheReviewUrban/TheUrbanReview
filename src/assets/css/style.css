@@ -2170,11 +2170,11 @@ body.light-mode .hero-content .btn-main {
 }
 
 body.light-mode .btn-main {
-    background-color: #1DADDC;
+    background-color: #dc1d1d;
 }
 
 body.light-mode .btn-main:hover {
-    background-color: #1695bf;
+    background: #ff0000;
 }
 
 
