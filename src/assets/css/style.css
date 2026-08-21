@@ -1586,22 +1586,12 @@ body.light-mode .dropdown-content li a:hover {
 
 /* =====================================================
    NOTÍCIAS DE ESPORTES
+   BLOCO CORRIGIDO - SEM DUPLICAÇÃO DE VARIÁVEIS
 ===================================================== */
 
-#esportes {
-    --esporte-laranja: #F59E0B;
-    --esporte-laranja-escuro: #D97706;
-    --esporte-dourado: #FBBF24;
-    --esporte-forte: #EA580C;
-    --esporte-preto: #050505;
-    --esporte-marrom: #3D1F0A;
-}
-
-
 /* LOGO */
-
 #esportes .logo h1 span {
-    color: var(--esporte-laranja);
+    color: var(--esportes-color-primaria);
     -webkit-text-stroke: 1px #000;
     text-shadow:
         3px 3px 0 #000,
@@ -1609,148 +1599,117 @@ body.light-mode .dropdown-content li a:hover {
 }
 
 #esportes .logo p {
-    color: var(--esporte-dourado);
+    color: var(--esportes-color-terciaria);
 }
 
-
 /* MENU */
-
 #esportes .nav-links a:hover {
-    color: var(--esporte-dourado);
-    border-bottom: 3px solid var(--esporte-laranja);
+    color: var(--esportes-color-terciaria);
+    border-bottom: 3px solid var(--esportes-color-primaria);
 }
 
 #esportes .nav-links a.active {
     color: white;
-    border-bottom: 2px solid var(--esporte-laranja);
+    border-bottom: 2px solid var(--esportes-color-primaria);
 }
-
 
 /* CARROSSEL */
-
 #esportes .carousel-content .badge {
-    background: var(--esporte-forte);
+    background: var(--esportes-color-quaternaria);
     color: white;
 }
 
-
-/* BOTÃO PRINCIPAL */
-
-#esportes .carousel-content .btn-main,
-#esportes .btn-main {
+/* BOTÃO "LER MAIS" DO CARROSSEL */
+#esportes .carousel-content .btn-main {
+    display: inline-block;
+    width: auto;
     background: linear-gradient(
         135deg,
-        var(--esporte-forte),
-        var(--esporte-laranja)
+        var(--esportes-color-quaternaria),
+        var(--esportes-color-primaria)
     );
     color: white;
-    box-shadow:
-        0 5px 15px rgba(245, 158, 11, 0.25);
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.25);
     transition: all 0.3s ease;
 }
 
-#esportes .carousel-content .btn-main:hover,
-#esportes .btn-main:hover {
+#esportes .carousel-content .btn-main:hover {
+    display: inline-block;
+    width: auto;
     background: linear-gradient(
         135deg,
-        var(--esporte-laranja),
-        var(--esporte-dourado)
+        var(--esportes-color-primaria),
+        var(--esportes-color-terciaria)
     );
     color: #1c1008;
     transform: translateY(-3px);
-    box-shadow:
-        0 8px 25px rgba(245, 158, 11, 0.4);
-    display: flex;
-    align-items: center;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
 }
 
-
 /* SETAS */
-
 #esportes .carousel-btn {
     background: rgba(245, 158, 11, 0.2);
-    border: 1px solid var(--esporte-dourado);
+    border: 1px solid var(--esportes-color-terciaria);
     color: white;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #esportes .carousel-btn:hover {
-    background: var(--esporte-forte);
-    border-color: var(--esporte-dourado);
+    background: var(--esportes-color-quaternaria);
+    border-color: var(--esportes-color-terciaria);
     transform: translateY(-50%) scale(1.1);
 }
 
-
 /* INDICADORES */
-
 #esportes .carousel-dot {
-    border: 2px solid var(--esporte-laranja);
+    border: 2px solid var(--esportes-color-primaria);
 }
 
 #esportes .carousel-dot:hover {
-    background: var(--esporte-laranja-escuro);
-    border-color: var(--esporte-dourado);
+    background: var(--esportes-color-secundaria);
+    border-color: var(--esportes-color-terciaria);
 }
 
 #esportes .carousel-dot.active {
-    background: var(--esporte-laranja);
-    border-color: var(--esporte-dourado);
-    box-shadow:
-        0 0 10px rgba(245, 158, 11, 0.5);
+    background: var(--esportes-color-primaria);
+    border-color: var(--esportes-color-terciaria);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
-
 /* BARRA DE PROGRESSO */
-
 #esportes .carousel-progress-bar {
     background: linear-gradient(
         90deg,
-        var(--esporte-forte),
-        var(--esporte-laranja),
-        var(--esporte-dourado)
+        var(--esportes-color-quaternaria),
+        var(--esportes-color-primaria),
+        var(--esportes-color-terciaria)
     );
 }
 
-
 /* TÍTULO */
-
 #esportes .section-header {
-    border-left: 4px solid var(--esporte-laranja);
-    box-shadow:
-        -5px 0 15px rgba(245, 158, 11, 0.08);
+    border-left: 4px solid var(--esportes-color-primaria);
+    box-shadow: -5px 0 15px rgba(245, 158, 11, 0.08);
 }
 
 #esportes .section-header h3 {
     color: white;
 }
 
-
 /* VER TODAS */
-
 #esportes .see-all {
-    color: var(--esporte-dourado);
+    color: var(--esportes-color-terciaria);
     transition: 0.3s;
 }
 
 #esportes .see-all:hover {
-    color: var(--esporte-laranja);
-    text-shadow:
-        0 0 8px rgba(245, 158, 11, 0.5);
+    color: var(--esportes-color-primaria);
+    text-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
 }
 
-
 /* CARDS */
-
 #esportes .news-card {
-    background:
-        linear-gradient(
-            145deg,
-            #0b0f19,
-            #120d06
-        );
+    background: linear-gradient(145deg, #0b0f19, #120d06);
     border: 1px solid #292015;
     transition:
         transform 0.3s ease,
@@ -1760,65 +1719,55 @@ body.light-mode .dropdown-content li a:hover {
 
 #esportes .news-card:hover {
     transform: translateY(-7px);
-    border-color: var(--esporte-laranja);
-    box-shadow:
-        0 10px 30px rgba(245, 158, 11, 0.15);
+    border-color: var(--esportes-color-primaria);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
 }
-
 
 /* CATEGORIA */
-
 #esportes .card-category {
-    color: var(--esporte-laranja);
+    color: var(--esportes-color-primaria);
 }
 
+#esportes .card-category::before {
+    content: "●";
+    color: var(--esportes-color-terciaria);
+    margin-right: 6px;
+    font-size: 10px;
+}
 
 /* HORÁRIO */
-
 #esportes .card-time {
     color: #777;
 }
 
-
 /* TÍTULO */
-
 #esportes .news-card h4 {
     color: #f5f5f5;
 }
 
-
 /* LEIA MAIS */
-
 #esportes .read-more {
-    color: var(--esporte-dourado);
+    color: var(--esportes-color-terciaria);
     font-weight: bold;
     transition: 0.3s;
 }
 
 #esportes .read-more:hover {
-    color: var(--esporte-laranja);
-    text-shadow:
-        0 0 8px rgba(245, 158, 11, 0.4);
+    color: var(--esportes-color-primaria);
+    text-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
 }
 
-
 /* NEWSLETTER */
-
 #esportes .newsletter-box {
-    background:
-        linear-gradient(
-            135deg,
-            #0b0f19,
-            #1a1005
-        );
+    background: linear-gradient(135deg, #0b0f19, #1a1005);
     border: 1px solid #302314;
 }
 
 #esportes .newsletter-form button {
     background: linear-gradient(
         135deg,
-        var(--esporte-forte),
-        var(--esporte-laranja)
+        var(--esportes-color-quaternaria),
+        var(--esportes-color-primaria)
     );
     color: white;
     border: none;
@@ -1826,38 +1775,20 @@ body.light-mode .dropdown-content li a:hover {
 }
 
 #esportes .newsletter-form button:hover {
-    background: var(--esporte-dourado);
+    background: var(--esportes-color-terciaria);
     color: #1c1008;
     transform: translateY(-2px);
 }
 
-
 /* FOOTER */
-
 #esportes .footer {
-    background:
-        linear-gradient(
-            180deg,
-            #020617,
-            #090704
-        );
+    background: linear-gradient(180deg, #020617, #090704);
     border-top: 1px solid #2a2114;
 }
 
 #esportes .footer-brand h2 span {
-    color: var(--esporte-laranja);
-    text-shadow:
-        0 0 10px rgba(245, 158, 11, 0.3);
-}
-
-
-/* DETALHE ESPORTIVO */
-
-#esportes .card-category::before {
-    content: "●";
-    color: var(--esporte-dourado);
-    margin-right: 6px;
-    font-size: 10px;
+    color: var(--esportes-color-primaria);
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
 }
 
 
@@ -2299,7 +2230,7 @@ body#noticias-inicio.light-mode .article-back a:hover {
         position: relative;
     }
 
-    .navbar.logo-urban {
+    .navbar .logo-urban {
         
         display: none;
     }
