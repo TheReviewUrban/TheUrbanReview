@@ -206,13 +206,6 @@ a {
     transition: color 0.3s, border-color 0.3s;
 }
 
-#congresso .nav-links a,
-#politica .nav-links a,
-#economia .nav-links a,
-#esportes .nav-links a,
-#internacional .nav-links a {
-    color: white;
-}
 
 .nav-links a:hover {
     color: #ffffff;
@@ -261,14 +254,17 @@ a {
 }
 
 #congresso .nav-links a.active {
+    color: var(--congresso-color-primaria);
     border-bottom-color: var(--congresso-color-primaria);
 }
 
 #politica .nav-links a.active {
+    color: var(--politica-color-primaria);
     border-bottom-color: var(--politica-color-primaria);
 }
 
 #economia .nav-links a.active {
+    color: var(--economia-color-secundaria);
     border-bottom-color: var(--economia-color-primaria);
 }
 
@@ -277,6 +273,7 @@ a {
 }
 
 #internacional .nav-links a.active {
+    color: var(--internacional-color-quinquenaria);
     border-bottom-color: var(--internacional-color-primaria);
 }
 
@@ -1014,6 +1011,21 @@ body.light-mode .dropdown-content li a:hover {
     margin-top: 20px;
 }
 
+.inicial-noticia{
+    font-size: 1.00rem;
+    padding: 10px;
+    color: #d1d5db;
+    margin-left: 30px;
+}
+
+strong{
+    color: #000;
+}
+
+p{
+    color: #000;
+}
+
 .social-icons a {
     background-color: #111827;
     width: 35px;
@@ -1607,8 +1619,28 @@ body.light-mode .dropdown-content li a:hover {
     border-bottom: 3px solid var(--esportes-color-primaria);
 }
 
+#politica .nav-links a:hover {
+    color: var(--politica-color-terciaria);
+    border-bottom: 3px solid var(--politica-color-primaria);
+}
+
+#congresso .nav-links a:hover {
+    color: var(--congresso-color-terciaria);
+    border-bottom: 3px solid var(--congresso-color-primaria);
+}
+
+#economia .nav-links a:hover {
+    color: var(--economia-color-terciaria);
+    border-bottom: 3px solid var(--economia-color-primaria);
+}
+
+#internacional .nav-links a:hover {
+    color: var(--internacional-color-terciaria);
+    border-bottom: 3px solid var(--internacional-color-primaria);
+}
+
 #esportes .nav-links a.active {
-    color: white;
+    color: rgb(255, 136, 0);
     border-bottom: 2px solid var(--esportes-color-primaria);
 }
 
@@ -2082,6 +2114,11 @@ body.light-mode .nav-links a:hover,
 body.light-mode .nav-links a.active {
     color: #1DADDC;
 }
+
+#politica body.light-mode .nav-links a:hover{
+    color: var(--politica-color-secundaria);
+}
+
 
 body.light-mode .search-btn {
     background: #f3f4f6;
