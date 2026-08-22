@@ -1,9 +1,14 @@
+/* =====================================================
+   CORES / ESPECIFICAS
+===================================================== */
+
 :root {
     --congresso-color-primaria: #e6c89d;
     --congresso-color-secundaria: #ab9d89;
     --congresso-color-terciaria: #867A69;
     --congresso-color-quaternaria: #635645;
     --congresso-color-quinquenaria: #c27c14;
+    --congresso-color-senaria:#97600d;
 }
 
 :root {
@@ -46,9 +51,13 @@
     --internacional-color-setenaria: #D00000;
 }
 
+/* =====================================================
+   FIM CORES / ESPECIFICAS
+===================================================== */
+
 
 /* =====================================================
-   RESET / GERAL
+    GERAL
 ===================================================== */
 
 * {
@@ -172,6 +181,1191 @@ a {
         3px 3px 0px #000,
         0 0 15px var(--internacional-color-quaternaria);
 }
+
+/* =====================================================
+   NOTICIAS DE POLITICA INTERNAS
+===================================================== */
+
+#noticias-politica .logo h1 span {
+    color: var(--politica-color-primaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--politica-color-primaria);
+}
+
+#noticias-politica .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-politica .article-page .container {
+    max-width: 950px;
+}
+
+#noticias-politica .newsletter-form button {
+    background-color: var(--politica-color-senaria);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+}
+
+#noticias-politica .newsletter-form button:hover {
+    background-color: var(--politica-color-secundaria);
+}
+
+#noticias-politica .footer-brand h2 span {
+    color: var(--politica-color-secundaria);
+}
+
+#politica .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid var(--politica-color-senaria);
+    padding-bottom: 2px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-politica .article-category {
+    display: inline-block;
+    background: var(--politica-color-terciaria);
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-politica .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-politica .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #9ca3af;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-politica .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-politica .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-politica .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+}
+
+#noticias-politica .article-image figcaption {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* TEXTO */
+
+#noticias-politica .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-politica .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-politica .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #f3f4f6;
+    font-weight: 500;
+    border-left: 3px solid var(--politica-color-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-politica .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--politica-color-primaria);
+    padding-left: 12px;
+}
+
+
+/* CITAÇÃO */
+
+#noticias-politica .article-content blockquote {
+    margin: 35px 0;
+    padding: 25px;
+    background: #0b0f19;
+    border-left: 4px solid var(--politica-color-primaria);
+    border-radius: 5px;
+    color: #e5e7eb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
+/* COMPARTILHAMENTO */
+
+#noticias-politica .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-politica .article-share span {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-politica .article-share button {
+    border: 1px solid #374151;
+    background: #111827;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-politica .article-share button:hover {
+    background: var(--politica-color-terciaria);
+}
+
+
+/* VOLTAR */
+
+#noticias-politica .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-politica .article-back a {
+    color: var(--politica-color-primaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-politica .article-back a:hover {
+    color: #ffffff;
+}
+
+body#noticias-politica.light-mode .article-title {
+    color: #111827;
+}
+
+body#noticias-politica.light-mode .article-subtitle {
+    color: #4b5563;
+}
+
+body#noticias-politica.light-mode .article-meta {
+    color: #6b7280;
+}
+
+body#noticias-politica.light-mode .article-content p {
+    color: #374151;
+}
+
+body#noticias-politica.light-mode .article-content .article-lead {
+    color: #111827;
+}
+
+body#noticias-politica.light-mode .article-content h2 {
+    color: #111827;
+}
+
+body#noticias-politica.light-mode .article-content blockquote {
+    background: #ffffff;
+    color: #374151;
+    border-color: var(--politica-color-primaria);
+}
+
+body#noticias-politica.light-mode .article-share {
+    border-color: #d1d5db;
+}
+
+body#noticias-politica.light-mode .article-share button {
+    background: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+body.light-mode .article-back a:hover {
+    color: #111827;
+}
+
+body#noticias-politica.light-mode .nav-links a:hover{
+    color: var(--politica-color-primaria);
+    border-bottom-color: var(--politica-color-primaria);
+
+}
+
+body#noticias-politica.light-mode .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid var(--politica-color-primaria);
+    padding-bottom: 2px;
+
+    
+}
+#noticias-politica strong{
+    color: white;
+}
+
+body#noticias-politica.light-mode strong{
+    color: black;
+}
+
+
+/* =====================================================
+   FIM DAS NOTICIAS DE POLITICA INTERNAS
+===================================================== */
+
+/* =====================================================
+   NOTICIAS DE CONGRESSO INTERNAS
+===================================================== */
+
+#noticias-congresso .logo h1 span {
+    color: var(--congresso-color-primaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--congresso-color-primaria);
+}
+
+#noticias-congresso .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-congresso .article-page .container {
+    max-width: 950px;
+}
+
+#noticias-congresso .newsletter-form button {
+    background-color: var(--congresso-color-senaria);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+}
+
+#noticias-congresso .newsletter-form button:hover {
+    background-color: var(--congresso-color-terciaria);
+}
+
+#noticias-congresso .footer-brand h2 span {
+    color: var(--congresso-color-secundaria);
+}
+
+#congresso .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid var(--congresso-color-senaria);
+    padding-bottom: 2px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-congresso .article-category {
+    display: inline-block;
+    background: var(--congresso-color-terciaria);
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-congresso .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-congresso .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #9ca3af;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-congresso .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-congresso .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-congresso .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+}
+
+#noticias-congresso .article-image figcaption {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* TEXTO */
+
+#noticias-congresso .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-congresso .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-congresso .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #f3f4f6;
+    font-weight: 500;
+    border-left: 3px solid var(--congresso-color-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-congresso .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--congresso-color-primaria);
+    padding-left: 12px;
+}
+
+
+/* CITAÇÃO */
+
+#noticias-congresso .article-content blockquote {
+    margin: 35px 0;
+    padding: 25px;
+    background: #0b0f19;
+    border-left: 4px solid var(--congresso-color-primaria);
+    border-radius: 5px;
+    color: #e5e7eb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
+/* COMPARTILHAMENTO */
+
+#noticias-congresso .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-congresso .article-share span {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-congresso .article-share button {
+    border: 1px solid #374151;
+    background: #111827;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-congresso .article-share button:hover {
+    background: var(--congresso-color-terciaria);
+}
+
+
+/* VOLTAR */
+
+#noticias-congresso .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-congresso .article-back a {
+    color: var(--congresso-color-primaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-congresso .article-back a:hover {
+    color: #ffffff;
+}
+
+body#noticias-congresso.light-mode .article-title {
+    color: #111827;
+}
+
+body#noticias-congresso.light-mode .article-subtitle {
+    color: #4b5563;
+}
+
+body#noticias-congresso.light-mode .article-meta {
+    color: #6b7280;
+}
+
+body#noticias-congresso.light-mode .article-content p {
+    color: #374151;
+}
+
+body#noticias-congresso.light-mode .article-content .article-lead {
+    color: #111827;
+}
+
+body#noticias-congresso.light-mode .article-content h2 {
+    color: #111827;
+}
+
+body#noticias-congresso.light-mode .article-content blockquote {
+    background: #ffffff;
+    color: #374151;
+    border-color: var(--congresso-color-primaria);
+}
+
+body#noticias-congresso.light-mode .article-share {
+    border-color: #d1d5db;
+}
+
+body#noticias-congresso.light-mode .article-share button {
+    background: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+body.light-mode .article-back a:hover {
+    color: #111827;
+}
+
+body#noticias-congresso.light-mode .nav-links a:hover{ 
+    color: #ffffff;
+    border-bottom: 2px solid var(--congresso-color-senaria);
+    padding-bottom: 2px;
+}
+
+
+
+body#noticias-congresso.light-mode .nav-links a.active{
+    color: var(--congresso-color-primaria);
+    border-bottom-color: var(--congresso-color-primaria);
+}
+
+#noticias-congresso strong{
+    color: white;
+}
+
+body#noticias-congresso.light-mode strong{
+    color: black;
+}
+
+/* =====================================================
+   FIM DAS NOTICIAS DE CONGRESSO INTERNAS
+===================================================== */
+
+/* =====================================================
+   NOTICIAS DE ECONOMIA INTERNAS
+===================================================== */
+
+#noticias-economia .logo h1 span {
+    color: var(--economia-color-primaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--economia-color-primaria);
+}
+
+#noticias-economia .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-economia .article-page .container {
+    max-width: 950px;
+}
+
+#noticias-economia .newsletter-form button {
+    background-color: var(--economia-color-quaternaria);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+}
+
+#noticias-economia .newsletter-form button:hover {
+    background-color: var(--economia-color-quinquenaria);
+}
+
+#noticias-economia .footer-brand h2 span {
+    color: var(--economia-color-secundaria);
+}
+
+#economia .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid var(--economia-color-senaria);
+    padding-bottom: 2px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-economia .article-category {
+    display: inline-block;
+    background: var(--economia-color-terciaria);
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-economia .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-economia .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #9ca3af;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-economia .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-economia .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-economia .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+}
+
+#noticias-economia .article-image figcaption {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* TEXTO */
+
+#noticias-economia .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-economia .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-economia .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #f3f4f6;
+    font-weight: 500;
+    border-left: 3px solid var(--economia-color-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-economia .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--economia-color-primaria);
+    padding-left: 12px;
+}
+
+
+/* CITAÇÃO */
+
+#noticias-economia .article-content blockquote {
+    margin: 35px 0;
+    padding: 25px;
+    background: #0b0f19;
+    border-left: 4px solid var(--economia-color-primaria);
+    border-radius: 5px;
+    color: #e5e7eb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
+/* COMPARTILHAMENTO */
+
+#noticias-economia .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-economia .article-share span {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-economia .article-share button {
+    border: 1px solid #374151;
+    background: #111827;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-economia .article-share button:hover {
+    background: var(--economia-color-terciaria);
+}
+
+
+/* VOLTAR */
+
+#noticias-economia .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-economia .article-back a {
+    color: var(--economia-color-primaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-economia .article-back a:hover {
+    color: #ffffff;
+}
+
+body#noticias-economia.light-mode .article-title {
+    color: #111827;
+}
+
+body#noticias-economia.light-mode .article-subtitle {
+    color: #4b5563;
+}
+
+body#noticias-economia.light-mode .article-meta {
+    color: #6b7280;
+}
+
+body#noticias-economia.light-mode .article-content p {
+    color: #374151;
+}
+
+body#noticias-economia.light-mode .article-content .article-lead {
+    color: #111827;
+}
+
+body#noticias-economia.light-mode .article-content h2 {
+    color: #111827;
+}
+
+body#noticias-economia.light-mode .article-content blockquote {
+    background: #ffffff;
+    color: #374151;
+    border-color: var(--economia-color-primaria);
+}
+
+body#noticias-economia.light-mode .article-share {
+    border-color: #d1d5db;
+}
+
+body#noticias-economia.light-mode .article-share button {
+    background: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+body.light-mode .article-back a:hover {
+    color: #111827;
+}
+
+body#noticias-economia.light-mode .nav-links a:hover{
+   border-bottom: 3px solid #297d06;
+    padding-bottom: 3px;
+}
+
+
+body#noticias-economia.light-mode .nav-links a.active {
+     border-bottom: 2px solid #60dc1d;
+    padding-bottom: 2px;
+}
+    
+
+#noticias-economia strong{
+    color: white;
+}
+
+body#noticias-economia.light-mode strong{
+    color: black;
+}
+
+/* =====================================================
+   FIM DAS NOTICIAS DE ECONOMIA INTERNAS
+===================================================== */
+
+/* =====================================================
+   NOTICIAS DE INTERNACIONAL INTERNAS
+===================================================== */
+
+#noticias-internacional .logo h1 span {
+    color: var(--internacional-color-primaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px var(--internacional-color-primaria);
+}
+
+#noticias-internacional .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-internacional .article-page .container {
+    max-width: 950px;
+}
+
+#noticias-internacional .newsletter-form button {
+    background-color: var(--internacional-color-quaternaria);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+}
+
+#noticias-internacional .newsletter-form button:hover {
+    background-color: var(--internacional-color-quinquenaria);
+}
+
+#noticias-internacional .footer-brand h2 span {
+    color: var(--internacional-color-secundaria);
+}
+
+#internacional .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid var(--internacional-color-senaria);
+    padding-bottom: 2px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-internacional .article-category {
+    display: inline-block;
+    background: var(--internacional-color-terciaria);
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-internacional .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-internacional .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #9ca3af;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-internacional .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-internacional .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-internacional .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+}
+
+#noticias-internacional .article-image figcaption {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* TEXTO */
+
+#noticias-internacional .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-internacional .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #d1d5db;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-internacional .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #f3f4f6;
+    font-weight: 500;
+    border-left: 3px solid var(--internacional-color-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-internacional .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--internacional-color-primaria);
+    padding-left: 12px;
+}
+
+
+/* CITAÇÃO */
+
+#noticias-internacional .article-content blockquote {
+    margin: 35px 0;
+    padding: 25px;
+    background: #0b0f19;
+    border-left: 4px solid var(--internacional-color-primaria);
+    border-radius: 5px;
+    color: #e5e7eb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
+/* COMPARTILHAMENTO */
+
+#noticias-internacional .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-internacional .article-share span {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-internacional .article-share button {
+    border: 1px solid #374151;
+    background: #111827;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-internacional .article-share button:hover {
+    background: var(--internacional-color-terciaria);
+}
+
+
+/* VOLTAR */
+
+#noticias-internacional .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-internacional .article-back a {
+    color: var(--internacional-color-primaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-internacional .article-back a:hover {
+    color: #ffffff;
+}
+
+body#noticias-internacional.light-mode .article-title {
+    color: #111827;
+}
+
+body#noticias-internacional.light-mode .article-subtitle {
+    color: #4b5563;
+}
+
+body#noticias-internacional.light-mode .article-meta {
+    color: #6b7280;
+}
+
+body#noticias-internacional.light-mode .article-content p {
+    color: #374151;
+}
+
+body#noticias-internacional.light-mode .article-content .article-lead {
+    color: #111827;
+}
+
+body#noticias-internacional.light-mode .article-content h2 {
+    color: #111827;
+}
+
+body#noticias-internacional.light-mode .article-content blockquote {
+    background: #ffffff;
+    color: #374151;
+    border-color: var(--internacional-color-primaria);
+}
+
+body#noticias-internacional.light-mode .article-share {
+    border-color: #d1d5db;
+}
+
+body#noticias-internacional.light-mode .article-share button {
+    background: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+body.light-mode .article-back a:hover {
+    color: #111827;
+}
+
+body#noticias-internacional.light-mode .nav-links a:hover{
+   border-bottom: 3px solid #297d06;
+    padding-bottom: 3px;
+}
+
+
+body#noticias-internacional.light-mode .nav-links a.active {
+     border-bottom: 2px solid #60dc1d;
+    padding-bottom: 2px;
+}
+    
+
+#noticias-internacional strong{
+    color: white;
+}
+
+body#noticias-internacional.light-mode strong{
+    color: black;
+}
+
+/* =====================================================
+   FIM DAS NOTICIAS DE INTERNACIONAL INTERNAS
+===================================================== */
+
+
 
 #congresso .logo p {
     color: var(--congresso-color-primaria);
@@ -486,11 +1680,9 @@ body.light-mode .dropdown-content li a:hover {
 }
 
 .hero-overlay {
-    background: linear-gradient(
-        to top,
-        #030712 10%,
-        rgba(3, 7, 18, 0.4) 100%
-    );
+    background: linear-gradient(to top,
+            #030712 10%,
+            rgba(3, 7, 18, 0.4) 100%);
     width: 100%;
     height: 100%;
     display: flex;
@@ -935,11 +2127,9 @@ body.light-mode .dropdown-content li a:hover {
 }
 
 #esportes .newsletter-form button {
-    background: linear-gradient(
-        135deg,
-        var(--esportes-color-quaternaria),
-        var(--esportes-color-primaria)
-    );
+    background: linear-gradient(135deg,
+            var(--esportes-color-quaternaria),
+            var(--esportes-color-primaria));
 }
 
 #esportes .newsletter-form button:hover {
@@ -1011,18 +2201,18 @@ body.light-mode .dropdown-content li a:hover {
     margin-top: 20px;
 }
 
-.inicial-noticia{
+.inicial-noticia {
     font-size: 1.00rem;
     padding: 10px;
     color: #d1d5db;
     margin-left: 30px;
 }
 
-strong{
+strong {
     color: #000;
 }
 
-p{
+p {
     color: #000;
 }
 
@@ -1132,12 +2322,10 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.75) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.2) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.2) 100%);
     display: flex;
     align-items: center;
     z-index: 1;
@@ -1235,11 +2423,9 @@ p{
 }
 
 #esportes .carousel-content .btn-main {
-    background: linear-gradient(
-        135deg,
-        var(--esportes-color-quaternaria),
-        var(--esportes-color-primaria)
-    );
+    background: linear-gradient(135deg,
+            var(--esportes-color-quaternaria),
+            var(--esportes-color-primaria));
 }
 
 #internacional .carousel-content .btn-main {
@@ -1254,27 +2440,29 @@ p{
 
 #congresso .carousel-content .btn-main:hover {
     background-color: var(--congresso-color-terciaria);
+    box-shadow: 0 6px 20px rgba(234, 175, 97, 0.4);
 }
 
 #politica .carousel-content .btn-main:hover {
     background-color: var(--politica-color-terciaria);
+    box-shadow: 0 6px 20px rgba(238, 238, 238, 0.4);
 }
 
 #economia .carousel-content .btn-main:hover {
     background-color: var(--economia-color-terciaria);
+    box-shadow: 0 6px 20px rgba(108, 220, 38, 0.4);
 }
 
 #esportes .carousel-content .btn-main:hover {
-    background: linear-gradient(
-        135deg,
-        var(--esportes-color-primaria),
-        var(--esportes-color-terciaria)
-    );
+    background: linear-gradient(135deg,
+            var(--esportes-color-primaria),
+            var(--esportes-color-terciaria));
     color: #1c1008;
 }
 
 #internacional .carousel-content .btn-main:hover {
     background-color: var(--internacional-color-quinquenaria);
+    box-shadow: 0 6px 20px rgba(220, 141, 38, 0.4);
 }
 
 
@@ -1530,21 +2718,17 @@ p{
 }
 
 #esportes .carousel-progress-bar {
-    background: linear-gradient(
-        90deg,
-        var(--esportes-color-quaternaria),
-        var(--esportes-color-primaria),
-        var(--esportes-color-terciaria)
-    );
+    background: linear-gradient(90deg,
+            var(--esportes-color-quaternaria),
+            var(--esportes-color-primaria),
+            var(--esportes-color-terciaria));
 }
 
 #internacional .carousel-progress-bar {
-    background: linear-gradient(
-        90deg,
-        var(--internacional-color-quaternaria),
-        var(--internacional-color-terciaria),
-        var(--internacional-color-primaria)
-    );
+    background: linear-gradient(90deg,
+            var(--internacional-color-quaternaria),
+            var(--internacional-color-terciaria),
+            var(--internacional-color-primaria));
 }
 
 
@@ -1654,11 +2838,9 @@ p{
 #esportes .carousel-content .btn-main {
     display: inline-block;
     width: auto;
-    background: linear-gradient(
-        135deg,
-        var(--esportes-color-quaternaria),
-        var(--esportes-color-primaria)
-    );
+    background: linear-gradient(135deg,
+            var(--esportes-color-quaternaria),
+            var(--esportes-color-primaria));
     color: white;
     box-shadow: 0 5px 15px rgba(245, 158, 11, 0.25);
     transition: all 0.3s ease;
@@ -1667,11 +2849,9 @@ p{
 #esportes .carousel-content .btn-main:hover {
     display: inline-block;
     width: auto;
-    background: linear-gradient(
-        135deg,
-        var(--esportes-color-primaria),
-        var(--esportes-color-terciaria)
-    );
+    background: linear-gradient(135deg,
+            var(--esportes-color-primaria),
+            var(--esportes-color-terciaria));
     color: #1c1008;
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
@@ -1709,12 +2889,10 @@ p{
 
 /* BARRA DE PROGRESSO */
 #esportes .carousel-progress-bar {
-    background: linear-gradient(
-        90deg,
-        var(--esportes-color-quaternaria),
-        var(--esportes-color-primaria),
-        var(--esportes-color-terciaria)
-    );
+    background: linear-gradient(90deg,
+            var(--esportes-color-quaternaria),
+            var(--esportes-color-primaria),
+            var(--esportes-color-terciaria));
 }
 
 /* TÍTULO */
@@ -1788,11 +2966,9 @@ p{
 
 
 #esportes .newsletter-form button {
-    background: linear-gradient(
-        135deg,
-        var(--esportes-color-quaternaria),
-        var(--esportes-color-primaria)
-    );
+    background: linear-gradient(135deg,
+            var(--esportes-color-quaternaria),
+            var(--esportes-color-primaria));
     color: white;
     border: none;
     transition: 0.3s;
@@ -1819,6 +2995,10 @@ p{
     padding: 70px 0 80px;
 }
 
+#noticias-inicio strong{
+    color: white;
+}
+
 #noticias-inicio .article-page .container {
     max-width: 950px;
 }
@@ -1828,7 +3008,7 @@ p{
 
 #noticias-inicio .article-category {
     display: inline-block;
-    background: var(--politica-color-terciaria);
+    background: #1DADDC;
     color: #ffffff;
     padding: 7px 14px;
     border-radius: 4px;
@@ -2103,7 +3283,7 @@ body.light-mode .nav-links a.active {
     color: #1DADDC;
 }
 
-#politica body.light-mode .nav-links a:hover{
+#politica body.light-mode .nav-links a:hover {
     color: var(--politica-color-secundaria);
 }
 
@@ -2255,7 +3435,7 @@ body#noticias-inicio.light-mode .article-back a:hover {
     }
 
     .navbar .logo-urban {
-        
+
         display: none;
     }
 
@@ -2458,4 +3638,4 @@ body#noticias-inicio.light-mode .article-back a:hover {
     #noticias-inicio .article-image img {
         max-height: 300px;
     }
-}  
+}
