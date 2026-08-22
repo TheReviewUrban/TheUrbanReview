@@ -14,7 +14,7 @@
 * Botão de modo claro/escuro.
 * Aba de comentários para os úsuarios.
 * Selecionamento de paginas sobre as noticias.
-* Mudanças de cor para as páginas selecionadas.
+* Mudanças de corres para as páginas selecionadas.
 * Slides de notícias.
 
 ---
