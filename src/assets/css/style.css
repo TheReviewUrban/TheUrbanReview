@@ -2550,6 +2550,7 @@ p {
 }
 
 #esportes .carousel-btn {
+    display: flex;
     background: rgba(245, 158, 11, 0.2);
     border-color: var(--esportes-color-terciaria);
 }
@@ -3638,4 +3639,351 @@ body#noticias-inicio.light-mode .article-back a:hover {
     #noticias-inicio .article-image img {
         max-height: 300px;
     }
+}
+/* =====================================================
+   NOTÍCIAS DE ESPORTES INTERNAS - TEMA VERMELHO
+===================================================== */
+
+/* CORES */
+:root {
+    --noticias-esportes-primaria: #DC2626;
+    --noticias-esportes-secundaria: #B91C1C;
+    --noticias-esportes-terciaria: #EF4444;
+    --noticias-esportes-quaternaria: #991B1B;
+    --noticias-esportes-fundo: #080303;
+    --noticias-esportes-card: #140606;
+}
+
+
+/* =====================================================
+   GERAL
+===================================================== */
+
+body#noticias-esportes {
+    background-color: var(--noticias-esportes-fundo);
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+#noticias-esportes .navbar {
+    background-color: #100404;
+    border-bottom: 1px solid #5c1515;
+}
+
+
+/* LOGO */
+
+#noticias-esportes .logo h1 span {
+    color: var(--noticias-esportes-terciaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px rgba(220, 38, 38, 0.6);
+}
+
+#noticias-esportes .logo p {
+    color: var(--noticias-esportes-terciaria);
+}
+
+
+/* MENU */
+
+#noticias-esportes .nav-links a:hover {
+    color: #ffffff;
+    border-bottom-color: var(--noticias-esportes-primaria);
+}
+
+#noticias-esportes .nav-links a.active {
+    color: #ffffff;
+    border-bottom-color: var(--noticias-esportes-primaria);
+}
+
+
+/* =====================================================
+   PÁGINA DA NOTÍCIA
+===================================================== */
+
+#noticias-esportes .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-esportes .article-page .container {
+    max-width: 950px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-esportes .article-category {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        var(--noticias-esportes-terciaria),
+        var(--noticias-esportes-quaternaria)
+    );
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-esportes .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-esportes .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #c7b0b0;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-esportes .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9f8585;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-esportes .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-esportes .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #7f1d1d;
+}
+
+#noticias-esportes .article-image figcaption {
+    color: #a68d8d;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   CONTEÚDO DA NOTÍCIA
+===================================================== */
+
+#noticias-esportes .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-esportes .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #e0d0d0;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-esportes .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 500;
+    border-left: 4px solid var(--noticias-esportes-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-esportes .article-content h1,
+#noticias-esportes .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--noticias-esportes-primaria);
+    padding-left: 15px;
+}
+
+#noticias-esportes .article-content h1 {
+    font-size: 1.7rem;
+}
+
+#noticias-esportes .article-content h2 {
+    font-size: 1.4rem;
+}
+
+
+/* LINK DA NOTÍCIA ORIGINAL */
+
+#noticias-esportes .article-content a {
+    display: inline-block;
+    color: var(--noticias-esportes-terciaria);
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#noticias-esportes .article-content a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   COMPARTILHAMENTO
+===================================================== */
+
+#noticias-esportes .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #5c1515;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-esportes .article-share span {
+    color: #c7b0b0;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-esportes .article-share button {
+    border: 1px solid #7f1d1d;
+    background: #180707;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-esportes .article-share button:hover {
+    background: var(--noticias-esportes-primaria);
+    border-color: var(--noticias-esportes-terciaria);
+}
+
+
+/* =====================================================
+   VOLTAR
+===================================================== */
+
+#noticias-esportes .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-esportes .article-back a {
+    color: var(--noticias-esportes-terciaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-esportes .article-back a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CONTATO
+===================================================== */
+
+#noticias-esportes .newsletter-box {
+    display: flex;
+    background-color: var(--noticias-esportes-card);
+    border-color: #5c1515;
+}
+
+#noticias-esportes .newsletter-form button {
+    display: flex;
+    background-color: var(--noticias-esportes-primaria);
+    color: white;
+    border: none;
+}
+
+#noticias-esportes .newsletter-form button:hover {
+    background-color: var(--noticias-esportes-quaternaria);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#noticias-esportes .footer {
+    background-color: #090202;
+    border-top: 1px solid #5c1515;
+}
+
+#noticias-esportes .footer-brand h2 span {
+    color: var(--noticias-esportes-terciaria);
+}
+
+
+/* =====================================================
+   MODO CLARO
+===================================================== */
+
+body#noticias-esportes.light-mode {
+    background-color: #fff7f7;
+}
+
+body#noticias-esportes.light-mode .article-title,
+body#noticias-esportes.light-mode .article-content h1,
+body#noticias-esportes.light-mode .article-content h2 {
+    color: #1f1111;
+}
+
+body#noticias-esportes.light-mode .article-subtitle {
+    color: #6b4b4b;
+}
+
+body#noticias-esportes.light-mode .article-meta {
+    color: #806666;
+}
+
+body#noticias-esportes.light-mode .article-content p {
+    color: #422f2f;
+}
+
+body#noticias-esportes.light-mode .article-content .article-lead {
+    color: #211414;
+}
+
+body#noticias-esportes.light-mode .newsletter-box {
+    background-color: #ffffff;
+    border-color: #e5b4b4;
 }
