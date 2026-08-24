@@ -4,17 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Urban Review - Notícias, informações e novidades do mundo dos esportes.">
+
+    <meta
+        name="description"
+        content="The Urban Review - Notícias, informações e novidades do mundo dos esportes."
+    >
 
     <title>The Urban Review | Esportes</title>
 
     <link rel="stylesheet" href="/src/assets/css/style.css">
-
+    <link rel="icon" type="image/png" href="/src/assets/img/ícones/LogoEsportes.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 </head>
 
 <body id="esportes">
@@ -22,153 +28,366 @@
     <!-- ==================== CABEÇALHO ==================== -->
 
     <header class="navbar">
-        <a href="/public/index.html">
-            <img src="/src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban">
-        </a>
-
+        <a href="/public/index.html"><img src="/src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban"></a>
         <div class="container nav-container">
 
             <div class="logo">
-                <h1>THE <span>URBAN</span> REVIEW</h1>
+                <h1>
+                    THE <span>URBAN</span> REVIEW
+                </h1>
+
                 <p>Notícias de Esportes</p>
             </div>
 
             <!-- MENU DESKTOP -->
+                
             <nav class="nav-links menu-desk" aria-label="Navegação principal">
-                <a href="/public/index.html">Início</a>
-                <a href="/src/pages/politica.html">Política</a>
-                <a href="/src/pages/internacional.html">Internacional</a>
-                <a href="/src/pages/esportes.html" class="active" aria-current="page">Esportes</a>
-                <a href="#contato">Contato</a>
+
+                <a href="/public/index.html">
+                    Início
+                </a>
+
+                <a href="/src/pages/politica.html">
+                    Política
+                </a>
+
+                <a href="/src/pages/internacional.html">
+                    Internacional
+                </a>
+
+                <a
+                    href="/src/pages/esportes.html"
+                    class="active"
+                    aria-current="page">
+                    Esportes
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
+
             </nav>
 
             <!-- MENU MOBILE -->
-            <nav class="dropdown menu-mob" aria-label="Menu mobile">
-                <button type="button" id="btnMenuMob" class="menu-icon-btn" aria-label="Abrir menu"
-                    aria-expanded="false" aria-controls="dropdownContent">
-                    ☰
-                </button>
 
+            <nav class="dropdown menu-mob" aria-label="Menu mobile">
+            
+                <button
+                    type="button"
+                    id="btnMenuMob"
+                    class="menu-icon-btn"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="dropdownContent">
+
+                    ☰
+
+                </button>
+                
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="/public/index.html">Início</a></li>
-                    <li><a href="/src/pages/politica.html">Política</a></li>
-                    <li><a href="/src/pages/internacional.html">Internacional</a></li>
-                    <li><a href="/src/pages/esportes.html" aria-current="page">Esportes</a></li>
-                    <li><a href="#contato">Contato</a></li>
+
+                    <li>
+                        <a href="/public/index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/src/pages/politica.html">
+                            Política
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/src/pages/internacional.html">
+                            Internacional
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="/src/pages/esportes.html"
+                            aria-current="page">
+                            Esportes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">
+                            Contato
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
 
             <!-- AÇÕES -->
+
             <div class="nav-actions">
-                <div class="search-box" role="search"></div>
-                <button type="button" id="modoEscuro" class="theme-toggle" title="Alternar tema"
+
+                <div
+                    class="search-box"
+                    role="search">
+                </div>
+
+                <button
+                    type="button"
+
+                    id="modoEscuro"
+                    class="theme-toggle"
+                    title="Alternar tema"
                     aria-label="Alternar entre tema claro e escuro">
+
                     🌙
+
                 </button>
+
             </div>
 
         </div>
+
     </header>
 
 
     <!-- ==================== CARROSSEL ==================== -->
 
-    <section class="carousel-section" aria-label="Destaques esportivos">
+    <section
+        class="carousel-section"
+        aria-label="Destaques esportivos">
+
         <div class="carousel-container">
+
             <div class="carousel-track">
 
                 <!-- SLIDE 1 -->
+                 
+                <img src="/src/assets/img/img-noticias/Esportes/volei.png" alt="Slide 1"
+                        class="carousel-bg">
+
                 <article class="carousel-slide active">
-                    <img src="/src/assets/img/img-noticias/Esportes/volei.png" alt="Slide 1" class="carousel-bg">
                     <img src="/src/assets/img/img-noticias/Esportes/UFC.png" class="carousel-bg" alt="esportes">
 
                     <div class="carousel-overlay">
+
                         <div class="container carousel-content">
-                            <span class="badge badge-blue">UFC</span>
-                            <span class="meta-info">Luta • há 1h</span>
-                            <h2>UFC 330: Tresean Gore vence Vicente Luque, mas perde dentes na luta e fica "banguela"
+                                
+                            <span class="badge badge-blue">
+                                UFC
+                            </span>
+
+                            <span class="meta-info">
+                                Luta • há 1h
+                            </span>
+
+                            <h2>
+                                UFC 330: Tresean Gore vence Vicente Luque, mas perde dentes na luta e fica "banguela" 
                             </h2>
-                            <p>Norte-americano derrotou lutador brasileiro por decisão unânime, mas perdeu alguns dentes
-                                da parte inferior da boca após uma joelhada no fim da luta</p>
-                            <a href="/src/pages/noticias/esporte/ufc-330.html" class="btn-main">Ler mais →</a>
+
+                            <p>
+                               Norte-americano derrotou lutador brasileiro por decisão unânime, mas perdeu alguns dentes da parte inferior da boca após uma joelhada no fim da luta
+                            </p>
+
+                            <a
+                                href="/src/pages/noticias/esporte/ufc-330.html"
+                                class="btn-main">
+                                Ler mais →
+                            </a>
+
                         </div>
+
                     </div>
+
                 </article>
+
 
                 <!-- SLIDE 2 -->
+
                 <article class="carousel-slide">
-                    <img src="/src/assets/img/img-noticias/Esportes/UFC.png" alt="Slide 1" class="carousel-bg">
-                    <img src="/src/assets/img/img-noticias/Esportes/volei.png" class="carousel-bg" alt="esportes">
+
+                    <img src="/src/assets/img/img-noticias/Esportes/UFC.png" alt="Slide 1"
+                        class="carousel-bg">
+
+                     <img src="/src/assets/img/img-noticias/Esportes/volei.png" class="carousel-bg" alt="esportes">
+                    
 
                     <div class="carousel-overlay">
+
                         <div class="container carousel-content">
-                            <span class="badge badge-red">Volei</span>
-                            <span class="meta-info">Volei • há 2h</span>
-                            <h2>Liga das Nações: top 5 jogadoras para ficar de olho</h2>
-                            <p>Confira os nomes que prometem esquentar a disputa que começa nesta quarta-feira; Brasil
-                                estreia contra República Tcheca às 17h30, no Maracanãzinho</p>
-                            <a href="/src/pages/noticias/clubes.html" class="btn-main">Ler mais →</a>
+
+                            <span class="badge badge-red">
+                                Volei
+                            </span>
+
+                            <span class="meta-info">
+                                Volei • há 2h
+                            </span>
+
+                            <h2>
+                               Liga das Nações: top 5 jogadoras para ficar de olho
+                            </h2>
+
+                            <p>
+                               Confira os nomes que prometem esquentar a disputa que começa nesta quarta-feira; Brasil estreia contra República Tcheca às 17h30, no Maracanãzinho
+                            </p>
+
+                            <a
+                                href="/src/pages/noticias/esporte/volei.html"
+                                class="btn-main">
+                                Ler mais →
+                            </a>
+
                         </div>
+
                     </div>
+
                 </article>
 
-                <!-- SLIDE 3 -->
-                <article class="carousel-slide">
-                    <img src="/src/assets/img/img-noticias/Esportes/Skate.png" alt="Slide 1" class="carousel-bg">
 
+                <!-- SLIDE 3 -->
+                
+                <article class="carousel-slide">
+                    <img src="/src/assets/img/img-noticias/Esportes/Skate.png" alt="Slide 1"
+                        class="carousel-bg">
                     <div class="carousel-overlay">
+
                         <div class="container carousel-content">
-                            <span class="badge badge-purple">Skate</span>
-                            <span class="meta-info">Skate • há 3h</span>
-                            <h2>Tony Alves garante a prata em competição de skate na Espanha; brasileiros fecham o pódio
+
+                            <span class="badge badge-purple">
+                                Skate
+                            </span>
+
+                            <span class="meta-info">
+                                Skate• há 3h
+                            </span>
+
+                            <h2>
+                                Tony Alves garante a prata em competição de skate na Espanha; brasileiros fecham o pódio
                             </h2>
                             <p>Skatista de São Vicente ficou em segundo lugar no Adaptive Skateboarding</p>
                             <a href="/src/pages/noticias/esporte/skate.html" class="btn-main">Ler mais →</a>
+
                         </div>
+
                     </div>
+
                 </article>
+
 
                 <!-- SLIDE 4 -->
-                <article class="carousel-slide">
-                    <img src="/src/assets/img/img-noticias/Esportes/Judo.png" alt="Slide 1" class="carousel-bg">
 
+                <article class="carousel-slide">
+                    <img src="/src/assets/img/img-noticias/Esportes/Judo.png" alt="Slide 1"
+                        class="carousel-bg">
                     <div class="carousel-overlay">
+
                         <div class="container carousel-content">
-                            <span class="badge badge-yellow">Judo</span>
-                            <span class="meta-info">Judo • há 4h</span>
-                            <h2>Brasil conquista três medalhas no segundo dia do Grand Prix de judô de Lima</h2>
-                            <p>David Lima (-81kg) conquistou ouro; em duelo brasileiro, Guilherme de Oliveira (-73kg)
-                                venceu o compatriota Daniel Cargnin e ficou com bronze; Nauana Silva (-70kg) garantiu a
-                                prata</p>
-                            <a href="/src/pages/noticias/esporte/judo.html" class="btn-main">Ler mais →</a>
+                            <span class="badge badge-yellow">
+                               Judo
+                            </span>
+
+                            <span class="meta-info">
+                                Judo • há 4h
+                            </span>
+
+                            <h2>
+                                Brasil conquista três medalhas no segundo dia do Grand Prix de judô de Lima
+                            </h2>
+
+                            <p>
+                                David Lima (-81kg) conquistou ouro; em duelo brasileiro, Guilherme de Oliveira (-73kg) venceu o compatriota Daniel Cargnin e ficou com bronze; Nauana Silva (-70kg) garantiu a prata
+                            </p>
+
+                            <a
+                                href="/src/pages/noticias/esporte/judo.html"
+                                class="btn-main">
+                                Ler mais →
+                            </a>
+
                         </div>
+
                     </div>
+
                 </article>
 
             </div>
 
-            <!-- SETAS DE NAVEGAÇÃO -->
-            <button class="carousel-btn carousel-btn-prev" id="btnPrev" aria-label="Slide anterior">
-                <span>❮</span>
+
+            <!-- SETAS -->
+
+            <button
+                type="button"
+                class="carousel-btn carousel-btn-prev"
+                id="btnPrev"
+                aria-label="Slide anterior">
+
+                <span><</span>
+
             </button>
-            <button class="carousel-btn carousel-btn-next" id="btnNext" aria-label="Próximo slide">
-                <span>❯</span>
+            
+            <button
+                type="button"
+                class="carousel-btn carousel-btn-next"
+                id="btnNext"
+                aria-label="Próximo slide">
+
+                <span>></span>
+
             </button>
 
-            <!-- INDICADORES (DOTS) -->
-            <div class="carousel-indicators">
-                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
-                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+
+            <!-- INDICADORES -->
+
+            <div
+                class="carousel-indicators"
+                aria-label="Selecionar slide">
+
+                <button
+                    type="button"
+                    class="carousel-dot active"
+                    data-slide="0"
+                    aria-label="Ir para slide 1"
+                    aria-current="true">
+                </button>
+
+                <button
+                    type="button"
+                    class="carousel-dot"
+                    data-slide="1"
+                    aria-label="Ir para slide 2">
+                </button>
+
+                <button
+                    type="button"
+                    class="carousel-dot"
+                    data-slide="2"
+                    aria-label="Ir para slide 3">
+                </button>
+
+                <button
+                    type="button"
+                    class="carousel-dot"
+                    data-slide="3"
+                    aria-label="Ir para slide 4">
+                </button>
+
             </div>
 
+
             <!-- BARRA DE PROGRESSO -->
-            <div class="carousel-progress">
-                <div class="carousel-progress-bar" id="progressBar"></div>
+
+            <div
+                class="carousel-progress"
+                aria-hidden="true">
+
+                <div
+                    class="carousel-progress-bar"
+                    id="progressBar">
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
 
@@ -177,95 +396,222 @@
     <main class="container main-content">
 
         <div class="section-header">
-            <h3>Últimas notícias de esportes</h3>
-            <a href="/src/pages/esportes.html" class="see-all">Ver todas →</a>
+
+            <h3>
+                Últimas notícias de esportes
+            </h3>
+
+            <a
+                href="/src/pages/esportes.html"
+                class="see-all">
+                Ver todas →
+            </a>
+
         </div>
 
-        <section class="news-grid" aria-label="Últimas notícias">
+
+        <section
+            class="news-grid"
+            aria-label="Últimas notícias">
+
 
             <!-- NOTÍCIA 1 -->
+
             <article class="news-card">
-                <div class="card-img"
-                    style="background-image: url('/src/assets/img/img-noticias/Esportes/Flamengo.png');"></div>
+
+                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/Flamengo.png');">
+
+                </div> 
+
                 <div class="card-body">
+                    
                     <div>
-                        <span class="card-category text-blue">Futebol</span>
-                        <span class="card-time">• há 1h</span>
+                        <span class="card-category text-blue">
+                            Futebol
+                        </span>
+
+                        <span class="card-time">
+                            • há 1h
+                        </span>
                     </div>
-                    <h4>Clube rubro-negro tem um jogo a menos devido a um adiamento e depende apenas de si para assumir
-                        a liderança do Campeonato Brasileiro.</h4>
-                    <a href="/src/pages/noticias/esporte/flamengo.html" class="read-more">Ler mais →</a>
+
+                    <h4>
+                       Clube rubro-negro tem um jogo a menos devido a um adiamento e depende apenas de si para assumir a liderança do Campeonato Brasileiro.
+                    </h4>
+                    
+                    <a
+                        href="/src/pages/noticias/esporte/flamengo.html"
+                        class="read-more">
+                        Ler mais →
+                    </a>
+
                 </div>
+
             </article>
+
 
             <!-- NOTÍCIA 2 -->
+
             <article class="news-card">
-                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/Psg.png');">
-                </div>
+
+                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/Psg.png');"></div>
+
                 <div class="card-body">
+
                     <div>
-                        <span class="card-category text-red">Futebol</span>
-                        <span class="card-time">• há 2h</span>
+                        <span class="card-category text-red">
+                            Futebol
+                        </span>
+
+                        <span class="card-time">
+                            • há 2h
+                        </span>
                     </div>
-                    <h4>PSG perde para o Lens e fica com o vice da Supercopa da França</h4>
-                    <a href="/src/pages/noticias/esporte/psg.html" class="read-more">Ler mais →</a>
+
+                    <h4>
+                       PSG perde para o Lens e fica com o vice da Supercopa da França
+                    </h4>
+
+                    <a
+                        href="/src/pages/noticias/esporte/psg.html"
+                        class="read-more">
+                        Ler mais →
+                    </a>
+
                 </div>
+
             </article>
+
 
             <!-- NOTÍCIA 3 -->
+
             <article class="news-card">
-                <div class="card-img"
-                    style="background-image: url('/src/assets/img/img-noticias/Esportes/africa.png');"></div>
+
+               <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/africa.png');"></div>
+
                 <div class="card-body">
+
                     <div>
-                        <span class="card-category text-yellow">Curiosidade</span>
-                        <span class="card-time">• há 3h</span>
+                        <span class="card-category text-yellow">
+                            Curiosidade
+                        </span>
+
+                        <span class="card-time">
+                            • há 3h
+                        </span>
                     </div>
-                    <h4>Copa do Mundo: dez curiosidades sobre o país africano que vai estrear na competição</h4>
-                    <a href="/src/pages/noticias/esporte/copa.html" class="read-more">Ler mais →</a>
+
+                    <h4>
+                    Copa do Mundo: dez curiosidades sobre o país africano que vai estrear na competição
+                    </h4>
+
+                    <a
+                        href="/src/pages/noticias/esporte/copa.html"
+                        class="read-more">
+                        Ler mais →
+                    </a>
+
                 </div>
+
             </article>
+
 
             <!-- NOTÍCIA 4 -->
+
             <article class="news-card">
-                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/Tiago.png');">
-                </div>
+
+                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/Tiago.png');"></div>
+
                 <div class="card-body">
+
                     <div>
-                        <span class="card-category text-blue">Basquete</span>
-                        <span class="card-time">• há 4h</span>
+                        <span class="card-category text-blue">
+                            Basquete
+                        </span>
+
+                        <span class="card-time">
+                            • há 4h
+                        </span>
                     </div>
-                    <h4>Tiago Splitter quase foi contratado pelos 76ers, nova equipe de LeBron James; entenda</h4>
-                    <a href="/src/pages/noticias/esporte/basquete.html" class="read-more">Ler mais →</a>
+
+                    <h4>
+                       Tiago Splitter quase foi contratado pelos 76ers, nova equipe de LeBron James; entenda
+                    </h4>
+
+                    <a
+                        href="/src/pages/noticias/esporte/basquete.html"
+                        class="read-more">
+                        Ler mais →
+                    </a>
+
                 </div>
+
             </article>
+
 
             <!-- NOTÍCIA 5 -->
+
             <article class="news-card">
-                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/MMA.png');">
-                </div>
+
+                 <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/MMA.png');"></div>
+
                 <div class="card-body">
+
                     <div>
-                        <span class="card-category text-purple">UFC</span>
-                        <span class="card-time">• há 5h</span>
+                        <span class="card-category text-purple">
+                            UFC
+                        </span>
+
+                        <span class="card-time">
+                            • há 5h
+                        </span>
                     </div>
-                    <h4>Islam Makhachev mantém cinturão e aponta Carlos Prates como possível desafiante</h4>
-                    <a href="/src/pages/noticias/esporte/ufc.html" class="read-more">Ler mais →</a>
+
+                    <h4>
+                       Islam Makhachev mantém cinturão e aponta Carlos Prates como possível desafiante
+                    </h4>
+
+                    <a
+                        href="/src/pages/noticias/esporte/ufc.html"
+                        class="read-more">
+                        Ler mais →
+                    </a>
+
                 </div>
+
             </article>
 
+
             <!-- NOTÍCIA 6 -->
+
             <article class="news-card">
-                <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/Surf.png');">
-                </div>
+
+                 <div class="card-img" style="background-image: url('/src/assets/img/img-noticias/Esportes/Surf.png');"></div>
+
                 <div class="card-body">
+
                     <div>
-                        <span class="card-category text-yellow">Surf</span>
-                        <span class="card-time">• há 6h</span>
+                        <span class="card-category text-yellow">
+                            Surf
+                        </span>
+
+                        <span class="card-time">
+                            • há 6h
+                        </span>
                     </div>
-                    <h4>Italo Ferreira é eliminado por havaiano na semi em Teahupoo, mas fecha etapa no topo da WSL</h4>
-                    <a href="/src/pages/noticias/esporte/surf.html" class="read-more">Ler mais →</a>
+
+                    <h4>
+                       Italo Ferreira é eliminado por havaiano na semi em Teahupoo, mas fecha etapa no topo da WSL
+                    </h4>
+
+                    <a
+                        href="/src/pages/noticias/esporte/surf.html"
+                        class="read-more">
+                        Ler mais →
+                    </a>
+
                 </div>
+
             </article>
 
         </section>
@@ -274,50 +620,104 @@
         <!-- ==================== AGENDA ==================== -->
 
         <div class="section-header">
-            <h3>Agenda da Semana</h3>
+
+            <h3>
+                Agenda da Semana
+            </h3>
+
         </div>
 
-        <section class="news-grid agenda-semana" aria-label="Agenda esportiva da semana">
+        <section
+            class="news-grid agenda-semana"
+            aria-label="Agenda esportiva da semana">
+
 
             <article class="news-card">
                 <div class="card-body">
-                    <span class="card-category text-blue">Segunda-feira</span>
-                    <h4>Rodada de futebol movimenta a semana esportiva</h4>
+
+                    <span class="card-category text-blue">
+                        Segunda-feira
+                    </span>
+
+                    <h4>
+                        Rodada de futebol movimenta a semana esportiva
+                    </h4>
+
                 </div>
             </article>
 
-            <article class="news-card">
-                <div class="card-body">
-                    <span class="card-category text-red">Terça-feira</span>
-                    <h4>Competições de basquete entram em fase decisiva</h4>
-                </div>
-            </article>
 
             <article class="news-card">
                 <div class="card-body">
-                    <span class="card-category text-purple">Quarta-feira</span>
-                    <h4>Atletas intensificam preparação para os próximos torneios</h4>
+
+                    <span class="card-category text-red">
+                        Terça-feira
+                    </span>
+
+                    <h4>
+                        Competições de basquete entram em fase decisiva
+                    </h4>
+
                 </div>
             </article>
 
-            <article class="news-card">
-                <div class="card-body">
-                    <span class="card-category text-yellow">Quinta-feira</span>
-                    <h4>Futebol internacional ganha destaque na programação esportiva</h4>
-                </div>
-            </article>
 
             <article class="news-card">
                 <div class="card-body">
-                    <span class="card-category text-blue">Sexta-feira</span>
-                    <h4>Fim de semana começa com grandes eventos esportivos</h4>
+
+                    <span class="card-category text-purple">
+                        Quarta-feira
+                    </span>
+
+                    <h4>
+                        Atletas intensificam preparação para os próximos torneios
+                    </h4>
+
                 </div>
             </article>
 
+
             <article class="news-card">
                 <div class="card-body">
-                    <span class="card-category text-red">Sábado</span>
-                    <h4>Torcedores acompanham uma agenda cheia de competições</h4>
+
+                    <span class="card-category text-yellow">
+                        Quinta-feira
+                    </span>
+
+                    <h4>
+                        Futebol internacional ganha destaque na programação esportiva
+                    </h4>
+
+                </div>
+            </article>
+
+
+            <article class="news-card">
+                <div class="card-body">
+
+                    <span class="card-category text-blue">
+                        Sexta-feira
+                    </span>
+
+                    <h4>
+                        Fim de semana começa com grandes eventos esportivos
+                    </h4>
+
+                </div>
+            </article>
+
+
+            <article class="news-card">
+                <div class="card-body">
+
+                    <span class="card-category text-red">
+                        Sábado
+                    </span>
+
+                    <h4>
+                        Torcedores acompanham uma agenda cheia de competições
+                    </h4>
+
                 </div>
             </article>
 
@@ -341,7 +741,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="footer-links">
                 <h5>Navegação</h5>
                 <a href="/public/index.html">Início</a>
@@ -349,9 +748,7 @@
                 <a href="/src/pages/internacional.html">Internacional</a>
                 <a href="/src/pages/esportes.html">Esporte</a>
             </div>
-
             <img src="/src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban Footer">
-
             <div id="contato" class="footer-contact">
                 <h5>Contato Redação</h5>
                 <p>reviewurban759@gmail.com</p>
@@ -359,13 +756,13 @@
                 <p>Brazlândia/Águas Lindas - DF, Brasil</p>
             </div>
         </div>
-
         <div class="container footer-bottom">
             <p>&copy; 2026 The Urban Review - Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- JAVASCRIPT -->
+
     <script src="/src/assets/js/script.js"></script>
 
 </body>
