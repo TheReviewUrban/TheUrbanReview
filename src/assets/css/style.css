@@ -3646,12 +3646,12 @@ body#noticias-inicio.light-mode .article-back a:hover {
 
 /* CORES */
 :root {
-    --noticias-esportes-primaria: #DC2626;
-    --noticias-esportes-secundaria: #B91C1C;
-    --noticias-esportes-terciaria: #EF4444;
-    --noticias-esportes-quaternaria: #991B1B;
-    --noticias-esportes-fundo: #080303;
-    --noticias-esportes-card: #140606;
+    --noticias-flamengo-primaria: #DC2626;
+    --noticias-flamengo-secundaria: #B91C1C;
+    --noticias-flamengo-terciaria: #EF4444;
+    --noticias-flamengo-quaternaria: #991B1B;
+    --noticias-flamengo-fundo: #080303;
+    --noticias-flamengo-card: #140606;
 }
 
 
@@ -3659,8 +3659,8 @@ body#noticias-inicio.light-mode .article-back a:hover {
    GERAL
 ===================================================== */
 
-body#noticias-esportes {
-    background-color: var(--noticias-esportes-fundo);
+body#noticias-flamengo {
+    background-color: var(--noticias-flamengo-fundo);
 }
 
 
@@ -3668,7 +3668,7 @@ body#noticias-esportes {
    NAVBAR
 ===================================================== */
 
-#noticias-esportes .navbar {
+#noticias-flamengo .navbar {
     background-color: #100404;
     border-bottom: 1px solid #5c1515;
 }
@@ -3676,28 +3676,28 @@ body#noticias-esportes {
 
 /* LOGO */
 
-#noticias-esportes .logo h1 span {
-    color: var(--noticias-esportes-terciaria);
+#noticias-flamengo .logo h1 span {
+    color: var(--noticias-flamengo-terciaria);
     text-shadow:
         3px 3px 0px #000,
         0 0 15px rgba(220, 38, 38, 0.6);
 }
 
-#noticias-esportes .logo p {
-    color: var(--noticias-esportes-terciaria);
+#noticias-flamengo .logo p {
+    color: var(--noticias-flamengo-terciaria);
 }
 
 
 /* MENU */
 
-#noticias-esportes .nav-links a:hover {
+#noticias-flamengo .nav-links a:hover {
     color: #ffffff;
-    border-bottom-color: var(--noticias-esportes-primaria);
+    border-bottom-color: var(--noticias-flamengo-primaria);
 }
 
-#noticias-esportes .nav-links a.active {
+#noticias-flamengo .nav-links a.active {
     color: #ffffff;
-    border-bottom-color: var(--noticias-esportes-primaria);
+    border-bottom-color: var(--noticias-flamengo-primaria);
 }
 
 
@@ -3705,23 +3705,23 @@ body#noticias-esportes {
    PÁGINA DA NOTÍCIA
 ===================================================== */
 
-#noticias-esportes .article-page {
+#noticias-flamengo .article-page {
     padding: 70px 0 80px;
 }
 
-#noticias-esportes .article-page .container {
+#noticias-flamengo .article-page .container {
     max-width: 950px;
 }
 
 
 /* CATEGORIA */
 
-#noticias-esportes .article-category {
+#noticias-flamengo .article-category {
     display: inline-block;
     background: linear-gradient(
         135deg,
-        var(--noticias-esportes-terciaria),
-        var(--noticias-esportes-quaternaria)
+        var(--noticias-flamengo-terciaria),
+        var(--noticias-flamengo-quaternaria)
     );
     color: #ffffff;
     padding: 7px 14px;
@@ -3737,7 +3737,7 @@ body#noticias-esportes {
 
 /* TÍTULO */
 
-#noticias-esportes .article-title {
+#noticias-flamengo .article-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 800;
@@ -3749,7 +3749,7 @@ body#noticias-esportes {
 
 /* SUBTÍTULO */
 
-#noticias-esportes .article-subtitle {
+#noticias-flamengo .article-subtitle {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -3761,7 +3761,7 @@ body#noticias-esportes {
 
 /* META */
 
-#noticias-esportes .article-meta {
+#noticias-flamengo .article-meta {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -3774,11 +3774,11 @@ body#noticias-esportes {
 
 /* IMAGEM */
 
-#noticias-esportes .article-image {
+#noticias-flamengo .article-image {
     margin: 0 0 40px;
 }
 
-#noticias-esportes .article-image img {
+#noticias-flamengo .article-image img {
     display: block;
     width: 100%;
     max-height: 550px;
@@ -3787,7 +3787,7 @@ body#noticias-esportes {
     border: 1px solid #7f1d1d;
 }
 
-#noticias-esportes .article-image figcaption {
+#noticias-flamengo .article-image figcaption {
     color: #a68d8d;
     font-size: 0.75rem;
     margin-top: 8px;
@@ -3798,12 +3798,12 @@ body#noticias-esportes {
    CONTEÚDO DA NOTÍCIA
 ===================================================== */
 
-#noticias-esportes .article-content {
+#noticias-flamengo .article-content {
     max-width: 800px;
     margin: 0 auto;
 }
 
-#noticias-esportes .article-content p {
+#noticias-flamengo .article-content p {
     font-family: 'Open Sans', sans-serif;
     color: #e0d0d0;
     font-size: 1.05rem;
@@ -3814,47 +3814,47 @@ body#noticias-esportes {
 
 /* PRIMEIRO PARÁGRAFO */
 
-#noticias-esportes .article-content .article-lead {
+#noticias-flamengo .article-content .article-lead {
     font-size: 1.2rem;
     color: #ffffff;
     font-weight: 500;
-    border-left: 4px solid var(--noticias-esportes-primaria);
+    border-left: 4px solid var(--noticias-flamengo-primaria);
     padding-left: 20px;
 }
 
 
 /* SUBTÍTULOS */
 
-#noticias-esportes .article-content h1,
-#noticias-esportes .article-content h2 {
+#noticias-flamengo .article-content h1,
+#noticias-flamengo .article-content h2 {
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     margin-top: 45px;
     margin-bottom: 20px;
-    border-left: 4px solid var(--noticias-esportes-primaria);
+    border-left: 4px solid var(--noticias-flamengo-primaria);
     padding-left: 15px;
 }
 
-#noticias-esportes .article-content h1 {
+#noticias-flamengo .article-content h1 {
     font-size: 1.7rem;
 }
 
-#noticias-esportes .article-content h2 {
+#noticias-flamengo .article-content h2 {
     font-size: 1.4rem;
 }
 
 
 /* LINK DA NOTÍCIA ORIGINAL */
 
-#noticias-esportes .article-content a {
+#noticias-flamengo .article-content a {
     display: inline-block;
-    color: var(--noticias-esportes-terciaria);
+    color: var(--noticias-flamengo-terciaria);
     font-weight: bold;
     margin-top: 15px;
     transition: 0.3s;
 }
 
-#noticias-esportes .article-content a:hover {
+#noticias-flamengo .article-content a:hover {
     color: #ffffff;
 }
 
@@ -3863,7 +3863,7 @@ body#noticias-esportes {
    COMPARTILHAMENTO
 ===================================================== */
 
-#noticias-esportes .article-share {
+#noticias-flamengo .article-share {
     max-width: 800px;
     margin: 50px auto 30px;
     padding-top: 25px;
@@ -3873,13 +3873,13 @@ body#noticias-esportes {
     gap: 10px;
 }
 
-#noticias-esportes .article-share span {
+#noticias-flamengo .article-share span {
     color: #c7b0b0;
     font-size: 0.85rem;
     margin-right: 5px;
 }
 
-#noticias-esportes .article-share button {
+#noticias-flamengo .article-share button {
     border: 1px solid #7f1d1d;
     background: #180707;
     color: #ffffff;
@@ -3889,9 +3889,9 @@ body#noticias-esportes {
     transition: 0.3s;
 }
 
-#noticias-esportes .article-share button:hover {
-    background: var(--noticias-esportes-primaria);
-    border-color: var(--noticias-esportes-terciaria);
+#noticias-flamengo .article-share button:hover {
+    background: var(--noticias-flamengo-primaria);
+    border-color: var(--noticias-flamengo-terciaria);
 }
 
 
@@ -3899,20 +3899,20 @@ body#noticias-esportes {
    VOLTAR
 ===================================================== */
 
-#noticias-esportes .article-back {
+#noticias-flamengo .article-back {
     max-width: 800px;
     margin: 25px auto 0;
 }
 
-#noticias-esportes .article-back a {
-    color: var(--noticias-esportes-terciaria);
+#noticias-flamengo .article-back a {
+    color: var(--noticias-flamengo-terciaria);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     transition: 0.3s;
 }
 
-#noticias-esportes .article-back a:hover {
+#noticias-flamengo .article-back a:hover {
     color: #ffffff;
 }
 
@@ -3921,21 +3921,23 @@ body#noticias-esportes {
    CONTATO
 ===================================================== */
 
-#noticias-esportes .newsletter-box {
+#noticias-flamengo .newsletter-box {
     display: flex;
-    background-color: var(--noticias-esportes-card);
+    background-color: var(--noticias-flamengo-card);
     border-color: #5c1515;
 }
 
-#noticias-esportes .newsletter-form button {
+#noticias-flamengo .newsletter-form button {
     display: flex;
-    background-color: var(--noticias-esportes-primaria);
+    background-color: var(--noticias-flamengo-primaria);
     color: white;
     border: none;
+    align-items: center;
+    justify-content: space-around;
 }
 
-#noticias-esportes .newsletter-form button:hover {
-    background-color: var(--noticias-esportes-quaternaria);
+#noticias-flamengo .newsletter-form button:hover {
+    background-color: var(--noticias-flamengo-quaternaria);
 }
 
 
@@ -3943,13 +3945,13 @@ body#noticias-esportes {
    FOOTER
 ===================================================== */
 
-#noticias-esportes .footer {
+#noticias-flamengo .footer {
     background-color: #090202;
     border-top: 1px solid #5c1515;
 }
 
-#noticias-esportes .footer-brand h2 span {
-    color: var(--noticias-esportes-terciaria);
+#noticias-flamengo .footer-brand h2 span {
+    color: var(--noticias-flamengo-terciaria);
 }
 
 
@@ -3957,33 +3959,48 @@ body#noticias-esportes {
    MODO CLARO
 ===================================================== */
 
-body#noticias-esportes.light-mode {
+body#noticias-flamengo.light-mode {
     background-color: #fff7f7;
 }
 
-body#noticias-esportes.light-mode .article-title,
-body#noticias-esportes.light-mode .article-content h1,
-body#noticias-esportes.light-mode .article-content h2 {
+body#noticias-flamengo.light-mode .article-title,
+body#noticias-flamengo.light-mode .article-content h1,
+body#noticias-flamengo.light-mode .article-content h2 {
     color: #1f1111;
 }
 
-body#noticias-esportes.light-mode .article-subtitle {
+body#noticias-flamengo.light-mode .article-subtitle {
     color: #6b4b4b;
 }
 
-body#noticias-esportes.light-mode .article-meta {
+body#noticias-flamengo.light-mode .article-meta {
     color: #806666;
 }
 
-body#noticias-esportes.light-mode .article-content p {
+body#noticias-flamengo.light-mode .article-content p {
     color: #422f2f;
 }
 
-body#noticias-esportes.light-mode .article-content .article-lead {
+body#noticias-flamengo.light-mode .article-content .article-lead {
     color: #211414;
 }
 
-body#noticias-esportes.light-mode .newsletter-box {
+body#noticias-flamengo.light-mode .newsletter-box {
     background-color: #ffffff;
     border-color: #e5b4b4;
+}
+
+body#noticias-flamengo.light-mode a:hover {
+    color: #e70202;
+    border-bottom-color: var(--noticias-flamengo-primaria);
+}
+
+body#noticias-flamengo.light-mode a.active {
+    color: #e70202;
+    border-bottom-color: var(--noticias-flamengo-primaria);
+}
+
+body#noticias-flamengo.light-mode .navbar{
+    background-color: #ffffff;
+    border-bottom: 1px solid #5c1515;
 }
