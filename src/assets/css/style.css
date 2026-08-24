@@ -460,7 +460,6 @@ body#noticias-politica.light-mode .nav-links a:hover{
 }
 
 body#noticias-politica.light-mode .nav-links a.active {
-    color: #ffffff;
     border-bottom: 2px solid var(--politica-color-primaria);
     padding-bottom: 2px;
 
