@@ -460,11 +460,11 @@ body#noticias-politica.light-mode .nav-links a:hover{
 }
 
 body#noticias-politica.light-mode .nav-links a.active {
-    border-bottom: 2px solid var(--politica-color-primaria);
+     border-bottom: 2px solid var(--politica-color-quaternaria);
+     color: var(--politica-color-quinquenaria);
     padding-bottom: 2px;
-
-    
 }
+    
 #noticias-politica strong{
     color: white;
 }
@@ -1347,7 +1347,8 @@ body#noticias-internacional.light-mode .nav-links a:hover{
 
 
 body#noticias-internacional.light-mode .nav-links a.active {
-     border-bottom: 2px solid #60dc1d;
+     border-bottom: 2px solid #dc891d;
+     color: var(--internacional-color-quinquenaria);
     padding-bottom: 2px;
 }
     
