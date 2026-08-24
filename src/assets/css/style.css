@@ -2550,7 +2550,6 @@ p {
 }
 
 #esportes .carousel-btn {
-    display: flex;
     background: rgba(245, 158, 11, 0.2);
     border-color: var(--esportes-color-terciaria);
 }
@@ -2858,19 +2857,7 @@ p {
     box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
 }
 
-/* SETAS */
-#esportes .carousel-btn {
-    background: rgba(245, 158, 11, 0.2);
-    border: 1px solid var(--esportes-color-terciaria);
-    color: white;
-    transition: all 0.3s ease;
-}
 
-#esportes .carousel-btn:hover {
-    background: var(--esportes-color-quaternaria);
-    border-color: var(--esportes-color-terciaria);
-    transform: translateY(-50%) scale(1.1);
-}
 
 /* INDICADORES */
 #esportes .carousel-dot {
