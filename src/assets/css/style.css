@@ -3641,7 +3641,7 @@ body#noticias-inicio.light-mode .article-back a:hover {
     }
 }
 /* =====================================================
-   NOTÍCIAS DE ESPORTES INTERNAS - TEMA VERMELHO
+   NOTÍCIAS DO FLAMENGO INTERNA
 ===================================================== */
 
 /* CORES */
@@ -4001,6 +4001,369 @@ body#noticias-flamengo.light-mode a.active {
 }
 
 body#noticias-flamengo.light-mode .navbar{
+    background-color: #ffffff;
+    border-bottom: 1px solid #5c1515;
+}
+
+/* COMEÇO DE UFC*/
+
+/* CORES */
+:root {
+    --noticias-ufc-primaria: #941414;
+    --noticias-ufc-secundaria: #580808;
+    --noticias-ufc-terciaria: #720e0e;
+    --noticias-ufc-quaternaria: #991B1B;
+    --noticias-ufc-fundo: #080303;
+    --noticias-ufc-card: #140606;
+}
+
+
+/* =====================================================
+   GERAL
+===================================================== */
+
+body#noticias-ufc {
+    background-color: var(--noticias-ufc-fundo);
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+#noticias-ufc .navbar {
+    background-color: #100404;
+    border-bottom: 1px solid #5c1515;
+}
+
+
+/* LOGO */
+
+#noticias-ufc .logo h1 span {
+    color: var(--noticias-ufc-terciaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px rgba(220, 38, 38, 0.6);
+}
+
+#noticias-ufc .logo p {
+    color: var(--noticias-ufc-terciaria);
+}
+
+
+/* MENU */
+
+#noticias-ufc .nav-links a:hover {
+    color: #ffffff;
+    border-bottom-color: var(--noticias-ufc-primaria);
+}
+
+#noticias-ufc .nav-links a.active {
+    color: #ffffff;
+    border-bottom-color: var(--noticias-ufc-primaria);
+}
+
+
+/* =====================================================
+   PÁGINA DA NOTÍCIA
+===================================================== */
+
+#noticias-ufc .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-ufc .article-page .container {
+    max-width: 950px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-ufc .article-category {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        var(--noticias-ufc-terciaria),
+        var(--noticias-ufc-quaternaria)
+    );
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-ufc .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-ufc .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #c7b0b0;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-ufc .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9f8585;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-ufc .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-ufc .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #7f1d1d;
+}
+
+#noticias-ufc .article-image figcaption {
+    color: #a68d8d;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   CONTEÚDO DA NOTÍCIA
+===================================================== */
+
+#noticias-ufc .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-ufc .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #e0d0d0;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-ufc .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 500;
+    border-left: 4px solid var(--noticias-ufc-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-ufc .article-content h1,
+#noticias-ufc .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--noticias-ufc-primaria);
+    padding-left: 15px;
+}
+
+#noticias-ufc .article-content h1 {
+    font-size: 1.7rem;
+}
+
+#noticias-ufc .article-content h2 {
+    font-size: 1.4rem;
+}
+
+
+/* LINK DA NOTÍCIA ORIGINAL */
+
+#noticias-ufc .article-content a {
+    display: inline-block;
+    color: var(--noticias-ufc-terciaria);
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#noticias-ufc .article-content a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   COMPARTILHAMENTO
+===================================================== */
+
+#noticias-ufc .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #5c1515;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-ufc .article-share span {
+    color: #c7b0b0;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-ufc .article-share button {
+    border: 1px solid #7f1d1d;
+    background: #180707;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-ufc .article-share button:hover {
+    background: var(--noticias-ufc-primaria);
+    border-color: var(--noticias-ufc-terciaria);
+}
+
+
+/* =====================================================
+   VOLTAR
+===================================================== */
+
+#noticias-ufc .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-ufc .article-back a {
+    color: var(--noticias-ufc-terciaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-ufc .article-back a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CONTATO
+===================================================== */
+
+#noticias-ufc .newsletter-box {
+    display: flex;
+    background-color: var(--noticias-ufc-card);
+    border-color: #5c1515;
+}
+
+#noticias-ufc .newsletter-form button {
+    display: flex;
+    background-color: var(--noticias-ufc-primaria);
+    color: white;
+    border: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#noticias-ufc .newsletter-form button:hover {
+    background-color: var(--noticias-ufc-quaternaria);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#noticias-ufc .footer {
+    background-color: #090202;
+    border-top: 1px solid #5c1515;
+}
+
+#noticias-ufc .footer-brand h2 span {
+    color: var(--noticias-ufc-terciaria);
+}
+
+
+/* =====================================================
+   MODO CLARO
+===================================================== */
+
+body#noticias-ufc.light-mode {
+    background-color: #fff7f7;
+}
+
+body#noticias-ufc.light-mode .article-title,
+body#noticias-ufc.light-mode .article-content h1,
+body#noticias-ufc.light-mode .article-content h2 {
+    color: #1f1111;
+}
+
+body#noticias-ufc.light-mode .article-subtitle {
+    color: #6b4b4b;
+}
+
+body#noticias-ufc.light-mode .article-meta {
+    color: #806666;
+}
+
+body#noticias-ufc.light-mode .article-content p {
+    color: #422f2f;
+}
+
+body#noticias-ufc.light-mode .article-content .article-lead {
+    color: #211414;
+}
+
+body#noticias-ufc.light-mode .newsletter-box {
+    background-color: #ffffff;
+    border-color: #e5b4b4;
+}
+
+body#noticias-ufc.light-mode a:hover {
+    color: #e70202;
+    border-bottom-color: var(--noticias-ufc-primaria);
+}
+
+body#noticias-ufc.light-mode a.active {
+    color: #e70202;
+    border-bottom-color: var(--noticias-ufc-primaria);
+}
+
+body#noticias-ufc.light-mode .navbar{
     background-color: #ffffff;
     border-bottom: 1px solid #5c1515;
 }
