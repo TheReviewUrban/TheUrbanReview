@@ -750,8 +750,8 @@ body.light-mode .article-back a:hover {
 }
 
 body#noticias-congresso.light-mode .nav-links a:hover{ 
-    color: #ffffff;
     border-bottom: 2px solid var(--congresso-color-senaria);
+    color: var(--congresso-color-primaria);
     padding-bottom: 2px;
 }
 
