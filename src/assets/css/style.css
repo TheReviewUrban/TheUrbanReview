@@ -2550,7 +2550,6 @@ p {
 }
 
 #esportes .carousel-btn {
-    display: flex;
     background: rgba(245, 158, 11, 0.2);
     border-color: var(--esportes-color-terciaria);
 }
@@ -2858,19 +2857,7 @@ p {
     box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
 }
 
-/* SETAS */
-#esportes .carousel-btn {
-    background: rgba(245, 158, 11, 0.2);
-    border: 1px solid var(--esportes-color-terciaria);
-    color: white;
-    transition: all 0.3s ease;
-}
 
-#esportes .carousel-btn:hover {
-    background: var(--esportes-color-quaternaria);
-    border-color: var(--esportes-color-terciaria);
-    transform: translateY(-50%) scale(1.1);
-}
 
 /* INDICADORES */
 #esportes .carousel-dot {
@@ -4367,3 +4354,367 @@ body#noticias-ufc.light-mode .navbar{
     background-color: #ffffff;
     border-bottom: 1px solid #5c1515;
 }
+
+/* COMEÇO DE SKATE*/
+
+/* CORES */
+:root {
+    --noticias-skate-primaria: #FFC5D3;
+    --noticias-skate-secundaria: #FFB5C0;
+    --noticias-skate-terciaria: #FF8DA1;
+    --noticias-skate-quaternaria: #FF007F;
+    --noticias-skate-fundo: #080303;
+    --noticias-skate-card:  #140606;
+}
+
+
+/* =====================================================
+   GERAL
+===================================================== */
+
+body#noticias-skate {
+    background-color: var(--noticias-skate-fundo);
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+#noticias-skate .navbar {
+    background-color: #100404;
+    border-bottom: 1px solid #5c1515;
+}
+
+
+/* LOGO */
+
+#noticias-skate .logo h1 span {
+    color: var(--noticias-skate-terciaria);
+    text-shadow:
+        3px 3px 0px #000,
+        0 0 15px rgba(220, 38, 38, 0.6);
+}
+
+#noticias-skate .logo p {
+    color: var(--noticias-skate-terciaria);
+}
+
+
+/* MENU */
+
+#noticias-skate .nav-links a:hover {
+    color: #ffffff;
+    border-bottom-color: var(--noticias-skate-primaria);
+}
+
+#noticias-skate .nav-links a.active {
+    color: #ffffff;
+    border-bottom-color: var(--noticias-skate-primaria);
+}
+
+
+/* =====================================================
+   PÁGINA DA NOTÍCIA
+===================================================== */
+
+#noticias-skate .article-page {
+    padding: 70px 0 80px;
+}
+
+#noticias-skate .article-page .container {
+    max-width: 950px;
+}
+
+
+/* CATEGORIA */
+
+#noticias-skate .article-category {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        var(--noticias-skate-terciaria),
+        var(--noticias-skate-quaternaria)
+    );
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+#noticias-skate .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+/* SUBTÍTULO */
+
+#noticias-skate .article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #c7b0b0;
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+
+/* META */
+
+#noticias-skate .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9f8585;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGEM */
+
+#noticias-skate .article-image {
+    margin: 0 0 40px;
+}
+
+#noticias-skate .article-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #7f1d1d;
+}
+
+#noticias-skate .article-image figcaption {
+    color: #a68d8d;
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   CONTEÚDO DA NOTÍCIA
+===================================================== */
+
+#noticias-skate .article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#noticias-skate .article-content p {
+    font-family: 'Open Sans', sans-serif;
+    color: #e0d0d0;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* PRIMEIRO PARÁGRAFO */
+
+#noticias-skate .article-content .article-lead {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 500;
+    border-left: 4px solid var(--noticias-skate-primaria);
+    padding-left: 20px;
+}
+
+
+/* SUBTÍTULOS */
+
+#noticias-skate .article-content h1,
+#noticias-skate .article-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--noticias-skate-primaria);
+    padding-left: 15px;
+}
+
+#noticias-skate .article-content h1 {
+    font-size: 1.7rem;
+}
+
+#noticias-skate .article-content h2 {
+    font-size: 1.4rem;
+}
+
+
+/* LINK DA NOTÍCIA ORIGINAL */
+
+#noticias-skate .article-content a {
+    display: inline-block;
+    color: var(--noticias-skate-terciaria);
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#noticias-skate .article-content a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   COMPARTILHAMENTO
+===================================================== */
+
+#noticias-skate .article-share {
+    max-width: 800px;
+    margin: 50px auto 30px;
+    padding-top: 25px;
+    border-top: 1px solid #5c1515;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#noticias-skate .article-share span {
+    color: #c7b0b0;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+#noticias-skate .article-share button {
+    border: 1px solid #7f1d1d;
+    background: #180707;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#noticias-skate .article-share button:hover {
+    background: var(--noticias-skate-primaria);
+    border-color: var(--noticias-skate-terciaria);
+}
+
+
+/* =====================================================
+   VOLTAR
+===================================================== */
+
+#noticias-skate .article-back {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+#noticias-skate .article-back a {
+    color: var(--noticias-skate-terciaria);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#noticias-skate .article-back a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CONTATO
+===================================================== */
+
+#noticias-skate .newsletter-box {
+    display: flex;
+    background-color: var(--noticias-skate-card);
+    border-color: #5c1515;
+}
+
+#noticias-skate .newsletter-form button {
+    display: flex;
+    background-color: var(--noticias-skate-primaria);
+    color: white;
+    border: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#noticias-skate .newsletter-form button:hover {
+    background-color: var(--noticias-skate-quaternaria);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+#noticias-skate .footer {
+    background-color: #090202;
+    border-top: 1px solid #5c1515;
+}
+
+#noticias-skate .footer-brand h2 span {
+    color: var(--noticias-skate-terciaria);
+}
+
+
+/* =====================================================
+   MODO CLARO
+===================================================== */
+
+body#noticias-skate.light-mode {
+    background-color: #fff7f7;
+}
+
+body#noticias-skate.light-mode .article-title,
+body#noticias-skate.light-mode .article-content h1,
+body#noticias-skate.light-mode .article-content h2 {
+    color: #1f1111;
+}
+
+body#noticias-skate.light-mode .article-subtitle {
+    color: #6b4b4b;
+}
+
+body#noticias-skate.light-mode .article-meta {
+    color: #806666;
+}
+
+body#noticias-skate.light-mode .article-content p {
+    color: #422f2f;
+}
+
+body#noticias-skate.light-mode .article-content .article-lead {
+    color: #211414;
+}
+
+body#noticias-skate.light-mode .newsletter-box {
+    background-color: #ffffff;
+    border-color: #e5b4b4;
+}
+
+body#noticias-skate.light-mode a:hover {
+    color: #e70202;
+    border-bottom-color: var(--noticias-skate-primaria);
+}
+
+body#noticias-skate.light-mode a.active {
+    color: #e70202;
+    border-bottom-color: var(--noticias-skate-primaria);
+}
+
+body#noticias-skate.light-mode .navbar{
+    background-color: #ffffff;
+    border-bottom: 1px solid #5c1515;
+}
+
