@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $senha = "senac";
-$banco = "sistemaex";
+$banco = "theurbanreview";
 $porta = 3307;
 
 # Cria a conexão
