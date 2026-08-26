@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | The Urban Review</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="login-page cadastro-page">
+    <button id="modoEscuro" class="floating-theme-btn" aria-label="Mudar tema">
+        ☀️
+    </button>
+    <main class="login-container">
+
+        <section class="login-card cadastro-card">
+
+            <div class="login-header">
+                <h1>The <span>Urban Review</span></h1>
+                <p>Crie sua conta</p>
+            </div>
+
+            <form action="../php/cadastro.php" method="POST" class="login-form">
+
+                <!-- NOME -->
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name"
+                        required>
+                </div>
+
+                <!-- E-MAIL -->
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email"
+                        required>
+                </div>
+
+                <!-- DATA DE NASCIMENTO -->
+                <div class="form-group">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" autocomplete="bday" required>
+                </div>
+
+                <!-- SENHA -->
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha"
+                        autocomplete="new-password" minlength="6" required>
+                    <small class="password-info">
+                        A senha deve ter pelo menos 6 caracteres.
+                    </small>
+                </div>
+
+                <!-- BOTÃO -->
+                <button type="submit" class="login-button">
+                    Criar conta
+                </button>
+
+            </form>
+
+            <!-- DIVISOR -->
+            <div class="login-divider">
+                <span>ou</span>
+            </div>
+
+            <!-- LOGIN -->
+            <div class="register-area">
+                <p>Já possui uma conta?</p>
+                <a href="../pages/login.html" class="register-button">
+                    Fazer login
+                </a>
+            </div>
+
+            <!-- VOLTAR -->
+            <div class="back-home">
+                <a href="../../../index.html">
+                    ← Voltar para o site
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

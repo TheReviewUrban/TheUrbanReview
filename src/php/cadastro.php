@@ -11,7 +11,7 @@ if(empty($nome) || empty($email) || empty($senha) || empty($nascimento)){
 # Aplica criptografia na senha
 $senha_segura = password_hash($senha, PASSWORD_DEFAULT);
 # Cria comando SQL de inserção usando Prepared Statements (Seguro)
-$stmt = $conexao->prepare("INSERT INTO usuarios (nome, email, nascimento, senha_segura) VALUES (?, ?, ?, ?)");
+$stmt = $conexao->prepare("INSERT INTO usuarios (nome_completo, email, nascimento, senha_segura) VALUES (?, ?, ?, ?)");
 # "ssss" indica que os 4 parâmetros são strings
 $stmt->bind_param("ssss", $nome, $email, $nascimento, $senha_segura);
 # Executa o comando

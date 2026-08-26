@@ -57,35 +57,60 @@ if (formOpiniao && newsletterSection) {
         formOpiniao.reset();
     })
 };
+// ==========================================
+// TEMA CLARO / ESCURO
+// ==========================================
+
 const btnModo = document.getElementById("modoEscuro");
 
 if (btnModo) {
 
+    // Recupera o tema salvo
     const tema = localStorage.getItem("tema");
 
     if (tema === "claro") {
+
         document.body.classList.add("light-mode");
-        btnModo.textContent = "☀️";
-    } else {
+
+        // No modo claro, mostra lua
         btnModo.textContent = "🌙";
+
+    } else {
+
+        // Modo escuro padrão
+        btnModo.textContent = "☀️";
     }
 
+
+    // Troca o tema ao clicar
     btnModo.addEventListener("click", () => {
 
         btnModo.classList.add("animar");
 
         document.body.classList.toggle("light-mode");
 
+
         if (document.body.classList.contains("light-mode")) {
-            btnModo.textContent = "☀️";
-            localStorage.setItem("tema", "claro");
-        } else {
+
+            // MODO CLARO
             btnModo.textContent = "🌙";
+
+            localStorage.setItem("tema", "claro");
+
+        } else {
+
+            // MODO ESCURO
+            btnModo.textContent = "☀️";
+
             localStorage.setItem("tema", "escuro");
         }
 
+
+        // Remove a animação
         setTimeout(() => {
+
             btnModo.classList.remove("animar");
+
         }, 500);
 
     });
