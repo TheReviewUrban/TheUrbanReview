@@ -22,6 +22,7 @@
                 <h1>THE <span>URBAN</span> REVIEW</h1>
                 <p>Notícias que informam. Conteúdo que importa.</p>
             </div>
+
             <nav class="nav-links menu-desk">
                 <a href="/public/index.html" class="active">Início</a>
                 <a href="../src/pages/politica.html">Política</a>
@@ -40,10 +41,95 @@
                 </ul>
             </nav>
             <div class="nav-actions">
+
                 <div class="search-box"></div>
-                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
+
+                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">
+                    🌙
+                </button>
+
+                <!-- CONTA -->
+                <div class="account-container">
+                    <a href="../src/pages/cadastro.html">
+                        <button id="accountButton" class="account-button">
+                            <span class="account-icon"> Faça Seu Login/Cadastro</span>
+
+                        </button>
+                    </a>
+
+                    <!-- MENU DA CONTA -->
+                    <div id="accountMenu" class="account-menu">
+
+                        <!-- NÃO LOGADO -->
+                        <div id="loggedOutMenu">
+
+                            <div class="account-menu-header">
+                                <strong>Minha conta</strong>
+                                <span>Entre para acessar seus recursos</span>
+                            </div>
+
+                            <button id="openLogin" class="account-menu-button">
+                                Entrar
+                            </button>
+
+                            <button id="openRegister" class="account-menu-register">
+                                Criar uma conta
+                            </button>
+
+                        </div>
+
+
+                        <!-- LOGADO -->
+                        <div id="loggedInMenu" style="display: none;">
+
+                            <div class="account-user">
+
+                                <div id="accountAvatar" class="account-avatar">
+                                    U
+                                </div>
+
+                                <div>
+                                    <strong id="accountName">
+                                        Usuário
+                                    </strong>
+
+                                    <span id="accountEmail">
+                                        usuario@email.com
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="account-menu-divider"></div>
+
+                            <button class="user-option" id="openDashboard">
+                                Minha conta
+                            </button>
+
+                            <button class="user-option">
+                                ⭐ Favoritos
+                            </button>
+
+                            <button class="user-option">
+                                💬 Meus comentários
+                            </button>
+
+                            <div class="account-menu-divider"></div>
+
+                            <button id="logoutButton" class="logout-option">
+                                🚪 Sair
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
+
+
     </header>
 
     <!-- ==================== CARROSSEL ==================== -->
@@ -163,7 +249,8 @@
             </article>
 
             <article class="news-card">
-                <div class="card-img" style="background-image: url('../src/assets/img/img-noticias/inicio/esporte.jpg');">
+                <div class="card-img"
+                    style="background-image: url('../src/assets/img/img-noticias/inicio/esporte.jpg');">
                 </div>
                 <div class="card-body">
                     <span class="card-category text-blue">Esportes</span> <span class="card-time">• há 2h</span>
