@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Urban Review</title>tgjm
+    <link rel="stylesheet" href="../src/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="../src/assets/img/ícones/LogoUrban.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+       <a href="../public/index.html"><img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban"></a> 
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>THE <span>URBAN</span> REVIEW</h1>
+                <p>Notícias que informam. Conteúdo que importa.</p>
+            </div>
+            <nav class="nav-links menu-desk">
+                <a href="index.html" class="active">Início</a>
+                <a href="../src/pages/politica.html">Política</a>
+                <a href="../src/pages/internacional.html">Internacional</a>
+                <a href="../../dashboard/fr/">Esporte</a>
+                <a href="#contato">Contato</a> 
+            </nav>
+            <nav class="dropdown menu-mob">
+                <button id="btnMenuMob" class="menu-icon-btn">☰</button>
+                <ul id="dropdownContent" class="dropdown-content">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="../src/pages/politica.html">Política</a></li>
+                    <li><a href="../src/pages/internacional.html">Internacional</a></li>
+                    <li><a href="../src/pages/esportes.html">Esporte</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box"></div>
+                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
+            </div>
+          <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Pesquisar notícias..."
+    >
+    <button onclick="searchNews()">🔍</button>
+</div>
+    </header>
+
+    <!-- ==================== CARROSSEL ==================== -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+
+            <!-- SLIDES - TROQUE AS IMAGENS E TEXTOS AQUI -->
+            <div class="carousel-track">
+
+                <!-- SLIDE 1 -->
+                <div class="carousel-slide active">
+                    <img src="../src/assets/img/img-noticias/inicio/noticiadestaque.jpg" alt="Slide 1"
+                        class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-red">DESTAQUE</span>
+                            <span class="meta-info">Política • há 2h</span>
+                            <h2>Governo libera R$ 5,7 bi no orçamento; Cidades, Transportes e Fazenda são os mais
+                                beneficiados</h2>
+                            <p>O governo federal publicou em edição extra do Diário Oficial da União (DOU) na noite
+                                desta quinta-feira (30) o decreto que detalha a liberação de R$ 5,7 bilhões em gastos do
+                                Orçamento de 2026, anunciada na semana passada pela equipe econômica.</p>
+                            <a href="../src/pages/politica.html" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="carousel-slide">
+                    <img src="../src/assets/img/img-noticias/inicio/jogos-eletronicos.jpeg" alt="Slide 2"
+                        class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-blue">ESPORTES</span>
+                            <span class="meta-info">Esportes • há 3h</span>
+                            <h2>UFLA assina parceria com Ministério do Esporte para jogos eletrônicos</h2>
+                            <p>A universidade federal firma acordo inédito para estruturar a área de e-sports no Brasil.
+                            </p>
+                            <a href="../../TheUrbanReview/src/pages/noticias/politica/noticia.txt" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>../noticias/UFLA.html
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div class="carousel-slide">
+                    <img src="../src/assets/img/img-noticias/inicio/futurotec.jpg" alt="Slide 3" class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-purple">TECNOLOGIA</span>
+                            <span class="meta-info">Tecnologia • há 5h</span>
+                            <h2>Futuro das tecnologias e os impactos das narrativas futuristas no cinema</h2>
+                            <p>Descubra como o cinema está moldando nossa percepção sobre o futuro tecnológico.</p>
+                            <a href="../../TheUrbanReview/src/pages/noticias/" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4 -->
+                <div class="carousel-slide">
+                    <img src="../src/assets/img/img-noticias/inicio/tecnologia-com-ia.jpg" alt="Slide 4"
+                        class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-yellow">INTERNACIONAL</span>
+                            <span class="meta-info">Internacional • há 4h</span>
+                            <h2>Novas tecnologias: tendências e o que esperar do futuro em escala global</h2>
+                            <p>Análise completa das inovações que estão transformando o cenário mundial.</p>
+                            <a href="./noticias/NovasTecnologia.html" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SETAS DE NAVEGAÇÃO -->
+            <button class="carousel-btn carousel-btn-prev" id="btnPrev" aria-label="Slide anterior">
+                <span>❮</span>
+            </button>
+            <button class="carousel-btn carousel-btn-next" id="btnNext" aria-label="Próximo slide">
+                <span>❯</span>
+            </button>
+
+            <!-- INDICADORES (DOTS) -->
+            <div class="carousel-indicators">
+                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+            </div>
+
+            <!-- BARRA DE PROGRESSO -->
+            <div class="carousel-progress">
+                <div class="carousel-progress-bar" id="progressBar"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==================== FIM CARROSSEL ==================== -->
+
+    <main class="container main-content">
+        <div class="section-header">
+            <h3>Últimas notícias</h3>
+            <a href="#" class="see-all">Ver todas →</a>
+        </div>
+
+        <section class="news-grid">
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../src/assets/img/img-noticias/politica/politica.jpeg');">
+                </div>
+                <div class="card-body">
+                    <span class="card-category text-red">Politicas</span> <span class="card-time">• há 1h</span>
+                    <h4>Renan critica Flávio e questiona força política de Michelle</h4>
+                    <a href="../src/pages/noticias/inicio/politicas.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img" style="background-image: url('../src/assets/img/img-noticias/inicio/esporte.jpg');">
+                </div>
+                <div class="card-body">
+                    <span class="card-category text-blue">Esportes</span> <span class="card-time">• há 2h</span>
+                    <h4>Colo-Colo anuncia contratação do goleiro Vozinha, destaque de Cabo Verde</h4>
+                    <a href="../src/pages/noticias/inicio/esportes.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../src/assets/img/img-noticias/inicio/curiosade-monte.png');">
+                </div>
+                <div class="card-body">
+                    <span class="card-category text-yellow">Curiosidade do dia</span> <span class="card-time">• há
+                        3h</span>
+                    <h4>O Monte Everest cresce cerca de 4 milímetros por ano devido ao movimento das placas tectônicas.
+                    </h4>
+                    <a href="../src/pages/noticias/inicio/curiosidade.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../src/assets/img/img-noticias/inicio/internacional.jpg');">
+                </div>
+                <div class="card-body">
+                    <span class="card-category text-blue">Internacional</span> <span class="card-time">• há 4h</span>
+                    <h4>Mais de 48 mil imigrantes saíram de Ceuta, diz Espanha</h4>
+                    <a href="../src/pages/noticias/inicio/internacional.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../src/assets/img/img-noticias/inicio/tecnologia.jpg');">
+                </div>
+                <div class="card-body">
+                    <span class="card-category text-purple">Tecnologia</span> <span class="card-time">• há 5h</span>
+                    <h4>Comissão Europeia discute incidentes com OpenAI e Anthropic antes da nova Lei de IA
+                    </h4>
+                    <a href="../src/pages/noticias/inicio/internacional.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../src/assets/img/img-noticias/inicio/Economia.jpg');">
+                </div>
+                <div class="card-body">
+                    <span class="card-category text-yellow">Economia</span> <span class="card-time">• há 6h</span>
+                    <h4>Dívida pública sobe 10 pontos do PIB na parcial do governo Lula e atinge 81,9%, maior nível em
+                        mais de 5 anos</h4>
+                    <a href="../src/pages/noticias/inicio/economia.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- =========================
+             AGENDA DA SEMANA
+        ========================== -->
+        <div class="section-header">
+            <h3>Agenda da Semana</h3>
+        </div>
+
+        <section class="news-grid agenda-semana">
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-blue">Segunda-feira</span>
+                    <h4>Ciclone perde força, mas ventos podem chegar a 90 km/h no Sul e Sudeste</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-red">Terça-feira</span>
+                    <h4>Lula insiste em taxação dos mais ricos</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-purple">Quarta-feira</span>
+                    <h4>Em ligação com presidente do Republicanos, Cleitinho confirma candidatura ao governo de Minas
+                        Gerais</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-yellow">Quinta-feira</span>
+                    <h4>Inquérito da PF vai investigar possível crime da Anac no caso Voepass</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-yellow">Sexta-feira</span>
+                    <h4>Quatro vítimas de acidente na GO-010 são identificadas; sexta morte é confirmada</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-yellow">Sábado</span>
+                    <h4>Estudo da Dra. Tatiana da polilaminina sai em revista científica internacional: 75% tiveram
+                        melhora</h4>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <section id="contato" class="container newsletter-section">
+        <div class="newsletter-box">
+            <div class="newsletter-text">
+                <div class="icon-mail"><img src="../src/assets/img/ícones/email.png" class="opniao" alt="icone email">
+                </div>
+                <div>
+                    <h4>Coloque sua opinião sobre o site abaixo</h4>
+                    <p>Insira os seus dados para submeter o seu comentário.</p>
+                </div>
+            </div>
+            <form class="newsletter-form form-contato" id="formOpiniao">
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua opinião aqui..." required></textarea>
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </form>
+        </div>
+        <div class="container lista-comentarios">
+            <h3>Comentários dos Leitores</h3>
+            <ul id="listaComentariosUl"></ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>THE <span>URBAN</span> REVIEW</h2>
+                <p>Notícias que informam. Conteúdo que importa.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/reviewurban759/" class="redes" title="Instagram">
+                        <img src="../src/assets/img/ícones/instagram.png" alt="Instagram" class="redes">
+                    </a>
+                    <a href="mailto:reviewurban759@gmail.com" class="redes" title="Gmail">
+                        <img src="../src/assets/img/ícones/social.png" alt="Gmail" class="redes">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h5>Navegação</h5>
+                <a href="index.html">Início</a>
+                <a href="../src/pages/politica.html">Política</a>
+                <a href="../src/pages/congresso.html">Congresso</a>
+                <a href="../src/pages/economia.html">Economia</a>
+            </div>
+            <img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban Footer">
+            <div class="footer-contact">
+                <h5>Contato Redação</h5>
+                <p>reviewurban759@gmail.com</p>
+                <p>(61) 99999-9999</p>
+                <p>Brazlândia/Águas Lindas - DF, Brasil</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 The Urban Review - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../src/assets/js/script.js"></script>
+</body>
+
+</html>

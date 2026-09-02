@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Urban Review - Cobertura Política</title>
+    <link rel="stylesheet" href="../../src/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="icon" type="image/png" href="../../src/assets/img/ícones/LogoPolitica.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="politica">
+    <header class="navbar">
+        <a href="/public/index.html"><img src="../../src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Urban"></a>
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>THE <span>URBAN</span> REVIEW</h1>
+                <p>Análise política. Conteúdo que importa.</p>
+            </div>
+            <nav class="nav-links menu-desk">
+                <a href="../../public/index.html">Início</a>
+                <a href="../../src/pages/politica.html" class="active">Política</a>
+                <a href="../../src/pages/congresso.html">Congresso</a>
+                <a href="../../src/pages/economia.html">Economia</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <nav class="dropdown menu-mob">
+                <button id="btnMenuMob" class="menu-icon-btn">☰</button>
+                <ul id="dropdownContent" class="dropdown-content">
+                    <li><a href="../public/index.html">Início</a></li>
+                    <li><a href="../../src/pages/politica.html">Política</a></li>
+                    <li><a href="../../src/pages/congresso.html">Congresso</a></li>
+                    <li><a href="../../src/pages/economia.html">Economia</a></li>
+                    <li><a href="/public/index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="carousel-section">
+        <div class="carousel-container">
+
+            <div class="carousel-track">
+
+                <div class="carousel-slide active">
+                    <img src="../../src/assets/img/img-noticias/politica/politica-brasil.jpg" alt="Congresso Nacional"
+                        class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-red">DESTAQUE</span>
+                            <span class="meta-info">Orçamento • há 2h</span>
+                            <h2>Convenções partidárias: veja o que disseram os presidenciáveis ao lançar suas
+                                candidaturas</h2>
+                            <p>Flávio Bolsonaro, Lula, Renan Santos, Ronaldo Caiado e Romeu Zema oficializaram suas
+                                candidaturas à Presidência com discursos voltados a economia, segurança, valores e
+                                críticas aos adversários.</p>
+                            <a href="../../src/pages/noticias/politica/convencoes-partidarias.html" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="../../src/assets/img/img-noticias/politica/politicas-judiciarias.jpg" alt="Fachada do STF"
+                        class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-blue">JUDICIÁRIO</span>
+                            <span class="meta-info">STF • há 3h</span>
+                            <h2>STJ vai decidir se pune Marco Buzzi por assédio nesta semana; ministro da Corte pode ser
+                                demitido</h2>
+                            <p>Colegiado julgará processo administrativo contra o magistrado por acusações de assédio e
+                                importunação sexual. Ministro pode ser punido com aposentadoria compulsória ou demissão.
+                            </p>
+                            <a href="../../src/pages/noticias/politica/stj.html" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="../../src/assets/img/img-noticias/politica/politica-legislação.jpg" alt="Mesa do Senado"
+                        class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-purple">LEGISLAÇÃO</span>
+                            <span class="meta-info">Senado • há 5h</span>
+                            <h2>Retrospectiva: Câmara aprovou no 1º semestre acordo Mercosul-UE, fim da escala 6x1 e
+                                reajuste para professores</h2>
+                            <p>Confira as principais as principais propostas aprovadas pelo Plenário nesse período</p>
+                            <a href="../../src/pages/noticias/politica/camera.html" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="../../src/assets/img/img-noticias/politica/politica-internacional.jpg" alt="Encontro diplomático"
+                        class="carousel-bg">
+                    <div class="carousel-overlay">
+                        <div class="container carousel-content">
+                            <span class="badge badge-yellow">INTERNACIONAL</span>
+                            <span class="meta-info">Diplomacia • há 4h</span>
+                            <h2>Como a crise migratória da Espanha gerou uma tempestade política — e foi alimentada
+                                pelas redes sociais </h2>
+                            <p>A súbita invasão de enclave espanhol por milhares de migrantes marroquinos semana passada
+                                abalou alicerces da União Europeia ao expor divisões profundas.</p>
+                            <a href="../../src/pages/noticias/politica/crise-migratoria.html" class="btn-main">Ler mais →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-btn carousel-btn-prev" id="btnPrev" aria-label="Slide anterior">
+                <span>❮</span>
+            </button>
+            <button class="carousel-btn carousel-btn-next" id="btnNext" aria-label="Próximo slide">
+                <span>❯</span>
+            </button>
+
+            <div class="carousel-indicators">
+                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-progress">
+                <div class="carousel-progress-bar" id="progressBar"></div>
+            </div>
+
+        </div>
+    </section>
+    <main class="container main-content">
+        <div class="section-header">
+            <h3>Últimas da Política</h3>
+            <a href="#" class="see-all">Ver todas →</a>
+        </div>
+
+        <section class="news-grid">
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../../src/assets/img/img-noticias/politica/politica-articulação.jpg');"></div>
+                <div class="card-body">
+                    <span class="card-category text-red">Articulação</span> <span class="card-time">• há 1h</span>
+                    <h4>Polícia Federal apreende mais três celulares de Vorcaro em nova prisão</h4>
+                    <a href="../../src/pages/noticias/politica/articulacao.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../../src/assets/img/img-noticias/politica/politica-eleições.jpg');"></div>
+                <div class="card-body">
+                    <span class="card-category text-blue">Eleições</span> <span class="card-time">• há 2h</span>
+                    <h4>Nova onda de ataques mira as urnas eletrônicas e põe as instituições em alerta</h4>
+                    <a href="../../src/pages/noticias/politica/eleicoes.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../../src/assets/img/img-noticias/politica/politica-bastidores.jpg');"></div>
+                <div class="card-body">
+                    <span class="card-category text-yellow">Bastidores</span> <span class="card-time">• há 3h</span>
+                    <h4>Na volta dos trabalhos do STF, Fachin defende críticas ao Supremo 'dentro dos limites
+                        republicanos'</h4>
+                    <a href="../../src/pages/noticias/politica/bastidores.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../../src/assets/img/img-noticias/politica/politica-geopolitica.jpg');"></div>
+                <div class="card-body">
+                    <span class="card-category text-blue">Geopolítica</span> <span class="card-time">• há 4h</span>
+                    <h4>Trump diz que Irã deve escolher entre 'acordo' ou 'rendição total': 'É a última chance deles'
+                    </h4>
+                    <a href="../../src/pages/noticias/politica/geopolitica.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../../src/assets/img/img-noticias/politica/politica-regulamentação.jpg');"></div>
+                <div class="card-body">
+                    <span class="card-category text-purple">Regulamentação</span> <span class="card-time">• há 5h</span>
+                    <h4>Governo estabelece novas regras para big techs atuarem no Brasil; veja principais pontos</h4>
+                    <a href="../../src/pages/noticias/politica/regulamentacao.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img"
+                    style="background-image: url('../../src/assets/img/img-noticias/politica/politica-economia.jpg');"></div>
+                <div class="card-body">
+                    <span class="card-category text-yellow">Economia Política</span> <span class="card-time">• há
+                        6h</span>
+                    <h4>Recorde de lucros deixa banqueiros satisfeitos com a política de Lula</h4>
+                    <a href="../../src/pages/noticias/politica/economia.html" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- =========================
+             AGENDA DA SEMANA
+        ========================== -->
+        <div class="section-header">
+            <h3>Agenda da Semana</h3>
+        </div>
+
+         <section class="news-grid">
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-blue">Segunda-feira</span>
+                    <h4>Governo e Congresso iniciam a semana com debates sobre novas medidas e propostas.</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-red">Terça-feira</span>
+                    <h4>Principais votações movimentam o cenário político e geram novos debates.</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-purple">Quarta-feira</span>
+                    <h4>Decisões do Executivo e do Legislativo ganham destaque no noticiário nacional.</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-yellow">Quinta-feira</span>
+                    <h4>Parlamentares discutem projetos relacionados a direitos, serviços públicos e economia.</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-yellow">Sexta-feira</span>
+                    <h4>Semana política termina com votações, negociações e novas declarações de autoridades.</h4>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-body">
+                    <span class="card-category text-yellow">Sábado</span>
+                    <h4>Retrospectiva dos principais acontecimentos que marcaram a política durante a semana.</h4>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>THE <span>URBAN</span> REVIEW</h2>
+                <p>Análise política. Conteúdo que importa.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/reviewurban759/" class="redes" title="Instagram">
+                        <img src="../../src/assets/img/ícones/instagram.png" alt="Instagram" class="redes">
+                    </a>
+                    <a href="mailto:reviewurban759@gmail.com" class="redes" title="Gmail">
+                        <img src="../../src/assets/img/ícones/social.png" alt="Gmail" class="redes">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h5>Navegação</h5>
+                <a href="/public/index.html">Início</a>
+                <a href="../../src/pages/politica.html">Política</a>
+                <a href="../../src/pages/congresso.html">Congresso</a>
+                <a href="../../src/pages/economia.html">Economia</a>
+            </div>
+            <img src="../../src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Política Footer">
+            <div id="contato" class="footer-contact">
+                <h5>Contato Redação</h5>
+                <p>reviewurban759@gmail.com</p>
+                <p>(61) 99999-9999</p>
+                <p>Brazlândia/Águas Lindas - DF, Brasil</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 The Urban Review - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../../src/assets/js/script.js"></script>
+</body>
+
+</html>
