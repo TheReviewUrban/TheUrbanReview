@@ -321,3 +321,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+ document.addEventListener('DOMContentLoaded', () => {
+            // ======================
+            // ELEMENTOS
+          // ======================
+         const sidebarItems = document.querySelectorAll('.sidebar-item');
+           const sections = document.querySelectorAll('.dashboard-section');
+           const logoutButton = document.getElementById('logoutButton');
+           const themeBtn = document.getElementById('dashboardTheme');
+            const settingTheme = document.getElementById('settingTheme');
+            const saveProfileBtn = document.getElementById('saveProfile');
+            const notificationsToggle = document.getElementById('notifications');
+
+
+            // ======================
+            // NAVEGAÇÃO ENTRE SEÇÕES
+            // ======================
+            sidebarItems.forEach(item => {
+               item.addEventListener('click', () => {
+                    const sectionId = item.dataset.section;
+
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                   item.classList.add('active');
+                   document.getElementById(sectionId).classList.add('active');
+                });
+           });
+
+
+          
+       });

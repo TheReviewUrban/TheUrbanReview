@@ -5310,3 +5310,783 @@ body.light-mode .password-info {
     }
 }
 
+/* =====================================================
+   DASHBOARD - MINHA CONTA
+===================================================== */
+
+#dashboard {
+    background-color: #030712;
+    color: #f3f4f6;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#dashboard a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =====================================================
+   NAVBAR DO DASHBOARD
+===================================================== */
+
+#dashboard .dashboard-navbar {
+    background-color: #030712;
+    border-bottom: 1px solid #1f2937;
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#dashboard .dashboard-logo {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#dashboard .dashboard-logo span {
+    color: #1DADDC;
+    text-shadow: 0 0 12px rgba(29, 173, 220, 0.4);
+}
+
+#dashboard .dashboard-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#dashboard .dashboard-nav-right a {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#dashboard .dashboard-nav-right a:hover {
+    color: #1DADDC;
+}
+
+#dashboard #dashboardTheme {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+#dashboard #dashboardTheme:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+#dashboard .user-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 30px;
+    padding: 6px 14px 6px 6px;
+}
+
+#dashboard .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1DADDC, #1685aa);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+#dashboard #navUserName {
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+#dashboard .dashboard-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: calc(100vh - 70px);
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+#dashboard .dashboard-sidebar {
+    background-color: #0b0f19;
+    border-right: 1px solid #1f2937;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#dashboard .sidebar-user {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #1f2937;
+}
+
+#dashboard .big-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1DADDC, #0e7490);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 25px rgba(29, 173, 220, 0.25);
+}
+
+#dashboard .sidebar-user h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+#dashboard .sidebar-user p {
+    color: #6b7280;
+    font-size: 0.8rem;
+}
+
+#dashboard .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+#dashboard .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+#dashboard .sidebar-item:hover {
+    background: #111827;
+    color: #ffffff;
+}
+
+#dashboard .sidebar-item.active {
+    background: rgba(29, 173, 220, 0.12);
+    color: #1DADDC;
+    border-left: 3px solid #1DADDC;
+}
+
+#dashboard .logout-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    color: #f87171;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+#dashboard .logout-button:hover {
+    background: rgba(248, 113, 113, 0.1);
+    border-color: #f87171;
+}
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+#dashboard .dashboard-content {
+    padding: 40px 50px;
+    overflow-y: auto;
+}
+
+#dashboard .dashboard-section {
+    display: none;
+    animation: fadeIn 0.35s ease;
+}
+
+#dashboard .dashboard-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#dashboard .dashboard-heading {
+    margin-bottom: 35px;
+}
+
+#dashboard .dashboard-label {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #1DADDC;
+    margin-bottom: 8px;
+}
+
+#dashboard .dashboard-heading h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+#dashboard .dashboard-heading p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+/* =====================================================
+   ESTATÍSTICAS
+===================================================== */
+
+#dashboard .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+#dashboard .stat-card {
+    background: #0b0f19;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+#dashboard .stat-card:hover {
+    border-color: #1DADDC;
+    transform: translateY(-3px);
+}
+
+#dashboard .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(29, 173, 220, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+#dashboard .stat-card span {
+    display: block;
+    color: #9ca3af;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+#dashboard .stat-card strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+#dashboard .dashboard-card {
+    background: #0b0f19;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    padding: 28px;
+}
+
+#dashboard .card-title {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #1f2937;
+}
+
+#dashboard .card-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* =====================================================
+   ESTADO VAZIO
+===================================================== */
+
+#dashboard .activity-empty {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#dashboard .activity-empty > div {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+#dashboard .activity-empty h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    color: #e5e7eb;
+    margin-bottom: 8px;
+}
+
+#dashboard .activity-empty p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+#dashboard .activity-empty a {
+    color: #1DADDC;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+#dashboard .activity-empty a:hover {
+    color: #ffffff;
+}
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+#dashboard .profile-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 700px;
+}
+
+#dashboard .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1DADDC, #0e7490);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    box-shadow: 0 0 30px rgba(29, 173, 220, 0.2);
+}
+
+#dashboard .profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#dashboard .profile-info label {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#dashboard .profile-info input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+}
+
+#dashboard .profile-info input:focus {
+    border-color: #1DADDC;
+    box-shadow: 0 0 0 3px rgba(29, 173, 220, 0.12);
+}
+
+#dashboard .profile-info input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#dashboard #saveProfile {
+    margin-top: 20px;
+    height: 44px;
+    padding: 0 28px;
+    background: #1DADDC;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: inherit;
+}
+
+#dashboard #saveProfile:hover {
+    background: #1685aa;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   CONFIGURAÇÕES
+===================================================== */
+
+#dashboard .settings-card {
+    max-width: 600px;
+}
+
+#dashboard .setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+    border-bottom: 1px solid #1f2937;
+}
+
+#dashboard .setting-row:last-child {
+    border-bottom: none;
+}
+
+#dashboard .setting-row h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+#dashboard .setting-row p {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+#dashboard .setting-toggle {
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#dashboard .setting-toggle:hover {
+    border-color: #1DADDC;
+    background: rgba(29, 173, 220, 0.1);
+}
+
+/* Switch */
+#dashboard .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+}
+
+#dashboard .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#dashboard .switch span {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #374151;
+    border-radius: 26px;
+    transition: 0.3s;
+}
+
+#dashboard .switch span::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#dashboard .switch input:checked + span {
+    background: #1DADDC !important;
+}
+
+#dashboard .switch input:checked + span::before {
+    transform: translateX(22px);
+}
+
+/* =====================================================
+   MODO CLARO
+===================================================== */
+
+body#dashboard.light-mode {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+body#dashboard.light-mode .dashboard-navbar {
+    background: #ffffff;
+    border-bottom-color: #d1d5db;
+}
+
+body#dashboard.light-mode .dashboard-logo {
+    color: #111827;
+}
+
+body#dashboard.light-mode .dashboard-logo span {
+    color: #1685aa;
+    text-shadow: none;
+}
+
+body#dashboard.light-mode .dashboard-nav-right a {
+    color: #6b7280;
+}
+
+body#dashboard.light-mode .dashboard-nav-right a:hover {
+    color: #1DADDC;
+}
+
+body#dashboard.light-mode #dashboardTheme {
+    color: #111827;
+}
+
+body#dashboard.light-mode .user-mini {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+body#dashboard.light-mode #navUserName {
+    color: #374151;
+}
+
+body#dashboard.light-mode .dashboard-sidebar {
+    background: #ffffff;
+    border-right-color: #d1d5db;
+}
+
+body#dashboard.light-mode .sidebar-user {
+    border-bottom-color: #e5e7eb;
+}
+
+body#dashboard.light-mode .sidebar-user h3 {
+    color: #111827;
+}
+
+body#dashboard.light-mode .sidebar-item {
+    color: #6b7280;
+}
+
+body#dashboard.light-mode .sidebar-item:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+body#dashboard.light-mode .sidebar-item.active {
+    background: rgba(29, 173, 220, 0.1);
+    color: #1685aa;
+}
+
+body#dashboard.light-mode .logout-button {
+    border-color: #fca5a5;
+    color: #dc2626;
+}
+
+body#dashboard.light-mode .logout-button:hover {
+    background: rgba(220, 38, 38, 0.08);
+}
+
+body#dashboard.light-mode .dashboard-heading h1 {
+    color: #111827;
+}
+
+body#dashboard.light-mode .dashboard-heading p {
+    color: #6b7280;
+}
+
+body#dashboard.light-mode .stat-card,
+body#dashboard.light-mode .dashboard-card {
+    background: #ffffff;
+    border-color: #d1d5db;
+}
+
+body#dashboard.light-mode .stat-card strong,
+body#dashboard.light-mode .card-title h2,
+body#dashboard.light-mode .activity-empty h3,
+body#dashboard.light-mode .setting-row h3 {
+    color: #111827;
+}
+
+body#dashboard.light-mode .stat-icon {
+    background: rgba(29, 173, 220, 0.1);
+}
+
+body#dashboard.light-mode .profile-info input {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    color: #111827;
+}
+
+body#dashboard.light-mode .profile-info input:focus {
+    background: #ffffff;
+}
+
+body#dashboard.light-mode .setting-toggle {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+body#dashboard.light-mode .switch span {
+    background: #d1d5db;
+}
+
+body#dashboard.light-mode .card-title {
+    border-bottom-color: #e5e7eb;
+}
+
+body#dashboard.light-mode .setting-row {
+    border-bottom-color: #e5e7eb;
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 1024px) {
+    #dashboard .dashboard-layout {
+        grid-template-columns: 240px 1fr;
+    }
+
+    #dashboard .dashboard-content {
+        padding: 30px;
+    }
+
+    #dashboard .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    #dashboard .dashboard-navbar {
+        padding: 14px 18px;
+    }
+
+    #dashboard .dashboard-logo {
+        font-size: 1.15rem;
+    }
+
+    #dashboard .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #dashboard .dashboard-sidebar {
+        display: none;
+    }
+
+    #dashboard .dashboard-content {
+        padding: 25px 18px;
+    }
+
+    #dashboard .dashboard-heading h1 {
+        font-size: 1.6rem;
+    }
+
+    #dashboard .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    #dashboard .profile-info {
+        width: 100%;
+    }
+
+    #dashboard #saveProfile {
+        width: 100%;
+    }
+
+    #dashboard .user-mini span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    #dashboard .dashboard-heading h1 {
+        font-size: 1.4rem;
+    }
+
+    #dashboard .stat-card {
+        padding: 18px;
+    }
+
+    #dashboard .stat-card strong {
+        font-size: 1.35rem;
+    }
+}
+
+/* =====================================================
+   FIM - DASHBOARD
+===================================================== */

@@ -21,7 +21,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <body>
     <header class="navbar">
-        <a href="index.html"><img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban"></a>
+        <a href="index.php"><img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban"></a>
         <div class="container nav-container">
             <div class="logo">
                 <h1>THE <span>URBAN</span> REVIEW</h1>
@@ -29,38 +29,29 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
 
             <nav class="nav-links menu-desk">
-                <a href="/public/index.html" class="active">Início</a>
-                <a href="../src/pages/politica.html">Política</a>
-                <a href="../src/pages/internacional.html">Internacional</a>
-                <a href="../src/pages/esportes.html">Esporte</a>
+                <a href="/public/index.php" class="active">Início</a>
+                <a href="../src/pages/politica.php">Política</a>
+                <a href="../src/pages/internacional.php">Internacional</a>
+                <a href="../src/pages/esportes.php">Esporte</a>
                 <a href="#contato">Contato</a>
             </nav>
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="/public/index.html">Início</a></li>
-                    <li><a href="../src/pages/politica.html">Política</a></li>
-                    <li><a href="../src/pages/internacional.html">Internacional</a></li>
-                    <li><a href="../src/pages/esportes.html">Esporte</a></li>
+                    <li><a href="/public/index.php">Início</a></li>
+                    <li><a href="../src/pages/politica.php">Política</a></li>
+                    <li><a href="../src/pages/internacional.php">Internacional</a></li>
+                    <li><a href="../src/pages/esportes.php">Esporte</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
 
-                <div class="search-box"></div>
 
                 <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">
                     🌙
                 </button>
 
-                <!-- CONTA -->
-                <div class="account-container">
-                    <a href="../src/pages/cadastro.html">
-                        <button id="accountButton" class="account-button">
-                            <span class="account-icon"> Faça Seu Login/Cadastro</span>
-
-                        </button>
-                    </a>
 
                     <!-- MENU DA CONTA -->                                                                                                                                                                                                                                                                                  
                     <div id="accountMenu" class="account-menu">
@@ -130,11 +121,10 @@ if (session_status() === PHP_SESSION_NONE) {
                     </div>
 
                     <?php if (isset($_SESSION['id_usuario'])): ?>
-                        <a href="painel.php" class="nav-link <?php echo ($pagina_atual === 'painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
-                        <a href="../php/logout.php" class="nav-link">Sair</a>
+                        <a href="../src/pages/painel.php" class="nav-link <?php echo ($pagina_atual === '../src/pages/painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
                     <?php else: ?>
-                        <a href="login.php" class="nav-link <?php echo ($pagina_atual === 'login.php') ? 'ativo' : ''; ?>">Entrar</a>
-                        <a href="cadastro.php" class="nav-link <?php echo ($pagina_atual === 'cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>
+                        <a href="../src/pages/login.php" class="nav-link <?php echo ($pagina_atual === '../pages/login.php') ? 'ativo' : ''; ?>">Entrar</a>
+                        <a href="../src/pages/cadastro.php" class="nav-link <?php echo ($pagina_atual === '../pages/cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>
                     <?php endif; ?>
 
                 </div>
@@ -165,7 +155,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             <p>O governo federal publicou em edição extra do Diário Oficial da União (DOU) na noite
                                 desta quinta-feira (30) o decreto que detalha a liberação de R$ 5,7 bilhões em gastos do
                                 Orçamento de 2026, anunciada na semana passada pela equipe econômica.</p>
-                            <a href="../src/pages/noticias/inicio/politica.html" class="btn-main">Ler mais →</a>
+                            <a href="../src/pages/noticias/inicio/politica.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +171,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             <h2>UFLA assina parceria com Ministério do Esporte para jogos eletrônicos</h2>
                             <p>A universidade federal firma acordo inédito para estruturar a área de e-sports no Brasil.
                             </p>
-                            <a href="../src/pages/noticias/inicio/esporte.html" class="btn-main">Ler mais →</a>
+                            <a href="../src/pages/noticias/inicio/esporte.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -195,7 +185,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             <span class="meta-info">Tecnologia • há 5h</span>
                             <h2>Futuro das tecnologias e os impactos das narrativas futuristas no cinema</h2>
                             <p>Descubra como o cinema está moldando nossa percepção sobre o futuro tecnológico.</p>
-                            <a href="../src/pages/noticias/inicio/tecnologias.html" class="btn-main">Ler mais →</a>
+                            <a href="../src/pages/noticias/inicio/tecnologias.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -210,7 +200,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             <span class="meta-info">Internacional • há 4h</span>
                             <h2>Novas tecnologias: tendências e o que esperar do futuro em escala global</h2>
                             <p>Análise completa das inovações que estão transformando o cenário mundial.</p>
-                            <a href="../src/pages/noticias/inicio/internacionais.html" class="btn-main">Ler mais →</a>
+                            <a href="../src/pages/noticias/inicio/internacionais.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -256,7 +246,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div class="card-body">
                     <span class="card-category text-red">Politicas</span> <span class="card-time">• há 1h</span>
                     <h4>Renan critica Flávio e questiona força política de Michelle</h4>
-                    <a href="../src/pages/noticias/inicio/politicas.html" class="read-more">Ler mais →</a>
+                    <a href="../src/pages/noticias/inicio/politicas.php" class="read-more">Ler mais →</a>
 
                 </div>
             </article>
@@ -268,7 +258,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div class="card-body">
                     <span class="card-category text-blue">Esportes</span> <span class="card-time">• há 2h</span>
                     <h4>Colo-Colo anuncia contratação do goleiro Vozinha, destaque de Cabo Verde</h4>
-                    <a href="../src/pages/noticias/inicio/esportes.html" class="read-more">Ler mais →</a>
+                    <a href="../src/pages/noticias/inicio/esportes.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -281,7 +271,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         3h</span>
                     <h4>O Monte Everest cresce cerca de 4 milímetros por ano devido ao movimento das placas tectônicas.
                     </h4>
-                    <a href="../src/pages/noticias/inicio/curiosidade.html" class="read-more">Ler mais →</a>
+                    <a href="../src/pages/noticias/inicio/curiosidade.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -292,7 +282,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div class="card-body">
                     <span class="card-category text-blue">Internacional</span> <span class="card-time">• há 4h</span>
                     <h4>Mais de 48 mil imigrantes saíram de Ceuta, diz Espanha</h4>
-                    <a href="../src/pages/noticias/inicio/internacional.html" class="read-more">Ler mais →</a>
+                    <a href="../src/pages/noticias/inicio/internacional.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -304,7 +294,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     <span class="card-category text-purple">Tecnologia</span> <span class="card-time">• há 5h</span>
                     <h4>Comissão Europeia discute incidentes com OpenAI e Anthropic antes da nova Lei de IA
                     </h4>
-                    <a href="../src/pages/noticias/inicio/tecnologia.html" class="read-more">Ler mais →</a>
+                    <a href="../src/pages/noticias/inicio/tecnologia.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -316,7 +306,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     <span class="card-category text-yellow">Economia</span> <span class="card-time">• há 6h</span>
                     <h4>Dívida pública sobe 10 pontos do PIB na parcial do governo Lula e atinge 81,9%, maior nível em
                         mais de 5 anos</h4>
-                    <a href="../src/pages/noticias/inicio/economia.html" class="read-more">Ler mais →</a>
+                    <a href="../src/pages/noticias/inicio/economia.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
         </section>
@@ -394,10 +384,10 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
-                <a href="../src/pages/politica.html">Política</a>
-                <a href="../src/pages/internacional.html">Internacional</a>
-                <a href="../src/pages/esportes.html">Esportes</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../src/pages/politica.php">Política</a>
+                <a href="../src/pages/internacional.php">Internacional</a>
+                <a href="../src/pages/esportes.php">Esportes</a>
             </div>
             <img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban Footer">
             <div id="contato" class="footer-contact">

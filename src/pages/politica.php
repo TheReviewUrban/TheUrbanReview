@@ -16,27 +16,27 @@
 
 <body id="politica">
     <header class="navbar">
-        <a href="/public/index.html"><img src="../../src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Urban"></a>
+        <a href="/public/index.php"><img src="../../src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Urban"></a>
         <div class="container nav-container">
             <div class="logo">
                 <h1>THE <span>URBAN</span> REVIEW</h1>
                 <p>Análise política. Conteúdo que importa.</p>
             </div>
             <nav class="nav-links menu-desk">
-                <a href="../../public/index.html">Início</a>
-                <a href="../../src/pages/politica.html" class="active">Política</a>
-                <a href="../../src/pages/congresso.html">Congresso</a>
-                <a href="../../src/pages/economia.html">Economia</a>
+                <a href="../../public/index.php">Início</a>
+                <a href="../../src/pages/politica.php" class="active">Política</a>
+                <a href="../../src/pages/congresso.php">Congresso</a>
+                <a href="../../src/pages/economia.php">Economia</a>
                 <a href="#contato">Contato</a>
             </nav>
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="../public/index.html">Início</a></li>
-                    <li><a href="../../src/pages/politica.html">Política</a></li>
-                    <li><a href="../../src/pages/congresso.html">Congresso</a></li>
-                    <li><a href="../../src/pages/economia.html">Economia</a></li>
-                    <li><a href="/public/index.html#contato">Contato</a></li>
+                    <li><a href="../public/index.php">Início</a></li>
+                    <li><a href="../../src/pages/politica.php">Política</a></li>
+                    <li><a href="../../src/pages/congresso.php">Congresso</a></li>
+                    <li><a href="../../src/pages/economia.php">Economia</a></li>
+                    <li><a href="/public/index.php#contato">Contato</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
@@ -62,7 +62,7 @@
                             <p>Flávio Bolsonaro, Lula, Renan Santos, Ronaldo Caiado e Romeu Zema oficializaram suas
                                 candidaturas à Presidência com discursos voltados a economia, segurança, valores e
                                 críticas aos adversários.</p>
-                            <a href="../../src/pages/noticias/politica/convencoes-partidarias.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/politica/convencoes-partidarias.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                             <p>Colegiado julgará processo administrativo contra o magistrado por acusações de assédio e
                                 importunação sexual. Ministro pode ser punido com aposentadoria compulsória ou demissão.
                             </p>
-                            <a href="../../src/pages/noticias/politica/stj.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/politica/stj.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                             <h2>Retrospectiva: Câmara aprovou no 1º semestre acordo Mercosul-UE, fim da escala 6x1 e
                                 reajuste para professores</h2>
                             <p>Confira as principais as principais propostas aprovadas pelo Plenário nesse período</p>
-                            <a href="../../src/pages/noticias/politica/camera.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/politica/camera.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                                 pelas redes sociais </h2>
                             <p>A súbita invasão de enclave espanhol por milhares de migrantes marroquinos semana passada
                                 abalou alicerces da União Europeia ao expor divisões profundas.</p>
-                            <a href="../../src/pages/noticias/politica/crise-migratoria.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/politica/crise-migratoria.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                 <div class="card-body">
                     <span class="card-category text-red">Articulação</span> <span class="card-time">• há 1h</span>
                     <h4>Polícia Federal apreende mais três celulares de Vorcaro em nova prisão</h4>
-                    <a href="../../src/pages/noticias/politica/articulacao.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/politica/articulacao.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -160,7 +160,7 @@
                 <div class="card-body">
                     <span class="card-category text-blue">Eleições</span> <span class="card-time">• há 2h</span>
                     <h4>Nova onda de ataques mira as urnas eletrônicas e põe as instituições em alerta</h4>
-                    <a href="../../src/pages/noticias/politica/eleicoes.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/politica/eleicoes.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -171,7 +171,7 @@
                     <span class="card-category text-yellow">Bastidores</span> <span class="card-time">• há 3h</span>
                     <h4>Na volta dos trabalhos do STF, Fachin defende críticas ao Supremo 'dentro dos limites
                         republicanos'</h4>
-                    <a href="../../src/pages/noticias/politica/bastidores.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/politica/bastidores.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -182,7 +182,7 @@
                     <span class="card-category text-blue">Geopolítica</span> <span class="card-time">• há 4h</span>
                     <h4>Trump diz que Irã deve escolher entre 'acordo' ou 'rendição total': 'É a última chance deles'
                     </h4>
-                    <a href="../../src/pages/noticias/politica/geopolitica.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/politica/geopolitica.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -192,7 +192,7 @@
                 <div class="card-body">
                     <span class="card-category text-purple">Regulamentação</span> <span class="card-time">• há 5h</span>
                     <h4>Governo estabelece novas regras para big techs atuarem no Brasil; veja principais pontos</h4>
-                    <a href="../../src/pages/noticias/politica/regulamentacao.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/politica/regulamentacao.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -203,7 +203,7 @@
                     <span class="card-category text-yellow">Economia Política</span> <span class="card-time">• há
                         6h</span>
                     <h4>Recorde de lucros deixa banqueiros satisfeitos com a política de Lula</h4>
-                    <a href="../../src/pages/noticias/politica/economia.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/politica/economia.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
         </section>
@@ -280,10 +280,10 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
-                <a href="../../src/pages/politica.html">Política</a>
-                <a href="../../src/pages/congresso.html">Congresso</a>
-                <a href="../../src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../../src/pages/politica.php">Política</a>
+                <a href="../../src/pages/congresso.php">Congresso</a>
+                <a href="../../src/pages/economia.php">Economia</a>
             </div>
             <img src="../../src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Política Footer">
             <div id="contato" class="footer-contact">

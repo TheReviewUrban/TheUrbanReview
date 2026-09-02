@@ -1,20 +1,79 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+include("../php/conexao.php");
+
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Primeiro pegamos o ID da sessão
+$id_usuario = $_SESSION['id_usuario'];
+
+// Agora fazemos a consulta
+$sql = "SELECT nome_completo, email, nascimento, tipo_usuario
+        FROM usuarios 
+        WHERE id_usuario = ?";
+
+$stmt = $conexao->prepare($sql);
+$stmt->bind_param("i", $id_usuario);
+$stmt->execute();
+
+$resultado = $stmt->get_result();
+$usuario = $resultado->fetch_assoc();
+
+$stmt->close();
+
+// Verifica se o usuário realmente foi encontrado
+if (!$usuario) {
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+
+// Dados do usuário
+$nome_exibicao = $usuario['nome_completo'];
+$email_exibicao = $usuario['email'];
+$nascimento = $usuario['nascimento'];
+
+// Horário de Brasília
+date_default_timezone_set('America/Sao_Paulo');
+
+$hora = (int) date('H');
+
+if ($hora >= 5 && $hora < 12) {
+    $saudacao = "Bom dia";
+} elseif ($hora >= 12 && $hora < 18) {
+    $saudacao = "Boa tarde";
+} else {
+    $saudacao = "Boa noite";
+}
+$eh_moderador = in_array($usuario['tipo_usuario'], ['moderador', 'admin']);
+$tipos_rotulo = [
+    'admin'     => 'Administrador',
+    'moderador' => 'Moderador',      
+    'comum'     => 'Usuário Comum'    
+];
+$rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta | The Urban Review</title>
-
-    <link rel="stylesheet" href="../../src/assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
-
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="../assets/img/ícones/LogoUrban.png">
 </head>
-<body class="dashboard-page">
+<body id="dashboard">
 
     <!-- NAVBAR -->
     <header class="dashboard-navbar">
@@ -25,12 +84,12 @@
         </div>
 
         <div class="dashboard-nav-right">
-            <a href="../../public/index.html">🏠 Início</a>
-            <button id="dashboardTheme">🌙</button>
+            <a href="../../public/index.php">🏠 Início</a>
+            <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
 
             <div class="user-mini">
-                <div class="user-avatar">K</div>
-                <span id="navUserName">Usuário</span>
+                <div class="user-avatar"><?= htmlspecialchars(strtoupper(substr($nome_exibicao, 0, 1))) ?></div>
+                <span id="navUserName"><?= htmlspecialchars($nome_exibicao) ?></span>
             </div>
         </div>
     </header>
@@ -41,9 +100,9 @@
         <!-- SIDEBAR -->
         <aside class="dashboard-sidebar">
             <div class="sidebar-user">
-                <div class="big-avatar" id="userAvatar">K</div>
-                <h3 id="sidebarUserName">Usuário</h3>
-                <p id="sidebarUserEmail">usuario@email.com</p>
+                <div class="big-avatar" id="userAvatar"><?= htmlspecialchars(strtoupper(substr($nome_exibicao, 0, 1))) ?></div>
+                <h3 id="sidebarUserName"><?= htmlspecialchars($nome_exibicao) ?></h3>
+                <p id="sidebarUserEmail"><?= htmlspecialchars($email_exibicao) ?></p>
             </div>
 
             <nav class="sidebar-menu">
@@ -64,9 +123,9 @@
                 </button>
             </nav>
 
-            <button class="logout-button" id="logoutButton">
-                🚪 <span>Sair da conta</span>
-            </button>
+            <a href="../pages/login.php" class="logout-button">
+                    🚪 <span>Sair da conta</span>
+            </a>
         </aside>
 
         <!-- CONTEÚDO -->
@@ -77,12 +136,11 @@
                 <div class="dashboard-heading">
                     <div>
                         <span class="dashboard-label">MINHA CONTA</span>
-                        <h1>Olá, <span id="welcomeName">Usuário</span>! 👋</h1>
+                        <h1>Olá, <span id="welcomeName" class="destaque-nome"><?= htmlspecialchars($nome_exibicao) ?></span>!</h1>
                         <p>Bem-vindo ao seu painel do The Urban Review.</p>
                     </div>
                 </div>
 
-                <!-- ESTATÍSTICAS -->
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-icon">⭐</div>
@@ -109,7 +167,6 @@
                     </div>
                 </div>
 
-                <!-- ATIVIDADE -->
                 <div class="dashboard-card">
                     <div class="card-title">
                         <h2>Atividade recente</h2>
@@ -133,7 +190,7 @@
                 </div>
 
                 <div class="dashboard-card profile-card">
-                    <div class="profile-avatar" id="profileAvatar">K</div>
+                    <div class="profile-avatar" id="profileAvatar"><?= htmlspecialchars(strtoupper(substr($nome_exibicao, 0, 1))) ?></div>
 
                     <div class="profile-info">
                         <label>Nome</label>
@@ -190,14 +247,7 @@
                 </div>
 
                 <div class="dashboard-card settings-card">
-                    <div class="setting-row">
-                        <div>
-                            <h3>Modo escuro</h3>
-                            <p>Alternar entre modo claro e escuro.</p>
-                        </div>
-                        <button class="setting-toggle" id="settingTheme">🌙</button>
-                    </div>
-
+                    
                     <div class="setting-row">
                         <div>
                             <h3>Notificações</h3>
@@ -213,7 +263,7 @@
 
         </main>
     </div>
-
-    <script src="../assets/js/dashboard.js"></script>
+    <script src="../../src/assets/js/script.js"></script>
+       
 </body>
 </html>

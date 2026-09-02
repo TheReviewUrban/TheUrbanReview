@@ -28,7 +28,7 @@
     <!-- ==================== CABEÇALHO ==================== -->
 
     <header class="navbar">
-        <a href="/public/index.html"><img src="../../src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban"></a>
+        <a href="/public/index.php"><img src="../../src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban"></a>
         <div class="container nav-container">
 
             <div class="logo">
@@ -43,20 +43,20 @@
                 
             <nav class="nav-links menu-desk" aria-label="Navegação principal">
 
-                <a href="../../public/index.html">
+                <a href="../../public/index.php">
                     Início
                 </a>
 
-                <a href="../../src/pages/politica.html">
+                <a href="../../src/pages/politica.php">
                     Política
                 </a>
 
-                <a href="../../src/pages/internacional.html">
+                <a href="../../src/pages/internacional.php">
                     Internacional
                 </a>
 
                 <a
-                    href="../../src/pages/esportes.html"
+                    href="../../src/pages/esportes.php"
                     class="active"
                     aria-current="page">
                     Esportes
@@ -87,26 +87,26 @@
                 <ul id="dropdownContent" class="dropdown-content">
 
                     <li>
-                        <a href="/public/index.html">
+                        <a href="/public/index.php">
                             Início
                         </a>
                     </li>
 
                     <li>
-                        <a href="../../src/pages/politica.html">
+                        <a href="../../src/pages/politica.php">
                             Política
                         </a>
                     </li>
 
                     <li>
-                        <a href="../../src/pages/internacional.html">
+                        <a href="../../src/pages/internacional.php">
                             Internacional
                         </a>
                     </li>
 
                     <li>
                         <a
-                            href="../../src/pages/esportes.html"
+                            href="../../src/pages/esportes.php"
                             aria-current="page">
                             Esportes
                         </a>
@@ -188,7 +188,7 @@
                             </p>
 
                             <a
-                                href="../../src/pages/noticias/esporte/ufc-330.html"
+                                href="../../src/pages/noticias/esporte/ufc-330.php"
                                 class="btn-main">
                                 Ler mais →
                             </a>
@@ -231,7 +231,7 @@
                             </p>
 
                             <a
-                                href="../../src/pages/noticias/esporte/volei.html"
+                                href="../../src/pages/noticias/esporte/volei.php"
                                 class="btn-main">
                                 Ler mais →
                             </a>
@@ -264,7 +264,7 @@
                                 Tony Alves garante a prata em competição de skate na Espanha; brasileiros fecham o pódio
                             </h2>
                             <p>Skatista de São Vicente ficou em segundo lugar no Adaptive Skateboarding</p>
-                            <a href="../../src/pages/noticias/esporte/skate.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/esporte/skate.php" class="btn-main">Ler mais →</a>
 
                         </div>
 
@@ -298,7 +298,7 @@
                             </p>
 
                             <a
-                                href="../../src/pages/noticias/esporte/judo.html"
+                                href="../../src/pages/noticias/esporte/judo.php"
                                 class="btn-main">
                                 Ler mais →
                             </a>
@@ -402,7 +402,7 @@
             </h3>
 
             <a
-                href="../../src/pages/esportes.html"
+                href="../../src/pages/esportes.php"
                 class="see-all">
                 Ver todas →
             </a>
@@ -440,7 +440,7 @@
                     </h4>
                     
                     <a
-                        href="../../src/pages/noticias/esporte/flamengo.html"
+                        href="../../src/pages/noticias/esporte/flamengo.php"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -473,7 +473,7 @@
                     </h4>
 
                     <a
-                        href="../../src/pages/noticias/esporte/psg.html"
+                        href="../../src/pages/noticias/esporte/psg.php"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -506,7 +506,7 @@
                     </h4>
 
                     <a
-                        href="../../src/pages/noticias/esporte/copa.html"
+                        href="../../src/pages/noticias/esporte/copa.php"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -539,7 +539,7 @@
                     </h4>
 
                     <a
-                        href="../../src/pages/noticias/esporte/basquete.html"
+                        href="../../src/pages/noticias/esporte/basquete.php"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -572,7 +572,7 @@
                     </h4>
 
                     <a
-                        href="../../src/pages/noticias/esporte/ufc.html"
+                        href="../../src/pages/noticias/esporte/ufc.php"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -605,7 +605,7 @@
                     </h4>
 
                     <a
-                        href="../../src/pages/noticias/esporte/surf.html"
+                        href="../../src/pages/noticias/esporte/surf.php"
                         class="read-more">
                         Ler mais →
                     </a>
@@ -743,10 +743,10 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
-                <a href="../../src/pages/politica.html">Política</a>
-                <a href="../../src/pages/internacional.html">Internacional</a>
-                <a href="../../src/pages/esportes.html">Esporte</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../../src/pages/politica.php">Política</a>
+                <a href="../../src/pages/internacional.php">Internacional</a>
+                <a href="../../src/pages/esportes.php">Esporte</a>
             </div>
             <img src="../../src/assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban Footer">
             <div id="contato" class="footer-contact">

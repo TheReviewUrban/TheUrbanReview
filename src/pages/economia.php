@@ -20,7 +20,7 @@
          HEADER
     ========================= -->
     <header class="navbar">
-        <a href="/public/index.html"><img src="../../src/assets/img/ícones/LogoEconomia.png" class="logo-urban"
+        <a href="/public/index.php"><img src="../../src/assets/img/ícones/LogoEconomia.png" class="logo-urban"
                 alt="Logo Urban">
         </a>
         <div class="container nav-container">
@@ -31,10 +31,10 @@
 
             <!-- Menu Desktop -->
             <nav class="nav-links menu-desk">
-                <a href="../../public/index.html">Início</a>
-                <a href="../../src/pages/politica.html">Política</a>
-                <a href="../../src/pages/congresso.html">Congresso</a>
-                <a href="../../src/pages/economia.html" class="active">Economia</a>
+                <a href="../../public/index.php">Início</a>
+                <a href="../../src/pages/politica.php">Política</a>
+                <a href="../../src/pages/congresso.php">Congresso</a>
+                <a href="../../src/pages/economia.php" class="active">Economia</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -42,11 +42,11 @@
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="/public/index.html">Início</a></li>
-                    <li><a href="../../src/pages/politica.html">Política</a></li>
-                    <li><a href="../../src/pages/congresso.html">Congresso</a></li>
-                    <li><a href="../../src/pages/economia.html">Economia</a></li>
-                    <li><a href="/public/index.html#contato">Contato</a></li>
+                    <li><a href="/public/index.php">Início</a></li>
+                    <li><a href="../../src/pages/politica.php">Política</a></li>
+                    <li><a href="../../src/pages/congresso.php">Congresso</a></li>
+                    <li><a href="../../src/pages/economia.php">Economia</a></li>
+                    <li><a href="/public/index.php#contato">Contato</a></li>
                 </ul>
             </nav>
 
@@ -75,7 +75,7 @@
                                 segue travado</h2>
                             <p>Governo do DF pediu nova audiência no STF e apontou 'inércia' federal no acordo; Fazenda
                                 criticou falas. BRB quer R$ 6,6 bilhões para reduzir rombo deixado pelo caso Master.</p>
-                            <a href="../../src/pages/noticias/economia/crise-brb.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/economia/crise-brb.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                             <p>Presidente dos EUA voltou a pedir que petroleiras reduzam os preços após a alta provocada
                                 pelo conflito no Oriente Médio. Especialistas afirmam que a gasolina continua atrelada
                                 ao mercado global de petróleo e à estrutura do setor no país.</p>
-                            <a href="../../src/pages/noticias/economia/gasolina-sobe.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/economia/gasolina-sobe.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                             <p>As expectativas para o próximo ano sobre a situação financeira das famílias melhoraram,
                                 com uma menor parcela líquida de famílias esperando uma situação financeira pior daqui
                                 um ano.</p>
-                            <a href="../../src/pages/noticias/economia/expectativa-inflacao.html" class="btn-main">Ler mais
+                            <a href="../../src/pages/noticias/economia/expectativa-inflacao.php" class="btn-main">Ler mais
                                 →</a>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                             <h2>Taxa de juros nos EUA gera divergências</h2>
                             <p>Decisão do Federal Reserve de manter juros entre 3,5% e 3,75% aumenta temor do mercado e
                                 eleva rendimento dos títulos americanos.</p>
-                            <a href="../../src/pages/noticias/economia/taxa-de-juros.html" class="btn-main">Ler mais →</a>
+                            <a href="../../src/pages/noticias/economia/taxa-de-juros.php" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                     <span class="card-category text-red">Mercado</span>
                     <span class="card-time">• há 1h</span>
                     <h4>Emprego: veja as 320 vagas disponíveis em Petrolina, Salgueiro e Araripina</h4>
-                    <a href="../../src/pages/noticias/economia/vagas-disponíveis.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/economia/vagas-disponíveis.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -191,7 +191,7 @@
                     <span class="card-category text-blue">Câmbio</span>
                     <span class="card-time">• há 2h</span>
                     <h4>Mercado de Câmbio Acompanha Decisões Monetárias e Indicadores Econômicos</h4>
-                    <a href="../../src/pages/noticias/economia/mercado-de-cambio.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/economia/mercado-de-cambio.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -204,7 +204,7 @@
                     <span class="card-category text-yellow">Inflação</span>
                     <span class="card-time">• há 3h</span>
                     <h4>Na economia, crescimento com responsabilidade fiscal e inflação controlada</h4>
-                    <a href="../../src/pages/noticias/economia/crescimento-com-responsabilidade.html" class="read-more">Ler
+                    <a href="../../src/pages/noticias/economia/crescimento-com-responsabilidade.php" class="read-more">Ler
                         mais →</a>
                 </div>
             </article>
@@ -217,7 +217,7 @@
                     <span class="card-category text-blue">Empresas</span>
                     <span class="card-time">• há 4h</span>
                     <h4>BC determina reter transferência ‘cripto’ acima de US$ 10 mil por 24h para combater fraudes</h4>
-                    <a href="../../src/pages/noticias/economia/cripto.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/economia/cripto.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -229,7 +229,7 @@
                     <span class="card-category text-purple">Crédito</span>
                     <span class="card-time">• há 5h</span>
                     <h4>ACISC projeta alta moderada para o Dia dos Pais com juros altos e crédito caro</h4>
-                    <a href="../../src/pages/noticias/economia/dia-dos-pais.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/economia/dia-dos-pais.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -241,7 +241,7 @@
                     <span class="card-category text-yellow">Bancos</span>
                     <span class="card-time">• há 6h</span>
                     <h4>Bancos apostam em atendimento humanizado para fortalecer relação com público 50+</h4>
-                    <a href="../../src/pages/noticias/economia/atendimento-humanizado.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/economia/atendimento-humanizado.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -322,10 +322,10 @@
             <!-- Navegação -->
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
-                <a href="../../src/pages/politica.html">Política</a>
-                <a href="../../src/pages/congresso.html">Congresso</a>
-                <a href="../../src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../../src/pages/politica.php">Política</a>
+                <a href="../../src/pages/congresso.php">Congresso</a>
+                <a href="../../src/pages/economia.php">Economia</a>
             </div>
 
             <!-- Logo -->

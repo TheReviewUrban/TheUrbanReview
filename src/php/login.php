@@ -16,13 +16,13 @@ if($resultado->num_rows > 0){
     $usuario = $resultado->fetch_assoc();
 } else {
     echo "E-mail não cadastrado";
-    header("Location: ../pages/cadastro.html");
+    header("Location: ../pages/cadastro.php");
 }
 # Verifica se a senha inserida pelo usuário é igual a senha armazenada no banco de dados
 if(password_verify($senha, $usuario['senha_segura'])){
     $_SESSION['id_usuario'] = $usuario['id_usuario'];
     $_SESSION['nome'] = $usuario['nome'];
-    header("Location: ../../public/index.html");
+    header("Location: ../../public/index.php");
     exit();
 } else {
     echo "<p>Senha incorreta!</p>";

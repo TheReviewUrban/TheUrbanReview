@@ -17,7 +17,7 @@ $stmt->bind_param("ssss", $nome, $email, $nascimento, $senha_segura);
 # Executa o comando
 if($stmt->execute()){
     # Redireciona o usuário para a página de login após o cadastro
-    header("Location: ../pages/login.html");
+    header("Location: ../pages/login.php");
 } else { echo "Erro ao cadastrar: " . $conexao->error;}
 $stmt->close();
 $conexao->close();

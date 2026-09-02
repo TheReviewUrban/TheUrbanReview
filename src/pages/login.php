@@ -72,7 +72,7 @@
             </div>
 
             <div class="back-home">
-                <a href="../../../index.html">
+                <a href="../../public/index.php">
                     ← Voltar para o site
                 </a>
             </div>

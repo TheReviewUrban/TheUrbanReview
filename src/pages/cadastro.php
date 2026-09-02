@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<php lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -68,14 +68,14 @@
             <!-- LOGIN -->
             <div class="register-area">
                 <p>Já possui uma conta?</p>
-                <a href="../pages/login.html" class="register-button">
+                <a href="../pages/login.php" class="register-button">
                     Fazer login
                 </a>
             </div>
 
             <!-- VOLTAR -->
             <div class="back-home">
-                <a href="../../public/index.html">
+                <a href="../../public/index.php">
                     ← Voltar para o site
                 </a>
             </div>

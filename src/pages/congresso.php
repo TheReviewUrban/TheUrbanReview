@@ -18,27 +18,27 @@
 
 <body id="congresso">
     <header class="navbar">
-        <a href="../../public/index.html"><img src="../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban" alt="Logo Urban"></a>
+        <a href="../../public/index.php"><img src="../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban" alt="Logo Urban"></a>
         <div class="container nav-container">
             <div class="logo">
                 <h1>THE <span>URBAN</span> REVIEW</h1>
                 <p>Congresso Nacional • Câmara e Senado</p>
             </div>
             <nav class="nav-links menu-desk">
-                <a href="../../public/index.html">Início</a>
-                <a href="../../src/pages/politica.html">Política</a>
-                <a href="../../src/pages/congresso.html" class="active">Congresso</a>
-                <a href="../../src/pages/economia.html">Economia</a>
+                <a href="../../public/index.php">Início</a>
+                <a href="../../src/pages/politica.php">Política</a>
+                <a href="../../src/pages/congresso.php" class="active">Congresso</a>
+                <a href="../../src/pages/economia.php">Economia</a>
                 <a href="#contato">Contato</a>
             </nav>
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="../../public/index.html">Início</a></li>
-                    <li><a href="../../src/pages/politica.html">Política</a></li>
-                    <li><a href="../../src/pages/congresso.html">Congresso</a></li>
-                    <li><a href="../../src/pages/economia.html">Economia</a></li>
-                    <li><a href="../../public/index.html#contato">Contato</a></li>
+                    <li><a href="../../public/index.php">Início</a></li>
+                    <li><a href="../../src/pages/politica.php">Política</a></li>
+                    <li><a href="../../src/pages/congresso.php">Congresso</a></li>
+                    <li><a href="../../src/pages/economia.php">Economia</a></li>
+                    <li><a href="../../public/index.php#contato">Contato</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
@@ -73,7 +73,7 @@
                                 Zarattini quer detalhar o que é necessário para garantir que essa tecnologia respeite a
                                 Lei de Proteção de Dados
                             </p>
-                            <a href="../../src/pages/noticias/congresso/noticia-congresso.html" class="btn-main">
+                            <a href="../../src/pages/noticias/congresso/noticia-congresso.php" class="btn-main">
                                 Ler mais →
                             </a>
                         </div>
@@ -97,7 +97,7 @@
                                 Texto segue para votação em plenário após aprovação
                                 na comissão responsável.
                             </p>
-                            <a href="../../src/pages/noticias/congresso/comite-do-senado.html" class="btn-main">
+                            <a href="../../src/pages/noticias/congresso/comite-do-senado.php" class="btn-main">
                                 Ler mais →
                             </a>
                         </div>
@@ -121,7 +121,7 @@
                                 Lideranças partidárias articulam apoio para votação
                                 em segundo turno nas próximas semanas.
                             </p>
-                            <a href="../../src/pages/noticias/congresso/lideres-negociam.html" class="btn-main">
+                            <a href="../../src/pages/noticias/congresso/lideres-negociam.php" class="btn-main">
                                 Ler mais →
                             </a>
                         </div>
@@ -145,7 +145,7 @@
                                 Deputados e senadores discutem temas ligados à saúde,
                                 infraestrutura e orçamento federal.
                             </p>
-                            <a href="../../src/pages/noticias/congresso/comissoes-retomam.html" class="btn-main">
+                            <a href="../../src/pages/noticias/congresso/comissoes-retomam.php" class="btn-main">
                                 Ler mais →
                             </a>
                         </div>
@@ -195,7 +195,7 @@
                         Deputados aprovam urgência para projeto de modernização administrativa.
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/deputados-aprovam.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/deputados-aprovam.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -210,7 +210,7 @@
                         Comissão debate mudanças nas regras do orçamento para 2027.
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/mudanças-nas-regras.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/mudanças-nas-regras.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -226,7 +226,7 @@
                         Líderes negociam calendário para votação da nova proposta constitucional.
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/lideres-negociam.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/lideres-negociam.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -242,7 +242,7 @@
                         Audiências públicas discutem investimentos em infraestrutura nacional.
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/infraestrutura-nacional.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/infraestrutura-nacional.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -258,7 +258,7 @@
                         Relator apresenta novas estimativas para despesas e receitas federais.
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/presenta-novas-estimativas.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/presenta-novas-estimativas.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -273,7 +273,7 @@
                         Comissão Parlamentar convoca novas testemunhas para depoimentos.
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/parlamentar-convoca.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/parlamentar-convoca.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -288,7 +288,7 @@
                         Plenário do CNJ aprova proposta orçamentária para 2027
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/votação-da-nova-proposta.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/votação-da-nova-proposta.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -304,7 +304,7 @@
                         Comitê do Senado aprova responsabilização de Fauci por desacato ao Congresso
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/desacato.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/desacato.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -320,7 +320,7 @@
                         Centrão troca disputa pela Presidência por bilhões em cadeiras no Congresso
                     </h4>
 
-                    <a href="../../src/pages/noticias/congresso/centrao-troca-disputa.html" class="read-more">Ler mais →</a>
+                    <a href="../../src/pages/noticias/congresso/centrao-troca-disputa.php" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -440,10 +440,10 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="../../public/index.html">Início</a>
-                <a href="../../src/pages/politica.html">Política</a>
-                <a href="../../src/pages/congresso.html">Congresso</a>
-                <a href="../../src/pages/economia.html">Economia</a>
+                <a href="../../public/index.php">Início</a>
+                <a href="../../src/pages/politica.php">Política</a>
+                <a href="../../src/pages/congresso.php">Congresso</a>
+                <a href="../../src/pages/economia.php">Economia</a>
             </div>
             <img src="../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban" alt="Logo Congresso Footer">
             <div id="contato" class="footer-contact">
@@ -460,4 +460,4 @@
     <script src="../../src/assets/js/script.js"></script>
 </body>
 
-</html>
+</php>

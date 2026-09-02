@@ -4,7 +4,7 @@ include('conexao.php');
 # Executa a função de iniciar sessão do usuário
 session_start();
 # Caso o usuário não esteja logado, redireciona para a página de login
-if (!isset($_SESSION['id_usuario'])) { header("Location: ../pages/login.html"); exit(); }
+if (!isset($_SESSION['id_usuario'])) { header("Location: ../pages/login.php"); exit(); }
 # Armazena o ID do usuário logado na variável ID
 $id = $_SESSION['id_usuario'];
 # Verifica se o usuário enviou o formulário de alteração (POST)
@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt_senha->close();
     }
     # Após salvar, redireciona para a mesma página para evitar reenvio de formulário
-    header("Location: ../pages/dashboard.html?sucesso=1"); exit();
+    header("Location: ../pages/painel.php?sucesso=1"); exit();
 }
-# Se o usuário apenas acessou a página (GET), redireciona para o HTML do dashboard
-header("Location: ../pages/dashboard.html"); exit();
+# Se o usuário apenas acessou a página (GET), redireciona para o php do painel
+header("Location: ../pages/painel.php"); exit();
 ?>
