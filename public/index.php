@@ -1,15 +1,10 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Urban Review</title>
+    <title>The Urban Review</title>tgjm
     <link rel="stylesheet" href="../src/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +22,6 @@ if (session_status() === PHP_SESSION_NONE) {
                 <h1>THE <span>URBAN</span> REVIEW</h1>
                 <p>Notícias que informam. Conteúdo que importa.</p>
             </div>
-
             <nav class="nav-links menu-desk">
                 <a href="/public/index.php" class="active">Início</a>
                 <a href="../src/pages/politica.php">Política</a>
@@ -130,9 +124,14 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
 
             </div>
-        </div>
-
-
+          <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Pesquisar notícias..."
+    >
+    <button onclick="searchNews()">🔍</button>
+</div>
     </header>
 
     <!-- ==================== CARROSSEL ==================== -->
@@ -173,7 +172,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             </p>
                             <a href="../src/pages/noticias/inicio/esporte.php" class="btn-main">Ler mais →</a>
                         </div>
-                    </div>
+                    </div>../noticias/UFLA.html
                 </div>
 
                 <!-- SLIDE 3 -->
@@ -252,8 +251,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </article>
 
             <article class="news-card">
-                <div class="card-img"
-                    style="background-image: url('../src/assets/img/img-noticias/inicio/esporte.jpg');">
+                <div class="card-img" style="background-image: url('../src/assets/img/img-noticias/inicio/esporte.jpg');">
                 </div>
                 <div class="card-body">
                     <span class="card-category text-blue">Esportes</span> <span class="card-time">• há 2h</span>
@@ -264,7 +262,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
             <article class="news-card">
                 <div class="card-img"
-                    style="background-image: url('../src/assets/img/img-noticias/inicio/curiosidade.jpg');">
+                    style="background-image: url('../src/assets/img/img-noticias/inicio/curiosade-monte.png');">
                 </div>
                 <div class="card-body">
                     <span class="card-category text-yellow">Curiosidade do dia</span> <span class="card-time">• há
@@ -366,7 +364,28 @@ if (session_status() === PHP_SESSION_NONE) {
 
     </main>
 
-
+    <section id="contato" class="container newsletter-section">
+        <div class="newsletter-box">
+            <div class="newsletter-text">
+                <div class="icon-mail"><img src="../src/assets/img/ícones/email.png" class="opniao" alt="icone email">
+                </div>
+                <div>
+                    <h4>Coloque sua opinião sobre o site abaixo</h4>
+                    <p>Insira os seus dados para submeter o seu comentário.</p>
+                </div>
+            </div>
+            <form class="newsletter-form form-contato" id="formOpiniao">
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua opinião aqui..." required></textarea>
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </form>
+        </div>
+        <div class="container lista-comentarios">
+            <h3>Comentários dos Leitores</h3>
+            <ul id="listaComentariosUl"></ul>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container footer-grid">
@@ -390,7 +409,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <a href="../src/pages/esportes.php">Esportes</a>
             </div>
             <img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban Footer">
-            <div id="contato" class="footer-contact">
+            <div class="footer-contact">
                 <h5>Contato Redação</h5>
                 <p>reviewurban759@gmail.com</p>
                 <p>(61) 99999-9999</p>
