@@ -5875,5 +5875,34 @@ body.light-mode .password-info {
     .account-modal-box {
         padding: 28px 22px;
     }
+    .search-box {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 15px;
+}
+
+.search-box button {
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #333;
+}
 
 }

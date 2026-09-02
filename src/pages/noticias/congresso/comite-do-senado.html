@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deputado defende projeto que regulamenta venda e uso de óculos inteligentes | The Urban Review</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="icon" type="image/png" href="../../../../src/assets/img/ícones/LogoCongresso.png">
+    <link rel="icon" type="image/png" href="/src/assets/img/ícones/LogoCongresso.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,7 +17,7 @@
 <body id="noticias-congresso">
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
-        <a href="/public/index.html"><img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban"
+        <a href="/public/index.html"><img src="/src/assets/img/ícones/LogoCongresso.png" class="logo-urban"
                 alt="Logo Urban"></a>
 
         <div class="container nav-container">
@@ -29,9 +29,9 @@
             <!-- Menu Desktop -->
             <nav class="nav-links menu-desk">
                 <a href="/public/index.html">Início</a>
-                <a href="../../../../src/pages/politica.html">Política</a>
-                <a href="../../../../src/pages/congresso.html" class="active">Congresso</a>
-                <a href="../../../../src/pages/economia.html">Economia</a>
+                <a href="/src/pages/politica.html">Política</a>
+                <a href="/src/pages/congresso.html" class="active">Congresso</a>
+                <a href="/src/pages/economia.html">Economia</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -40,9 +40,9 @@
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
                     <a href="/public/index.html">Início</a>
-                    <a href="../../../../src/pages/politica.html">Política</a>
-                    <a href="../../../../src/pages/congresso.html" class="active">Congresso</a>
-                    <a href="../../../../src/pages/economia.html">Economia</a>
+                    <a href="/src/pages/politica.html">Política</a>
+                    <a href="/src/pages/congresso.html" class="active">Congresso</a>
+                    <a href="/src/pages/economia.html">Economia</a>
                     <a href="/public/index.html#contato">Contato</a>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -83,7 +83,7 @@
 
             <!-- Imagem principal -->
             <figure class="article-image">
-                <img src="../../../../src/assets/img/img-noticias/congresso/congresso-senado.avif"
+                <img src="/src/assets/img/img-noticias/congresso/congresso-senado.avif"
                     alt="Senador Efraim Filho durante discurso no Plenário do Senado">
                 <figcaption>
                     Senador Efraim Filho, relator do projeto que moderniza as regras de conflitos entre contribuinte e
@@ -188,7 +188,7 @@
 
             <!-- Voltar -->
             <div class="article-back">
-                <a href="../../../../src/pages/congresso.html">← Voltar para as notícias</a>
+                <a href="/src/pages/congresso.html">← Voltar para as notícias</a>
             </div>
 
         </div>
@@ -199,7 +199,7 @@
         <div class="newsletter-box">
             <div class="newsletter-text">
                 <div class="icon-mail">
-                    <img src="../../../../src/assets/img/ícones/email.png" class="opniao" alt="Contato">
+                    <img src="/src/assets/img/ícones/email.png" class="opniao" alt="Contato">
                 </div>
                 <div>
                     <h4>Coloque sua opinião sobre o site abaixo</h4>
@@ -229,21 +229,21 @@
                 <p>Notícias que informam. Conteúdo que importa.</p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/reviewurban759/" class="redes" title="Instagram">
-                        <img src="../../../../src/assets/img/ícones/instagram.png" alt="Instagram" class="redes">
+                        <img src="/src/assets/img/ícones/instagram.png" alt="Instagram" class="redes">
                     </a>
                     <a href="mailto:reviewurban759@gmail.com" class="redes" title="Gmail">
-                        <img src="../../../../src/assets/img/ícones/social.png" alt="Gmail" class="redes">
+                        <img src="/src/assets/img/ícones/social.png" alt="Gmail" class="redes">
                     </a>
                 </div>
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
                 <a href="/public/index.html">Início</a>
-                <a href="../../../../src/pages/politica.html">Política</a>
-                <a href="../../../../src/pages/congresso.html">Congresso</a>
-                <a href="../../../../src/pages/economia.html">Economia</a>
+                <a href="/src/pages/politica.html">Política</a>
+                <a href="/src/pages/congresso.html">Congresso</a>
+                <a href="/src/pages/economia.html">Economia</a>
             </div>
-            <img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban" alt="Logo Urban Footer">
+            <img src="/src/assets/img/ícones/LogoCongresso.png" class="logo-urban" alt="Logo Urban Footer">
             <div class="footer-contact">
                 <h5>Contato Redação</h5>
                 <p>reviewurban759@gmail.com</p>
@@ -256,7 +256,7 @@
         </div>
     </footer>
 
-    <script src="../../../../src/assets/js/script.js"></script>
+    <script src="../../../assets/js/script.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Urban Review</title>
+    <title>The Urban Review</title>tgjm
     <link rel="stylesheet" href="../src/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,24 +16,23 @@
 
 <body>
     <header class="navbar">
-        <a href="index.html"><img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban"></a>
+       <a href="../public/index.html"><img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban"></a> 
         <div class="container nav-container">
             <div class="logo">
                 <h1>THE <span>URBAN</span> REVIEW</h1>
                 <p>Notícias que informam. Conteúdo que importa.</p>
             </div>
-
             <nav class="nav-links menu-desk">
-                <a href="/public/index.html" class="active">Início</a>
+                <a href="index.html" class="active">Início</a>
                 <a href="../src/pages/politica.html">Política</a>
                 <a href="../src/pages/internacional.html">Internacional</a>
-                <a href="../src/pages/esportes.html">Esporte</a>
-                <a href="#contato">Contato</a>
+                <a href="../../dashboard/fr/">Esporte</a>
+                <a href="#contato">Contato</a> 
             </nav>
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="/public/index.html">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="../src/pages/politica.html">Política</a></li>
                     <li><a href="../src/pages/internacional.html">Internacional</a></li>
                     <li><a href="../src/pages/esportes.html">Esporte</a></li>
@@ -41,95 +40,17 @@
                 </ul>
             </nav>
             <div class="nav-actions">
-
                 <div class="search-box"></div>
-
-                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">
-                    🌙
-                </button>
-
-                <!-- CONTA -->
-                <div class="account-container">
-                    <a href="../src/pages/cadastro.html">
-                        <button id="accountButton" class="account-button">
-                            <span class="account-icon"> Faça Seu Login/Cadastro</span>
-
-                        </button>
-                    </a>
-
-                    <!-- MENU DA CONTA -->
-                    <div id="accountMenu" class="account-menu">
-
-                        <!-- NÃO LOGADO -->
-                        <div id="loggedOutMenu">
-
-                            <div class="account-menu-header">
-                                <strong>Minha conta</strong>
-                                <span>Entre para acessar seus recursos</span>
-                            </div>
-
-                            <button id="openLogin" class="account-menu-button">
-                                Entrar
-                            </button>
-
-                            <button id="openRegister" class="account-menu-register">
-                                Criar uma conta
-                            </button>
-
-                        </div>
-
-
-                        <!-- LOGADO -->
-                        <div id="loggedInMenu" style="display: none;">
-
-                            <div class="account-user">
-
-                                <div id="accountAvatar" class="account-avatar">
-                                    U
-                                </div>
-
-                                <div>
-                                    <strong id="accountName">
-                                        Usuário
-                                    </strong>
-
-                                    <span id="accountEmail">
-                                        usuario@email.com
-                                    </span>
-                                </div>
-
-                            </div>
-
-                            <div class="account-menu-divider"></div>
-
-                            <button class="user-option" id="openDashboard">
-                                Minha conta
-                            </button>
-
-                            <button class="user-option">
-                                ⭐ Favoritos
-                            </button>
-
-                            <button class="user-option">
-                                💬 Meus comentários
-                            </button>
-
-                            <div class="account-menu-divider"></div>
-
-                            <button id="logoutButton" class="logout-option">
-                                🚪 Sair
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
             </div>
-        </div>
-
-
+          <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Pesquisar notícias..."
+    >
+    <button onclick="searchNews()">🔍</button>
+</div>
     </header>
 
     <!-- ==================== CARROSSEL ==================== -->
@@ -152,7 +73,7 @@
                             <p>O governo federal publicou em edição extra do Diário Oficial da União (DOU) na noite
                                 desta quinta-feira (30) o decreto que detalha a liberação de R$ 5,7 bilhões em gastos do
                                 Orçamento de 2026, anunciada na semana passada pela equipe econômica.</p>
-                            <a href="../src/pages/noticias/inicio/politica.html" class="btn-main">Ler mais →</a>
+                            <a href="../src/pages/politica.html" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -168,9 +89,9 @@
                             <h2>UFLA assina parceria com Ministério do Esporte para jogos eletrônicos</h2>
                             <p>A universidade federal firma acordo inédito para estruturar a área de e-sports no Brasil.
                             </p>
-                            <a href="../src/pages/noticias/inicio/esporte.html" class="btn-main">Ler mais →</a>
+                            <a href="../../TheUrbanReview/src/pages/noticias/politica/noticia.txt" class="btn-main">Ler mais →</a>
                         </div>
-                    </div>
+                    </div>../noticias/UFLA.html
                 </div>
 
                 <!-- SLIDE 3 -->
@@ -182,7 +103,7 @@
                             <span class="meta-info">Tecnologia • há 5h</span>
                             <h2>Futuro das tecnologias e os impactos das narrativas futuristas no cinema</h2>
                             <p>Descubra como o cinema está moldando nossa percepção sobre o futuro tecnológico.</p>
-                            <a href="../src/pages/noticias/inicio/tecnologias.html" class="btn-main">Ler mais →</a>
+                            <a href="../../TheUrbanReview/src/pages/noticias/" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -197,7 +118,7 @@
                             <span class="meta-info">Internacional • há 4h</span>
                             <h2>Novas tecnologias: tendências e o que esperar do futuro em escala global</h2>
                             <p>Análise completa das inovações que estão transformando o cenário mundial.</p>
-                            <a href="../src/pages/noticias/inicio/internacionais.html" class="btn-main">Ler mais →</a>
+                            <a href="./noticias/NovasTecnologia.html" class="btn-main">Ler mais →</a>
                         </div>
                     </div>
                 </div>
@@ -244,13 +165,11 @@
                     <span class="card-category text-red">Politicas</span> <span class="card-time">• há 1h</span>
                     <h4>Renan critica Flávio e questiona força política de Michelle</h4>
                     <a href="../src/pages/noticias/inicio/politicas.html" class="read-more">Ler mais →</a>
-
                 </div>
             </article>
 
             <article class="news-card">
-                <div class="card-img"
-                    style="background-image: url('../src/assets/img/img-noticias/inicio/esporte.jpg');">
+                <div class="card-img" style="background-image: url('../src/assets/img/img-noticias/inicio/esporte.jpg');">
                 </div>
                 <div class="card-body">
                     <span class="card-category text-blue">Esportes</span> <span class="card-time">• há 2h</span>
@@ -261,7 +180,7 @@
 
             <article class="news-card">
                 <div class="card-img"
-                    style="background-image: url('../src/assets/img/img-noticias/inicio/curiosidade.jpg');">
+                    style="background-image: url('../src/assets/img/img-noticias/inicio/curiosade-monte.png');">
                 </div>
                 <div class="card-body">
                     <span class="card-category text-yellow">Curiosidade do dia</span> <span class="card-time">• há
@@ -291,7 +210,7 @@
                     <span class="card-category text-purple">Tecnologia</span> <span class="card-time">• há 5h</span>
                     <h4>Comissão Europeia discute incidentes com OpenAI e Anthropic antes da nova Lei de IA
                     </h4>
-                    <a href="../src/pages/noticias/inicio/tecnologia.html" class="read-more">Ler mais →</a>
+                    <a href="../src/pages/noticias/inicio/internacional.html" class="read-more">Ler mais →</a>
                 </div>
             </article>
 
@@ -363,7 +282,28 @@
 
     </main>
 
-
+    <section id="contato" class="container newsletter-section">
+        <div class="newsletter-box">
+            <div class="newsletter-text">
+                <div class="icon-mail"><img src="../src/assets/img/ícones/email.png" class="opniao" alt="icone email">
+                </div>
+                <div>
+                    <h4>Coloque sua opinião sobre o site abaixo</h4>
+                    <p>Insira os seus dados para submeter o seu comentário.</p>
+                </div>
+            </div>
+            <form class="newsletter-form form-contato" id="formOpiniao">
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua opinião aqui..." required></textarea>
+                <button type="submit" id="btnEnviar">Enviar</button>
+            </form>
+        </div>
+        <div class="container lista-comentarios">
+            <h3>Comentários dos Leitores</h3>
+            <ul id="listaComentariosUl"></ul>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container footer-grid">
@@ -381,13 +321,13 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
+                <a href="index.html">Início</a>
                 <a href="../src/pages/politica.html">Política</a>
-                <a href="../src/pages/internacional.html">Internacional</a>
-                <a href="../src/pages/esportes.html">Esportes</a>
+                <a href="../src/pages/congresso.html">Congresso</a>
+                <a href="../src/pages/economia.html">Economia</a>
             </div>
             <img src="../src/assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban Footer">
-            <div id="contato" class="footer-contact">
+            <div class="footer-contact">
                 <h5>Contato Redação</h5>
                 <p>reviewurban759@gmail.com</p>
                 <p>(61) 99999-9999</p>

@@ -318,6 +318,80 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     });
+function searchNews() {
+    const input = document.getElementById("searchInput");
+    const search = input.value.toLowerCase().trim();
+
+    const news = document.querySelectorAll(".news-card");
+
+    news.forEach(article => {
+        const title = article
+            .querySelector("h2")
+            .textContent
+            .toLowerCase();
+
+        if (title.includes(search)) {
+            article.style.display = "";
+        } else {
+            article.style.display = "none";
+        }
+    });
+}
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
+
+function searchNews() {
+    const searchText = searchInput.value
+        .toLowerCase()
+        .trim();
+
+    const newsCards = document.querySelectorAll(".news-card");
+
+    newsCards.forEach(card => {
+        const content = card.textContent.toLowerCase();
+
+        if (content.includes(searchText)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+searchButton.addEventListener("click", searchNews);
+
+searchInput.addEventListener("input", searchNews);
+
+searchInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        searchNews();
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const newsCards = document.querySelectorAll(".news-card");
+
+    function searchNews() {
+        const text = searchInput.value.toLowerCase().trim();
+
+        newsCards.forEach(card => {
+            const content = card.textContent.toLowerCase();
+
+            if (content.includes(text)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+
+    searchInput.addEventListener("input", searchNews);
+
+    searchButton.addEventListener("click", searchNews);
+
+});
 
 });
 
