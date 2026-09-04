@@ -18,7 +18,7 @@
 
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
-        <a href="../../../../public/index.html"><img src="../../../assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban"></a>
+        <a href="../../../../public/index.php"><img src="../../../assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban"></a>
 
         <div class="container nav-container">
             <div class="logo">
@@ -28,10 +28,10 @@
 
             <!-- Menu Desktop -->
             <nav class="nav-links menu-desk">
-                <a href="../../../../public/index.html">Início</a>
-                <a href="../../politica.html">Política</a>
-                <a href="../../internacional.html" class="active">Internacional</a>
-                <a href="../../esportes.html">Esporte</a>
+                <a href="../../../../public/index.php">Início</a>
+                <a href="../../politica.php">Política</a>
+                <a href="../../internacional.php" class="active">Internacional</a>
+                <a href="../../esportes.php">Esporte</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -39,10 +39,10 @@
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="../../../../public/index.html">Início</a></li>
-                    <li><a href="../../politica.html">Política</a></li>
-                    <li><a href="../../internacional.html">Internacional</a></li>
-                    <li><a href="../../esportes.html">Esporte</a></li>
+                    <li><a href="../../../../public/index.php">Início</a></li>
+                    <li><a href="../../politica.php">Política</a></li>
+                    <li><a href="../../internacional.php">Internacional</a></li>
+                    <li><a href="../../esportes.php">Esporte</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -150,7 +150,7 @@
 
             <!-- Voltar -->
             <div class="article-back">
-                <a href="../../internacional.html">← Voltar para Internacional</a>
+                <a href="../../internacional.php">← Voltar para Internacional</a>
             </div>
 
         </div>
@@ -200,10 +200,10 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="../../../../public/index.html">Início</a>
-                <a href="../../politica.html">Política</a>
-                <a href="../../congresso.html">Congresso</a>
-                <a href="../../economia.html">Economia</a>
+                <a href="../../../../public/index.php">Início</a>
+                <a href="../../politica.php">Política</a>
+                <a href="../../congresso.php">Congresso</a>
+                <a href="../../economia.php">Economia</a>
             </div>
             <img src="../../../assets/img/ícones/LogoUrban.png" class="logo-urban" alt="Logo Urban Footer">
             <div class="footer-contact">

@@ -27,16 +27,16 @@
                 <p>Notícias que informam. Conteúdo que importa.</p>
             </div>
             <nav class="nav-links menu-desk">
-                <a href="/public/index.html" class="active">
+                <a href="/public/index.php" class="active">
                     Início
                 </a>
-                <a href="../../../../src/pages/politica.html">
+                <a href="../../../../src/pages/politica.php">
                     Política
                 </a>
-                <a href="../../../../src/pages/congresso.html">
+                <a href="../../../../src/pages/congresso.php">
                     Congresso
                 </a>
-                <a href="../../../../src/pages/economia.html">
+                <a href="../../../../src/pages/economia.php">
                     Economia
                 </a>
                 <a href="#contato">
@@ -47,10 +47,10 @@
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="/public/index.html">Início</a></li>
-                    <li><a href="../../../../src/pages/politica.html">Política</a></li>
-                    <li><a href="../../../../src/pages/congresso.html">Congresso</a></li>
-                    <li><a href="../../../../src/pages/economia.html">Economia</a></li>
+                    <li><a href="/public/index.php">Início</a></li>
+                    <li><a href="../../../../src/pages/politica.php">Política</a></li>
+                    <li><a href="../../../../src/pages/congresso.php">Congresso</a></li>
+                    <li><a href="../../../../src/pages/economia.php">Economia</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -181,7 +181,7 @@
             </div>
             <!-- Voltar -->
             <div class="article-back">
-                <a href="/public/index.html">
+                <a href="/public/index.php">
                     ← Voltar para as notícias
                 </a>
             </div>
@@ -243,16 +243,16 @@
                 <h5>
                     Navegação
                 </h5>
-                <a href="/public/index.html">
+                <a href="/public/index.php">
                     Início
                 </a>
-                <a href="../../../../src/pages/politica.html">
+                <a href="../../../../src/pages/politica.php">
                     Política
                 </a>
-                <a href="../../../../src/pages/internacional.html">
+                <a href="../../../../src/pages/internacional.php">
                     Internacional
                 </a>
-                <a href="../../../../src/pages/esportes.html">
+                <a href="../../../../src/pages/esportes.php">
                     Esporte
                 </a>
             </div>
