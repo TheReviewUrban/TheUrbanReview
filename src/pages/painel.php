@@ -78,7 +78,7 @@ $rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
     <!-- NAVBAR -->
     <header class="dashboard-navbar">
         <div class="dashboard-nav-left">
-            <a href="../../public/index.html" class="dashboard-logo">
+            <a href="../../public/index.php" class="dashboard-logo">
                 THE <span>URBAN</span> REVIEW
             </a>
         </div>

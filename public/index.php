@@ -1,10 +1,72 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+include("../src/php/conexao.php");
+
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Primeiro pegamos o ID da sessão
+$id_usuario = $_SESSION['id_usuario'];
+
+// Agora fazemos a consulta
+$sql = "SELECT nome_completo, email, nascimento, tipo_usuario
+        FROM usuarios 
+        WHERE id_usuario = ?";
+
+$stmt = $conexao->prepare($sql);
+$stmt->bind_param("i", $id_usuario);
+$stmt->execute();
+
+$resultado = $stmt->get_result();
+$usuario = $resultado->fetch_assoc();
+
+$stmt->close();
+
+// Verifica se o usuário realmente foi encontrado
+if (!$usuario) {
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+
+// Dados do usuário
+$nome_exibicao = $usuario['nome_completo'];
+$email_exibicao = $usuario['email'];
+$nascimento = $usuario['nascimento'];
+
+// Horário de Brasília
+date_default_timezone_set('America/Sao_Paulo');
+
+$hora = (int) date('H');
+
+if ($hora >= 5 && $hora < 12) {
+    $saudacao = "Bom dia";
+} elseif ($hora >= 12 && $hora < 18) {
+    $saudacao = "Boa tarde";
+} else {
+    $saudacao = "Boa noite";
+}
+$eh_moderador = in_array($usuario['tipo_usuario'], ['moderador', 'admin']);
+$tipos_rotulo = [
+    'admin'     => 'Administrador',
+    'moderador' => 'Moderador',      
+    'comum'     => 'Usuário Comum'    
+];
+$rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Urban Review</title>tgjm
+    <title>The Urban Review</title>
     <link rel="stylesheet" href="../src/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
