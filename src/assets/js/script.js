@@ -411,18 +411,47 @@ document.addEventListener("DOMContentLoaded", () => {
             // ======================
             // NAVEGAÇÃO ENTRE SEÇÕES
             // ======================
-            sidebarItems.forEach(item => {
-               item.addEventListener('click', () => {
-                    const sectionId = item.dataset.section;
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
 
-                    sidebarItems.forEach(i => i.classList.remove('active'));
-                    sections.forEach(s => s.classList.remove('active'));
+function searchNews() {
+    const searchText = searchInput.value
+        .toLowerCase()
+        .trim();
 
-                   item.classList.add('active');
-                   document.getElementById(sectionId).classList.add('active');
-                });
-           });
+    const newsCards = document.querySelectorAll(".news-card");
 
+    newsCards.forEach(card => {
+        const content = card.textContent.toLowerCase();
 
+        if (content.includes(searchText)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+searchButton.addEventListener("click", searchNews);
+
+searchInput.addEventListener("input", searchNews);
+
+searchInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        searchNews();
+    }
+});
+
+const [search, setSearch] = useState("");
+
+const filteredMovies = movies.filter(movie =>
+    movie.title.toLowerCase().includes(search.toLowerCase())
+);
           
+<input
+    type="text"
+    placeholder="Pesquisa..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+/>
        });
