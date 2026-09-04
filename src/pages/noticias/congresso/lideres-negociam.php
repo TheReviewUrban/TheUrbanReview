@@ -18,7 +18,7 @@
 
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
-        <a href="/public/index.html"><img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban"
+        <a href="/public/index.php"><img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban"
                 alt="Logo Urban"></a>
 
         <div class="container nav-container">
@@ -29,10 +29,10 @@
 
             <!-- Menu Desktop -->
             <nav class="nav-links menu-desk">
-                <a href="/public/index.html">Início</a>
-                <a href="../../../../src/pages/politica.html">Política</a>
-                <a href="../../../../src/pages/congresso.html" class="active">Congresso</a>
-                <a href="../../../../src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../../../../src/pages/politica.php">Política</a>
+                <a href="../../../../src/pages/congresso.php" class="active">Congresso</a>
+                <a href="../../../../src/pages/economia.php">Economia</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -40,11 +40,11 @@
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <a href="/public/index.html">Início</a>
-                    <a href="../../../../src/pages/politica.html">Política</a>
-                    <a href="../../../../src/pages/congresso.html" class="active">Congresso</a>
-                    <a href="../../../../src/pages/economia.html">Economia</a>
-                    <a href="/public/index.html#contato">Contato</a>
+                    <a href="/public/index.php">Início</a>
+                    <a href="../../../../src/pages/politica.php">Política</a>
+                    <a href="../../../../src/pages/congresso.php" class="active">Congresso</a>
+                    <a href="../../../../src/pages/economia.php">Economia</a>
+                    <a href="/public/index.php#contato">Contato</a>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -152,7 +152,7 @@
 
             <!-- Voltar -->
             <div class="article-back">
-                <a href="../../../../src/pages/congresso.html">← Voltar para as notícias</a>
+                <a href="../../../../src/pages/congresso.php">← Voltar para as notícias</a>
             </div>
 
         </div>
@@ -202,10 +202,10 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
-                <a href="../../../../src/pages/politica.html">Política</a>
-                <a href="../../../../src/pages/congresso.html">Congresso</a>
-                <a href="../../../../src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../../../../src/pages/politica.php">Política</a>
+                <a href="../../../../src/pages/congresso.php">Congresso</a>
+                <a href="../../../../src/pages/economia.php">Economia</a>
             </div>
             <img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban" alt="Logo Urban Footer">
             <div class="footer-contact">

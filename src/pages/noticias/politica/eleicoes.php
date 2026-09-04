@@ -18,7 +18,7 @@
 
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
-        <a href="/public/index.html"><img src="/src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Urban"></a>
+        <a href="/public/index.php"><img src="/src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Urban"></a>
 
         <div class="container nav-container">
             <div class="logo">
@@ -28,10 +28,10 @@
 
             <!-- Menu Desktop -->
             <nav class="nav-links menu-desk">
-                <a href="/public/index.html">Início</a>
-                <a href="/src/pages/politica.html" class="active">Política</a>
-                <a href="/src/pages/congresso.html">Congresso</a>
-                <a href="/src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="/src/pages/politica.php" class="active">Política</a>
+                <a href="/src/pages/congresso.php">Congresso</a>
+                <a href="/src/pages/economia.php">Economia</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -39,10 +39,10 @@
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="/public/index.html">Início</a></li>
-                    <li><a href="/src/pages/politica.html">Política</a></li>
-                    <li><a href="/src/pages/congresso.html">Congresso</a></li>
-                    <li><a href="/src/pages/economia.html">Economia</a></li>
+                    <li><a href="/public/index.php">Início</a></li>
+                    <li><a href="/src/pages/politica.php">Política</a></li>
+                    <li><a href="/src/pages/congresso.php">Congresso</a></li>
+                    <li><a href="/src/pages/economia.php">Economia</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -160,7 +160,7 @@
 
             <!-- Voltar -->
             <div class="article-back">
-                <a href="/src/pages/politica.html">← Voltar para as notícias</a>
+                <a href="/src/pages/politica.php">← Voltar para as notícias</a>
             </div>
 
         </div>
@@ -210,10 +210,10 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
-                <a href="/src/pages/politica.html">Política</a>
-                <a href="/src/pages/congresso.html">Congresso</a>
-                <a href="/src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="/src/pages/politica.php">Política</a>
+                <a href="/src/pages/congresso.php">Congresso</a>
+                <a href="/src/pages/economia.php">Economia</a>
             </div>
             <img src="/src/assets/img/ícones/LogoPolitica.png" class="logo-urban" alt="Logo Urban Footer">
             <div class="footer-contact">

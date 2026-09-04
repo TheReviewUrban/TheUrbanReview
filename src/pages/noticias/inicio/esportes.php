@@ -29,16 +29,16 @@
                 <p>Notícias que informam. Conteúdo que importa.</p>
             </div>
             <nav class="nav-links menu-desk">
-                <a href="../../../../public/index.html" class="active">
+                <a href="../../../../public/index.php" class="active">
                     Início
                 </a>
-                <a href="../../politica.html">
+                <a href="../../politica.php">
                     Política
                 </a>
-                <a href="../../internacional.html">
+                <a href="../../internacional.php">
                     Internacional
                 </a>
-                <a href="../../esportes.html">
+                <a href="../../esportes.php">
                     Esporte
                 </a>
                 <a href="#contato">
@@ -51,22 +51,22 @@
                 </button>
                 <ul id="dropdownContent" class="dropdown-content">
                     <li>
-                        <a href="../../../../public/index.html">
+                        <a href="../../../../public/index.php">
                             Início
                         </a>
                     </li>
                     <li>
-                        <a href="../../politica.html">
+                        <a href="../../politica.php">
                             Política
                         </a>
                     </li>
                     <li>
-                        <a href="../../internacional.html">
+                        <a href="../../internacional.php">
                             Internacional
                         </a>
                     </li>
                     <li>
-                        <a href="../../esportes.html">
+                        <a href="../../esportes.php">
                             Esporte
                         </a>
                     </li>
@@ -178,7 +178,7 @@
             </div>
             <!-- Voltar -->
             <div class="article-back">
-                <a href="../../../../public/index.html">
+                <a href="../../../../public/index.php">
                     ← Voltar para as notícias
                 </a>
             </div>
@@ -241,16 +241,16 @@
                 <h5>
                     Navegação
                 </h5>
-                <a href="../../../../public/index.html">
+                <a href="../../../../public/index.php">
                     Início
                 </a>
-                <a href="../../politica.html">
+                <a href="../../politica.php">
                     Política
                 </a>
-                <a href="../../internacional.html">
+                <a href="../../internacional.php">
                     Internacional
                 </a>
-                <a href="../../esportes.html">
+                <a href="../../esportes.php">
                     Esporte
                 </a>
             </div>

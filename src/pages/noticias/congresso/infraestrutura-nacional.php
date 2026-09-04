@@ -15,7 +15,7 @@
 <body id="noticias-congresso">
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
-        <a href="/public/index.html"><img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban"
+        <a href="/public/index.php"><img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban"
                 alt="Logo Urban"></a>
         <div class="container nav-container">
             <div class="logo">
@@ -24,21 +24,21 @@
             </div>
             <!-- Menu Desktop -->
             <nav class="nav-links menu-desk">
-                <a href="/public/index.html">Início</a>
-                <a href="../../../../src/pages/politica.html">Política</a>
-                <a href="../../../../src/pages/congresso.html" class="active">Congresso</a>
-                <a href="../../../../src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../../../../src/pages/politica.php">Política</a>
+                <a href="../../../../src/pages/congresso.php" class="active">Congresso</a>
+                <a href="../../../../src/pages/economia.php">Economia</a>
                 <a href="#contato">Contato</a>
             </nav>
             <!-- Menu Mobile -->
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <a href="/public/index.html">Início</a>
-                    <a href="../../../../src/pages/politica.html">Política</a>
-                    <a href="../../../../src/pages/congresso.html"class="active">Congresso</a>
-                    <a href="../../../../src/pages/economia.html" >Economia</a>
-                    <a href="/public/index.html#contato">Contato</a>
+                    <a href="/public/index.php">Início</a>
+                    <a href="../../../../src/pages/politica.php">Política</a>
+                    <a href="../../../../src/pages/congresso.php"class="active">Congresso</a>
+                    <a href="../../../../src/pages/economia.php" >Economia</a>
+                    <a href="/public/index.php#contato">Contato</a>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -128,7 +128,7 @@
                     <strong>Fonte:</strong> Terra / Estadão.
                 </p>
                 <p>
-                    <a href="https://www.terra.com.br/economia/proximo-governo-tera-que-rever-emendas-parlamentares-para-destravar-investimentos-em-infraestrutura,bdf561e600640ab7d96a16c4f0b51576kdg60veu.html" target="_blank" rel="noopener">VEJA A NOTÍCIA ORIGINAL</a>
+                    <a href="https://www.terra.com.br/economia/proximo-governo-tera-que-rever-emendas-parlamentares-para-destravar-investimentos-em-infraestrutura,bdf561e600640ab7d96a16c4f0b51576kdg60veu.php" target="_blank" rel="noopener">VEJA A NOTÍCIA ORIGINAL</a>
                 </p>
             </article>
             <!-- Compartilhamento -->
@@ -139,7 +139,7 @@
             </div>
             <!-- Voltar -->
             <div class="article-back">
-                <a href="../../../../src/pages/economia.html">← Voltar para as notícias</a>
+                <a href="../../../../src/pages/economia.php">← Voltar para as notícias</a>
             </div>
         </div>
     </main>
@@ -184,10 +184,10 @@
             </div>
             <div class="footer-links">
                 <h5>Navegação</h5>
-                <a href="/public/index.html">Início</a>
-                <a href="../../../../src/pages/politica.html">Política</a>
-                <a href="../../../../src/pages/congresso.html">Congresso</a>
-                <a href="../../../../src/pages/economia.html">Economia</a>
+                <a href="/public/index.php">Início</a>
+                <a href="../../../../src/pages/politica.php">Política</a>
+                <a href="../../../../src/pages/congresso.php">Congresso</a>
+                <a href="../../../../src/pages/economia.php">Economia</a>
             </div>
             <img src="../../../../src/assets/img/ícones/LogoCongresso.png" class="logo-urban" alt="Logo Urban Footer">
             <div class="footer-contact">

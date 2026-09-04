@@ -187,13 +187,7 @@ $rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
 
             </div>
           <div class="search-box">
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Pesquisar notícias..."
-    >
-    <button onclick="searchNews()">🔍</button>
-</div>
+    
     </header>
 
     <!-- ==================== CARROSSEL ==================== -->

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<php lang="pt-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">

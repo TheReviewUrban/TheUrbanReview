@@ -18,7 +18,7 @@
 
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
-        <a href="../../../../public/index.html"><img src="../../../assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban"></a>
+        <a href="../../../../public/index.php"><img src="../../../assets/img/ícones/LogoEsportes.png" class="logo-urban" alt="Logo Urban"></a>
 
         <div class="container nav-container">
             <div class="logo">
@@ -28,9 +28,9 @@
 
             <!-- Menu Desktop -->
             <nav class="nav-links menu-desk">
-                <a href="../../../../public/index.html">Início</a>
-                <a href="../../politica.html">Política</a>
-                <a href="../../internacional.html">Internacional</a>
+                <a href="../../../../public/index.php">Início</a>
+                <a href="../../politica.php">Política</a>
+                <a href="../../internacional.php">Internacional</a>
                 <a href="../../" class="active">Esporte</a>
                 <a href="#contato">Contato</a>
             </nav>
@@ -39,9 +39,9 @@
             <nav class="dropdown menu-mob">
                 <button id="btnMenuMob" class="menu-icon-btn">☰</button>
                 <ul id="dropdownContent" class="dropdown-content">
-                    <li><a href="../../../../public/index.html">Início</a></li>
-                    <li><a href="../../politica.html">Política</a></li>
-                    <li><a href="../../internacional.html">Internacional</a></li>
+                    <li><a href="../../../../public/index.php">Início</a></li>
+                    <li><a href="../../politica.php">Política</a></li>
+                    <li><a href="../../internacional.php">Internacional</a></li>
                     <li><a href="../../">Esporte</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -169,7 +169,7 @@ Finais - 19h*</p>
 
             <!-- Voltar -->
             <div class="article-back">
-                <a href="../../../../public/index.html">← Voltar para as notícias</a>
+                <a href="../../../../public/index.php">← Voltar para as notícias</a>
             </div>
 
         </div>
