@@ -6353,6 +6353,7 @@ body#dashboard.light-mode .setting-row {
         width: 210px;
         opacity: 1;
         pointer-events: auto;
+        display: block !important;
     }
 
     #searchInput {
