@@ -5,15 +5,14 @@ if (session_status() === PHP_SESSION_NONE) {
 
 include("../src/php/conexao.php");
 
+// 1. Verifique se o usuário está logado
 if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
+    header("Location: ../src/pages/login.php"); // Redireciona se não houver sessão
     exit();
 }
 
-// Primeiro pegamos o ID da sessão
 $id_usuario = $_SESSION['id_usuario'];
 
-// Agora fazemos a consulta
 $sql = "SELECT nome_completo, email, nascimento, tipo_usuario
         FROM usuarios 
         WHERE id_usuario = ?";
@@ -27,21 +26,20 @@ $usuario = $resultado->fetch_assoc();
 
 $stmt->close();
 
-// Verifica se o usuário realmente foi encontrado
+// 2. Verifique se o usuário existe no banco de dados
 if (!$usuario) {
     session_destroy();
-    header("Location: login.php");
+    header("Location: ../src/pages/login.php");
     exit();
 }
 
-// Dados do usuário
-$nome_exibicao = $usuario['nome_completo'];
+// Dados do usuário (agora seguros para acesso)
+$nome_exibicao  = $usuario['nome_completo'];
 $email_exibicao = $usuario['email'];
-$nascimento = $usuario['nascimento'];
+$nascimento     = $usuario['nascimento'];
 
 // Horário de Brasília
 date_default_timezone_set('America/Sao_Paulo');
-
 $hora = (int) date('H');
 
 if ($hora >= 5 && $hora < 12) {
@@ -51,14 +49,17 @@ if ($hora >= 5 && $hora < 12) {
 } else {
     $saudacao = "Boa noite";
 }
-$eh_moderador = in_array($usuario['tipo_usuario'], ['moderador', 'admin']);
-$tipos_rotulo = [
+
+// Definição de papéis segura
+$tipo_usuario  = $usuario['tipo_usuario'] ?? 'comum';
+$eh_moderador  = in_array($tipo_usuario, ['moderador', 'admin']);
+
+$tipos_rotulo  = [
     'admin'     => 'Administrador',
     'moderador' => 'Moderador',      
     'comum'     => 'Usuário Comum'    
 ];
-$rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
-
+$rotulo_atual  = $tipos_rotulo[$tipo_usuario] ?? 'Usuário';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -102,92 +103,49 @@ $rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
                 </ul>
             </nav>
             <div class="nav-actions">
+                <div class="search-container" id="searchContainer">
 
+    <div class="search-container" id="searchContainer">
 
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Pesquisar notícias..."
+            autocomplete="off"
+        >
+
+        <button
+            type="button"
+            class="search-clear"
+            id="searchClear"
+            aria-label="Limpar pesquisa"
+        >
+            ×
+        </button>
+    </div>
+
+    <button
+        type="button"
+        class="search-btn"
+        id="searchButton"
+        aria-label="Pesquisar"
+    >
+        🔍
+    </button>
+
+</div>
                 <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">
                     🌙
                 </button>
-
-
-                    <!-- MENU DA CONTA -->                                                                                                                                                                                                                                                                                  
-                    <div id="accountMenu" class="account-menu">
-
-                        <!-- NÃO LOGADO -->
-                        <!-- <div id="loggedOutMenu">
-
-                            <div class="account-menu-header">
-                                <strong>Minha conta</strong>
-                                <span>Entre para acessar seus recursos</span>
-                            </div>
-
-                            <button id="openLogin" class="account-menu-button">
-                                Entrar
-                            </button>
-
-                            <button id="openRegister" class="account-menu-register">
-                                Criar uma conta
-                            </button>
-
-                        </div> -->
-
-
-                        <!-- LOGADO -->
-                        <!-- <div id="loggedInMenu" style="display: none;">
-
-                            <div class="account-user">
-
-                                <div id="accountAvatar" class="account-avatar">
-                                    U
-                                </div>
-
-                                <div>
-                                    <strong id="accountName">
-                                        Usuário
-                                    </strong>
-
-                                    <span id="accountEmail">
-                                        usuario@email.com
-                                    </span>
-                                </div>
-
-                            </div>
-
-                            <div class="account-menu-divider"></div>
-
-                            <button class="user-option" id="openDashboard">
-                                Minha conta
-                            </button>
-
-                            <button class="user-option">
-                                ⭐ Favoritos
-                            </button>
-
-                            <button class="user-option">
-                                💬 Meus comentários
-                            </button>
-
-                            <div class="account-menu-divider"></div>
-
-                            <button id="logoutButton" class="logout-option">
-                                🚪 Sair
-                            </button>
-
-                        </div> -->
-
-                    </div>
-
-                    <?php if (isset($_SESSION['id_usuario'])): ?>
-                        <a href="../src/pages/painel.php" class="nav-link <?php echo ($pagina_atual === '../src/pages/painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
-                    <?php else: ?>
-                        <a href="../src/pages/login.php" class="nav-link <?php echo ($pagina_atual === '../pages/login.php') ? 'ativo' : ''; ?>">Entrar</a>
-                        <a href="../src/pages/cadastro.php" class="nav-link <?php echo ($pagina_atual === '../pages/cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>
-                    <?php endif; ?>
-
-                </div>
-
-            </div>
-          <div class="search-box">
-    
+                <?php if (isset($_SESSION['id_usuario'])): ?>
+                    <a href="../src/pages/painel.php" class="nav-link <?php echo ($pagina_atual === '../src/pages/painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
+                <?php else: ?>
+                    <a href="../src/pages/login.php" class="nav-link <?php echo ($pagina_atual === '../pages/login.php') ? 'ativo' : ''; ?>">Entrar</a>
+                    <a href="../src/pages/cadastro.php" class="nav-link <?php echo ($pagina_atual === '../pages/cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>
+                <?php endif; ?>
+            </div>    
+        </div>
     </header>
 
     <!-- ==================== CARROSSEL ==================== -->
@@ -228,7 +186,7 @@ $rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
                             </p>
                             <a href="../src/pages/noticias/inicio/esporte.php" class="btn-main">Ler mais →</a>
                         </div>
-                    </div>../noticias/UFLA.html
+                    </div>
                 </div>
 
                 <!-- SLIDE 3 -->

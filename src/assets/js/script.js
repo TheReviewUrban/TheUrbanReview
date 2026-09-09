@@ -318,140 +318,269 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     });
-function searchNews() {
-    const input = document.getElementById("searchInput");
-    const search = input.value.toLowerCase().trim();
+})
 
-    const news = document.querySelectorAll(".news-card");
+// ==========================================
+// PESQUISA DE NOTÍCIAS - THE URBAN REVIEW
+// ==========================================
 
-    news.forEach(article => {
-        const title = article
-            .querySelector("h2")
-            .textContent
-            .toLowerCase();
+document.addEventListener("DOMContentLoaded", function () {
 
-        if (title.includes(search)) {
-            article.style.display = "";
-        } else {
-            article.style.display = "none";
-        }
-    });
-}
-const searchInput = document.getElementById("searchInput");
-const searchButton = document.getElementById("searchButton");
-
-function searchNews() {
-    const searchText = searchInput.value
-        .toLowerCase()
-        .trim();
-
-    const newsCards = document.querySelectorAll(".news-card");
-
-    newsCards.forEach(card => {
-        const content = card.textContent.toLowerCase();
-
-        if (content.includes(searchText)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
-        }
-    });
-}
-
-searchButton.addEventListener("click", searchNews);
-
-searchInput.addEventListener("input", searchNews);
-
-searchInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        searchNews();
-    }
-});
-document.addEventListener("DOMContentLoaded", () => {
-
+    const searchContainer = document.getElementById("searchContainer");
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
-    const newsCards = document.querySelectorAll(".news-card");
+    const searchClear = document.getElementById("searchClear");
+
+    // Se a página não tiver pesquisa, não faz nada
+    if (!searchContainer || !searchInput || !searchButton) {
+        return;
+    }
+
+
+    // ==========================================
+    // ABRIR / FECHAR PESQUISA
+    // ==========================================
+
+    searchButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        searchContainer.classList.toggle("active");
+
+        if (searchContainer.classList.contains("active")) {
+
+            searchInput.focus();
+
+        } else {
+
+            searchInput.value = "";
+            searchNews();
+
+        }
+
+    });
+
+
+    // ==========================================
+    // PESQUISAR NOTÍCIAS
+    // ==========================================
 
     function searchNews() {
-        const text = searchInput.value.toLowerCase().trim();
 
-        newsCards.forEach(card => {
-            const content = card.textContent.toLowerCase();
+        const searchText = searchInput.value
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
 
-            if (content.includes(text)) {
+        const newsCards = document.querySelectorAll(".news-card");
+
+        let resultsFound = 0;
+
+
+        newsCards.forEach(function (card) {
+
+            const content = card.textContent
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+            if (searchText === "" || content.includes(searchText)) {
+
                 card.style.display = "";
+
+                resultsFound++;
+
             } else {
+
                 card.style.display = "none";
+
             }
+
         });
+
+
+        updateSearchMessage(searchText, resultsFound);
+        updateClearButton();
+
     }
 
-    searchInput.addEventListener("input", searchNews);
 
-    searchButton.addEventListener("click", searchNews);
+    // ==========================================
+    // MENSAGEM DE NENHUM RESULTADO
+    // ==========================================
 
-});
+    function updateSearchMessage(searchText, resultsFound) {
 
-});
+        let message = document.getElementById("searchMessage");
 
- document.addEventListener('DOMContentLoaded', () => {
-            // ======================
-            // ELEMENTOS
-          // ======================
-         const sidebarItems = document.querySelectorAll('.sidebar-item');
-           const sections = document.querySelectorAll('.dashboard-section');
-           const logoutButton = document.getElementById('logoutButton');
-           const themeBtn = document.getElementById('dashboardTheme');
-            const settingTheme = document.getElementById('settingTheme');
-            const saveProfileBtn = document.getElementById('saveProfile');
-            const notificationsToggle = document.getElementById('notifications');
+        // Remove mensagem se a pesquisa estiver vazia
+        if (searchText === "") {
 
+            if (message) {
+                message.remove();
+            }
 
-            // ======================
-            // NAVEGAÇÃO ENTRE SEÇÕES
-            // ======================
-const searchInput = document.getElementById("searchInput");
-const searchButton = document.getElementById("searchButton");
-
-function searchNews() {
-    const searchText = searchInput.value
-        .toLowerCase()
-        .trim();
-
-    const newsCards = document.querySelectorAll(".news-card");
-
-    newsCards.forEach(card => {
-        const content = card.textContent.toLowerCase();
-
-        if (content.includes(searchText)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
+            return;
         }
-    });
-}
 
-searchButton.addEventListener("click", searchNews);
 
-searchInput.addEventListener("input", searchNews);
+        // Nenhum resultado
+        if (resultsFound === 0) {
 
-searchInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        searchNews();
+            if (!message) {
+
+                message = document.createElement("div");
+
+                message.id = "searchMessage";
+                message.className = "search-message";
+
+                const newsContainer =
+                    document.querySelector(".news-container") ||
+                    document.querySelector(".container");
+
+                if (newsContainer) {
+                    newsContainer.prepend(message);
+                }
+
+            }
+
+
+            message.innerHTML = `
+                <strong>Nenhuma notícia encontrada</strong>
+                Não encontramos resultados para "<span>${escapeHTML(searchText)}</span>".
+            `;
+
+        } else {
+
+            if (message) {
+                message.remove();
+            }
+
+        }
+
     }
+
+
+    // ==========================================
+    // BOTÃO LIMPAR
+    // ==========================================
+
+    function updateClearButton() {
+
+        if (!searchClear) {
+            return;
+        }
+
+        if (searchInput.value.trim() !== "") {
+
+            searchClear.style.display = "block";
+
+        } else {
+
+            searchClear.style.display = "none";
+
+        }
+
+    }
+
+
+    if (searchClear) {
+
+        searchClear.addEventListener("click", function () {
+
+            searchInput.value = "";
+
+            searchNews();
+
+            searchInput.focus();
+
+        });
+
+    }
+
+
+    // ==========================================
+    // PESQUISA EM TEMPO REAL
+    // ==========================================
+
+    searchInput.addEventListener("input", function () {
+
+        searchNews();
+
+    });
+
+
+    // ==========================================
+    // ENTER
+    // ==========================================
+
+    searchInput.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            searchNews();
+
+        }
+
+    });
+
+
+    // ==========================================
+    // FECHAR AO CLICAR FORA
+    // ==========================================
+
+    document.addEventListener("click", function (event) {
+
+        if (!searchContainer.contains(event.target)) {
+
+            if (
+                searchContainer.classList.contains("active") &&
+                searchInput.value.trim() === ""
+            ) {
+
+                searchContainer.classList.remove("active");
+
+            }
+
+        }
+
+    });
+
+
+    // ==========================================
+    // ESC FECHA A PESQUISA
+    // ==========================================
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            searchContainer.classList.remove("active");
+
+            searchInput.value = "";
+
+            searchNews();
+
+        }
+
+    });
+
+
+    // ==========================================
+    // PROTEÇÃO CONTRA HTML NO RESULTADO
+    // ==========================================
+
+    function escapeHTML(text) {
+
+        const div = document.createElement("div");
+
+        div.textContent = text;
+
+        return div.innerHTML;
+
+    }
+
 });
-
-const [search, setSearch] = useState("");
-
-const filteredMovies = movies.filter(movie =>
-    movie.title.toLowerCase().includes(search.toLowerCase())
-);
-          
-<input
-    type="text"
-    placeholder="Pesquisa..."
-    value={search}
-    onChange={(e) => setSearch(e.target.value)}
-/>
-       });

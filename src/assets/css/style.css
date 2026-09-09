@@ -1482,16 +1482,240 @@ body#noticias-internacional.light-mode strong {
     gap: 15px;
 }
 
+/* ==========================================
+   BARRA DE PESQUISA - THE URBAN REVIEW
+   ========================================== */
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Botão da lupa */
 .search-btn {
-    background-color: #111827;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #374151;
-    color: #9ca3af;
-    padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 50%;
+    background: rgba(17, 24, 39, 0.9);
+    color: #ffffff;
     cursor: pointer;
-    font-size: 0.85rem;
-    width: 200px;
-    height: 50px;
+    font-size: 18px;
+    transition:
+        width 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.2s ease;
+    margin-right: 10px;
+}
+
+.search-btn:hover {
+    background: #1f2937;
+    border-color: #2563eb;
+    transform: scale(1.05);
+}
+
+/* Área que contém o input */
+.search-box {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+
+    width: 0;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(-50%);
+
+    transition:
+        width 0.3s ease,
+        opacity 0.25s ease;
+}
+
+/* Pesquisa aberta */
+.search-container.active .search-box {
+    width: 280px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Input */
+#searchInput {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 42px 0 16px;
+
+    border: 1px solid #374151;
+    border-radius: 22px;
+
+    outline: none;
+
+    background: #111827;
+    color: #ffffff;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#searchInput::placeholder {
+    color: #9ca3af;
+}
+
+#searchInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Botão para limpar a pesquisa */
+.search-clear {
+    position: absolute;
+    right: 12px;
+
+    border: none;
+    background: transparent;
+
+    color: #9ca3af;
+
+    font-size: 18px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: none;
+}
+
+.search-clear:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   RESULTADOS DA PESQUISA
+   ========================================== */
+
+.search-message {
+    width: 100%;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: #9ca3af;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+.search-message strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   MODO CLARO
+   ========================================== */
+
+body.light-mode .search-btn {
+    background: #ffffff;
+    color: #111827;
+
+    border-color: #d1d5db;
+}
+
+body.light-mode .search-btn:hover {
+    background: #f3f4f6;
+    border-color: #2563eb;
+}
+
+body.light-mode #searchInput {
+    background: #ffffff;
+    color: #111827;
+
+    border-color: #d1d5db;
+}
+
+body.light-mode #searchInput::placeholder {
+    color: #6b7280;
+}
+
+body.light-mode .search-clear {
+    color: #6b7280;
+}
+
+body.light-mode .search-clear:hover {
+    color: #111827;
+}
+
+body.light-mode .search-message {
+    color: #6b7280;
+}
+
+body.light-mode .search-message strong {
+    color: #111827;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .search-container.active .search-box {
+        position: fixed;
+
+        top: 75px;
+        left: 15px;
+        right: 15px;
+
+        width: auto;
+        height: 46px;
+
+        transform: none;
+
+        z-index: 9999;
+    }
+
+    .search-box {
+        top: 75px;
+    }
+
+    #searchInput {
+        height: 46px;
+        border-radius: 23px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .search-container.active .search-box {
+        left: 10px;
+        right: 10px;
+    }
+
+    #searchInput {
+        font-size: 13px;
+    }
 }
 
 .theme-toggle {
@@ -1501,6 +1725,7 @@ body#noticias-internacional.light-mode strong {
     font-size: 1.4rem;
     cursor: pointer;
     transition: transform .5s ease, color .3s ease;
+    padding: 10px;
 }
 
 .theme-toggle.animar {
@@ -6091,3 +6316,134 @@ body#dashboard.light-mode .setting-row {
 /* =====================================================
    FIM - DASHBOARD
 ===================================================== */
+
+/* ================================
+   PESQUISA - MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Campo de pesquisa fechado */
+    .search-box {
+        position: absolute;
+        right: 42px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+
+    /* Campo aberto */
+    .search-container.active .search-box {
+        width: 210px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #searchInput {
+        width: 100%;
+        height: 42px;
+        padding: 0 38px 0 15px;
+        background: #111827;
+        color: #fff;
+        border: 1px solid #374151;
+        border-radius: 22px;
+        outline: none;
+        font-size: 0.85rem;
+        box-sizing: border-box;
+    }
+
+    #searchInput::placeholder {
+        color: #9ca3af;
+    }
+
+    #searchInput:focus {
+        border-color: #2563eb;
+    }
+
+    .search-btn {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #111827;
+        border: 1px solid #374151;
+        color: #fff;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    .search-clear {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #9ca3af;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: none;
+        padding: 0;
+    }
+
+    .search-clear:hover {
+        color: #fff;
+    }
+
+    /* Quando a pesquisa estiver aberta,
+       evita que outros elementos fiquem por cima */
+    .search-container.active {
+        z-index: 1100;
+    }
+
+    /* Resultado da pesquisa */
+    .search-message {
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+        color: #9ca3af;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ================================
+   PESQUISA - TELAS MUITO PEQUENAS
+================================ */
+
+@media (max-width: 480px) {
+
+    .search-container.active .search-box {
+        width: 170px;
+    }
+
+    #searchInput {
+        height: 40px;
+        font-size: 0.8rem;
+    }
+
+    .search-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+}

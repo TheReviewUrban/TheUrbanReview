@@ -66,7 +66,7 @@
                     Ainda não tem uma conta?
                 </p>
 
-                <a href="cadastro.html" class="register-button">
+                <a href="cadastro.php" class="register-button">
                     Criar uma conta
                 </a>
             </div>

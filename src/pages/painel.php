@@ -176,7 +176,7 @@ $rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
                         <div>📰</div>
                         <h3>Nenhuma atividade ainda</h3>
                         <p>Comece a explorar as notícias do The Urban Review.</p>
-                        <a href="../../public/index.html">Explorar notícias →</a>
+                        <a href="../../public/index.php">Explorar notícias →</a>
                     </div>
                 </div>
             </section>
