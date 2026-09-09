@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -42,7 +48,40 @@
                 </ul>
             </nav>
             <div class="nav-actions">
+                <div class="search-container" id="searchContainer">
+                    <div class="search-container" id="searchContainer">
+                    <div class="search-box">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Pesquisar notícias..."
+                            autocomplete="off"
+                        >
+                        <button
+                            type="button"
+                            class="search-clear"
+                            id="searchClear"
+                            aria-label="Limpar pesquisa"
+                        >
+                            ×
+                        </button>
+                    </div>
+                    <button
+                        type="button"
+                        class="search-btn"
+                        id="searchButton"
+                        aria-label="Pesquisar"
+                    >
+                        🔍
+                    </button>
+                </div>
                 <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
+                <?php if (isset($_SESSION['id_usuario'])): ?>
+                    <a href="painel.php" class="nav-link <?php echo ($pagina_atual === 'painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
+                <?php else: ?>
+                    <a href="login.php" class="nav-link <?php echo ($pagina_atual === 'login.php') ? 'ativo' : ''; ?>">Entrar/</a>
+                    <a href="cadastro.php" class="nav-link <?php echo ($pagina_atual === 'cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>
+                <?php endif; ?>
             </div>
         </div>
     </header>
