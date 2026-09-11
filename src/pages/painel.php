@@ -124,7 +124,7 @@ $rotulo_atual = $tipos_rotulo[$usuario['tipo_usuario']] ?? 'Usuário';
                 </button>
             </nav>
 
-            <a href="../pages/login.php" class="logout-button">
+            <a href="../php/logout.php" class="logout-button">
                     🚪 <span>Sair da conta</span>
             </a>
         </aside>

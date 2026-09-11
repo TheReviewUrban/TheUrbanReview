@@ -77,7 +77,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
                 <button id="modoEscuro" class="theme-toggle" title="Alternar Tema">🌙</button>
                 <?php if (isset($_SESSION['id_usuario'])): ?>
-                    <a href="painel.php" class="nav-link <?php echo ($pagina_atual === 'painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
+                    <a class="perfil" href="painel.php" class="nav-link <?php echo ($pagina_atual === 'painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
                 <?php else: ?>
                     <a href="login.php" class="nav-link <?php echo ($pagina_atual === 'login.php') ? 'ativo' : ''; ?>">Entrar/</a>
                     <a href="cadastro.php" class="nav-link <?php echo ($pagina_atual === 'cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>

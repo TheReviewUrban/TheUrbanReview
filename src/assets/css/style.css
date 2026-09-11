@@ -5931,12 +5931,50 @@ body.light-mode .password-info {
    PERFIL
 ===================================================== */
 
+.perfil {
+    display: inline-block;
+    background-color: #1DADDC;         
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 200, 83, 0.25);
+}
+
+/* Hover */
+.perfil:hover {
+    background-color: #167b9c;         
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 200, 83, 0.35);
+    color: #ffffff !important;
+}
+
+/* Quando estiver ativo (página atual) */
+.perfil.ativo {
+    background-color: #1DADDC;
+    box-shadow: 0 0 0 2px rgba(0, 200, 83, 0.4);
+}
+
+/* Versão mais compacta (opcional) */
+.perfil {
+    padding: 9px 20px;
+}
+
 #dashboard .profile-card {
     display: flex;
     align-items: flex-start;
     gap: 40px;
     max-width: 700px;
 }
+
+
 
 #dashboard .profile-avatar {
     width: 100px;

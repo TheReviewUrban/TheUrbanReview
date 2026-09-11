@@ -1,3 +1,24 @@
+<?php
+    session_start();
+    $usuarioLogado = isset($_SESSION['id_usuario']) && !empty($_SESSION['id_usuario']);
+    
+    $emailUsuario = $usuarioLogado ? ($_SESSION['email'] ?? '') : '';
+    $nomeUsuario = '';
+
+    if ($usuarioLogado) {
+        if (!empty($_SESSION['nome'])) {
+            $nomeUsuario = $_SESSION['nome'];
+        } else if (!empty($emailUsuario)) {
+            $partesEmail = explode('@', $emailUsuario);
+            $nomeUsuario = $partesEmail[0];
+        } else {
+            $nomeUsuario = 'Usuário';
+        }
+    }
+
+    // Define se o usuário é administrador (ajuste conforme seu banco/sessão)
+    $eAdmin = isset($_SESSION['perfil']) && $_SESSION['perfil'] === 'admin';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,14 +28,18 @@
     <title>Polícia Federal apreende mais três celulares de Vorcaro em nova prisão | The Urban Review</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link rel="icon" type="image/png" href="../../../assets/img/ícones/LogoPolitica.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
-        rel="stylesheet">
 </head>
 
 <body id="noticias-politica">
+
+    <script>
+        window.SESSAO_USUARIO = {
+            logado: <?php echo $usuarioLogado ? 'true' : 'false'; ?>,
+            nome: "<?php echo addslashes($nomeUsuario); ?>",
+            email: "<?php echo addslashes($emailUsuario); ?>",
+            eAdmin: <?php echo $eAdmin ? 'true' : 'false'; ?>
+        };
+    </script>
 
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
@@ -57,20 +82,16 @@
     <main class="article-page">
         <div class="container">
 
-            <!-- Categoria -->
             <div class="article-category">Política</div>
 
-            <!-- Título -->
             <h1 class="article-title">
                 Polícia Federal apreende mais três celulares de Vorcaro em nova prisão
             </h1>
 
-            <!-- Subtítulo -->
             <p class="article-subtitle">
                 Mandados autorizados pelo ministro André Mendonça, do STF, levaram à apreensão de aparelhos do dono do Banco Master.
             </p>
 
-            <!-- Informações -->
             <div class="article-meta">
                 <span>Política</span>
                 <span>•</span>
@@ -79,7 +100,6 @@
                 <span>8 de março de 2026</span>
             </div>
 
-            <!-- Imagem principal -->
             <figure class="article-image">
                 <img src="../../../assets/img/img-noticias/politica/politica-articulação.jpg"
                      alt="Polícia Federal apreende celulares de Daniel Vorcaro">
@@ -88,7 +108,6 @@
                 </figcaption>
             </figure>
 
-            <!-- Conteúdo -->
             <article class="article-content">
                 <p class="article-lead">
                     A Polícia Federal apreendeu três celulares com o empresário Daniel Vorcaro, do Banco Master, ao cumprir os mandados judiciais expedidos pelo ministro André Mendonça, do Supremo Tribunal Federal (STF), na última quarta-feira (4) e prender o banqueiro pela segunda vez.
@@ -133,14 +152,12 @@
                 </p>
             </article>
 
-            <!-- Compartilhamento -->
             <div class="article-share">
                 <span>Compartilhe:</span>
                 <button>WhatsApp</button>
                 <button>Instagram</button>
             </div>
 
-            <!-- Voltar -->
             <div class="article-back">
                 <a href="../../politica.php">← Voltar para as notícias</a>
             </div>
@@ -148,7 +165,7 @@
         </div>
     </main>
 
-    <!-- =================== CONTATO ==================== -->
+    <!-- =================== CONTATO / COMENTÁRIOS ==================== -->
     <section id="contato" class="container newsletter-section">
         <div class="newsletter-box">
             <div class="newsletter-text">
@@ -156,20 +173,22 @@
                     <img src="../../../assets/img/ícones/email.png" class="opniao" alt="Contato">
                 </div>
                 <div>
-                    <h4>Coloque sua opinião sobre o site abaixo</h4>
-                    <p>Insira os seus dados para submeter o seu comentário.</p>
+                    <h4>Deixe seu comentário sobre a notícia</h4>
+                    <p id="subtituloComentario">Sua opinião é muito importante para nós.</p>
                 </div>
             </div>
 
-            <form class="newsletter-form form-contato" id="formOpiniao">
-                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
-                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua opinião aqui..." required></textarea>
-                <button type="submit" id="btnEnviar">Enviar</button>
+            <form class="newsletter-form form-contato" id="formOpiniao" style="display: none;">
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva o seu comentário..." required></textarea>
+                <button type="submit" id="btnEnviar">Enviar Comentário</button>
             </form>
+
+            <div id="avisoLoginComentario" class="aviso-login" style="display: none; padding: 12px; background: rgba(0,0,0,0.05); border-left: 4px solid #007bff; border-radius: 4px; margin-top: 10px;">
+                <p style="margin: 0; color: inherit;">Você precisa estar <a href="../../../pages/login.php" style="font-weight: bold; text-decoration: underline;">logado</a> para enviar um comentário.</p>
+            </div>
         </div>
 
-        <div class="container lista-comentarios">
+        <div class="container lista-comentarios" style="margin-top: 20px;">
             <h3>Comentários dos Leitores</h3>
             <ul id="listaComentariosUl"></ul>
         </div>

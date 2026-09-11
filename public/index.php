@@ -5,38 +5,51 @@ if (session_status() === PHP_SESSION_NONE) {
 
 include("../src/php/conexao.php");
 
-// 1. Verifique se o usuário está logado
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: ../src/pages/login.php"); // Redireciona se não houver sessão
-    exit();
+// Variáveis padrão para visitante não logado
+$usuario = null;
+$nome_exibicao = "";
+$email_exibicao = "";
+$nascimento = "";
+$tipo_usuario = 'comum';
+$eh_moderador = false;
+$rotulo_atual = 'Visitante';
+
+// Se o usuário ESTIVER logado, busca os dados no banco
+if (isset($_SESSION['id_usuario'])) {
+    $id_usuario = $_SESSION['id_usuario'];
+
+    $sql = "SELECT nome_completo, email, nascimento, tipo_usuario
+            FROM usuarios 
+            WHERE id_usuario = ?";
+
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("i", $id_usuario);
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+    $usuario = $resultado->fetch_assoc();
+    $stmt->close();
+
+    // Se o usuário existir na sessão mas não for encontrado no banco (ex: deletado)
+    if ($usuario) {
+        $nome_exibicao  = $usuario['nome_completo'];
+        $email_exibicao = $usuario['email'];
+        $nascimento     = $usuario['nascimento'];
+        $tipo_usuario   = $usuario['tipo_usuario'] ?? 'comum';
+        $eh_moderador   = in_array($tipo_usuario, ['moderador', 'admin']);
+
+        $tipos_rotulo  = [
+            'admin'     => 'Administrador',
+            'moderador' => 'Moderador',      
+            'comum'     => 'Usuário Comum'    
+        ];
+        $rotulo_atual  = $tipos_rotulo[$tipo_usuario] ?? 'Usuário';
+    } else {
+        // Limpa a sessão inválida sem redirecionar
+        unset($_SESSION['id_usuario']);
+        session_destroy();
+    }
 }
-
-$id_usuario = $_SESSION['id_usuario'];
-
-$sql = "SELECT nome_completo, email, nascimento, tipo_usuario
-        FROM usuarios 
-        WHERE id_usuario = ?";
-
-$stmt = $conexao->prepare($sql);
-$stmt->bind_param("i", $id_usuario);
-$stmt->execute();
-
-$resultado = $stmt->get_result();
-$usuario = $resultado->fetch_assoc();
-
-$stmt->close();
-
-// 2. Verifique se o usuário existe no banco de dados
-if (!$usuario) {
-    session_destroy();
-    header("Location: ../src/pages/login.php");
-    exit();
-}
-
-// Dados do usuário (agora seguros para acesso)
-$nome_exibicao  = $usuario['nome_completo'];
-$email_exibicao = $usuario['email'];
-$nascimento     = $usuario['nascimento'];
 
 // Horário de Brasília
 date_default_timezone_set('America/Sao_Paulo');
@@ -49,17 +62,6 @@ if ($hora >= 5 && $hora < 12) {
 } else {
     $saudacao = "Boa noite";
 }
-
-// Definição de papéis segura
-$tipo_usuario  = $usuario['tipo_usuario'] ?? 'comum';
-$eh_moderador  = in_array($tipo_usuario, ['moderador', 'admin']);
-
-$tipos_rotulo  = [
-    'admin'     => 'Administrador',
-    'moderador' => 'Moderador',      
-    'comum'     => 'Usuário Comum'    
-];
-$rotulo_atual  = $tipos_rotulo[$tipo_usuario] ?? 'Usuário';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -139,7 +141,7 @@ $rotulo_atual  = $tipos_rotulo[$tipo_usuario] ?? 'Usuário';
                     🌙
                 </button>
                 <?php if (isset($_SESSION['id_usuario'])): ?>
-                    <a href="../src/pages/painel.php" class="nav-link <?php echo ($pagina_atual === '../src/pages/painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
+                    <a class="perfil" href="../src/pages/painel.php" class="nav-link <?php echo ($pagina_atual === '../src/pages/painel.php') ? 'ativo' : ''; ?>">Meu Perfil</a>
                 <?php else: ?>
                     <a href="../src/pages/login.php" class="nav-link <?php echo ($pagina_atual === '../pages/login.php') ? 'ativo' : ''; ?>">Entrar</a>
                     <a href="../src/pages/cadastro.php" class="nav-link <?php echo ($pagina_atual === '../pages/cadastro.php') ? 'ativo' : ''; ?>">Cadastrar-se</a>
