@@ -3222,7 +3222,7 @@ p {
 }
 
 #noticias-inicio strong {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 #noticias-inicio .article-page .container {

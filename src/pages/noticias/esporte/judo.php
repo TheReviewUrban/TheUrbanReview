@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    $usuarioLogado = isset($_SESSION['id_usuario']) && !empty($_SESSION['id_usuario']);
+    
+    $emailUsuario = $usuarioLogado ? ($_SESSION['email'] ?? '') : '';
+    $nomeUsuario = '';
+
+    if ($usuarioLogado) {
+        if (!empty($_SESSION['nome'])) {
+            $nomeUsuario = $_SESSION['nome'];
+        } else if (!empty($emailUsuario)) {
+            $partesEmail = explode('@', $emailUsuario);
+            $nomeUsuario = $partesEmail[0];
+        } else {
+            $nomeUsuario = 'Usuário';
+        }
+    }
+
+    // Define se o usuário é administrador (ajuste conforme seu banco/sessão)
+    $eAdmin = isset($_SESSION['perfil']) && $_SESSION['perfil'] === 'admin';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,6 +37,15 @@
 </head>
 
 <body id="noticias-ufc">
+
+     <script>
+        window.SESSAO_USUARIO = {
+            logado: <?php echo $usuarioLogado ? 'true' : 'false'; ?>,
+            nome: "<?php echo addslashes($nomeUsuario); ?>",
+            email: "<?php echo addslashes($emailUsuario); ?>",
+            eAdmin: <?php echo $eAdmin ? 'true' : 'false'; ?>
+        };
+    </script>
 
     <!-- ==================== HEADER ==================== -->
     <header class="navbar">
@@ -175,7 +206,7 @@ Finais - 19h*</p>
         </div>
     </main>
 
-    <!-- =================== CONTATO ==================== -->
+    <!-- =================== CONTATO / COMENTÁRIOS ==================== -->
     <section id="contato" class="container newsletter-section">
         <div class="newsletter-box">
             <div class="newsletter-text">
@@ -183,15 +214,26 @@ Finais - 19h*</p>
                     <img src="../../../assets/img/ícones/email.png" class="opniao" alt="Contato">
                 </div>
                 <div>
-                    <h4>Coloque sua opinião sobre o site abaixo</h4>
-                    <p>Insira os seus dados para submeter o seu comentário.</p>
+                    <h4>Deixe seu comentário sobre a notícia</h4>
+                    <p id="subtituloComentario">Sua opinião é muito importante para nós.</p>
                 </div>
             </div>
 
-            <form class="newsletter-form form-contato" id="formOpiniao">
-</form>
-</div>
-</section>
-<script src="../../../assets/js/script.js"></script>
-</body>
+            <form class="newsletter-form form-contato" id="formOpiniao" style="display: none;">
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva o seu comentário..." required></textarea>
+                <button type="submit" id="btnEnviar">Enviar Comentário</button>
+            </form>
+
+            <div id="avisoLoginComentario" class="aviso-login" style="display: none; padding: 12px; background: rgba(0,0,0,0.05); border-left: 4px solid #007bff; border-radius: 4px; margin-top: 10px;">
+                <p style="margin: 0; color: inherit;">Você precisa estar <a href="../../../pages/login.php" style="font-weight: bold; text-decoration: underline;">logado</a> para enviar um comentário.</p>
+            </div>
+        </div>
+
+        <div class="container lista-comentarios" style="margin-top: 20px;">
+            <h3>Comentários dos Leitores</h3>
+            <ul id="listaComentariosUl"></ul>
+        </div>
+    </section>
+        <script src="../../../assets/js/script.js"></script>
+    </body>
 </html>
