@@ -584,3 +584,135 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// ==========================================
+// DASHBOARD - THE URBAN REVIEW
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ---- ELEMENTOS ----
+    const sidebarItems = document.querySelectorAll(".sidebar-item");
+    const sections = document.querySelectorAll(".dashboard-section");
+    const btnModo = document.getElementById("modoEscuro");
+
+    // Perfil
+    const profileName = document.getElementById("profileName");
+    const profileEmail = document.getElementById("profileEmail");
+    const saveProfileBtn = document.getElementById("saveProfile");
+
+    // Nomes dinâmicos (já vêm do PHP)
+    const welcomeName = document.getElementById("welcomeName");
+    const navUserName = document.getElementById("navUserName");
+    const sidebarUserName = document.getElementById("sidebarUserName");
+    const sidebarUserEmail = document.getElementById("sidebarUserEmail");
+
+    // Avatares
+    const userAvatar = document.getElementById("userAvatar");
+    const profileAvatar = document.getElementById("profileAvatar");
+
+    // Contadores (por enquanto fixos em 0)
+    const favoritesCount = document.getElementById("favoritesCount");
+    const commentsCount = document.getElementById("commentsCount");
+    const readCount = document.getElementById("readCount");
+
+    // ---- 1. NAVEGAÇÃO DA SIDEBAR ----
+    sidebarItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const sectionId = this.getAttribute("data-section");
+
+            // Remove active de todos
+            sidebarItems.forEach(i => i.classList.remove("active"));
+            sections.forEach(s => s.classList.remove("active"));
+
+            // Ativa o item e a seção
+            this.classList.add("active");
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add("active");
+            }
+
+            // Scroll suave para o topo do conteúdo
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+
+
+    // ---- 3. PREENCHER DADOS DO PERFIL ----
+    // Pega o nome e e-mail que já estão na tela (vindos do PHP)
+    if (sidebarUserName && profileName) {
+        profileName.value = sidebarUserName.textContent.trim();
+    }
+
+    if (sidebarUserEmail && profileEmail) {
+        profileEmail.value = sidebarUserEmail.textContent.trim();
+    }
+
+    // Atualiza o avatar quando o usuário digita o nome
+    if (profileName) {
+        profileName.addEventListener("input", function () {
+            const primeiraLetra = this.value.trim().charAt(0).toUpperCase() || "?";
+
+            if (userAvatar) userAvatar.textContent = primeiraLetra;
+            if (profileAvatar) profileAvatar.textContent = primeiraLetra;
+
+            // Atualiza também o avatar da navbar
+            const navAvatar = document.querySelector(".user-avatar");
+            if (navAvatar) navAvatar.textContent = primeiraLetra;
+        });
+    }
+
+    // ---- 4. SALVAR PERFIL (MOCK) ----
+    if (saveProfileBtn) {
+        saveProfileBtn.addEventListener("click", function () {
+            const novoNome = profileName.value.trim();
+
+            if (novoNome === "") {
+                alert("Por favor, digite um nome válido.");
+                return;
+            }
+
+            // Atualiza visualmente em todos os lugares
+            if (welcomeName) welcomeName.textContent = novoNome;
+            if (navUserName) navUserName.textContent = novoNome;
+            if (sidebarUserName) sidebarUserName.textContent = novoNome;
+
+            // Feedback visual
+            const textoOriginal = saveProfileBtn.textContent;
+            saveProfileBtn.textContent = "Salvo ✓";
+            saveProfileBtn.disabled = true;
+
+            setTimeout(() => {
+                saveProfileBtn.textContent = textoOriginal;
+                saveProfileBtn.disabled = false;
+            }, 2000);
+
+            // Aqui no futuro você fará um fetch() para o backend
+            // Exemplo:
+            // fetch("../php/atualizar_perfil.php", {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/json" },
+            //     body: JSON.stringify({ nome: novoNome })
+            // });
+        });
+    }
+
+    // ---- 5. CONTADORES (por enquanto 0) ----
+    if (favoritesCount) favoritesCount.textContent = "0";
+    if (commentsCount) commentsCount.textContent = "0";
+    if (readCount) readCount.textContent = "0";
+
+    // ---- 6. LOGOUT ----
+    // O link já está no HTML. Se quiser forçar limpeza de localStorage:
+    const logoutBtn = document.querySelector(".logout-button");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function (e) {
+            // Opcional: limpar tema ou outras preferências
+            // localStorage.removeItem("tema");
+            // A sessão será destruída no backend
+        });
+    }
+
+    // ---- 7. PROTEÇÃO EXTRA (caso o usuário tente acessar seção inexistente) ----
+    // Já tratado pelo data-section + getElementById
+
+});
