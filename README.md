@@ -53,7 +53,7 @@ git clone https://github.com/seu-usuario/the-urban-review.git
 ---
 
 ## 👨🏻‍👩🏻‍👦🏻‍👦🏻Autores
-* Desenvolvido por Yasmin Cavalcante/Kaio César/Kaio Nogueira/Gustavo Bryan.
+* Desenvolvido por Yasmim Cavalcante/Kaio César/Kaio Nogueira/Gustavo Brayan.
 * Turma de Tecnologia em Informática para internet (Vespertino) – Senac DF
 
 
