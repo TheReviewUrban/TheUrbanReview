@@ -41,6 +41,8 @@ git clone https://github.com/seu-usuario/the-urban-review.git
 
 ## 🚀Melhorias Futuras
 * Notícias Atualizadas
+* Curtida nos comentarios
+* Melhoria no Meu Painel
 ---
 
 ## 🦾Aprendizagem
